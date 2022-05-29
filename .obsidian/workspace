@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "Algo/Tips & Tricks.md",
-            "mode": "source",
+            "mode": "preview",
             "source": false
           }
         }
@@ -79,8 +79,17 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "f1ee07f162f4bf75",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
