@@ -1,0 +1,102 @@
+{
+  "main": {
+    "id": "2c8816b18aed108a",
+    "type": "split",
+    "children": [
+      {
+        "id": "05575696746444a7",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Start/Algo/Tips and tricks.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "002214b705c5b0b8",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd3b877704ed2607",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0410bd45af2778e8",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7935f83c9f568d7b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1550d3d45d30a5b4",
+    "type": "split",
+    "children": [
+      {
+        "id": "311bcdbda8042feb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0f6f2d5df1138a66",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Start/Algo/Tips and tricks.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b524170c8f8d9d89",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "active": "05575696746444a7",
+  "lastOpenFiles": [
+    "Start/Algo/Tips and tricks.md"
+  ]
+}
