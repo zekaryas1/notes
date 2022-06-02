@@ -1,5 +1,5 @@
 # What is Backtracking
-- Backtracking is just another type of recursion where we try every possible options available…brute force  aka DFS approach  
+- Backtracking is just another type of recursion where we try every possible options available…brute force  aka DFS approach
 - Memory can be used to achieve better performance making it DP programming. 
 
 ![](https://scaler.com/topics/images/working-of-backtracking-algorithm)
