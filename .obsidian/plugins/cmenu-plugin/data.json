@@ -45,11 +45,6 @@
       "id": "cmenu-plugin:editor:insert-link",
       "name": "cMenu: Insert markdown link",
       "icon": "link-glyph"
-    },
-    {
-      "id": "cmenu-plugin:editor:insert-embed",
-      "name": "cMenu: Add embed",
-      "icon": "note-glyph"
     }
   ],
   "appendMethod": "workspace",

@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "980bffe1416bb441",
+        "id": "333fe77ebb26c7ff",
         "type": "leaf",
         "state": {
           "type": "diff-view",
           "state": {
-            "file": ".obsidian/appearance.json",
+            "file": ".gitignore",
             "staged": false
           }
         }
@@ -101,8 +101,9 @@
     "direction": "horizontal",
     "width": 300
   },
-  "active": "980bffe1416bb441",
+  "active": "333fe77ebb26c7ff",
   "lastOpenFiles": [
+    "🐍 Algo/Tips & Tricks/String.md",
     "🐍 Algo/Fundamental Algorithms/Recursion/Dynamic programming.md",
     "🐍 Algo/Fundamental Algorithms/Recursion/Recursion.md",
     "🐍 Algo/Tips & Tricks/Inspiring Math algos.md",
@@ -111,7 +112,6 @@
     "🐍 Algo/Tips & Tricks/How to act during interviews.md",
     "🐍 Algo/Tips & Tricks/Division and modulo with 10.md",
     "🐍 Algo/Tips & Tricks/Infinity in python.md",
-    "🐍 Algo/Tips & Tricks/In-built Binary search.md",
-    "🐍 Algo/Tips & Tricks/Sorting.md"
+    "🐍 Algo/Tips & Tricks/In-built Binary search.md"
   ]
 }
