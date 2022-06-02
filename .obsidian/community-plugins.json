@@ -1,4 +1,6 @@
 [
   "execute-code",
-  "obsidian-git"
+  "obsidian-git",
+  "cmenu-plugin",
+  "highlightr-plugin"
 ]

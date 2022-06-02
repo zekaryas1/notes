@@ -1,4 +1,8 @@
 {
   "legacyEditor": false,
-  "livePreview": true
+  "livePreview": true,
+  "showLineNumber": false,
+  "spellcheck": true,
+  "fileSortOrder": "byCreatedTimeReverse",
+  "alwaysUpdateLinks": true
 }
