@@ -11,17 +11,17 @@
 # Common algorithm's time complexity 
 * O(logn): binary search…cuts the problem in half  
 * O(Klogn)...heap operations 
-	* popping the min element from heap is logn
-	* popping k times will be klogn
+	* Popping the min element from heap is logn
+	* Popping k times will be klogn
 * O(nlogn)...most of sort operations
 
 # What does “constant extra space” means?_  
-  * it means use a constant O(1) memory this can be
-	  * variable
-	  * array with fixed size  Array a = new Array[3]  
-  * it doesn’t mean
-	  * a dictionary or an array that depends on the input 
-	  * ex: List l = new List(input.length)
+  * It means use a constant O(1) memory this can be
+	  * Variable
+	  * Array with fixed size  Array a = new Array[3]  
+  * It doesn’t mean
+	  * A dictionary or an array that depends on the input 
+	  * Ex: List l = new List(input.length)
 
 # Amortized Cost  
   

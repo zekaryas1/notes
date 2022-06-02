@@ -42,19 +42,19 @@ print(fibo(5))
 
 # DP vs Greedy algo  
   
-* if a problem is asking for the maximum/minimum/longest/shortest of something, the number of ways to do something, or if it is possible to reach a certain point, it is probably greedy or DP.  
-  * thus, how do we know which algo to use  
-      * The characteristic that is common in DP problems is that future "decisions" depend on earlier decisions.  
-      * Deciding to do something at one step may affect the ability to do something in a later step.  
-      * This characteristic is what makes a greedy algorithm invalid for a DP problem - we need to factor in results from previous decisions.  
-          * with greedy at each step we decide the best value not caring about past decisions  
+* If a problem is asking for the maximum/minimum/longest/shortest of something, the number of ways to do something, or if it is possible to reach a certain point, it is probably greedy or DP.
+* Thus, how do we know which algo to use
+	* The characteristic that is common in DP problems is that future "decisions" depend on earlier decisions.
+	* Deciding to do something at one step may affect the ability to do something in a later step.
+	* This characteristic is what makes a greedy algorithm invalid for a DP problem - we need to factor in results from previous decisions.
+	* with greedy at each step we decide the best value not caring about past decisions  
   
 # Tips for dynamic programming  
   
-* In recursive problems, the key to the problem is  
-  * to figure out the relationship between a base case and its sub-problems.  
+* In recursive problems, the key to the problem is
+	* To figure out the relationship between a base case and its sub-problems.  
 * Steps:  
    1. First write the base case and the other some consequent sub cases  
-   2. Identity any relationship  
+   2. Identity any relationship
 	   1. This is the key to the solution.  
    3. If any repetitive step that can lead to memorization which = dynamic programming. 

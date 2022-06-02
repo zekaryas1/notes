@@ -1,6 +1,5 @@
-Insertion sort also know as shifting sort  
-  
-insertion-sort is an excellent algorithm for sorting small sequences (say, less than 50 elements) 
+- Insertion sort also know as shifting sort  
+- Insertion-sort is an excellent algorithm for sorting small sequences (say, less than 50 elements) 
 
 ![](https://media.geeksforgeeks.org/wp-content/uploads/insertion_sort-recursion.png)
   

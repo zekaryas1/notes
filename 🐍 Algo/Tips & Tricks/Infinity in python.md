@@ -1,5 +1,5 @@
 # Infinity and -infinity in python
-- use float
+- Use float
 ```python
 a = float("inf") #positive infinity
 b = float("-inf") #negative infinity

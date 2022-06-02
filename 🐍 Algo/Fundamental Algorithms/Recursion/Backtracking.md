@@ -1,8 +1,12 @@
 # What is Backtracking
 - Backtracking is just another type of recursion where we try every possible options available…brute force  aka DFS approach  
-- Memory can be used to achieve better performance making it DP programming.    
+- Memory can be used to achieve better performance making it DP programming. 
+
+![](https://scaler.com/topics/images/working-of-backtracking-algorithm)
 
 # Backtracking template  
+
+[Video Source ](https://youtu.be/H2gnD7Ixeao)
 
 ```python
 def is_valid_path(path):

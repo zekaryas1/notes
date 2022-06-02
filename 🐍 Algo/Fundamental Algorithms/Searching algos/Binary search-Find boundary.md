@@ -1,18 +1,18 @@
+[Source Algo Monster](https://algo.monster/problems/binary_search_boundary)
 # How to use binary boundary method
 * Most binary search questions can be solved with find boundary logic  
 	* Steps:  
 		  1. Find a logic to turn the sorted inputs in to a false…True array 
 		  2. With that logic modify the previous code  
-	* Example: Solving minimum in rotated sorted array  
-		  * the logic to turn the sorted array: is arr[i] <= arr[-1]
-
+	* Example: Solving minimum in rotated sorted array
+		* The logic to turn the sorted array: is arr[i] <= arr[-1]
 # Finding the Boundary with Binary Search
-- An array of boolean values is divided into two sections;  
-	- the left section consists of all false and  
-	- the right section consists of all true.  
-  * Find the boundary of the right section,  
-      * *i.e. the index of the first true element. If there is no true element, return -1*.  
-    * _[Finding Boundary - Binary Search / Overview](https://algo.monster/problems/binary_search_boundary)_  
+- An array of boolean values is divided into two sections;
+	- The left section consists of all false and
+	- The right section consists of all true.  
+  * Find the boundary of the right section
+	  * I.e. the index of the first true element. If there is no true element, return -1*.
+	  * [Finding Boundary - Binary Search / Overview](https://algo.monster/problems/binary_search_boundary)_  
 
 ```python
 from typing import List

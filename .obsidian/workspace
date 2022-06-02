@@ -7,11 +7,10 @@
         "id": "980bffe1416bb441",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "diff-view",
           "state": {
-            "file": "🐍 Algo/Fundamental Algorithms/Recursion/Backtracking.md",
-            "mode": "source",
-            "source": false
+            "file": ".obsidian/appearance.json",
+            "staged": false
           }
         }
       }
@@ -53,7 +52,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 272.00793838500977
+    "width": 337.50793838500977
   },
   "right": {
     "id": "fdaccba8ab8b88a8",
@@ -69,7 +68,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "🐍 Algo/Fundamental Algorithms/Recursion/Backtracking.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -93,9 +91,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "🐍 Algo/Fundamental Algorithms/Recursion/Backtracking.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -107,15 +103,15 @@
   },
   "active": "980bffe1416bb441",
   "lastOpenFiles": [
-    "🐍 Algo/Fundamental Algorithms/Recursion/Backtracking.md",
     "🐍 Algo/Fundamental Algorithms/Recursion/Dynamic programming.md",
     "🐍 Algo/Fundamental Algorithms/Recursion/Recursion.md",
-    "🐍 Algo/Fundamental Algorithms/Searching algos/Binary search-Find boundary.md",
-    "🐍 Algo/Fundamental Algorithms/Searching algos/Binary search.md",
-    "🐍 Algo/Fundamental Algorithms/Sorting algos/Selection Sort.md",
-    "🐍 Algo/Fundamental Algorithms/Sorting algos/Insertion sort.md",
-    "🐍 Algo/Fundamental Algorithms/Sorting algos/Merge Sort.md",
-    "🐍 Algo/Fundamental Algorithms/Sorting algos/Quick Sort.md",
-    "🐍 Algo/Fundamental Algorithms/Sorting algos/Radix Sort.md"
+    "🐍 Algo/Tips & Tricks/Inspiring Math algos.md",
+    "🐍 Algo/Tips & Tricks/Which algo to select, pattern based answer.md",
+    "🐍 Algo/Tips & Tricks/How to approach OOP questions.md",
+    "🐍 Algo/Tips & Tricks/How to act during interviews.md",
+    "🐍 Algo/Tips & Tricks/Division and modulo with 10.md",
+    "🐍 Algo/Tips & Tricks/Infinity in python.md",
+    "🐍 Algo/Tips & Tricks/In-built Binary search.md",
+    "🐍 Algo/Tips & Tricks/Sorting.md"
   ]
 }

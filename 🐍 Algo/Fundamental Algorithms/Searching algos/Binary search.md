@@ -20,7 +20,7 @@ print(search([1,2,3,4,5,6], 4))
 
 # Binary search recursion
 
-Note that although the concept is fairly simple, getting all the details right is far more difficult than you might think. Pay attention to the plus ones and minus ones.  
+- Note that although the concept is fairly simple, getting all the details right is far more difficult than you might think. Pay attention to the plus ones and minus ones.  
 
 ```python
 def search(nums, target, low, high):

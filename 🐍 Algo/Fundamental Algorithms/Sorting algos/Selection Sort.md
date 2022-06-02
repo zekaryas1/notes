@@ -1,7 +1,5 @@
-# Selection Sort I Runtime: O( n**2) average and worst case. Memory: 0 (1) . 
-
+# Selection Sort I Runtime: O( n**2) average and worst case. Memory: 0 (1)
 - Find the smallest element using a linear scan and move it to the front (swapping it with the front element).  
-  
 - Then, find the second smallest and move it, again doing a linear scan. Continue doing this until all the elements are in place.  
 
 ![](https://miro.medium.com/max/1400/1*l5skal1-UC-GtSc8ORE-2A.png)
