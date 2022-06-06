@@ -1,4 +1,10 @@
-# Bit manipulation tricks and things  
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: Bit Manipulation Tricks and Things
+---
+
+# Bit Manipulation Tricks and Things
 
 ```python
 # a&b
@@ -38,7 +44,7 @@ print(100101 << 1)
 
 ```
 
-## Find non duplicate with XOR
+## Find Non Duplicate with XOR
 
 ```python
 
@@ -51,10 +57,10 @@ for elt in a:
 print(res)  # prints 7
 
 ```
-  
-# Looping in bit world  
-  
-* Standard code: how to loop bits  
+
+# Looping in Bit World
+
+* Standard code: how to loop bits
 
 ```python
 x = 10101
@@ -64,7 +70,7 @@ while x:  #eventually x will be zero=false
   x = x >> 1  #or x = x << 1
 ```
 
-* Tips and tricks  
+* Tips and tricks
 
  ```python
 a = 12

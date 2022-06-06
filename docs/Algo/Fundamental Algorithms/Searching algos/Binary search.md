@@ -1,6 +1,12 @@
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: Binary Search Loop
+---
+
 ![](https://www.computerhope.com/jargon/b/binary-search.jpg)
 
-# Binary search loop
+# Binary Search Loop
 
 ```python
 def search(nums, target):
@@ -18,9 +24,9 @@ def search(nums, target):
 print(search([1,2,3,4,5,6], 4))
 ```
 
-# Binary search recursion
+# Binary Search Recursion
 
-- Note that although the concept is fairly simple, getting all the details right is far more difficult than you might think. Pay attention to the plus ones and minus ones.  
+- Note that although the concept is fairly simple, getting all the details right is far more difficult than you might think. Pay attention to the plus ones and minus ones.
 
 ```python
 def search(nums, target, low, high):
@@ -36,4 +42,3 @@ def search(nums, target, low, high):
 
 print(search([1,2,3,4,5,6], 4, 0, 6))
 ```  
-  

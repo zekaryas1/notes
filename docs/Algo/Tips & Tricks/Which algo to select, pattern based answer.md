@@ -1,39 +1,57 @@
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: If Input Array is Sorted Then
+---
+
 [Source](https://seanprashad.com/leetcode-patterns/)
-# If input array is sorted then
+
+# If Input Array is Sorted Then
+
 - Binary search [[Binary search]]
 - Two pointers
 
-# If asked for all permutations/subsets then
+# If Asked for All permutations/subsets Then
+
 - [[Backtracking]]
 
-# If given a tree then
+# If Given a Tree Then
+
 - DFS
 - BFS
 
-# If given a graph then
+# If Given a Graph Then
+
 - DFS
 - BFS
 
-# If given a linked list then
+# If Given a Linked List Then
+
 - Two pointers [[Linked list#The Runner Technique]]
 
-# If recursion is banned then
+# If Recursion is Banned Then
+
 - [[Stack & Queue#Stack]]
 
-# If must solve in-place then
+# If Must Solve In-place Then
+
 - Swap corresponding values
 - Store one or more different values in the same pointer
 
-# If asked for maximum/minimum subarray/subset/options then
+# If Asked for maximum/minimum subarray/subset/options Then
+
 - [[Dynamic programming]]
 
-# If asked for top/least K items then
+# If Asked for top/least K Items Then
+
 - Heap
 
-# If asked for common strings then
+# If Asked for Common Strings Then
+
 - Map
 - Trie
 
 # Else
+
 - Map/Set for O(1) time & O(n) space
 - Sort input for O(nlogn) time and O(1) space

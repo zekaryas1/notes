@@ -1,12 +1,19 @@
-# The Sieve of Eratosthenes  
-  
-* The Sieve of Eratosthenes is a highly efficient way to generate a list of primes. It works by recognizing that all non-prime numbers are divisible by a prime number.  
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: The Sieve of Eratosthenes
+---
+
+# The Sieve of Eratosthenes
+
+* The Sieve of Eratosthenes is a highly efficient way to generate a list of primes. It works by recognizing that all non-prime numbers are divisible by a prime number.
 * How it works
 	* We start with a list of all the numbers up through some value max. First, we cross off all numbers divisible by 2
 	* Then, we look for the next prime (the next non-crossed off number) and cross off all numbers divisible by it. By crossing off all numbers divisible by 2, 3, 5, 7, 11, and so on,
 	* Finally we wind up with a list of prime numbers from 2 through max.
 
 [Code source](https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes)
+
 ```python
 def SieveOfEratosthenes(num):
     prime = [True for i in range(num+1)]
@@ -37,7 +44,7 @@ if __name__ == '__main__':
     SieveOfEratosthenes(num)
 ```
 
-# Finding GCD(Greatest common divisor) of two numbers
+# Finding GCD(Greatest Common divisor) of Two Numbers
 
 ```python
 

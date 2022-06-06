@@ -1,3 +1,9 @@
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: Binary Search **bisect_left**
+---
+
 # Binary Search **bisect_left**
 
 - Returns index of the elt or the leftmost insertion point of x in a sorted list.
@@ -11,7 +17,7 @@ print(i)
 print(j)
 ```
 
-## Check elt exists with bisect_left
+## Check Elt Exists with bisect_left
 
 ```python
 from bisect import bisect_left

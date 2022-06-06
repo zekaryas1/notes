@@ -1,14 +1,20 @@
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: 'Radix Sort I Runtime: O( kn)'
+---
+
 [[Division and modulo with 10]]
 
-# Radix Sort I Runtime: O( kn)  
-  
-- Radix sort is a fast distribution sorting algorithm that orders keys by examining the individual components of the keys instead of comparing the keys themselves.  
+# Radix Sort I Runtime: O( kn)
+
+- Radix sort is a fast distribution sorting algorithm that orders keys by examining the individual components of the keys instead of comparing the keys themselves.
 
 ![](https://ds055uzetaobb.cloudfront.net/brioche/uploads/IEZs8xJML3-radixsort_ed.png?width=1200)
-  
-- <span style="color:#93DF5F">For example</span> , 
+
+- <span style="color:#93DF5F">For example</span> ,
 	- When sorting integer keys, the individual digits of the keys are compared from least significant to most significant.
-	- This is a special purpose sorting algorithm but can be used to sort many types of keys, including positive integers, strings, and floating-point values.  
+	- This is a special purpose sorting algorithm but can be used to sort many types of keys, including positive integers, strings, and floating-point values.
 
 ```python
 from collections import deque as Queue

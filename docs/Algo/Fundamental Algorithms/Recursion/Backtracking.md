@@ -1,10 +1,17 @@
+---
+date created: Sunday, June 5th 2022, 4:14:21 pm
+date modified: Monday, June 6th 2022, 12:48:56 pm
+title: What is Backtracking
+---
+
 # What is Backtracking
-- Backtracking is just another type of recursion where we try every possible options available…brute force  aka DFS approach
-- Memory can be used to achieve better performance making it DP programming. 
+
+- Backtracking is just another type of recursion where we try every possible options available…brute force aka DFS approach
+- Memory can be used to achieve better performance making it DP programming.
 
 ![](https://scaler.com/topics/images/working-of-backtracking-algorithm)
 
-# Backtracking template  
+# Backtracking Template
 
 [Video Source ](https://youtu.be/H2gnD7Ixeao)
 
@@ -34,7 +41,7 @@ def solve():
 	return solution
 ```
 
-# Example using backtracking template
+# Example Using Backtracking Template
 
 ```python
 def permute(nums):
@@ -61,4 +68,3 @@ def permute(nums):
         print(result)
 permute([1,2,3])
 ```
-  
