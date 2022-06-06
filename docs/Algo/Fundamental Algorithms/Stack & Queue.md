@@ -27,3 +27,60 @@ d.append(13)
 print(d.popleft())  #12 first in first out
 
 ```
+
+## Priority Queue
+
+- The **priority queue** is an advanced type of the [[Stack & Queue#Queue FIRST IN FIRST OUT]] data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
+
+- Priority queues are used to handle scheduling problems where some tasks are prioritized over others.
+
+```python
+# the item with the lowest value is removed first
+from queue import PriorityQueue
+
+q = PriorityQueue()
+
+q.put(4)
+q.put(2)
+q.put(5)
+q.put(1)
+q.put(3)
+
+while not q.empty():
+	next_item = q.get()
+	print(next_item)
+```
+
+```python
+# we can add items alogside the priorite numbers
+from queue import PriorityQueue  
+
+q = PriorityQueue()
+
+q.put((4, 'Read'))
+q.put((2, 'Play'))
+q.put((5, 'Write'))
+q.put((1, 'Code'))
+q.put((3, 'Study'))
+
+while not q.empty():
+	next_item = q.get()
+	print(next_item)
+```
+
+```python
+# we can multiply with negative to get the defualt out put in reverse
+from queue import PriorityQueue  
+
+q = PriorityQueue()
+
+q.put((-4, 'Read'))
+q.put((-2, 'Play'))
+q.put((-5, 'Write'))
+q.put((-1, 'Code'))
+q.put((-3, 'Study'))
+
+while not q.empty():
+	next_item = q.get()
+	print(next_item)
+```
