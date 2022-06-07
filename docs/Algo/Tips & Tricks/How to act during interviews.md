@@ -1,17 +1,25 @@
 ---
 date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: How to act during interviews
+date modified: Tuesday, June 7th 2022, 11:00:06 am
+title: How to Act During Interviews
 ---
 
 # How to Act During Interviews
 
-* During each step explain what you’re doing, every steps.
-* Make sure you understand the question.
-* Create Test cases input and output tests.
-	* Write all possible inputs and proper outputs, you can ask the interviewer
-	* None, valid, invalid …etc.
-	* Write the test cases in the main function as TDD
-* Code with pseudo-code before going to actual solution.
-* Write the actual code.
-* Run the test cases
+>  First of all, During each step explain what you’re doing, every steps.
+1. Make sure you understand the question.
+	1. Explain the question back to the interviewer…this will help you understand the question better
+2. Create Test cases input and output tests.
+	1. Write all possible inputs and proper outputs, you can ask the interviewer
+		1. None, valid, invalid …etc.
+	2. Write the test cases in the main function as TDD
+3. List all the possible ways/algorithms you think will solve the problem
+	1. Start with brute force
+	2. Select other ex: Binary search, DB, two pointers…
+	3. Discuss time complexity analysis
+	4. Select the best/easy based on time/space complexity
+4. Draw/Visualize your solution/approach
+5. Code with pseudo-code before going to actual solution
+	1. Skip if time is ticking…{you don't want to over explain things}
+6. Write the actual code
+7. Finally, Run the test cases
