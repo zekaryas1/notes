@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 9th 2022, 9:54:18 pm
-date modified: Saturday, June 11th 2022, 11:57:09 pm
+date modified: Sunday, June 12th 2022, 2:19:04 pm
 title: Parts of Dockerfile
 ---
 
@@ -25,7 +25,7 @@ FROM node:14
 Environment variables
 
 ```bash
-env = production
+ENV NODE_ENV = production
 ```
 
 ## RUN

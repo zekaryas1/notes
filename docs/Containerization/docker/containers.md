@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 9th 2022, 9:54:52 pm
-date modified: Thursday, June 9th 2022, 11:32:59 pm
+date modified: Sunday, June 12th 2022, 4:37:20 pm
 title: What is a Container
 ---
 
@@ -111,4 +111,12 @@ docker rm $(docker ps -aq)
 ```bash
 #docker container exec -it [container_name] bash
 docker container exec -it MySQL bash
+```
+
+# Logs
+
+- Print the last 100 lines of a container’s logs
+
+```bash
+docker container logs --tail 100 [container_name]
 ```
