@@ -49,6 +49,8 @@ docker container run -d -p --name my_awsome_mongo 27017:27017 mongo
 
 ```bash
 docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
+
+#then we would be able to access process.env.MYSQL_ROOT_PASSWORD inside the code
 ```
 
 # List Containers
@@ -104,7 +106,7 @@ docker rm -f [container_id]
 docker rm $(docker ps -aq)
 ```
 
-# Journey into Inside Containers
+# Journey Inside Containers
 
 ```bash
 #docker container exec -it [container_name] bash

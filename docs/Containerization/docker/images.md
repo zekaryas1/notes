@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 9th 2022, 9:54:36 pm
-date modified: Friday, June 10th 2022, 12:03:34 am
+date modified: Saturday, June 11th 2022, 11:41:39 pm
 title: What is an Image
 ---
 
@@ -32,7 +32,8 @@ docker pull MONGODB
 - After creating a dockerfile run the following command [[dockerfiles]]
 
 ```bash
-docker build -t image_name path_to_docker_file
+docker build -t tag_name path_to_docker_file
+# -t = tag followd by tag/name
 ```
 
 ```bash
@@ -71,21 +72,25 @@ docker image push zekaryas/hello-world
 
 # Tagging a Container
 
-Tag is an additional name/info we attach to an image to make it more meaningful
+- Tag is an additional name/info we attach to an image to make it more meaningful
+- The Docker tag command creates a new tag for an image.
+- It does not create a new image. The tag points to the same image and is just another way to reference the image.
 
-# Create an Image with Tag
+## Create an Image with Tag
 
 ```bash
 docker build -t zekaryas/hello_world .
 ```
 
-# Give a Tag to Existing Image
+## Give a Tag to Existing Image
 
 ```bash
-docker pull nginx  #we have image with no tag
+docker pull nginx  #we have image with tag: latest
 
-docker image tag nginx btraversy/nginx #we have an image with new_image_tag
+docker image tag nginx zekaryas/nginx #we've the same image with a new tag name zekaryas/nginx
 
-docker image tag image new_image_tag  #syntax
+docker image tag nginx nginx:v1:12:12 #we've the same image with a new tag name nginx:v1:12:12
+
+docker image tag prev_tag_name new_tag_name  #syntax
 
 ```

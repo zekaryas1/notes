@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 9th 2022, 9:54:18 pm
-date modified: Thursday, June 9th 2022, 11:52:59 pm
+date modified: Saturday, June 11th 2022, 11:57:09 pm
 title: Parts of Dockerfile
 ---
 
@@ -40,6 +40,9 @@ RUN npm install
 
 Ports to expose
 
+> The `EXPOSE` instruction does not actually publish the port. It functions as a type of documentation between the person who builds the image and the person who runs the container, about which ports are intended to be published.
+> <mark style="background: #CACFD9A6;">It simply is a message for the developer on which port to use, but also the developer can use whichever port it want at runtime.</mark>
+
 ```bash
 EXPOSE 8080
 ```
@@ -77,6 +80,49 @@ COPY package*.json . #copy package to container
 COPY . . #copy everything to container
 ```
 
+# Build the Docker into Image
 
-# Build the docker into image
 [[images#Build Your Own Image]]
+
+# Examples
+
+## Nodejs Dockerfile
+
+```bash
+FROM node:12.18.1
+
+ENV NODE_ENV=production
+
+WORKDIR /app
+
+COPY ["package.json", "package-lock.json*", "./"]
+
+RUN npm install --production
+
+COPY . .
+
+CMD [ "node", "server.js" ]
+```
+
+> it is a best practice to define a .dockerignore file for your images
+
+```bash
+#.dockerignore
+node_modules
+```
+
+## Spring Boot Dockerfile
+
+```bash
+FROM openjdk:16-alpine3.13
+
+WORKDIR /app
+
+COPY .mvn/ .mvn
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:go-offline
+
+COPY src ./src
+
+CMD ["./mvnw", "spring-boot:run"]
+```

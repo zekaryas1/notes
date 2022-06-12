@@ -71,6 +71,7 @@ q.put((2, 'Play'))
 q.put((5, 'Write'))
 q.put((1, 'Code'))
 q.put((3, 'Study'))
+q.put((4, 's'))
 
 while not q.empty():
 	next_item = q.get()
