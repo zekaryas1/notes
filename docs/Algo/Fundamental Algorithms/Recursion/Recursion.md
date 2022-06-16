@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: What is Recursion
----
-
 # What is Recursion
 
 - Recursion is a process for solving problems by subdividing a larger problem into smaller cases of the problem itself and then solving the smaller, more trivial parts.

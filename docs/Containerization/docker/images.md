@@ -1,9 +1,3 @@
----
-date created: Thursday, June 9th 2022, 9:54:36 pm
-date modified: Saturday, June 11th 2022, 11:41:39 pm
-title: What is an Image
----
-
 # What is an Image
 
 - Images are app binaries and dependencies with metadata about the image data and how to run the image

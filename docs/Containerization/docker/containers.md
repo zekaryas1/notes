@@ -1,9 +1,3 @@
----
-date created: Thursday, June 9th 2022, 9:54:52 pm
-date modified: Sunday, June 12th 2022, 4:37:20 pm
-title: What is a Container
----
-
 # What is a Container
 
 - Docker containers are often compared to virtual machines but they are actually just processes running on your host OS.

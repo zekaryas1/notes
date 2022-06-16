@@ -1,19 +1,13 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: If Input Array is Sorted Then
----
-
 [Source](https://seanprashad.com/leetcode-patterns/)
 
 # If Input Array is Sorted Then
 
-- Binary search [[Binary search]]
+- Binary search [Binary search](Binary%20search.md)
 - Two pointers
 
 # If Asked for All permutations/subsets Then
 
-- [[Backtracking]]
+- [Backtracking](Backtracking.md)
 
 # If Given a Tree Then
 
@@ -27,11 +21,11 @@ title: If Input Array is Sorted Then
 
 # If Given a Linked List Then
 
-- Two pointers [[Linked list#The Runner Technique]]
+- Two pointers [Linked list#The Runner Technique](Linked%20list#The%20Runner%20Technique.md)
 
 # If Recursion is Banned Then
 
-- [[Stack & Queue#Stack]]
+- [Stack & Queue#Stack](Stack%20&%20Queue#Stack.md)
 
 # If Must Solve In-place Then
 
@@ -40,7 +34,7 @@ title: If Input Array is Sorted Then
 
 # If Asked for maximum/minimum subarray/subset/options Then
 
-- [[Dynamic programming]]
+- [Dynamic programming](Dynamic%20programming.md)
 
 # If Asked for top/least K Items Then
 

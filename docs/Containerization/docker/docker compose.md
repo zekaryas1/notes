@@ -1,9 +1,3 @@
----
-date created: Thursday, June 9th 2022, 9:55:32 pm
-date modified: Sunday, June 12th 2022, 3:52:10 pm
-title: What is Docker Compose?
----
-
 # What is Docker Compose?
 
 - Compose is a tool for defining and running multi-container Docker applications.

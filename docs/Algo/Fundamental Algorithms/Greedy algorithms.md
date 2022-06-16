@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: Greedy algorithms
----
-
 # Greedy Algorithms
 
 * Greedy algorithms optimize locally, hoping to end up with a global optimum.

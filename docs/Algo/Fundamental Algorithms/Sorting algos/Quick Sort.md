@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: 'Quick Sort I Runtime: 0 (n Log (n)) Average, 0 (n*2) Worst Case. Memory: 0 (log (n) ) .'
----
-
 # Quick Sort I Runtime: 0 (n Log (n)) Average, 0 (n*2) Worst Case. Memory: 0 (log (n) ) .
 
 - In quick sort, we pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements that are greater than it.

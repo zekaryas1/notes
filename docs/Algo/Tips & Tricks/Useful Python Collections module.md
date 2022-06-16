@@ -1,12 +1,6 @@
----
-date created: Monday, June 6th 2022, 11:48:03 am
-date modified: Monday, June 6th 2022, 12:53:35 pm
-title: Useful Python Collections Module
----
-
 # Useful Python Collections Module
 
-- # deque [[Stack & Queue#Queue FIRST IN FIRST OUT]]
+- # deque [Stack & Queue#Queue FIRST IN FIRST OUT](Stack%20&%20Queue#Queue%20FIRST%20IN%20FIRST%20OUT.md)
 - # defaultdict
 	- Dictionary subclass that accepts a callable in its constructor whose return value will be used if a requested key cannot be found.
 

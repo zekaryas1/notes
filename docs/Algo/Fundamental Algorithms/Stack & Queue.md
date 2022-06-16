@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: Stack LAST IN FIRST OUT
----
-
 # Stack LAST IN FIRST OUT
 
 - Unlike an array, a stack does not offer constant-time access to the nth item. However, it does allow constant time adds and removes, as it doesn't require shifting elements around.
@@ -39,7 +33,7 @@ print(d.popleft())  #12 first in first out
 
 ## Priority Queue
 
-- The **priority queue** is an advanced type of the [[Stack & Queue#Queue FIRST IN FIRST OUT]] data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
+- The **priority queue** is an advanced type of the [Stack & Queue#Queue FIRST IN FIRST OUT](Stack%20&%20Queue#Queue%20FIRST%20IN%20FIRST%20OUT.md) data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
 
 - Priority queues are used to handle scheduling problems where some tasks are prioritized over others.
 

@@ -1,9 +1,11 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: Fundamental Algorithms
----
-
 # Fundamental Algorithms
 
+[Algo/Fundamental Algorithms/](Algo/Fundamental%20Algorithms/.md)
+
 # Python Tips and Tricks
+
+[Algo/Tips & Tricks/](Algo/Tips%20&%20Tricks/.md)
+
+# Containerization {Docker, Docker-compose}
+
+[Containerization/docker/](Containerization/docker/.md)

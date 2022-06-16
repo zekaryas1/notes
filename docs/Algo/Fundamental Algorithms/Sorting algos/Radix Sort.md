@@ -1,10 +1,4 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: 'Radix Sort I Runtime: O( kn)'
----
-
-[[Division and modulo with 10]]
+[Division and modulo with 10](Division%20and%20modulo%20with%2010.md)
 
 # Radix Sort I Runtime: O( kn)
 

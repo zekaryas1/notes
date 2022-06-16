@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: What is Linked List
----
-
 # What is Linked List
 
 * A linked list is a data structure that represents a sequence of nodes.

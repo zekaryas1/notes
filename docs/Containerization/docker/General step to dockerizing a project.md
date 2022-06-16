@@ -1,9 +1,3 @@
----
-date created: Thursday, June 9th 2022, 9:33:15 pm
-date modified: Sunday, June 12th 2022, 4:04:00 pm
-title: General Step to Dockerizing a Project
----
-
 # General Step to Dockerizing a Project
 
 - Create a `dockerfile`
@@ -11,7 +5,7 @@ title: General Step to Dockerizing a Project
 	- By this step you can build and run the container
 - If multiple docker need to be coupled together add `docker-compose.yml`
 	- By this step you can run multiple containers
-	- [[docker compose]]
+	- [docker compose](docker%20compose.md)
 
 # How to Run a Docker Project
 

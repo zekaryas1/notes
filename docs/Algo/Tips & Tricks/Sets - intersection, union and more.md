@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: Set is a Collection of Unique Elements
----
-
 # Set is a Collection of Unique Elements
 
 -   More interesting operations on set

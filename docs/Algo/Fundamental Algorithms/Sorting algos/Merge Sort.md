@@ -1,9 +1,3 @@
----
-date created: Sunday, June 5th 2022, 4:14:21 pm
-date modified: Monday, June 6th 2022, 12:48:56 pm
-title: 'Merge Sort I Runtime: O( N Log (n) ) Average and Worst Case. Memory: Depends.'
----
-
 # Merge Sort I Runtime: O( N Log (n) ) Average and Worst Case. Memory: Depends.
 
 - Merge sort divides the array in half, sorts each of those halves, and then merges them back together.
