@@ -1,11 +1,11 @@
 # Fundamental Algorithms
 
-[Algo/Fundamental Algorithms/](Algo/Fundamental%20Algorithms/.md)
+[docs/Algo/Fundamental Algorithms/README](docs/Algo/Fundamental%20Algorithms/README.md)
 
 # Python Tips and Tricks
 
-[Algo/Tips & Tricks/](Algo/Tips%20&%20Tricks/.md)
+[docs/Algo/Tips & Tricks/README](docs/Algo/Tips%20&%20Tricks/README.md)
 
 # Containerization {Docker, Docker-compose}
 
-[Containerization/docker/](Containerization/docker/.md)
+[docs/Containerization/docker/README](docs/Containerization/docker/README.md)
