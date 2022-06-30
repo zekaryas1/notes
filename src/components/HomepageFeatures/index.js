@@ -7,7 +7,7 @@ const FeatureList = [
     title: 'Support Me',
     description: (
       <>
-        Give me a star at here <a target="_blank" rel="noopener noreferrer" href="https://github.com/zekaryas1/me-and-notes">GitHub</a>
+        Give me a star at here <a target="_blank" rel="noopener noreferrer" href="https://github.com/zekaryas1/notes">GitHub</a>
       </>
     ),
   },
