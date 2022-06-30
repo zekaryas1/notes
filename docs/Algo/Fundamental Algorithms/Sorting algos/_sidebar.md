@@ -1,6 +1,0 @@
-- [Sorting algorithms](../)
-  - [Insertion sort](Insertion%20sort.md)
-  - [Selection sort](Selection%20Sort.md)
-  - [Merge Sort](Merge%20Sort.md)
-  - [Quick Sort](Quick%20Sort.md)
-  - [Radix Sort](Radix%20Sort.md)

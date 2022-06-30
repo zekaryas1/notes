@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:54:50 am
+title: Bit Manipulation Tricks and Things
+---
 # Bit Manipulation Tricks and Things
 
 ```python

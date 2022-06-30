@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:55:24 am
+title: 'Division(//) with (1, 10, 100,…)'
+---
 # Division(//) with (1, 10, 100,…)
 
 - Num // (1,10,100,…) returns number including (1th,10th,100th) place and above.

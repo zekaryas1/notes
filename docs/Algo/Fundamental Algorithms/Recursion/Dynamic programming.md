@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:51:10 am
+title: What is Dynamic Programming
+---
 # What is Dynamic Programming
 
 Recursion + memory = Dynamic programming

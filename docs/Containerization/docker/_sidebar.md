@@ -1,7 +1,0 @@
-- [Docker & Docker compose](../../)
-	- [Overview/Summery](General%20step%20to%20dockerizing%20a%20project.md)
-	- [Dockerfiles](dockerfiles.md)
-	- [Images](images.md)
-	- [Containers](containers.md)
-	- [Volumes](volumes.md)
-	- [docker compose](docker%20compose.md)

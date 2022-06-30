@@ -1,3 +1,9 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:50:56 am
+title: PHP crash course
+---
+
 # Printing
 
 ```php

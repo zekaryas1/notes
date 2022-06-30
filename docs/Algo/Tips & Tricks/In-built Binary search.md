@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:55:15 am
+title: Binary Search **bisect_left**
+---
 # Binary Search **bisect_left**
 
 - Returns index of the elt or the leftmost insertion point of x in a sorted list.

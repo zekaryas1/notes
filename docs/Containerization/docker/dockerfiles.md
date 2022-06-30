@@ -1,3 +1,9 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 23rd 2022, 4:49:19 pm
+title: Parts of Dockerfile
+---
+
 # Parts of Dockerfile
 
 ```bash
@@ -14,44 +20,9 @@ FROM node:latest
 FROM node:14
 ```
 
-## ENV
-
-Environment variables
-
-```bash
-ENV NODE_ENV = production
-```
-
-## RUN
-
-Run commands/shell scripts, etc
-
-```bash
-RUN npm install
-```
-
-## EXPOSE
-
-Ports to expose
-
-> The `EXPOSE` instruction does not actually publish the port. It functions as a type of documentation between the person who builds the image and the person who runs the container, about which ports are intended to be published.
-> <mark style="background: #CACFD9A6;">It simply is a message for the developer on which port to use, but also the developer can use whichever port it want at runtime.</mark>
-
-```bash
-EXPOSE 8080
-```
-
-## CMD
-
-Final command run when you launch a new container from image
-
-```bash
-CMD ["node", "app.js"]
-```
-
 ## WORKDIR
 
-Sets working directory (also could use 'RUN cd /some/path')
+- Sets working directory (also could use 'RUN cd /some/path')
 
 ```bash
 WORKDIR /app
@@ -65,9 +36,57 @@ WORKDIR /usr/share/nginx/html
 COPY index.html index.html
 ```
 
+## ENV
+
+- Environment variables
+
+```bash
+ENV NODE_ENV = production
+```
+
+## RUN
+
+- Run commands/shell scripts inside the container, etc
+- To run commands inside the containers, such as to install dependencies and updates
+
+```bash
+RUN npm install
+RUN apt-get install -y node
+```
+
+## EXPOSE
+
+- Ports to expose
+- The `EXPOSE` instruction does not actually publish the port. It functions as a type of documentation between the person who builds the image and the person who runs the container, about which ports are intended to be published.
+	-  It simply is a message for the developer on which port to use, but also the developer can use whichever port it want at runtime.
+
+```bash
+EXPOSE 8080
+```
+
+### Expose Multiple Port
+
+```bash
+EXPOSE 8080 5055 5005
+```
+
+## CMD
+
+- The Command that runs when you 'docker run' a new image
+
+```bash
+CMD ["node", "app.js"]
+```
+
+### Multiple CMD Can Be Used
+
+```bash
+CMD service sshd start && /opt/mq/sbin/rabbitmq-server start
+```
+
 ## COPY
 
-Copies files from host to container
+- Copies files from host to container
 
 ```bash
 COPY package*.json . #copy package to container
@@ -79,6 +98,8 @@ COPY . . #copy everything to container
 [[images#Build Your Own Image]]
 
 # Examples
+
+[More examples here](https://github.com/docker/awesome-compose)
 
 ## Nodejs Dockerfile
 
@@ -120,3 +141,4 @@ COPY src ./src
 
 CMD ["./mvnw", "spring-boot:run"]
 ```
+

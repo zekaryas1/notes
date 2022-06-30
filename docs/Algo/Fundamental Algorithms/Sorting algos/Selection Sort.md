@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:53:20 am
+title: 'Selection Sort I Runtime: O( n**2) Average and Worst Case. Memory: 0 (1)'
+---
 # Selection Sort I Runtime: O( n**2) Average and Worst Case. Memory: 0 (1)
 
 - Find the smallest element using a linear scan and move it to the front (swapping it with the front element).

@@ -1,3 +1,9 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 23rd 2022, 4:54:50 pm
+title: What is an Image
+---
+
 # What is an Image
 
 - Images are app binaries and dependencies with metadata about the image data and how to run the image
@@ -32,6 +38,14 @@ docker build -t tag_name path_to_docker_file
 
 ```bash
 docker build -t zekaryas/hello_world .
+```
+
+## The Dockerfile is Not Named Dockerfile
+
+- In the above command docker assumes there is a file called dockerfile in the path specified
+
+```bash
+docker build -t awsome_project -f not_named_dockerfile .
 ```
 
 # List Images We Have
@@ -87,4 +101,38 @@ docker image tag nginx nginx:v1:12:12 #we've the same image with a new tag name 
 
 docker image tag prev_tag_name new_tag_name  #syntax
 
+```
+
+# Joining Multiple Docker Images into One
+
+- If you have a project that requires multiple docker images you've two options
+	- Use docker-compose, but docker-compose isn't allowed…
+		1. Start `From ubuntu` and install & setup the requires procedure
+		2. Or use [docker-multi stage](https://docs.docker.com/develop/develop-images/multistage-build/) build where you can combine multiple images to run a project
+> The project could be a python project that also has a go code for some tasks…
+
+[Source](https://stackoverflow.com/questions/39626579/is-there-a-way-to-combine-docker-images-into-1-container)
+
+```bash
+FROM golang:1.7.3 as backend
+WORKDIR /backend
+RUN go get -d -v golang.org/x/net/html  
+COPY app.go .
+RUN  #install some stuff, compile assets....
+    
+FROM golang:1.7.3 as assets
+WORKDIR /assets
+RUN ./getassets.sh
+
+FROM nodejs:latest as frontend 
+RUN npm install
+WORKDIR /assets
+COPY --from=assets /asets .
+CMD ["./app"] 
+
+FROM alpine:latest as mergedassets
+WORKDIR /root/
+COPY --from=frontend . /
+COPY --from=backend ./backend .
+CMD ["./app"]
 ```

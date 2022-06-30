@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 12:00:26 pm
+title: Radix Sort I Runtime O( kn)
+---
 [Division and modulo with 10](Division%20and%20modulo%20with%2010.md)
 
 # Radix Sort I Runtime: O( kn)
@@ -6,7 +11,7 @@
 
 ![](https://ds055uzetaobb.cloudfront.net/brioche/uploads/IEZs8xJML3-radixsort_ed.png?width=1200)
 
-- <span style="color:#93DF5F">For example</span> ,
+- For example ,
 	- When sorting integer keys, the individual digits of the keys are compared from least significant to most significant.
 	- This is a special purpose sorting algorithm but can be used to sort many types of keys, including positive integers, strings, and floating-point values.
 

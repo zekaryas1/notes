@@ -1,3 +1,11 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 23rd 2022, 4:56:54 pm
+title: General Step to Dockerizing a Project
+---
+
+[Online Tool to test docker quickly](https://labs.play-with-docker.com/)
+
 # General Step to Dockerizing a Project
 
 - Create a `dockerfile`
@@ -75,3 +83,4 @@ docker-compose restart
 ```bash
 docker-compose down
 ```
+

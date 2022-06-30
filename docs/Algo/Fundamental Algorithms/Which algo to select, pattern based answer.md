@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:56:11 am
+title: If Input Array is Sorted Then
+---
 [Source](https://seanprashad.com/leetcode-patterns/)
 
 # If Input Array is Sorted Then
@@ -21,11 +26,11 @@
 
 # If Given a Linked List Then
 
-- Two pointers [Linked list#The Runner Technique](Linked%20list#The%20Runner%20Technique.md)
+- Two pointers [Linked list#The Runner Technique](notes/Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique.md)
 
 # If Recursion is Banned Then
 
-- [Stack & Queue#Stack](Stack%20&%20Queue#Stack.md)
+- [Stack & Queue#Stack](notes/Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack.md)
 
 # If Must Solve In-place Then
 

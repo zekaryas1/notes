@@ -1,3 +1,0 @@
-- [Fundamental algorithms to know](Algo/Fundamental%20Algorithms/)
-- [Python Tips & Tricks](Algo/Tips%20&%20Tricks/)
-- [Containerization/docker/](Containerization/docker/.md)

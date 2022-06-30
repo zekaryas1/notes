@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:51:41 am
+title: How to Use Binary Boundary Method
+---
 [Source Algo Monster](https://algo.monster/problems/binary_search_boundary)
 
 # How to Use Binary Boundary Method

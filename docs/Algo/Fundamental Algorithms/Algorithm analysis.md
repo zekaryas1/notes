@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:54:19 am
+title: What is Algorithm Analysis
+---
 # What is Algorithm Analysis
 
 * Time is not the only thing that matters in an algorithm. We might also care about the amount of memory or spacerequired by an algorithm.

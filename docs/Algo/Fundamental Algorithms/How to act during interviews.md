@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:55:30 am
+title: How to Act During Interviews
+---
 # How to Act During Interviews
 
 >  First of all, During each step explain what you’re doing, every steps.

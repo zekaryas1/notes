@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:51:34 am
+title: Binary Search Loop
+---
 ![](https://www.computerhope.com/jargon/b/binary-search.jpg)
 
 # Binary Search Loop

@@ -1,8 +1,15 @@
-# Useful Python Collections Module
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 12:29:59 pm
+title: Deque
+---
+# Deque
 
-- # deque [Stack & Queue#Queue FIRST IN FIRST OUT](Stack%20&%20Queue#Queue%20FIRST%20IN%20FIRST%20OUT.md)
-- # defaultdict
-	- Dictionary subclass that accepts a callable in its constructor whose return value will be used if a requested key cannot be found.
+- [Stack & Queue#Queue FIRST IN FIRST OUT](notes/Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Queue%20FIRST%20IN%20FIRST%20OUT.md)
+
+# Defaultdict
+
+- Dictionary subclass that accepts a callable in its constructor whose return value will be used if a requested key cannot be found.
 
 ```python
 from collections import defaultdict
@@ -13,8 +20,9 @@ print(d["dog"])
 print(d["cat"])  #returns zero default value
 ```
 
-- # orderedDict
-	- Dictionary subclass that remembers the insertion order of keys added to it: collections.OrderedDict
+# orderedDict
+
+- Dictionary subclass that remembers the insertion order of keys added to it: collections.OrderedDict
 
 ```python
 #same as dict but keeps the order
@@ -26,8 +34,9 @@ print(d)
 print(d.keys())
 ```
 
-- # Counter
-	- Dictionary to count several different objects at once. In this case, the keys will store individual objects, and the values will hold the number of repetitions of a given object, or the object’s **count**.
+# Counter
+
+- Dictionary to count several different objects at once. In this case, the keys will store individual objects, and the values will hold the number of repetitions of a given object, or the object’s **count**.
 
 ```python
 from collections import Counter
@@ -35,12 +44,15 @@ letters = Counter("mississippi")
 print(letters)
 print(letters["m"])  #the output of Counter is dictionary
 print(letters.keys())
+
+print(letters.most_common(1)) #get one most common
 ```
 
-- # ChainMap
-	- The collections.ChainMap data structure groups multiple dictionaries into a single mapping.
-	- Lookups search the underlying mappings one by one until a key is found.
-	- Insertions, updates, and deletions only affect the first mapping added to the chain.
+# ChainMap
+
+- The collections.ChainMap data structure groups multiple dictionaries into a single mapping.
+- Lookups search the underlying mappings one by one until a key is found.
+- Insertions, updates, and deletions only affect the first mapping added to the chain.
 
 ```python
 from collections import ChainMap

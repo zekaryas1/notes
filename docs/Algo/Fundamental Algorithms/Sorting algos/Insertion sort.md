@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:53:29 am
+title: Insertion Sort
+---
 # Insertion Sort
 
 - Insertion sort also know as shifting sort

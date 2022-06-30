@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:54:25 am
+title: What is Linked List
+---
 # What is Linked List
 
 * A linked list is a data structure that represents a sequence of nodes.
@@ -7,9 +12,9 @@
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200922124412/Doubly-Linked-List.png)
 
-* <span style="color:#93DF5F">Unlike an array, a linked list does not provide constant time access to a particular "index" within the list.</span>
-	* <span style="color:#93DF5F">This means that if you'd like to find the Kth element in the list, you will need to iterate through K elements.</span>
-* <span style="color:#93DF5F">The benefit of a linked list is that you can add and remove items from the beginning of the list in constant time. For specific applications, this can be useful.</span>
+* Unlike an array, a linked list does not provide constant time access to a particular "index" within the list.
+	* This means that if you'd like to find the Kth element in the list, you will need to iterate through K elements.
+* The benefit of a linked list is that you can add and remove items from the beginning of the list in constant time. For specific applications, this can be useful.
 
 # The Runner Technique
 
@@ -33,4 +38,4 @@ def middleNode(head):
   * In python and other object is pass by reference
   * Thus when you copy object the changes will be reflected on the original
   * Usually you don’t want this, thus you need to shallow copy such as
-	  * <span style="color:#D4ECA1">newNode = Node(oldNode.value)</span>
+	  * newNode = Node(oldNode.value)

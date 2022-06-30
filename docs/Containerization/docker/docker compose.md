@@ -1,8 +1,15 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 23rd 2022, 4:51:33 pm
+title: What is Docker Compose?
+---
+
 # What is Docker Compose?
 
 - Compose is a tool for defining and running multi-container Docker applications.
 - With Compose, you use a YAML file to configure your application’s services.
 	- Then, with a single command, you create and start all the services from your configuration.
+	- [More examples here](https://github.com/docker/awesome-compose)
 
 ```bash
 version: "3.7" 

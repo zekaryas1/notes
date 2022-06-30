@@ -1,4 +1,0 @@
-- [Recursion algorithms](../)
-  - [Recursion](Recursion.md)
-  - [Backtracking](Backtracking.md)
-  - [Dynamic programming](Dynamic%20programming.md)

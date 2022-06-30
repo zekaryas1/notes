@@ -1,3 +1,8 @@
+---
+date created: Thursday, June 16th 2022, 1:47:45 pm
+date modified: Thursday, June 16th 2022, 11:51:06 am
+title: What is Recursion
+---
 # What is Recursion
 
 - Recursion is a process for solving problems by subdividing a larger problem into smaller cases of the problem itself and then solving the smaller, more trivial parts.
@@ -47,5 +52,5 @@ print(fibo(5))
 # Recursive Runtime
 
 * When you have a recursive function that makes multiple calls, the runtime will often (but not always) look like O( branches ** depth ), where branches is the number of times each recursive call branches.
-	* <span style="color:#93DF5F">For example Fibonacci ( return fib(n-1) + fib(n-2))</span>
-	* <span style="color:#93DF5F">Has a runtime of 2**N (since two branch)</span>
+	* For example Fibonacci ( return fib(n-1) + fib(n-2))
+	* Has a runtime of 2**N (since two branch)
