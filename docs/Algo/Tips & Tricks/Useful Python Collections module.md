@@ -1,13 +1,16 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 12:29:59 pm
-title: Deque
+date modified: Sunday, July 3rd 2022, 11:08:34 am
+title: Python Collections Module
 ---
-# Deque
 
-- [Stack & Queue#Queue FIRST IN FIRST OUT](notes/Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Queue%20FIRST%20IN%20FIRST%20OUT.md)
+# Python Collections Module
 
-# Defaultdict
+## Deque
+
+- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
+
+## Defaultdict
 
 - Dictionary subclass that accepts a callable in its constructor whose return value will be used if a requested key cannot be found.
 
@@ -20,7 +23,7 @@ print(d["dog"])
 print(d["cat"])  #returns zero default value
 ```
 
-# orderedDict
+## orderedDict
 
 - Dictionary subclass that remembers the insertion order of keys added to it: collections.OrderedDict
 
@@ -34,7 +37,7 @@ print(d)
 print(d.keys())
 ```
 
-# Counter
+## Counter
 
 - Dictionary to count several different objects at once. In this case, the keys will store individual objects, and the values will hold the number of repetitions of a given object, or the object’s **count**.
 
@@ -48,7 +51,7 @@ print(letters.keys())
 print(letters.most_common(1)) #get one most common
 ```
 
-# ChainMap
+## ChainMap
 
 - The collections.ChainMap data structure groups multiple dictionaries into a single mapping.
 - Lookups search the underlying mappings one by one until a key is found.

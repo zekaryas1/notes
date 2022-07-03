@@ -1,9 +1,10 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:55:48 am
-title: Sort in Python
+date modified: Sunday, July 3rd 2022, 11:38:27 am
+title: Sorting in Python
 ---
-# Sort in Python
+
+# Sorting in Python
 
 - Two type of sort
 	- Sorting in place
@@ -17,7 +18,7 @@ print(b)
 print(a)
 ```
 
-# Sort by Key
+## Sort by Key
 
 - When you have a 2D or > 1D list D = Dimension
 
@@ -25,4 +26,10 @@ print(a)
 a = [[5,4], [4,3], [3,2], [2,1]]
 a.sort(key = lambda x: x[1]) #sort by the second key
 print(a)
+```
+
+- To get the sorted output in reverse {decreasing}
+
+```python
+a.sort(key=lambda x: x[1], reverse=True)
 ```

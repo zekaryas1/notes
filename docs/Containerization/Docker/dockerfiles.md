@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 23rd 2022, 4:49:19 pm
+date modified: Sunday, July 3rd 2022, 11:55:42 am
 title: Parts of Dockerfile
 ---
 
@@ -93,15 +93,15 @@ COPY package*.json . #copy package to container
 COPY . . #copy everything to container
 ```
 
-# Build the Docker into Image
+## Build the Docker into Image
 
-[[images#Build Your Own Image]]
+- [images](Containerization/Docker/images.md)
 
-# Examples
+## Examples
 
 [More examples here](https://github.com/docker/awesome-compose)
 
-## Nodejs Dockerfile
+### Nodejs Dockerfile
 
 ```bash
 FROM node:12.18.1
@@ -126,7 +126,7 @@ CMD [ "node", "server.js" ]
 node_modules
 ```
 
-## Spring Boot Dockerfile
+### Spring Boot Dockerfile
 
 ```bash
 FROM openjdk:16-alpine3.13
@@ -141,4 +141,3 @@ COPY src ./src
 
 CMD ["./mvnw", "spring-boot:run"]
 ```
-

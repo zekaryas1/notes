@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 23rd 2022, 4:58:42 pm
+date modified: Sunday, July 3rd 2022, 11:53:26 am
 title: What is a Container
 ---
 
@@ -11,9 +11,9 @@ title: What is a Container
 
 ![](https://user-content.gitlab-static.net/1f3ecb847e636cdec7d9db76f7c262e73d836ad9/68747470733a2f2f626c61636b666973682e6769746c61622e696f2f626c61636b666973682f696d616765732f646f636b65722d70726f642e6a7067)
 
-# Run Containers
+## Run Containers
 
-## Run Containers in the Foreground
+### Run Containers in the Foreground
 
 ```bash
 docker container run -it -p 80:80 Nginx
@@ -21,7 +21,7 @@ docker container run -it -p 80:80 Nginx
 # -p = port mapping public_port:continer_exposed_port
 ```
 
-## What Happens in the Above Command?
+### What Happens in the Above Command?
 
 - Look for an image called Nginx in the image cache
 - If not found in the cache, it looks to the default image repo on Dockerhub
@@ -31,14 +31,14 @@ docker container run -it -p 80:80 Nginx
 	- We would do ==$ docker container run -d -p 8000:80 nginx== to use port 8000
 - We can specify versions like "nginx:1.09"
 
-## Run Container in the Background
+### Run Container in the Background
 
 ```bash
 docker container run -d -p 80:80 nginx  
 #-d = run in detached mode => no showing log**
 ```
 
-## Naming Containers
+### Naming Containers
 
 ```bash
 docker container run -d -p 27017:27017 --name my_awsome_mongo mongo
@@ -47,7 +47,7 @@ docker container run -d -p --name my_awsome_mongo 27017:27017 mongo
 
 ```
 
-## Run Containers with Environment
+### Run Containers with Environment
 
 ```bash
 docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=123456 mysql
@@ -55,34 +55,34 @@ docker container run -d -p 3306:3306 --name mysql --env MYSQL_ROOT_PASSWORD=1234
 #then we would be able to access process.env.MYSQL_ROOT_PASSWORD inside the code
 ```
 
-# List Containers
+## List Containers
 
-## List Only Running Container
+### List Only Running Container
 
 ```bash
 docker ps
 ```
 
-## List All Containers Either Running or Not Running
+### List All Containers Either Running or Not Running
 
 ```bash
 docker ps -a
 # -a = all
 ```
 
-# Stop Container
+## Stop Container
 
 ```bash
 docker stop [container_id]
 ```
 
-## Stop All Running Containers
+### Stop All Running Containers
 
 ```bash
 docker stop $(docker ps -aq)
 ```
 
-# Remove Container
+## Remove Container
 
 > First stop the container as you can not remove a running container
 
@@ -90,36 +90,35 @@ docker stop $(docker ps -aq)
 docker rm [container_id]
 ```
 
-## Remove Multiple Containers
+### Remove Multiple Containers
 
 ```bash
 docker rm [container_id1] [container_id2]
 ```
 
-## Force Remove a Running Container
+### Force Remove a Running Container
 
 ```bash
 docker rm -f [container_id]
 ```
 
-## Remove All Containers
+### Remove All Containers
 
 ```bash
 docker rm $(docker ps -aq)
 ```
 
-# Journey Inside Containers
+## Journey Inside Containers
 
 ```bash
 #docker container exec -it [container_name] bash
 docker container exec -it MySQL bash
 ```
 
-# Logs
+## Logs
 
 - Print the last 100 lines of a container’s logs
 
 ```bash
 docker container logs --tail 100 [container_name]
 ```
-

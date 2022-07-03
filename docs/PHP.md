@@ -1,10 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:50:56 am
-title: PHP crash course
+date modified: Sunday, July 3rd 2022, 11:49:22 am
+title: PHP Crash Note
 ---
 
-# Printing
+# PHP Crash Note
+
+## Printing
 
 ```php
 echo "This is php";
@@ -12,7 +14,7 @@ echo "This is php";
 print("This is PHP");
 ```
 
-# Variables
+## Variables
 
 mind the dollar sign ($)
 
@@ -25,28 +27,28 @@ $z = true;
 echo $n;
 ```
 
-## Print Datatype of Variable
+### Print Datatype of Variable
 
 ```php
 var_dump($n) // prints int(5)
 ```
 
-## Delete a Variable
+### Delete a Variable
 
 ```php
 unset($z)
 ```
 
-## Constant Variable
+### Constant Variable
 
 ```php
 define("PI", 3.14);
 echo PI;
 ```
 
-# Control Flows
+## Control Flows
 
-## == Vs ===
+### == Vs ===
 
 ```php
 // == checks value sequality
@@ -58,7 +60,7 @@ assert($a == $b); //prints true
 assert($a === $b); //prints false
 ```
 
-## If/else
+### If/else
 
 ```php
 #&&/|| C syntax
@@ -69,7 +71,7 @@ if(true && 14>12){
 }
 ```
 
-## Switch
+### Switch
 
 ```php
 switch ($x) {
@@ -86,7 +88,7 @@ switch ($x) {
 }
 ```
 
-## While
+### While
 
 ```php
 $i = 0;
@@ -95,7 +97,7 @@ while ($i < 5) {
 } // Prints "01234"
 ```
 
-## For
+### For
 
 ```php
 for ($x = 0; $x < 10; $x++) {
@@ -103,7 +105,7 @@ for ($x = 0; $x < 10; $x++) {
 }// Prints "0123456789"
 ```
 
-## Foreach
+### Foreach
 
 ```php
 $my_array = [1,2];
@@ -123,9 +125,9 @@ foreach ($wheels as $vehicle => $wheel_count) {
 #A car has 4 wheels
 ```
 
-# Data Structures
+## Data Structures
 
-## Array
+### Array
 
 ```php
 $my_array = [1,2,3,4]
@@ -134,7 +136,7 @@ $my_array[] = 5 // add new array
 unset($my_array[2]) // remove an array
 ```
 
-## Hashmap {associative array}
+### Hashmap {associative array}
 
 - All arrays in PHP are associative arrays (hashmaps in some languages)
 
@@ -146,9 +148,9 @@ echo $associative['One']; // prints 1
 $associative['Four'] = 4; //Add an element
 ```
 
-# Functions
+## Functions
 
-## Define Function
+### Define Function
 
 ```php
 // Define a function with "function":
@@ -158,7 +160,7 @@ function my_function () {
 echo my_function(); // => "Hello"
 ```
 
-## Function with Arguments
+### Function with Arguments
 
 ```php
 function add ($x, $y = 1) { // $y is optional and defaults to 1
@@ -170,7 +172,7 @@ echo add(4); // => 5
 echo add(4, 2); // => 6
 ```
 
-## Anonymous Functions
+### Anonymous Functions
 
 > Function is object you can store, return or use it as a normal variable.
 
@@ -182,7 +184,7 @@ $inc = function ($x) {
 echo $inc(2); // => 3
 ```
 
-## Variable Arguments var_args
+### Variable Arguments var_args
 
 ```php
 function variable($word, ...$list) {
@@ -196,9 +198,9 @@ variable("Separate", "Hello", "World");
 //Separate || Hello | World |
 ```
 
-# OOP
+## OOP
 
-## Define Classes
+### Define Classes
 
 ```php
 class Fruit {  
@@ -216,7 +218,7 @@ class Fruit {
 }  
 ```
 
-## Objects
+### Objects
 
 ```php
 $apple = new Fruit();  
@@ -230,7 +232,7 @@ echo $banana->get_name();
 var_dump($apple instanceof Fruit);
 ```
 
-## Constructor
+### Constructor
 
 ```php
 class Fruit {  
@@ -253,12 +255,12 @@ $apple = new Fruit("Apple");
 echo $apple->get_name();
 ```
 
-## Access Modifiers
+### Access Modifiers
 
 1. public
 2. private
 3. protected
 
-## Inheritance, Interfaces, Constants, Static class…etc
+### Inheritance, Interfaces, Constants, Static class…etc
 
 …to be included

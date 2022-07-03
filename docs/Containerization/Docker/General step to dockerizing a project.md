@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 23rd 2022, 4:56:54 pm
+date modified: Sunday, July 3rd 2022, 11:40:12 am
 title: General Step to Dockerizing a Project
 ---
 
@@ -13,9 +13,9 @@ title: General Step to Dockerizing a Project
 	- By this step you can build and run the container
 - If multiple docker need to be coupled together add `docker-compose.yml`
 	- By this step you can run multiple containers
-	- [docker compose](docker%20compose.md)
+	- [docker compose](Containerization/Docker/docker%20compose.md)
 
-# How to Run a Docker Project
+## How to Run a Docker Project
 
 1. Build the image
 
@@ -53,7 +53,7 @@ docker restart [contaier_id]
 docker start [container_id]
 ```
 
-# How to Run a Docker-Compose Project
+## How to Run a Docker-Compose Project
 
 1. Build the image(s)
 
@@ -83,4 +83,3 @@ docker-compose restart
 ```bash
 docker-compose down
 ```
-

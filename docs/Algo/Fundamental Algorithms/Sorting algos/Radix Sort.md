@@ -1,12 +1,13 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 12:00:26 pm
-title: Radix Sort I Runtime O( kn)
+date modified: Sunday, July 3rd 2022, 11:37:14 am
+title: Radix Sort
 ---
-[Division and modulo with 10](Division%20and%20modulo%20with%2010.md)
 
-# Radix Sort I Runtime: O( kn)
+# Radix Sort
 
+- [Division and modulo with 10](Algo/Tips%20&%20Tricks/Division%20and%20modulo%20with%2010.md)
+- Runtime: O( kn)
 - Radix sort is a fast distribution sorting algorithm that orders keys by examining the individual components of the keys instead of comparing the keys themselves.
 
 ![](https://ds055uzetaobb.cloudfront.net/brioche/uploads/IEZs8xJML3-radixsort_ed.png?width=1200)

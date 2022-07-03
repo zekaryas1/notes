@@ -1,8 +1,9 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:57:23 am
+date modified: Sunday, July 3rd 2022, 11:58:36 am
 title: Volumes
 ---
+
 # Volumes
 
 ## Why We Need Volumes
@@ -10,7 +11,7 @@ title: Volumes
 - By default, all the changes inside the container are lost when the container stops. If we want to keep data between runs, Docker volumes and bind mounts can help.
 - Usually used with database systems such as MySQL, MongoDB…
 
-# What Are Volumes
+## What Are Volumes
 
 - The purpose of using Docker volumes is to persist data outside the container so it can be backed up or shared.
 - Multiple containers can mount the same volume.
@@ -20,7 +21,7 @@ title: Volumes
 	- Named volumes
 		- Bind to volume managed by docker
 
-# Bind Mounts
+### Bind Mounts
 
 - Connection from the container to a directory on the host machine. 
 - **It allows the host to share its own file system with the container**, which can be made read-only or read-write.
@@ -43,7 +44,7 @@ services:
       - ./target:/usr/share/nginx/html  #relative path being used
 ```
 
-# Named Volumes
+### Named Volumes
 
 - Unlike bind mount, where you can mount any directory from your host, volumes are stored in a single location
 	- (most likely `/var/lib/docker/volumes/` on unix systems)
@@ -71,13 +72,13 @@ volumes:
   html_files:
 ```
 
-# List Volumes
+## List Volumes
 
 ```bash
 docker volume ls
 ```
 
-# Create Volume
+## Create Volume
 
 Volumes are created automatically if they don't exist but can also be explicitly created.
 
@@ -113,18 +114,16 @@ volumes:
 docker volume rm jupiter-riding
 ```
 
-# Remove Unused Volume
+### Remove Unused Volume
 
 ```bash
 docker volume prune
 ```
 
-# Volume Detail
+## Volume Detail
 
 Use the `docker volume inspect` command to view the data volume details.
 
 ```bash
 docker volume inspect [volume_name]
 ```
-
-# Docker-compose & Volumes

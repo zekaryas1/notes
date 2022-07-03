@@ -1,9 +1,10 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:54:50 am
-title: Bit Manipulation Tricks and Things
+date modified: Sunday, July 3rd 2022, 11:20:26 am
+title: Bit Manipulation
 ---
-# Bit Manipulation Tricks and Things
+
+# Bit Manipulation
 
 ```python
 # a&b
@@ -30,7 +31,7 @@ print(100101 << 1)
 
 ```
 
-# XOR Properties
+## XOR Properties
 
 ```python
 
@@ -57,7 +58,7 @@ print(res)  # prints 7
 
 ```
 
-# Looping in Bit World
+## Looping in Bit World
 
 * Standard code: how to loop bits
 

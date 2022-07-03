@@ -1,9 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:56:17 am
-title: The Sieve of Eratosthenes
+date modified: Sunday, July 3rd 2022, 11:06:46 am
+title: Inspiring Math Algos
 ---
-# The Sieve of Eratosthenes
+
+# Inspiring Math Algos
+
+## The Sieve of Eratosthenes
 
 * The Sieve of Eratosthenes is a highly efficient way to generate a list of primes. It works by recognizing that all non-prime numbers are divisible by a prime number.
 * How it works
@@ -43,7 +46,7 @@ if __name__ == '__main__':
     SieveOfEratosthenes(num)
 ```
 
-# Finding GCD(Greatest Common divisor) of Two Numbers
+## Finding GCD(Greatest Common divisor) of Two Numbers
 
 ```python
 

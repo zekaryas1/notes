@@ -1,8 +1,9 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:54:25 am
+date modified: Sunday, July 3rd 2022, 11:30:57 am
 title: What is Linked List
 ---
+
 # What is Linked List
 
 * A linked list is a data structure that represents a sequence of nodes.
@@ -16,7 +17,7 @@ title: What is Linked List
 	* This means that if you'd like to find the Kth element in the list, you will need to iterate through K elements.
 * The benefit of a linked list is that you can add and remove items from the beginning of the list in constant time. For specific applications, this can be useful.
 
-# The Runner Technique
+## The Runner Technique
 
 - The "runner" (or second pointer) technique is used in many linked list problems.
 - The runner technique means that you iterate through the linked list with two pointers simultaneously, with one ahead of the other.
@@ -33,7 +34,7 @@ def middleNode(head):
     return slow
 ```
 
-# Tips on Linked List
+## Tips on Linked List
 
   * In python and other object is pass by reference
   * Thus when you copy object the changes will be reflected on the original

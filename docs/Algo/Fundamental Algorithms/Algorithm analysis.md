@@ -1,8 +1,9 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:54:19 am
+date modified: Sunday, July 3rd 2022, 11:20:00 am
 title: What is Algorithm Analysis
 ---
+
 # What is Algorithm Analysis
 
 * Time is not the only thing that matters in an algorithm. We might also care about the amount of memory or spacerequired by an algorithm.
@@ -13,7 +14,7 @@ title: What is Algorithm Analysis
 	* Q (big omega): In academia, big omega describes a lower bound.
 	* Big theta : describe the average
 
-# Common Algorithm's Time Complexity
+## Common Algorithm's Time Complexity
 
 * O(logn): binary search…cuts the problem in half
 * O(Klogn)…heap operations
@@ -21,7 +22,7 @@ title: What is Algorithm Analysis
 	* Popping k times will be klogn
 * O(nlogn)…most of sort operations
 
-# What Does “constant Extra space” means?_
+## What Does “constant Extra space” means?_
 
   * It means use a constant O(1) memory this can be
 	  * Variable
@@ -30,7 +31,7 @@ title: What is Algorithm Analysis
 	  * A dictionary or an array that depends on the input
 	  * Ex: List l = new List(input.length)
 
-# Amortized Cost
+## Amortized Cost
 
 - The append() operation of the list structure introduces a special case in algorithm analysis.
 	- The time required depends on the available capacity of the underlying array used to implement the list. If there are available slots, a value can be appended to the list in constant time.

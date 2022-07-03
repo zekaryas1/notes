@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:54:42 am
+date modified: Sunday, July 3rd 2022, 11:31:12 am
 title: Stack LAST IN FIRST OUT
 ---
 
@@ -19,7 +19,7 @@ print(stack[-1])  #45 last in first out
 
 ```
 
-# Queue FIRST IN FIRST OUT
+## Queue FIRST IN FIRST OUT
 
 - A queue can also be implemented with a linked list. In fact, they are essentially the same thing, as long as items are added and removed from opposite sides.
 - Enqueue = Add, Dequeue(POP)

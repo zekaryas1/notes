@@ -1,10 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:53:34 am
-title: 'Merge Sort I Runtime: O( N Log (n) ) Average and Worst Case. Memory: Depends.'
+date modified: Sunday, July 3rd 2022, 11:03:29 am
+title: Merge Sort
 ---
-# Merge Sort I Runtime: O( N Log (n) ) Average and Worst Case. Memory: Depends.
 
+# Merge Sort
+
+- Runtime: O( N Log (n) ) Average and Worst Case. Memory: Depends.
 - Merge sort divides the array in half, sorts each of those halves, and then merges them back together.
 
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/Merge-Sort-Tutorial.png)

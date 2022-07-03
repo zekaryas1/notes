@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 23rd 2022, 4:51:33 pm
+date modified: Sunday, July 3rd 2022, 11:54:42 am
 title: What is Docker Compose?
 ---
 
@@ -21,7 +21,7 @@ networks:
 	...
 ```
 
-# Docker-compose's Three Steps
+## Docker-compose's Three Steps
 
 1. Define your app's environments with a `Dockerfile`
 2. Define the services that make up your app in `docker-compose.yml` so they can be run together in an isolated environment.
@@ -55,7 +55,7 @@ volumes:
  mongodb_config:
 ```
 
-# Declaring the Dependencies
+## Declaring the Dependencies
 
 - We need to create a dependency chain between our services, so that some services get loaded before (and unloaded after) other ones.
 - We can achieve this result through the _depends_on_ keyword
@@ -75,9 +75,9 @@ services:
 
 > We should be aware, however, that Compose will not wait for the _zookeeper_ service to finish loading before starting the _kafka_ service: it will simply wait for it to start.
 
-# Docker-compose Commands
+## Docker-compose Commands
 
-## Build
+### Build
 
 - Builds images in the `docker-compose.yml` file. The job of the `build` command is to get the images ready to create containers,
 - So if a service is using the prebuilt image, it will skip this service.
@@ -86,7 +86,7 @@ services:
 docker-compose build
 ```
 
-## Start
+### Start
 
 - Starts existing containers for a service.
 
@@ -94,7 +94,7 @@ docker-compose build
 docker-compose start
 ```
 
-## Restart
+### Restart
 
 - Restarts all stopped and running services.
 
@@ -102,7 +102,7 @@ docker-compose start
 docker-compose restart
 ```
 
-## Stop
+### Stop
 
 - This command stops the running containers of specified services.
 
@@ -110,7 +110,7 @@ docker-compose restart
 docker-compose stop
 ```
 
-## Up
+### Up
 
 - It builds the images if they are not located locally and starts the containers.
 - If images are already built, it will fork the container directly.
@@ -127,7 +127,7 @@ docker-compose up -d --build
 #And then start the containers
 ```
 
-## PS
+### PS
 
 - This command list all the containers in the current `docker-compose` file. They can then either be running or stopped.
 
@@ -135,7 +135,7 @@ docker-compose up -d --build
 docker-compose ps
 ```
 
-## Down
+### Down
 
 - Stops containers and removes containers, networks, volumes, and images created by `up`.
 	- Networks and volumes defined as `external` are never removed.

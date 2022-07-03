@@ -1,8 +1,9 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:51:10 am
+date modified: Sunday, July 3rd 2022, 11:33:42 am
 title: What is Dynamic Programming
 ---
+
 # What is Dynamic Programming
 
 Recursion + memory = Dynamic programming
@@ -10,7 +11,7 @@ Recursion + memory = Dynamic programming
   * Dynamic programming is mostly just a matter of taking a recursive algorithm and finding the overlapping sub-problems (that is, the repeated calls).
   * You then cache those results for future recursive calls.
 
-# Bottom-up Vs Top-down DP
+## Bottom-up Vs Top-down DP
 
 There are two ways to implement a DP algorithm:
 
@@ -47,7 +48,7 @@ def fibo(n):
 print(fibo(5))
 ```
 
-# DP Vs Greedy Algo
+## DP Vs Greedy Algo
 
 * If a problem is asking for the maximum/minimum/longest/shortest of something, the number of ways to do something, or if it is possible to reach a certain point, it is probably greedy or DP.
 * Thus, how do we know which algo to use
@@ -56,7 +57,7 @@ print(fibo(5))
 	* This characteristic is what makes a greedy algorithm invalid for a DP problem - we need to factor in results from previous decisions.
 	* with greedy at each step we decide the best value not caring about past decisions
 
-# Tips for Dynamic Programming
+## Tips for Dynamic Programming
 
 * In recursive problems, the key to the problem is
 	* To figure out the relationship between a base case and its sub-problems.

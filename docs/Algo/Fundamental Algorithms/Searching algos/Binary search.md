@@ -1,11 +1,14 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:51:34 am
-title: Binary Search Loop
+date modified: Sunday, July 3rd 2022, 11:35:28 am
+title: Binary Search
 ---
+
+# Binary Search
+
 ![](https://www.computerhope.com/jargon/b/binary-search.jpg)
 
-# Binary Search Loop
+## Binary Search Loop
 
 ```python
 def search(nums, target):
@@ -23,7 +26,7 @@ def search(nums, target):
 print(search([1,2,3,4,5,6], 4))
 ```
 
-# Binary Search Recursion
+## Binary Search Recursion
 
 - Note that although the concept is fairly simple, getting all the details right is far more difficult than you might think. Pay attention to the plus ones and minus ones.
 

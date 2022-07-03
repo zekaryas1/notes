@@ -1,11 +1,14 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 11:51:41 am
-title: How to Use Binary Boundary Method
+date modified: Sunday, July 3rd 2022, 11:36:07 am
+title: Boundary Binary Search
 ---
+
 [Source Algo Monster](https://algo.monster/problems/binary_search_boundary)
 
-# How to Use Binary Boundary Method
+# Boundary Binary Search
+
+## How to Use Binary Boundary Method
 
 * Most binary search questions can be solved with find boundary logic
 	* Steps:
@@ -14,7 +17,7 @@ title: How to Use Binary Boundary Method
 	* Example: Solving minimum in rotated sorted array
 		* The logic to turn the sorted array: is arr[i] <= arr[-1]
 
-# Finding the Boundary with Binary Search
+## Finding the Boundary with Binary Search
 
 - An array of boolean values is divided into two sections;
 	- The left section consists of all false and
@@ -48,7 +51,7 @@ if __name__ == '__main__':
 
 ----
 
-# Find Minimum in Rotated Sorted Array
+## Find Minimum in Rotated Sorted Array
 
 ```python
 from typing import List

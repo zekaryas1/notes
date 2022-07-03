@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 23rd 2022, 4:54:50 pm
+date modified: Sunday, July 3rd 2022, 11:57:02 am
 title: What is an Image
 ---
 
@@ -11,25 +11,25 @@ title: What is an Image
 	1. Pull an already made from docker-hub or
 	2. Build our own
 
-# Pull Existing Image
+## Pull Existing Image
 
 ```bash
 docker pull [image_name]
 ```
 
-## Example
+### Example
 
 ```bash
 docker pull NGINX
 docker pull MONGODB
 ```
 
-> Once we have our image we can run it as [[containers#Run Containers in the Background]]
+> Once we have our image we can run it as [[Containerization/Docker/containers#Run Containers in the Background]]
 
-# Build Your Own Image
+## Build Your Own Image
 
 > Best to use docker-hub-username/project-name as your image name
-- After creating a dockerfile run the following command [[dockerfiles]]
+- After creating a dockerfile run the following command [[Containerization/Docker/dockerfiles]]
 
 ```bash
 docker build -t tag_name path_to_docker_file
@@ -40,7 +40,7 @@ docker build -t tag_name path_to_docker_file
 docker build -t zekaryas/hello_world .
 ```
 
-## The Dockerfile is Not Named Dockerfile
+### The Dockerfile is Not Named Dockerfile
 
 - In the above command docker assumes there is a file called dockerfile in the path specified
 
@@ -48,25 +48,25 @@ docker build -t zekaryas/hello_world .
 docker build -t awsome_project -f not_named_dockerfile .
 ```
 
-# List Images We Have
+## List Images We Have
 
 ```bash
 docker image ls
 ```
 
-# Remove an Image
+## Remove an Image
 
 ```bash
 docker image rm [image_name]
 ```
 
-## Remove All Image
+### Remove All Image
 
 ```bash
 docker rmi $(docker images -a -q)
 ```
 
-# Push Image to Docker-hub
+## Push Image to Docker-hub
 
 > You might need to run ==docker login== for this to work
 
@@ -78,19 +78,19 @@ docker image push [image_name]
 docker image push zekaryas/hello-world
 ```
 
-# Tagging a Container
+## Tagging a Container
 
 - Tag is an additional name/info we attach to an image to make it more meaningful
 - The Docker tag command creates a new tag for an image.
 - It does not create a new image. The tag points to the same image and is just another way to reference the image.
 
-## Create an Image with Tag
+### Create an Image with Tag
 
 ```bash
 docker build -t zekaryas/hello_world .
 ```
 
-## Give a Tag to Existing Image
+### Give a Tag to Existing Image
 
 ```bash
 docker pull nginx  #we have image with tag: latest
@@ -103,7 +103,7 @@ docker image tag prev_tag_name new_tag_name  #syntax
 
 ```
 
-# Joining Multiple Docker Images into One
+## Joining Multiple Docker Images into One
 
 - If you have a project that requires multiple docker images you've two options
 	- Use docker-compose, but docker-compose isn't allowed…
