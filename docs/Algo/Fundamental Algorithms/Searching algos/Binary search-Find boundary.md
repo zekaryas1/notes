@@ -1,12 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:36:07 am
+date modified: Sunday, July 3rd 2022, 12:11:29 pm
 title: Boundary Binary Search
 ---
 
-[Source Algo Monster](https://algo.monster/problems/binary_search_boundary)
-
 # Boundary Binary Search
+
+- [Source Algo Monster](https://algo.monster/problems/binary_search_boundary)
 
 ## How to Use Binary Boundary Method
 

@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:57:02 am
+date modified: Sunday, July 3rd 2022, 12:20:25 pm
 title: What is an Image
 ---
 
@@ -24,7 +24,7 @@ docker pull NGINX
 docker pull MONGODB
 ```
 
-> Once we have our image we can run it as [[Containerization/Docker/containers#Run Containers in the Background]]
+> Once we have our image we can run it [containers](Containerization/Docker/containers.md)
 
 ## Build Your Own Image
 
@@ -106,9 +106,10 @@ docker image tag prev_tag_name new_tag_name  #syntax
 ## Joining Multiple Docker Images into One
 
 - If you have a project that requires multiple docker images you've two options
-	- Use docker-compose, but docker-compose isn't allowed…
-		1. Start `From ubuntu` and install & setup the requires procedure
-		2. Or use [docker-multi stage](https://docs.docker.com/develop/develop-images/multistage-build/) build where you can combine multiple images to run a project
+	- Use docker-compose, but if docker-compose isn't allowed…
+		- Start `From ubuntu` and install & setup the requires procedure
+		- Or use [docker-multi stage](https://docs.docker.com/develop/develop-images/multistage-build/) build where you can combine multiple images to run a project
+		
 > The project could be a python project that also has a go code for some tasks…
 
 [Source](https://stackoverflow.com/questions/39626579/is-there-a-way-to-combine-docker-images-into-1-container)

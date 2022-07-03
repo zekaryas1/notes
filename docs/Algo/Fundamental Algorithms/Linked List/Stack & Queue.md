@@ -1,10 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:31:12 am
-title: Stack LAST IN FIRST OUT
+date modified: Sunday, July 3rd 2022, 12:08:39 pm
+title: Stack and Queue
 ---
 
-# Stack LAST IN FIRST OUT
+# Stack and Queue
+
+## Stack {LAST IN FIRST OUT}
 
 - Unlike an array, a stack does not offer constant-time access to the nth item. However, it does allow constant time adds and removes, as it doesn't require shifting elements around.
 
@@ -19,7 +21,7 @@ print(stack[-1])  #45 last in first out
 
 ```
 
-## Queue FIRST IN FIRST OUT
+## Queue {FIRST IN FIRST OUT}
 
 - A queue can also be implemented with a linked list. In fact, they are essentially the same thing, as long as items are added and removed from opposite sides.
 - Enqueue = Add, Dequeue(POP)
@@ -39,7 +41,7 @@ print(d.popleft())  #12 first in first out
 
 ## Priority Queue
 
-- The **priority queue** is an advanced type of the [Stack & Queue#Queue FIRST IN FIRST OUT](notes/Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Queue%20FIRST%20IN%20FIRST%20OUT.md) data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
+- The **priority queue** is an advanced type of the Queue data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
 
 - Priority queues are used to handle scheduling problems where some tasks are prioritized over others.
 
