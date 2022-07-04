@@ -1,13 +1,15 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:53:26 am
+date modified: Monday, July 4th 2022, 4:54:28 pm
 title: What is a Container
 ---
 
 # What is a Container
 
 - Docker containers are often compared to virtual machines but they are actually just processes running on your host OS.
-- on Linux you can run ==ps aux== and see the process
+	- **_A container is an isolated (namespaces) and restricted (cgroups, capabilities, seccomp) process._**
+- On Linux you can run ==ps aux== and see the process
+- [Detailed explanation on containers](https://iximiuz.com/en/posts/container-learning-path/)
 
 ![](https://user-content.gitlab-static.net/1f3ecb847e636cdec7d9db76f7c262e73d836ad9/68747470733a2f2f626c61636b666973682e6769746c61622e696f2f626c61636b666973682f696d616765732f646f636b65722d70726f642e6a7067)
 
