@@ -1,13 +1,39 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:55:42 am
+date modified: Monday, July 4th 2022, 5:03:55 pm
 title: Parts of Dockerfile
 ---
 
 # Parts of Dockerfile
 
 ```bash
-add sample docker file
+# Create image based on the official Node image from dockerhub
+
+FROM node:lts-buster
+
+# Create app directory
+
+WORKDIR /usr/src/app
+
+# Copy dependency definitions
+
+COPY package.json /usr/src/app
+
+COPY package-lock.json /usr/src/app
+
+# Install dependecies same as npm install
+RUN npm ci
+
+# Get all the code needed to run the app
+COPY . /usr/src/app
+
+# Expose the port the app runs in
+
+EXPOSE 3000
+
+# Serve the app
+
+CMD ["npm", "start"]
 ```
 
 ## From
