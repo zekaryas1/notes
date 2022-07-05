@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Monday, July 4th 2022, 4:54:28 pm
+date modified: Monday, July 4th 2022, 5:07:15 pm
 title: What is a Container
 ---
 
@@ -20,7 +20,7 @@ title: What is a Container
 ```bash
 docker container run -it -p 80:80 Nginx
 # -it = interactive
-# -p = port mapping public_port:continer_exposed_port
+# -p = port mapping public_port:container_exposed_port
 ```
 
 ### What Happens in the Above Command?

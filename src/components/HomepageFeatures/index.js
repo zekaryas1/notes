@@ -7,15 +7,7 @@ const FeatureList = [
     title: 'Support Me',
     description: (
       <>
-        Give me a star at here <a target="_blank" rel="noopener noreferrer" href="https://github.com/zekaryas1/notes">GitHub</a>
-      </>
-    ),
-  },
-  {
-    title: 'About me',
-    description: (
-      <>
-        Software engineer check my CV here.
+        Give me a star at here <a target="_blank" href="https://github.com/zekaryas1/notes">GitHub</a>
       </>
     ),
   },
@@ -23,8 +15,7 @@ const FeatureList = [
     title: 'Contact',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        <a target="_blank" href="https://www.linkedin.com/in/zekaryas-tadele-dinku">Linkedin</a>
       </>
     ),
   },

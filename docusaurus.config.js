@@ -100,11 +100,11 @@ const config = {
             items: [
               {
                 label: 'Algorithm & Data structure',
-                to: '/docs/Algo/',
+                to: '/docs/Algo/Fundamental Algorithms/Sorting algos/Radix Sort',
               },
               {
                 label: 'Python tips and Tricks',
-                to: '/docs/Algo/Tips & Tricks/',
+                to: '/docs/Algo/Tips & Tricks/Useful Python Collections module',
               },
             ],
           },
@@ -113,7 +113,7 @@ const config = {
             items: [
               {
                 label: 'Docker & Docker compose',
-                to: '/docs/Containerization/',
+                to: '/docs/Containerization/Docker/General Step to Dockerizing a Project',
               },
             ],
           },
@@ -127,6 +127,10 @@ const config = {
               {
                 label: 'GitHub',
                 href: 'https://github.com/zekaryas1/notes',
+              },
+              {
+                label: 'Contact me on Linkedin',
+                href: 'https://www.linkedin.com/in/zekaryas-tadele-dinku',
               },
             ],
           },
