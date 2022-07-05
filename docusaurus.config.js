@@ -86,7 +86,7 @@ const config = {
           },
           {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/zekaryas1/me-and-notes',
+            href: 'https://github.com/zekaryas1/notes',
             label: 'GitHub',
             position: 'right',
           },
