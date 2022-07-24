@@ -14,7 +14,7 @@ title: Inspiring Math Algos
 	* Then, we look for the next prime (the next non-crossed off number) and cross off all numbers divisible by it. By crossing off all numbers divisible by 2, 3, 5, 7, 11, and so on,
 	* Finally we wind up with a list of prime numbers from 2 through max.
 
-[Code source](https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes)
+- [Code source](https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes)
 
 ```python
 def SieveOfEratosthenes(num):

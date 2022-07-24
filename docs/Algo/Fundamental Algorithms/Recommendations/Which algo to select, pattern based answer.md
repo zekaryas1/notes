@@ -1,16 +1,16 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 12:09:08 pm
+date modified: Sunday, July 24th 2022, 8:51:36 pm
 title: 'Which Algo to Select, Pattern Based Answer'
 ---
 
-[Source](https://seanprashad.com/leetcode-patterns/)
-
 # Which Algo to Select, Pattern Based Answer
+
+[Source](https://seanprashad.com/leetcode-patterns/)
 
 ## If Input Array is Sorted Then
 
-- [Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/Binary%20search.md)
+- [1. Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 - Two pointers
 
 ## If Asked for All permutations/subsets Then

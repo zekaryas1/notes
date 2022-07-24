@@ -22,7 +22,7 @@ title: How to Act During Interviews
 
 - Start with brute force
 - Select other ex: Binary search, DB, two pointers…
-	- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
+	- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 - Discuss time complexity analysis
 - Select the best/easy based on time/space complexity
 

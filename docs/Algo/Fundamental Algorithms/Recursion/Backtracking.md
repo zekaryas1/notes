@@ -13,7 +13,7 @@ title: What is Backtracking
 
 ## Backtracking Template
 
-[Video Source ](https://youtu.be/H2gnD7Ixeao)
+- [Video Source ](https://youtu.be/H2gnD7Ixeao)
 
 ```python
 def is_valid_path(path):
