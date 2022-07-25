@@ -2,9 +2,12 @@
 tags: 
 	- coding_problems
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 2:48:53 pm
+date modified: Monday, June 27th 2022, 12:10:31 pm
 title: 5 Longest Palindromic Substring.py
 ---
+
+# 5 Longest Palindromic Substring.py
+
 ```python
 class Solution:
     def longestPalindrome(self, s: str) -> str:

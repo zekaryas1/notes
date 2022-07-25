@@ -1,8 +1,10 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, June 16th 2022, 2:49:50 pm
+date modified: Monday, June 27th 2022, 12:13:52 pm
 title: 101 Symmetric Tree.py
 ---
+
+# 101 Symmetric Tree.py
 
 ```python
 class Solution:
