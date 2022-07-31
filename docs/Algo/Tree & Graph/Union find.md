@@ -1,13 +1,13 @@
 ---
 date created: Sunday, July 24th 2022, 1:23:21 pm
-date modified: Sunday, July 24th 2022, 2:53:25 pm
+date modified: Sunday, July 31st 2022, 3:46:22 pm
 title: Union Find
 ---
 
 # Union Find
 
 - A [_disjoint-set data structure_](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.
-- A [_union-find algorithm_](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) is an algorithm that performs two useful operations on such a data structure:
+- A [_union-find algorithm_](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) is an algorithm that performs two useful operations on such a data structure.
 
 ## The Two Useful Operations
 

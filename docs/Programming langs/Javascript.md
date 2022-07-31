@@ -1,6 +1,6 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Sunday, July 24th 2022, 3:18:45 pm
+date modified: Sunday, July 31st 2022, 4:01:19 pm
 title: Javascript
 ---
 
@@ -185,4 +185,50 @@ data = { todos: data.todos.map(todo => {
 
 //add new entry
 data = {...data, notes: []}
+```
+
+## Named Export Vs Default Export in ES6/React
+
+### Named Export: (export)
+
+- Can have multiple named exports per file.
+- You import the specific exports you want surrounded in braces
+- The name of imported module has to be the same as the name of the exported module. Or you need to use `as`
+
+```js
+// exports from ./MyComponent.js file  
+export const MyComponent = () => {}  
+export const MyComponent2 = () => {}
+```
+
+```js
+// imports  
+// ex. importing a single named export  
+import { MyComponent } from "./MyComponent";// ex. importing multiple named exports  
+import { MyComponent, MyComponent2 } from "./MyComponent";
+
+import * as MainComponents from "./MyComponent";  
+// use MainComponents.MyComponent and MainComponents.MyComponent2 here
+```
+
+```js
+// ex. giving a named import a different name by using "as":  
+import { MyComponent2 as MyNewComponent } from "./MyComponent";
+```
+
+> Named exports are useful to export several values. During the import, one will be able to use the same name to refer to the corresponding value.
+
+### Default Export: (export default)
+
+- One can have only one default export per file.
+- When we import we have to specify a name.
+
+```js
+const MyComponent = () => {}
+export default MyComponent;
+```
+
+```js
+// import
+import MyDefaultComponent from "./MyDefaultExport";
 ```

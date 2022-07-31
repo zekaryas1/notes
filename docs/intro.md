@@ -1,7 +1,7 @@
 ---
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Monday, July 25th 2022, 9:24:06 pm
+date modified: Sunday, July 31st 2022, 4:05:45 pm
 title: Introduction
 ---
 
@@ -12,7 +12,7 @@ title: Introduction
 - Algorithm and data structure
 	- [Algorithm analysis](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
 	- [Python Tips and tricks](Algo/Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
-	- [Graph algorithms](Algo/Graph/Union%20find.md)
+	- [Graph algorithms](Algo/Tree%20&%20Graph/Union%20find.md)
 	- [Leetcode solutions](Algo/Coding%20Practice/Recursion/101%20Symmetric%20Tree.py.md)
 - Containerization
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)

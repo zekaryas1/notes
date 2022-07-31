@@ -19,3 +19,13 @@ print(a & b)
 print(a | b)
 print(a - b)
 ```
+
+## Check if a word is without repeating characters
+
+```python
+def isUnique(word):
+	return len(word) == len(set(word))
+
+print(isUnique("set"))
+print(isUnique("element"))
+```

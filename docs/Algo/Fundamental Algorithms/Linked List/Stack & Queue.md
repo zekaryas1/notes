@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 12:08:39 pm
+date modified: Wednesday, July 27th 2022, 11:53:30 am
 title: Stack and Queue
 ---
 
@@ -111,20 +111,25 @@ while not q.empty():
 ```python
 import heapq
 minHeap = []
-minHeap.append(12)
-minHeap.append(10)
 
-print(minHeap) #array ordered by index
-
-heapq.heapify(minHeap)
-
+# to add element
 heapq.heappush(minHeap, 1)
+heapq.heappush(minHeap, 13)
 
 print(minHeap) #sorted array
+print(minHeap[0]) #get the top max
 
+# to remove elt
 print(heapq.heappop(minHeap))
 print(heapq.heappop(minHeap))
+```
 
+```python
+# if you already have an array populated with elts, use heapify
+import heapq
+minHeap = [4,5,6,7,8]
+heapq.heapify(minHeap)
+print(minHeap)
 ```
 
 > [Priority Queue vs Heapq](https://stackoverflow.com/questions/36991716/whats-the-difference-between-heapq-and-priorityqueue-in-python)

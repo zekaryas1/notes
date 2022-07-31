@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:08:34 am
+date modified: Thursday, July 28th 2022, 12:39:35 am
 title: Python Collections Module
 ---
 
@@ -21,6 +21,12 @@ d = defaultdict(int)  #we can insert int(defulat-0), list(defualt-[]),set(defaul
 d["dog"] = d["dog"] + 1  #defualt value 0 + 1 = 1
 print(d["dog"])
 print(d["cat"])  #returns zero default value
+```
+
+```python
+from collections import defaultdict
+d = defaultdict(lambda: 1) #use this syntax to provide your own custom vallue
+print(d['cat'])
 ```
 
 ## orderedDict
