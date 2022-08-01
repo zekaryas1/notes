@@ -1,10 +1,10 @@
 ---
 date created: Sunday, July 31st 2022, 6:15:24 pm
-date modified: Sunday, July 31st 2022, 8:47:07 pm
-title: Topological Sort Kahn's Algorithm
+date modified: Monday, August 1st 2022, 10:43:37 am
+title: Topological Sort Kahns Algorithm
 ---
 
-# Topological Sort Kahn's Algorithm
+# Topological Sort Kahns Algorithm
 
 - [Video source](https://youtu.be/cIBFEhD77b4?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P)
 - Has the same properties as [Topological sort DFS](Algo/Tree%20&%20Graph/Graph/Topological%20sort%20DFS.md)
