@@ -66,5 +66,6 @@ def permute(nums):
         path = []
         dfs(path, result)
         print(result)
-permute([1,2,3])
+permute([1,2,3]) 
+# [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]
 ```

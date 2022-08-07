@@ -42,7 +42,7 @@ title: 'Which Algo to Select, Pattern Based Answer'
 
 ## If Asked for maximum/minimum subarray/subset/options Then
 
-- [Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Dynamic%20programming.md)
+- [Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 
 ## If Asked for top/least K Items Then
 

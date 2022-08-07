@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:33:42 am
+date modified: Sunday, August 7th 2022, 1:18:00 pm
 title: What is Dynamic Programming
 ---
 
@@ -28,14 +28,14 @@ def fibo(n):
 print(fibo(5))
 ```
 
-  1. Bottom-up, also known as tabulation.
-	  * Bottom-up is implemented with iteration and starts at the base cases.
-	  * A bottom-up implementation runtime is usually faster, as iteration does not have the overhead that recursion does.
-2. Top-down, also known as memorization.
+  -  Bottom-up, also known as tabulation.
+	  - Bottom-up is implemented with iteration and starts at the base cases.
+	  - A bottom-up implementation runtime is usually faster, as iteration does not have the overhead that recursion does.
+  * Top-down, also known as memorization.
 	  * Top-down is implemented with recursion and made efficient with memorization.
 	  * A top-down implementation is usually much easier to write. This is because with recursion, the ordering of sub-problems does not matter, whereas with tabulation, we need to go through a logical ordering of solving sub-problems.
 
-```python
+```
 #Top-down, also known as memorization.  
 memo = {}
 def fibo(n):
@@ -44,7 +44,6 @@ def fibo(n):
 	if n not in memo:
 		memo[n] = fibo(n-1) + fibo(n-2)
 	return memo[n]
-
 print(fibo(5))
 ```
 
@@ -62,7 +61,8 @@ print(fibo(5))
 * In recursive problems, the key to the problem is
 	* To figure out the relationship between a base case and its sub-problems.
 * Steps:
-   1. First write the base case and the other some consequent sub cases
-   2. Identity any relationship
-	   1. This is the key to the solution.
-   3. If any repetitive step that can lead to memorization which = dynamic programming.
+	* First write the base case and the other some consequent sub cases
+		* Thinking top down with tree is also an alternative
+	* Identity any relationship
+		* This is the key to the solution.
+	* If any repetitive step that can lead to memorization which = dynamic programming.

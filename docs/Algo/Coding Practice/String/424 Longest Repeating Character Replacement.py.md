@@ -4,7 +4,7 @@ date modified: Monday, July 25th 2022, 9:05:46 pm
 title: 424 Longest Repeating Character Replacement.py
 ---
 
-# 424 Longest Repeating Character Replacement.py
+# 424 Longest Repeating Character Replacement
 
 ```python
 class Solution:

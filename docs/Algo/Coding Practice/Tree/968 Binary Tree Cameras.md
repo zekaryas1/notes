@@ -1,6 +1,6 @@
 ---
 date created: Monday, July 25th 2022, 9:07:22 pm
-date modified: Monday, July 25th 2022, 9:08:45 pm
+date modified: Sunday, August 7th 2022, 4:21:49 pm
 title: 968 Binary Tree Cameras
 ---
 
@@ -31,25 +31,30 @@ class Solution:
                 return 1
         
         return cam+1 if dfs(root)==0 else cam
-        
+
+
+```
+
+```python
 # Other decent solution                  
-#         memo = set()
-#         memo.add(None)
-#         cam = 0
+memo = set()
+memo.add(None)
+cam = 0
         
-#         def dfs(node,parent):
-#             nonlocal cam
-#             if node:
-#                 dfs(node.left, node)
-#                 dfs(node.right, node)
+def dfs(node,parent):
+	nonlocal cam
+	if node:
+		dfs(node.left, node)
+		dfs(node.right, node)
                 
-#                 # if node is root or node middle node::: add camera
-#                 if (not parent and node not in memo) or (node.left not in memo or node.right not in memo):
-#                     memo.add(node)
-#                     memo.add(parent)
-#                     memo.add(node.left)
-#                     memo.add(node.right)
-#                     cam += 1
-#         dfs(root, None)
-#         return cam
+		# if node is root or node middle node::: add camera
+		if (not parent and node not in memo) or (node.left not in memo or node.right not in memo):
+				memo.add(node)
+				memo.add(parent)
+				memo.add(node.left)
+				memo.add(node.right)
+		        cam += 1
+
+dfs(root, None)
+return cam
 ```

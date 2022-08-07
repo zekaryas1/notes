@@ -6,7 +6,7 @@ date modified: Monday, June 27th 2022, 12:10:31 pm
 title: 5 Longest Palindromic Substring.py
 ---
 
-# 5 Longest Palindromic Substring.py
+# 5 Longest Palindromic Sub-string
 
 ```python
 class Solution:
