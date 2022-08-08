@@ -45,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/zekaryas1/notes/blob/main',
+            'https://github.com/zekaryas1/notes/blob/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
@@ -79,6 +79,10 @@ const config = {
         },
         items: [
           {
+            type: 'search',
+            position: 'right',
+          },
+          {
             type: 'doc',
             docId: 'intro',
             position: 'left',
@@ -88,7 +92,7 @@ const config = {
           {
             href: 'https://github.com/zekaryas1/notes',
             label: 'GitHub',
-            position: 'right',
+            position: 'left',
           },
         ],
       },
@@ -141,6 +145,14 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        // The application ID provided by Algolia
+        appId: '4QUF041B88',
+        // Public API key: it is safe to commit it
+        apiKey: '160f52becaea805c46780c776893836e',
+        indexName: 'zack-onrender',
+        debug: false
+      }
     }),
 };
 
