@@ -2,11 +2,13 @@
 tags: 
 	- coding_problems
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Monday, June 27th 2022, 12:10:31 pm
-title: 5 Longest Palindromic Substring.py
+date modified: Wednesday, August 10th 2022, 10:59:28 am
+title: 5 Longest Palindromic Sub-string
 ---
 
 # 5 Longest Palindromic Sub-string
+
+#string #sliding_window
 
 ```python
 class Solution:

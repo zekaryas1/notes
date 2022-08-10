@@ -1,10 +1,12 @@
 ---
 date created: Wednesday, August 3rd 2022, 9:11:12 pm
-date modified: Sunday, August 7th 2022, 3:29:10 pm
+date modified: Wednesday, August 10th 2022, 11:03:37 am
 title: 236 Lowest Common Ancestor of a Binary Tree
 ---
 
 # 236 Lowest Common Ancestor of a Binary Tree
+
+#tree #dfs
 
 ## Solution
 

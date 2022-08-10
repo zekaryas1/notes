@@ -1,10 +1,12 @@
 ---
 date created: Friday, August 5th 2022, 11:33:39 am
-date modified: Sunday, August 7th 2022, 3:31:20 pm
+date modified: Wednesday, August 10th 2022, 11:00:07 am
 title: 56 Merge Intervals
 ---
 
 # 56 Merge Intervals
+
+#merge_intervals
 
 ## Intro to Merge Interval
 

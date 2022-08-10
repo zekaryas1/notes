@@ -1,10 +1,12 @@
 ---
 date created: Thursday, August 4th 2022, 11:13:57 am
-date modified: Sunday, August 7th 2022, 3:26:25 pm
+date modified: Wednesday, August 10th 2022, 11:01:20 am
 title: 300 Longest Increasing Sub-sequence
 ---
 
 # 300 Longest Increasing Sub-sequence
+
+#dp  #sub_sequence
 
 ## DFS + Memo
 

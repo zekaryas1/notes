@@ -1,10 +1,12 @@
 ---
 date created: Monday, July 25th 2022, 9:03:44 pm
-date modified: Monday, July 25th 2022, 9:04:20 pm
+date modified: Wednesday, August 10th 2022, 11:02:01 am
 title: 49 Group Anagrams
 ---
 
 # 49 Group Anagrams
+
+#string #anagram
 
 ```python
 class Solution:

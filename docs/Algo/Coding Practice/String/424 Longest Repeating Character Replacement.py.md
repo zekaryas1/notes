@@ -1,10 +1,12 @@
 ---
 date created: Monday, July 25th 2022, 9:05:02 pm
-date modified: Monday, July 25th 2022, 9:05:46 pm
-title: 424 Longest Repeating Character Replacement.py
+date modified: Wednesday, August 10th 2022, 10:58:53 am
+title: 424 Longest Repeating Character Replacement
 ---
 
 # 424 Longest Repeating Character Replacement
+
+#string
 
 ```python
 class Solution:

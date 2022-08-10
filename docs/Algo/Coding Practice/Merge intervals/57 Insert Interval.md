@@ -1,10 +1,12 @@
 ---
 date created: Friday, August 5th 2022, 11:51:20 am
-date modified: Sunday, August 7th 2022, 3:27:46 pm
+date modified: Sunday, August 7th 2022, 3:31:26 pm
 title: 57 Insert Interval
 ---
 
 # 57 Insert Interval
+
+#merge_intervals
 
 ## Solution
 

@@ -1,10 +1,12 @@
 ---
 date created: Friday, August 5th 2022, 12:13:39 pm
-date modified: Friday, August 5th 2022, 12:19:17 pm
+date modified: Wednesday, August 10th 2022, 10:59:47 am
 title: Next Greater Elt
 ---
 
 # Next Greater Elt
+
+#stack #monotonic_stack
 
 ## Question
 

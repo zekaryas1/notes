@@ -1,10 +1,12 @@
 ---
 date created: Thursday, August 4th 2022, 4:28:04 pm
-date modified: Sunday, August 7th 2022, 3:27:16 pm
+date modified: Sunday, August 7th 2022, 3:30:45 pm
 title: 23 Merge K Sorted Lists
 ---
 
 # 23 Merge K Sorted Lists
+
+#heap
 
 ## Solution
 
