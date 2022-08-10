@@ -1,7 +1,8 @@
 ---
+tags: 
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Sunday, August 7th 2022, 4:16:26 pm
+date modified: Wednesday, August 10th 2022, 11:47:09 am
 title: Introduction
 ---
 
@@ -10,7 +11,7 @@ title: Introduction
 ## Table of Content
 
 - Algorithm and data structure
-	- [Algorithm analysis](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
+	- [Algorithms](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
 	- [Python Tips and tricks](Algo/Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
 	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.py.md)
@@ -41,5 +42,5 @@ title: Introduction
 - Make your next step challenging or new
 	- Doing the same things multiple times won't make you an expert
 		- Now array questions next should be graph problems
-		- Previously medium problems now should be hard problems
+		- Previously medium problems, next should be hard problems
 		- Not great on DP questions then more practice on DP questions

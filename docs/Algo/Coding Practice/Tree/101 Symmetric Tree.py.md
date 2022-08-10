@@ -1,12 +1,11 @@
 ---
+tags: [tree, recursion]
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, August 10th 2022, 11:02:20 am
+date modified: Wednesday, August 10th 2022, 11:15:27 am
 title: 101 Symmetric Tree.py
 ---
 
 # 101 Symmetric Tree.py
-
-#tree #recursion
 
 ```python
 class Solution:

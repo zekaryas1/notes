@@ -1,12 +1,11 @@
 ---
+tags: [dp, sub_sequence]
 date created: Sunday, August 7th 2022, 3:20:15 pm
-date modified: Wednesday, August 10th 2022, 11:01:10 am
+date modified: Wednesday, August 10th 2022, 11:20:54 am
 title: 1143 Longest Common Sub-sequence
 ---
 
 # 1143 Longest Common Sub-sequence
-
-#dp #sub_sequence
 
 ## Solution
 

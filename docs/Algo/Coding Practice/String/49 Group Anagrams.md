@@ -1,12 +1,11 @@
 ---
+tags: [string, anagram]
 date created: Monday, July 25th 2022, 9:03:44 pm
-date modified: Wednesday, August 10th 2022, 11:02:01 am
+date modified: Wednesday, August 10th 2022, 11:16:13 am
 title: 49 Group Anagrams
 ---
 
 # 49 Group Anagrams
-
-#string #anagram
 
 ```python
 class Solution:

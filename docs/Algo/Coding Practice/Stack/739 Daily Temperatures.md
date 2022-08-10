@@ -1,12 +1,11 @@
 ---
+tags: [stack, monotonic_stack]
 date created: Friday, August 5th 2022, 12:20:39 pm
-date modified: Wednesday, August 10th 2022, 10:59:58 am
+date modified: Wednesday, August 10th 2022, 11:17:03 am
 title: 739 Daily Temperatures
 ---
 
 # 739 Daily Temperatures
-
-#stack #monotonic_stack
 
 ## Solution
 

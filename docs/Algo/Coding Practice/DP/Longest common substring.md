@@ -1,12 +1,11 @@
 ---
+tags: [dp, string]
 date created: Sunday, August 7th 2022, 3:36:00 pm
-date modified: Wednesday, August 10th 2022, 11:00:49 am
+date modified: Wednesday, August 10th 2022, 11:20:39 am
 title: Longest Common Sub-string
 ---
 
 # Longest Common Sub-string
-
-#dp #string
 
 ## Solution
 

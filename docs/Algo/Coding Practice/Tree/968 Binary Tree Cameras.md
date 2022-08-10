@@ -1,12 +1,11 @@
 ---
+tags: [tree, dfs]
 date created: Monday, July 25th 2022, 9:07:22 pm
-date modified: Wednesday, August 10th 2022, 11:02:32 am
+date modified: Wednesday, August 10th 2022, 11:15:15 am
 title: 968 Binary Tree Cameras
 ---
 
 # 968 Binary Tree Cameras
-
-#tree #dfs
 
 ```python
 class Solution:

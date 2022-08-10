@@ -1,12 +1,11 @@
 ---
+tags: [string, sliding_window, set]
 date created: Wednesday, August 10th 2022, 10:45:23 am
-date modified: Wednesday, August 10th 2022, 10:57:33 am
+date modified: Wednesday, August 10th 2022, 11:15:54 am
 title: 3 Longest Substring Without Repeating Characters
 ---
 
 # 3 Longest Substring Without Repeating Characters
-
-#string #sliding_window
 
 ## Solution
 

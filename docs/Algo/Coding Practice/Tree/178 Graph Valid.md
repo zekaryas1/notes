@@ -1,12 +1,12 @@
 ---
+tags: [tree, dfs]
 date created: Wednesday, August 3rd 2022, 10:03:52 am
-date modified: Wednesday, August 10th 2022, 11:02:42 am
+date modified: Wednesday, August 10th 2022, 11:15:02 am
 title: 178 Graph Valid
 ---
 
 # 178 Graph Valid
 
-#tree #dfs
 - The Question is freely available on [Lintcode](https://lintcode.com)
 
 ## Question

@@ -1,14 +1,11 @@
 ---
-tags: 
-	- coding_problems
+tags: [string, sliding_window]
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, August 10th 2022, 10:59:28 am
+date modified: Wednesday, August 10th 2022, 11:16:36 am
 title: 5 Longest Palindromic Sub-string
 ---
 
 # 5 Longest Palindromic Sub-string
-
-#string #sliding_window
 
 ```python
 class Solution:

@@ -1,12 +1,11 @@
 ---
+tags: [merge_intervals]
 date created: Friday, August 5th 2022, 11:51:20 am
-date modified: Sunday, August 7th 2022, 3:31:26 pm
+date modified: Wednesday, August 10th 2022, 11:20:01 am
 title: 57 Insert Interval
 ---
 
 # 57 Insert Interval
-
-#merge_intervals
 
 ## Solution
 
