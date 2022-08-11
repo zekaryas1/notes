@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 24th 2022, 3:48:14 pm
+date modified: Wednesday, August 10th 2022, 5:07:14 pm
 title: What is Algorithm Analysis
 ---
 
@@ -16,11 +16,10 @@ title: What is Algorithm Analysis
 
 ## Common Algorithm's Time Complexity
 
-* O(logn): binary search…cuts the problem in half
-* O(Klogn)…heap operations
-	* Popping the min element from heap is logn
-	* Popping k times will be klogn
-* O(nlogn)…most of sort operations
+- Most Sorting Algo = O(nlogn)
+- Heap operation is O(logn)
+	- Pushing and popping k times will be klogn
+- [Common runtime complexity from Algo.monster](https://algo.monster/problems/runtime_summary)
 
 ## What Does “constant Extra space” means?_
 

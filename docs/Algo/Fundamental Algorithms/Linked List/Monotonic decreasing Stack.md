@@ -1,6 +1,6 @@
 ---
 date created: Wednesday, July 27th 2022, 11:08:39 pm
-date modified: Friday, August 5th 2022, 12:24:10 pm
+date modified: Wednesday, August 10th 2022, 5:27:52 pm
 title: Monotonic Stack
 ---
 
@@ -13,7 +13,7 @@ title: Monotonic Stack
 	- If it does, then we pop the top element off the stack until pushing the new element no longer breaks the monotonic condition.
 - ![](https://miro.medium.com/max/1400/1*HC8mM4Kv66ms3iFevERzIg.png)
 
-## Monotonic Stack Code Template
+## Monotonic Decreasing Stack Code Template
 
 ```python
 def mono_stack(nums):

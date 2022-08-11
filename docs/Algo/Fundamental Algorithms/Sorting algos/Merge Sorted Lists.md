@@ -1,18 +1,15 @@
 ---
 tags: [heap]
 date created: Thursday, August 4th 2022, 4:28:04 pm
-date modified: Wednesday, August 10th 2022, 11:20:24 am
-title: 23 Merge K Sorted Lists
+date modified: Wednesday, August 10th 2022, 5:56:12 pm
+title: Merge K Sorted Lists
 ---
 
-# 23 Merge K Sorted Lists
+# Merge K Sorted Lists
 
-## Solution
+## Intro to K-way Merge
 
 - [Source](https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed)
-
-### Intro to K-way Merge
-
 - K-way Merge helps you solve problems that involve a set of sorted arrays.
 - Whenever you’re given ‘K’ sorted arrays, you can use a Heap to efficiently perform a sorted traversal of all the elements of all arrays.
 - You can push the smallest element of each array in a Min Heap to get the overall minimum. After getting the overall minimum, push the next element from the same array to the heap. Then, repeat this process to make a sorted traversal of all elements.
@@ -25,20 +22,22 @@ title: 23 Merge K Sorted Lists
 	- Repeat steps 2 and 3 to populate the merged list in sorted order.
 
 ```python
-head = point = ListNode(0)
-q = PriorityQueue()
+l1 = [2,6,8]
+l2 = [3,6,7]
+l3 = [1,3,4]
 
-#insert the first elt of each list
-for l in lists:
-    if l:
-        q.put((l.val, l))
-        
+q = deque()
+q.put([l1[0],0, a])
+q.put([l2[0],0, b])
+q.put([l3[0],0, c])
+
+res = []
 while not q.empty():
-    val, node = q.get()  #take out the smallest elt
-    point.next = ListNode(val)
-    point = point.next
-    node = node.next
-    if node:
-        q.put((node.val, node)) # insert the next elt from same list
-return head.next
+	elt, index, arr = q.get()
+	res.append(elt)
+
+	if index != len(arr)-1:
+		index += 1
+		q.put([a[index], index, arr])
+return res
 ```

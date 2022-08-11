@@ -1,11 +1,12 @@
 ---
 date created: Sunday, August 7th 2022, 1:16:43 pm
-date modified: Sunday, August 7th 2022, 4:05:09 pm
+date modified: Wednesday, August 10th 2022, 6:14:39 pm
 title: Dynamic Programming Template
 ---
 
 # Dynamic Programming Template
 
+- [First read, Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 - Dynamic programming starts by solving sub-problems and builds up to solving the big problem.
 - Every dynamic-programming algorithm starts with a grid.
 	- The values in the cells are usually what you’re trying to optimize.

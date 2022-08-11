@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 24th 2022, 8:51:36 pm
+date modified: Wednesday, August 10th 2022, 5:46:15 pm
 title: 'Which Algo to Select, Pattern Based Answer'
 ---
 
@@ -40,7 +40,7 @@ title: 'Which Algo to Select, Pattern Based Answer'
 - Swap corresponding values
 - Store one or more different values in the same pointer
 
-## If Asked for maximum/minimum subarray/subset/options Then
+## If Asked for maximum/minimum sub-array/subset/options Then
 
 - [Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 
@@ -52,6 +52,10 @@ title: 'Which Algo to Select, Pattern Based Answer'
 
 - Map
 - Trie
+
+## If Asked Sub-string with X Condition
+
+- Sliding window
 
 ## Else
 

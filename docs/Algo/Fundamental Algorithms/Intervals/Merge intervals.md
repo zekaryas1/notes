@@ -1,11 +1,11 @@
 ---
 tags: [merge_intervals]
 date created: Friday, August 5th 2022, 11:33:39 am
-date modified: Wednesday, August 10th 2022, 11:20:14 am
-title: 56 Merge Intervals
+date modified: Wednesday, August 10th 2022, 5:53:33 pm
+title: Merge Intervals
 ---
 
-# 56 Merge Intervals
+# Merge Intervals
 
 ## Intro to Merge Interval
 
@@ -13,6 +13,10 @@ title: 56 Merge Intervals
 - The pattern works like this:
 	- Given two intervals (‘a’ and ‘b’), there will be six different ways the two intervals can relate to each other:
 - ![](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FG9YRlqC9joZNTWsi1ul7tRkO6tv1-8mh13wm9.jpg&w=828&q=75)
+
+## Sample Question
+
+- [Sample question from Leetcode](https://leetcode.com/problems/merge-intervals/)
 
 ## Solution
 

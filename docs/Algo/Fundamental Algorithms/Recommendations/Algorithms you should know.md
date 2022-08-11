@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Sunday, August 7th 2022, 4:12:15 pm
+date modified: Wednesday, August 10th 2022, 5:29:34 pm
 title: Algorithms You Should Know
 ---
 
@@ -12,12 +12,12 @@ title: Algorithms You Should Know
 	- [1. Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 	- Two Pointers
 	- Sliding Window
-		- Sliding window maximum
+		- [Sliding window maximum](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20queue.md)
 	- Sorting
 		-  [3. Merge Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/3.%20Merge%20Sort.md)
 		- [4. Quick Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/4.%20Quick%20Sort.md)
 		- [5. Radix Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/5.%20Radix%20Sort.md)
-	- [56 Merge intervals](Algo/Coding%20Practice/Merge%20intervals/56%20Merge%20intervals.md)
+	- [Merge intervals](Algo/Fundamental%20Algorithms/Intervals/Merge%20intervals.md)
 	- Kadane algorithm
 - String
 - Hash Table
@@ -28,7 +28,8 @@ title: Algorithms You Should Know
 	- Segment tree
 - Matrix
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20Stack.md)
+	- [Monotonic decreasing Stack](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20Stack.md)
+	- [Monotonic decreasing queue](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20queue.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search
