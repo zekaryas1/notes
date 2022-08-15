@@ -1,10 +1,10 @@
 ---
 date created: Sunday, August 14th 2022, 12:01:05 pm
 date modified: Sunday, August 14th 2022, 12:32:37 pm
-title: Check is a Tree is ?
+title: Check is a Tree is
 ---
 
-# Check is a Tree is ?
+# Check is a Tree is
 
 ## Sample Code
 
