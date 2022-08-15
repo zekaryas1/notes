@@ -7,12 +7,12 @@ title: What is Algorithm Analysis
 # What is Algorithm Analysis
 
 * Time is not the only thing that matters in an algorithm. We might also care about the amount of memory or space required by an algorithm.
-* In algorithm analysis, we focus on the growth rate of the running time as a function of the input size n .(how many times a function is likely to execute based on the input)
+* In algorithm analysis, we focus on the growth rate of the running time as a function of the input size n.(how many times a function is likely to execute based on the input)
 * Big 0(asymptotic runtime) is the language and metric we use to describe the efficiency of algorithms.
 * Big 0, Big Theta, and Big Omega
 	* 0 (big 0): In academia, big 0 describes an upper bound on the time.
 	* Q (big omega): In academia, big omega describes a lower bound.
-	* Big theta : describe the average
+	* Big theta : describe the average.
 
 ## Common Algorithm's Time Complexity
 

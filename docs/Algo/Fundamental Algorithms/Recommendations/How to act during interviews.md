@@ -6,7 +6,7 @@ title: How to Act During Interviews
 
 # How to Act During Interviews
 
->  First of all, During each step explain what you’re doing, every steps.
+>  Foremost, During each step explain what you’re doing, every step.
 
 ## Make Sure You Understand the Question.
 
@@ -24,7 +24,7 @@ title: How to Act During Interviews
 - Select other ex: Binary search, DB, two pointers…
 	- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 - Discuss time complexity analysis
-- Select the best/easy based on time/space complexity
+- Select the best/easy based on time/space complexity.
 
 ## Draw/Visualize Your solution(approach)
 

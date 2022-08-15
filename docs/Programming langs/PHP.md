@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:49:26 am
+date modified: Sunday, August 14th 2022, 4:10:31 pm
 title: PHP Crash Note
 ---
 
@@ -33,10 +33,24 @@ echo $n;
 var_dump($n) // prints int(5)
 ```
 
+#### Available Data-types
+
+```php
+Integer, Float, String, Booleans, Array, Object, resource and NULL
+```
+
 ### Delete a Variable
 
 ```php
 unset($z)
+```
+
+#### Check if Variable is Unset or Undefined
+
+```php
+if(!isset($z)){
+	echo "we need var z";
+}
 ```
 
 ### Constant Variable
@@ -127,13 +141,28 @@ foreach ($wheels as $vehicle => $wheel_count) {
 
 ## Data Structures
 
+### Strings
+
+```php
+$country = "south africa";
+
+ehco strlen($country);  //prints length of the string
+
+echo strrev($country);  //returns reversesd string
+```
+
 ### Array
 
 ```php
 $my_array = [1,2,3,4]
 echo $my_array;
+```
+
+```php
 $my_array[] = 5 // add new array
 unset($my_array[2]) // remove an array
+count($my_array) //returns size of array
+sort($array) //sorts the array
 ```
 
 ### Hashmap {associative array}
@@ -174,7 +203,7 @@ echo add(4, 2); // => 6
 
 ### Anonymous Functions
 
-> Function is object you can store, return or use it as a normal variable.
+> Function is an object you can store, return or use it as a normal variable.
 
 ```php
 $inc = function ($x) {
@@ -232,7 +261,7 @@ echo $banana->get_name();
 var_dump($apple instanceof Fruit);
 ```
 
-### Constructor
+### Constructor and Destructor
 
 ```php
 class Fruit {  
@@ -261,6 +290,116 @@ echo $apple->get_name();
 2. private
 3. protected
 
-### Inheritance, Interfaces, Constants, Static class…etc
+### Inheritance
 
-…to be included
+```php
+class Animal{
+	private $name;
+
+	public function __construct($name){
+		$this -> name = $name;
+	}
+
+	public function getName(){
+		return $this->name;
+	}
+}
+
+class Dog extends Animal{
+	private $owner;
+
+	public function __construct($name, $owner){
+		parent::__construct($name);
+		$this->owner = $owner;
+	}
+
+	public function getOwner(){
+		return $this->owner;
+	}
+
+	//overriding
+	public function getName(){
+		return "Catch ".$this->name;
+	}
+}
+```
+
+### Static Modifier
+
+```php
+class Config{
+
+	public static $DB_NAME = "DB_Name";
+
+	public static function get_connection($host){
+		return $host."/".Config::$DB_NAME;
+	}
+
+}
+
+echo Config::$DB_NAME;
+echo Config::get_connection("localhost");
+
+```
+
+### Interfaces
+
+```php
+interface IEngine{
+
+	function start();
+	    
+	function stop();
+	    
+	function status();	 
+}
+	
+class CarEngine implements IEngine{
+	private $status = "Loading";
+	  
+	function start(){
+		$this->status = "Running";
+	}
+	    
+	function stop(){
+		$this->status = "Resting";
+	}	    
+	    
+	 function status(){
+		return $this->status;
+	}
+	  
+}	
+	
+$c = new CarEngine();
+echo $c->status();  //loading
+echo "\n";
+$c->start();  //running
+echo $c->status();
+```
+
+### Abstract
+
+```php
+abstract class Car {  
+  public $name;  
+  public function __construct($name) {  
+    $this->name = $name;  
+  }  
+  abstract public function intro();  
+}  
+  
+// Child classes  
+class Audi extends Car {  
+  public function intro() {  
+    return "Choose German quality! I'm an $this->name!";  
+  }  
+}
+
+$audi = new Audi("Audi");  
+echo $audi->intro();
+```
+
+### Namespace, Typed-PHP…
+
+- To be included…

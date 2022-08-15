@@ -19,16 +19,15 @@ title: 178 Graph Valid
 
 > Every tree can be a graph but not vice versa
 - For a graph to be a valid tree it needs to satisfy the following
-	- Has root
-	- Contains no cycle
-	- Must have one component
-		- One component = has one root
+	- has root
+	- contains no cycle
+	- Must have one component = has one root
 - Solution:
 	- [Video solution](https://youtu.be/bXsUuownnoQ)
 	- Check there is only one component and no cycle
 	- How to count number of components
-		- Run DFS -> count the visited nodes and compare with the given total number of components
-			- If visited 4 and total is 5, we know there are multiple component
+		- Run DFS ⇾ count the visited nodes and compare with the given total number of components
+			- If visited 4 and total is 5, we know there are multiple components
 	- How to check no cycle
 		- Again run DFS and if you encounter a visited node along the search, you know you have found a loop/cycle.
 

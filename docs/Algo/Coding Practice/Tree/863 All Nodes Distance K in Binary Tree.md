@@ -1,6 +1,6 @@
 ---
 date created: Thursday, August 11th 2022, 10:27:00 am
-date modified: Thursday, August 11th 2022, 10:43:45 am
+date modified: Sunday, August 14th 2022, 11:39:30 am
 title: 863 All Nodes Distance K in Binary Tree
 ---
 
@@ -8,14 +8,14 @@ title: 863 All Nodes Distance K in Binary Tree
 
 ## Solution 1
 
-- Turn the tree into a un-directed graph
+- Turn the tree into an undirected graph
 	- This can be done with any DFS
 - Once we have the graph do another tree traversal or DFS
-	- Start from the target and distance zero then Increase the distance +1 every-time you jump to a node children
+	- Start from the target and distance zero then Increase the distance +1 every-time you jump to node children
 	- ==Using BFS as traversal is also possible==
 - Complexity
-	- Time - The algorithm is O(N) but since sorting the overall will be O(Nlogn)
-	- Space - O(N)
+	- Time – The algorithm is O(N) but since sorting the overall will be O(Nlogn)
+	- Space – O(N)
 
 ```python
 class Solution:
@@ -71,8 +71,8 @@ class Solution:
 - We then traverse as above by starting from the target node
 	- We will traverse in three direction, left, right and up{parent}
 - Complexity
-	- Time - O(N)
-	- Space - O(N)
+	- Time – O(N)
+	- Space – O(N)
 
 ```python
 class Solution(object):
