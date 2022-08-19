@@ -10,7 +10,7 @@ title: 79 Word Search
 
 - Start from every entry in the matrix and check if it matches the first index of the word
 	- If it is a match, we will DFS(search) starting from that entry
-	- we'll go up, down, left, and right
+	- we'll go up, down, left, and right, increasing the index
 	- keep `set` or `flag` , to not
 		- get into an in-finite loop
 		- revisit the same entry again
