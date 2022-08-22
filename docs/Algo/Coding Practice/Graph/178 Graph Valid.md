@@ -1,7 +1,7 @@
 ---
-tags: [tree, dfs]
+tags: [graph, dfs]
 date created: Wednesday, August 3rd 2022, 10:03:52 am
-date modified: Wednesday, August 10th 2022, 11:15:02 am
+date modified: Sunday, August 14th 2022, 11:40:02 am
 title: 178 Graph Valid
 ---
 

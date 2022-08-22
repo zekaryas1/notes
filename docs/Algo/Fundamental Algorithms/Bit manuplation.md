@@ -28,26 +28,19 @@ print(100101 >> 1)
 # Left shift by n,
 # Ex: 100101 << 1 = 00101..same as saying remove the first n bit(s)  
 print(100101 << 1)
-
 ```
 
 ## XOR Properties
 
 ```python
-
-
 # XOR properties:  
 # a ^ a = 0 => Same elements xored will result in zero  
-
-
 # a ^ 0 = a => Element xored with zero will result the element itself   
-
 ```
 
 ## Find Non Duplicate with XOR
 
 ```python
-
 # a ^ b ^ a = b  
 # a ^ a is zero and zero ^ b is the element itself which is b 
 a = [4,4,7,4,4]
@@ -55,7 +48,6 @@ res = 0
 for elt in a:
 	res = res ^ elt
 print(res)  # prints 7
-
 ```
 
 ## Looping in Bit World
