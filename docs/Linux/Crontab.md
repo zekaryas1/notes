@@ -1,6 +1,6 @@
 ---
 date created: Sunday, July 24th 2022, 9:15:13 pm
-date modified: Sunday, July 24th 2022, 9:26:24 pm
+date modified: Saturday, September 3rd 2022, 6:53:44 pm
 title: Crontab
 ---
 
@@ -63,5 +63,5 @@ crontab -r
 
 ## Tools
 
--   [Crontab.guru](https://crontab.guru/)
--   [Cron examples - Crontab.guru](https://crontab.guru/examples.html)
+- [Crontab.guru](https://crontab.guru/)
+- [Cron examples - Crontab.guru](https://crontab.guru/examples.html)
