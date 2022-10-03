@@ -1,10 +1,10 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Sunday, July 31st 2022, 4:01:19 pm
+date modified: Sunday, October 2nd 2022, 11:09:16 pm
 title: Javascript
 ---
 
-# Javascript
+# JavaScript
 
 ## Higher Order Functions
 
@@ -51,7 +51,7 @@ numbers.forEach(number => {  
 
 ### Reduce
 
--  Iterates through an array and returns a single value
+- Iterates through an array and returns a single value
 
 ```js
 const arrayOfNumbers = [1, 2, 3, 4];  
@@ -231,4 +231,63 @@ export default MyComponent;
 ```js
 // import
 import MyDefaultComponent from "./MyDefaultExport";
+```
+
+## Web Worker
+
+- [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
+- Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface.
+- What you can and can't inside web workers
+	- You can run whatever code you like inside the worker thread, with some exceptions.
+		- For example, you can't directly manipulate the `DOM` from inside a worker, or use some default methods and properties of the window object
+	- You can use a large number of items available under window, including `WebSockets`, and data storage mechanisms like `IndexedDB`.
+
+### Create a Web Worker
+
+```js
+const worker = new Worker('worker-file.js');
+```
+
+### Send Message & Responses
+
+- Both the client and server use `postMessage` to send messages & responses to each other
+	- The client uses it to send request
+	- The server uses it to send response
+
+```js
+const worker = new Worker('worker-file.js');
+myWorker.postMessage([first.value, second.value]);
+```
+
+### Receive Message & Response
+
+- Both client and server respond to messages via the `onmessage` event handler
+	- The message is contained within the message event's data attribute.
+	- The data is copied rather than shared.
+
+```js
+//webworker.js
+//receive message from server side
+onmessage = function(e) {
+  console.log('Worker: Message received from main script');
+  const result = e.data[0] * e.data[1];
+  if (isNaN(result)) {
+    postMessage('Please write two numbers');  //send the message to client
+  } else {
+    const workerResult = 'Result: ' + result;
+    console.log('Worker: Posting message back to main script');
+    postMessage(workerResult);  //send the message to client
+  }
+}
+```
+
+```js
+const worker = new Worker('worker-file.js');
+myWorker.postMessage([first.value, second.value]);
+
+//client can receive response with onmessage
+myWorker.onmessage = function(e) {
+	result.textContent = e.data;
+	console.log('Message received from worker');
+}
 ```

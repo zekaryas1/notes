@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Wednesday, August 10th 2022, 1:08:51 pm
+date modified: Saturday, September 17th 2022, 5:37:34 pm
 title: Introduction
 ---
 
@@ -34,7 +34,8 @@ title: Introduction
 # How to Become an Expert
 
 - Regular Practice
-	- Use Leetcode, competition…
+	- Find a good resource, this can be {teacher, book, website}
+	- Use `Leetcode`, competition…
 - Get feedback
 	- Is the code right or wrong?
 	- How fast or slow is it…can it be better?
