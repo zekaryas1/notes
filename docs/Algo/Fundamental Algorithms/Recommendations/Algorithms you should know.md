@@ -12,7 +12,7 @@ title: Algorithms You Should Know
 	- [1. Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 	- Two Pointers
 	- Sliding Window
-		- [Sliding window maximum](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20queue.md)
+		- [Sliding window maximum](Monotonic%20queue.md)
 	- Sorting
 		-  [3. Merge Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/3.%20Merge%20Sort.md)
 		- [4. Quick Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/4.%20Quick%20Sort.md)
@@ -28,8 +28,8 @@ title: Algorithms You Should Know
 	- Segment tree
 - Matrix
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic decreasing Stack](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20Stack.md)
-	- [Monotonic decreasing queue](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20decreasing%20queue.md)
+	- [Monotonic Stack](Monotonic%20Stack.md)
+	- [Monotonic queue](Monotonic%20queue.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search

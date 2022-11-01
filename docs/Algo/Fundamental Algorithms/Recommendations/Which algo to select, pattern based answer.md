@@ -19,7 +19,7 @@ title: 'Which Algo to Select, Pattern Based Answer'
 
 ## If Given a Tree Then
 
-- DFS
+- DFS{inorder,preorder, postorder}
 - BFS
 
 ## If Given a Graph Then
@@ -56,6 +56,11 @@ title: 'Which Algo to Select, Pattern Based Answer'
 ## If Asked Sub-string with X Condition
 
 - Sliding window
+- Monotonic queue
+
+## Next/Prev greater or smaller element
+
+- Monotonic stack
 
 ## Else
 

@@ -1,6 +1,6 @@
 ---
 date created: Wednesday, July 27th 2022, 11:08:39 pm
-date modified: Wednesday, August 10th 2022, 5:27:52 pm
+date modified: Sunday, October 23rd 2022, 4:57:29 pm
 title: Monotonic Stack
 ---
 
@@ -33,6 +33,8 @@ def mono_stack(nums):
 
 ## Application of Monotonic Stack
 
+- We can use this technique to find the next smaller or greater `elt` by iterating from start-end
+	- Or we can use it to find the previous smaller or greater `elt` by iterating from end - front
 - Next Largest or Smallest Element in a List
 	- [Get the next greater element for every array element](https://leetcode.com/problems/next-greater-element-i/)
 		- [Solution to Next greater elt](Algo/Coding%20Practice/Stack/Next%20greater%20elt.md)
