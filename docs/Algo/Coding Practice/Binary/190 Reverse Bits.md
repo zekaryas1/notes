@@ -1,6 +1,6 @@
 ---
 date created: Wednesday, August 24th 2022, 3:51:41 pm
-date modified: Wednesday, August 24th 2022, 4:07:02 pm
+date modified: Friday, November 11th 2022, 2:44:55 pm
 title: 190 Reverse Bits
 ---
 
@@ -28,7 +28,7 @@ turn to 30 bits 0 << 30 = 0...0 {length 30}
 add to res
 res = res + 30 bits {res = 10...0}
 
-```
+``````
 
 ```python
 class Solution:

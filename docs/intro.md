@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Saturday, September 17th 2022, 5:37:34 pm
+date modified: Sunday, November 6th 2022, 5:55:15 pm
 title: Introduction
 ---
 
@@ -12,6 +12,8 @@ title: Introduction
 
 - Algorithm and data structure
 	- [Algorithms](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
+		- [Algorithms you should know](Algorithms%20you%20should%20know.md)
+		- [Which algo to select, pattern based answer](Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 	- [Python Tips and tricks](Algo/Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
 	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.py.md)
@@ -20,28 +22,33 @@ title: Introduction
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/Javascript.md)
+- Frameworks
+	- [React Best practices](Best%20practices.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
-
-## Note Taking Guidelines
-
-- One heading(#) at the beginning of a file.
-	- Nested headings need to be sequential (## > ###)
-- Line should start with uppercase
-- Image only from remote
-- For sequential drop down use numbered bullets -> see docker notes file structure
 
 # How to Become an Expert
 
 - Regular Practice
 	- Find a good resource, this can be {teacher, book, website}
-	- Use `Leetcode`, competition…
+		- ex: Use `Leetcode`, competition…
 - Get feedback
 	- Is the code right or wrong?
 	- How fast or slow is it…can it be better?
+		- can it be refactored?
 	- Compare with other solutions
 - Make your next step challenging or new
 	- Doing the same things multiple times won't make you an expert
 		- Now array questions next should be graph problems
 		- Previously medium problems, next should be hard problems
 		- Not great on DP questions then more practice on DP questions
+
+## Things to Do
+
+- [ ] update algorithms you should know
+	- [ ] add note to every list
+	- [ ] organize better
+- [ ] add typescript to programming langs
+- [ ] update github readme
+	- [ ] include obsidian configuration
+	- [ ] more detailed explanation about the project

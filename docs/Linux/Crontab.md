@@ -12,7 +12,7 @@ title: Crontab
 ## List Crontabs
 
 ```shell
-crontab -l  
+crontab -l
 # list all crontab for the currently logged in user  
 ```
 

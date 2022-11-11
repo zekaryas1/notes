@@ -1,7 +1,7 @@
 ---
 title: Portfolio
 date created: Saturday, October 8th 2022, 7:15:34 pm
-date modified: Saturday, October 8th 2022, 8:17:43 pm
+date modified: Sunday, November 6th 2022, 5:37:50 pm
 ---
 
 # Portfolio
@@ -66,9 +66,8 @@ date modified: Saturday, October 8th 2022, 8:17:43 pm
 - Others
 	- Docker, GraphQL
 
-## Contact Me
+## Accounts
 
 - [Linkedin](https://www.linkedin.com/in/zekaryas-tadele-dinku)
-- [Telegram](tg://resolve?domain=zekaryastadele)
 - [Leetcode](https://leetcode.com/zekaryasTadele/)
 - [Github](https://github.com/zekaryas1)
