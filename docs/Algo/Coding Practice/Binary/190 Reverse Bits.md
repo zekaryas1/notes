@@ -1,6 +1,6 @@
 ---
 date created: Wednesday, August 24th 2022, 3:51:41 pm
-date modified: Friday, November 11th 2022, 2:44:55 pm
+date modified: Saturday, November 12th 2022, 6:57:37 pm
 title: 190 Reverse Bits
 ---
 
@@ -8,7 +8,7 @@ title: 190 Reverse Bits
 
 ## Solution
 
-- Iterate over the binary number with [Binary Looping template](Algo/Fundamental%20Algorithms/Bit%20manuplation.md# Looping in Bit World)
+- Iterate over the binary number with [Looping in Bit World](Algo/Fundamental%20Algorithms/Bit%20manipulation.md#Looping%20in%20Bit%20World)
 - Add the last bits to the end of the 32 bits answer
 	- The last bit will be placed at answer's `31th` bit
 	- The next last bit will be placed at answer's `30th` bit {31-1}…

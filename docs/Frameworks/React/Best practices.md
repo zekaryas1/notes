@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Monday, October 3rd 2022, 12:32:00 am
+date modified: Saturday, November 12th 2022, 6:55:01 pm
 ---
 
 # Best Practices
@@ -205,7 +205,7 @@ onCommentClick = (event) => {
 ## React Web Workers
 
 - [Popular react web worker library](https://www.npmjs.com/package/@shopify/react-web-worker)
-- [Web Worker](Javascript.md#Web%20Worker)
+- [Web Worker](Programming%20langs/Javascript.md#Web%20Worker)
 
 ```js
 import React, {useEffect} from 'react';
