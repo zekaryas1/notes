@@ -45,7 +45,7 @@ my_set.remove('b')
 
 my_set.remove('x') #caused an error x is not in the set
 
-my_set.discard('x') #doesn't cause an error
+my_set.discard('x') #remove but doesn't cause an error
 
 my_set.pop() #returns a random elt
 

@@ -37,7 +37,7 @@ class Solution:
 
 ## Solution 2: Python Iter
 
-- [Read about iter](Algo/Tips%20&%20Tricks/built-in%20functions.md#iter)
+- [Read about iter](Algo/Python%20Tips%20&%20Tricks/built-in%20list%20functions.md#iter)
 - Just testing whether all characters in s are also in t (in order).
 
 ```python

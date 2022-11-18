@@ -16,7 +16,7 @@ title: 417 Pacific Atlantic Water Flow
 - Use set to store both result and visited nodes
 	- We're going in four direction, so we need a method not run in infinite loop
 - Use set's `&` method to quickly find nodes common to 2 or more sets
-	- [Sets - intersection, union and more](Algo/Tips%20&%20Tricks/Sets%20-%20intersection,%20union%20and%20more.md)
+	- [Sets - intersection, union and more](Algo/Python%20Tips%20&%20Tricks/Sets%20-%20intersection,%20union%20and%20more.md)
 
 ```python
 class Solution:

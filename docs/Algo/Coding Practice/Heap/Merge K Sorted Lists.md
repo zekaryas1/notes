@@ -1,7 +1,7 @@
 ---
 tags: [heap]
 date created: Thursday, August 4th 2022, 4:28:04 pm
-date modified: Sunday, November 6th 2022, 5:25:46 pm
+date modified: Friday, November 18th 2022, 1:36:17 pm
 title: Merge K Sorted Lists
 ---
 
@@ -25,7 +25,7 @@ l1 = [2,6,8]
 l2 = [3,6,7]
 l3 = [1,3,4]
 
-q = deque()
+q = PriorityQueue()
 q.put([l1[0],0, a])
 q.put([l2[0],0, b])
 q.put([l3[0],0, c])
@@ -40,3 +40,6 @@ while not q.empty():
 		q.put([a[index], index, arr])
 return res
 ```
+
+- Pythonic way of merging sorted list
+	- [Merge Sorted Array with Heapq](Algo/Python%20Tips%20&%20Tricks/More%20on%20heapq.md#Merge%20Sorted%20Array%20with%20Heapq)

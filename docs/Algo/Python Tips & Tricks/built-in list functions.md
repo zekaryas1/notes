@@ -1,6 +1,6 @@
 ---
 date created: Sunday, July 31st 2022, 3:13:22 pm
-date modified: Wednesday, August 24th 2022, 11:39:59 am
+date modified: Friday, November 18th 2022, 12:58:24 pm
 title: Built-in Functions
 ---
 
@@ -19,7 +19,7 @@ result = zip(languages, versions) #result = zip object
 print(list(result))
 ```
 
--  If two `iterables` are passed to `zip()`; one `iterable` containing three(3) and other containing five(5) elements.
+- If two `iterables` are passed to `zip()`; one `iterable` containing three(3) and other containing five(5) elements.
 	- Then, the returned iterator will contain three tuples. It's because the iterator stops when the shortest `iterable` is exhausted.
 
 ```python

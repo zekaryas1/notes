@@ -14,7 +14,7 @@ title: Introduction
 	- [Algorithms](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
 		- [Algorithms you should know](Algo/Fundamental%20Algorithms/Recommendations/Algorithms%20you%20should%20know.md)
 		- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
-	- [Python Tips and tricks](Algo/Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
+	- [Python Tips and tricks](Algo/Python%20Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
 	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.py.md)
 - Containerization
@@ -23,7 +23,7 @@ title: Introduction
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/Javascript.md)
 - Frameworks
-	- [Best practices](Frameworks/React/Best%20practices.md)
+	- [React Best practices](Frameworks/React/Best%20practices.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
 

@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, July 27th 2022, 11:53:30 am
+date modified: Friday, November 18th 2022, 1:35:45 pm
 title: Stack and Queue
 ---
 
@@ -42,7 +42,6 @@ print(d.popleft())  #12 first in first out
 ## Priority Queue
 
 - The **priority queue** is an advanced type of the Queue data structure. Instead of dequeuing the oldest element, a priority queue sorts and dequeues elements based on their _priorities_.
-
 - Priority queues are used to handle scheduling problems where some tasks are prioritized over others.
 
 ```python
@@ -104,9 +103,9 @@ while not q.empty():
 - `heapify`
 	- This function is used to **convert the iterable into a heap** data structure.
 - `heappush`
-	-  This function is used to **insert the element** mentioned in its arguments into heap.
+	- This function is used to **insert the element** mentioned in its arguments into heap.
 - `heappop`
-	-  This function is used to **remove and return the smallest element** from heap.
+	- This function is used to **remove and return the smallest element** from heap.
 
 ```python
 import heapq
@@ -133,3 +132,4 @@ print(minHeap)
 ```
 
 > [Priority Queue vs Heapq](https://stackoverflow.com/questions/36991716/whats-the-difference-between-heapq-and-priorityqueue-in-python)
+- [More on heapq](Algo/Python%20Tips%20&%20Tricks/More%20on%20heapq.md)

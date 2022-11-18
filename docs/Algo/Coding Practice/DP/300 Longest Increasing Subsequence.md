@@ -79,7 +79,7 @@ for num in nums:
 return len(tail)
 ```
 
-- [Read about python binary search before](Algo/Tips%20&%20Tricks/In-built%20Binary%20search.md)
+- [Read about python binary search before](Algo/Python%20Tips%20&%20Tricks/In-built%20Binary%20search.md)
 
 ```
 [10,9,2,5,3,7,101,18]
