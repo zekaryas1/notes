@@ -52,3 +52,4 @@ title: Introduction
 - [ ] update github readme
 	- [ ] include obsidian configuration
 	- [ ] more detailed explanation about the project
+- [ ] move react concepts from javascript to react note
