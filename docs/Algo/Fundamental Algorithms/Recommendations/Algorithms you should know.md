@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Saturday, November 12th 2022, 6:44:36 pm
+date modified: Sunday, December 4th 2022, 5:34:09 pm
 title: Algorithms You Should Know
 ---
 
@@ -14,14 +14,14 @@ title: Algorithms You Should Know
 		- [Binary search-Find boundary](Algo/Fundamental%20Algorithms/Searching%20algos/2.%20Binary%20search-Find%20boundary.md)
 	- Two Pointers
 	- Sliding Window
-		- [Sliding window maximum](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20queue.md)
+		- [Sliding window maximum](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
 	- Sorting
 		- [3. Merge Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/3.%20Merge%20Sort.md)
 		- [4. Quick Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/4.%20Quick%20Sort.md)
 		- [5. Radix Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/5.%20Radix%20Sort.md)
-	- [Merge intervals](Algo/Fundamental%20Algorithms/Intervals/Merge%20intervals.md)
+	- [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
 	- Kadane algorithm
-	- Prefix sum
+	- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Prefix%20sum/Prefix%20sum.md)
 - String
 - Hash Table
 - Tree
@@ -31,8 +31,8 @@ title: Algorithms You Should Know
 	- Segment tree
 - Matrix
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20Stack.md)
-	- [Monotonic queue](Algo/Fundamental%20Algorithms/Linked%20List/Monotonic%20queue.md)
+	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
+	- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search
@@ -50,4 +50,4 @@ title: Algorithms You Should Know
 - [Recursion](Algo/Fundamental%20Algorithms/Recursion/Recursion.md)
 - [Backtracking](Algo/Fundamental%20Algorithms/Recursion/Backtracking.md)
 - [Greedy algorithms](Algo/Fundamental%20Algorithms/Greedy%20algorithms.md)
-- [Merge intervals](Algo/Fundamental%20Algorithms/Intervals/Merge%20intervals.md)
+- [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)

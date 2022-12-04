@@ -9,9 +9,9 @@ title: 57 Insert Interval
 
 ## Solution
 
-- [First read, Merge intervals](Algo/Fundamental%20Algorithms/Intervals/Merge%20intervals.md)
+- [First read, Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
 - First create a new list and add both intervals and the new intervals in sorted order.
-- Next run merge intervals [Merge intervals](Algo/Fundamental%20Algorithms/Intervals/Merge%20intervals.md)
+- Next run merge intervals [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
 
 ```python
 class Solution:
