@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Saturday, November 12th 2022, 6:23:04 pm
+date modified: Thursday, December 8th 2022, 1:34:54 pm
 title: Introduction
 ---
 
@@ -24,6 +24,7 @@ title: Introduction
 	- [JavaScript](Programming%20langs/Javascript.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
+	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
 
