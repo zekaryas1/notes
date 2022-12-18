@@ -1,4 +1,5 @@
 # Zekaryas's second brain
+![website screenshot](./image-h.png)
 <!-- TOC -->
 * [Zekaryas's second brain](#zekaryass-second-brain)
   * [How I take notes](#how-i-take-notes)
@@ -14,8 +15,6 @@
 - My Notes from books, articles and everywhere else powered by Obsidian & Docusaurus.
   - https://zack.onrender.com, https://zekaryas.vercel.app
 ----
-![website screenshot](./image-h.png)
-
 
 ## How I take notes
 - I use [Obsidian](https://obsidian.md/) a powerful and extensible knowledge base
