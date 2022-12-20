@@ -13,7 +13,7 @@
 <!-- TOC -->
 
 - My Notes from books, articles and everywhere else powered by Obsidian & Docusaurus.
-  - https://zack.onrender.com, https://zekaryas.vercel.app
+  - https://cnotes.vercel.app
 ----
 
 ## How I take notes
