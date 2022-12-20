@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Thursday, December 8th 2022, 1:34:54 pm
+date modified: Tuesday, December 20th 2022, 12:40:02 pm
 title: Introduction
 ---
 
@@ -44,13 +44,18 @@ title: Introduction
 		- Previously medium problems, next should be hard problems
 		- Not great on DP questions then more practice on DP questions
 
+## Domains
+
+- [Main Vercel](zekaryas.vercel.app)
+- [Render](zack.onrender.com)
+
 ## Things to Do
 
 - [ ] update algorithms you should know
 	- [ ] add note to every list
 	- [ ] organize better
 - [ ] add typescript to programming langs
-- [ ] update github readme
+- [ ] update GitHub readme
 	- [ ] include obsidian configuration
 	- [ ] more detailed explanation about the project
-- [ ] move react concepts from javascript to react note
+- [ ] move react concepts from JavaScript to react note
