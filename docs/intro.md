@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Tuesday, December 20th 2022, 12:40:02 pm
+date modified: Wednesday, December 28th 2022, 11:56:27 am
 title: Introduction
 ---
 
@@ -22,6 +22,7 @@ title: Introduction
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/Javascript.md)
+	- [Typescript](Programming%20langs/Typescript.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
 	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
@@ -46,8 +47,8 @@ title: Introduction
 
 ## Domains
 
-- [Main Vercel](zekaryas.vercel.app)
-- [Render](zack.onrender.com)
+- [Main Vercel](https://zekaryas.vercel.app)
+- [Render](https://zack.onrender.com)
 
 ## Things to Do
 
