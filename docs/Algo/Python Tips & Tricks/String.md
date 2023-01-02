@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Monday, October 3rd 2022, 10:02:17 am
+date modified: Monday, January 2nd 2023, 11:22:19 am
 title: String Operations
 ---
 
@@ -19,6 +19,33 @@ print(a[::-1])
 * In python string concatenation is O(n), because the underline cpython handles the string builder.
 * In python string is immutable, thus you can not do string replacement in place.
 	* Instead convert it into a list.
+
+## String Property Checking
+
+- `isupper` to check if a string is all uppercase
+- `islower` to check if a string is all lowercase
+- `isnumeric` to check if a string is all numeric
+- `isalpha` to check is a string is all alphabet
+- `isalnum` to check if a string is all numeric and alphabet
+- `isspace` to check is a string is all space/empty
+
+```python
+print("USA".isupper()) #true
+
+print("b".islower()) #true
+print("Bc".islower()) #false
+
+print("123".isnumeric()) #true
+
+print("abc".isalpha()) #true
+print("ab c".isalpha()) #false
+
+print("abc123".isalnum()) #true
+
+print("".isspace()) #false
+print(" ".isspace()) #true
+print(" \t".isspace()) #true
+```
 
 ## String Formatting
 
