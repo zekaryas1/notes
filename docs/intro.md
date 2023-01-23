@@ -22,7 +22,7 @@ title: Introduction
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/Javascript.md)
-	- [Fundamentals](Programming%20langs/TypeScript/Fundamentals.md)
+	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
 	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
