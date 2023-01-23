@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, August 10th 2022, 5:07:14 pm
+date modified: Friday, January 13th 2023, 11:16:56 am
 title: What is Algorithm Analysis
 ---
 
@@ -9,10 +9,8 @@ title: What is Algorithm Analysis
 * Time is not the only thing that matters in an algorithm. We might also care about the amount of memory or space required by an algorithm.
 * In algorithm analysis, we focus on the growth rate of the running time as a function of the input size n.(how many times a function is likely to execute based on the input)
 * Big 0(asymptotic runtime) is the language and metric we use to describe the efficiency of algorithms.
-* Big 0, Big Theta, and Big Omega
-	* 0 (big 0): In academia, big 0 describes an upper bound on the time.
-	* Q (big omega): In academia, big omega describes a lower bound.
-	* Big theta : describe the average.
+* [Video explanation on big o](https://youtu.be/BgLTDT03QtU)
+	* [Related website with code example](https://neetcode.io/courses/lessons/big-o-notation)
 
 ## Common Algorithm's Time Complexity
 
@@ -25,7 +23,7 @@ title: What is Algorithm Analysis
 
   * It means use a constant O(1) memory this can be
 	  * Variable
-	  * Array with fixed size Array a = new Array[3]
+	  * Array with fixed size i.e `Array a = new Array[3]`
   * It doesn’t mean
 	  * A dictionary or an array that depends on the input
 	  * Ex: List l = new List(input.length)

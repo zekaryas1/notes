@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Wednesday, December 28th 2022, 11:56:27 am
+date modified: Saturday, January 21st 2023, 1:16:39 pm
 title: Introduction
 ---
 
@@ -22,7 +22,7 @@ title: Introduction
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/Javascript.md)
-	- [Typescript](Programming%20langs/Typescript.md)
+	- [Fundamentals](Programming%20langs/TypeScript/Fundamentals.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
 	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
@@ -60,3 +60,17 @@ title: Introduction
 	- [ ] include obsidian configuration
 	- [ ] more detailed explanation about the project
 - [ ] move react concepts from JavaScript to react note
+- [ ] explore <https://www.enjoyalgorithms.com/>
+- [ ] Leetcode questions to explore and add here
+	- [ ] you don't know union find - <https://leetcode.com/problems/lexicographically-smallest-equivalent-string/description/>
+	- [ ] nice hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
+	- [ ] subarray questions: revision
+		- [ ] <https://leetcode.com/problems/subarray-sum-equals-k/>
+		- [ ] <https://leetcode.com/problems/continuous-subarray-sum/>
+		- [ ] <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>
+			- [ ] <https://youtu.be/10wbS3uk2F8>
+	- [ ] leetcode stone game: dynamic programming questions
+	- [ ] new backtracking technique
+		- [ ] using path at leaf node
+		- [ ] or building the result along the path and function parameter
+			- [ ] <https://leetcode.com/problems/restore-ip-addresses/description/>

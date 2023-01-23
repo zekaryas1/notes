@@ -1,10 +1,14 @@
 ---
 title: Best Practices
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Saturday, November 12th 2022, 6:55:01 pm
+date modified: Monday, January 23rd 2023, 3:55:03 pm
 ---
 
 # Best Practices
+
+## Use Typescript
+
+- [How to add types to react](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
 
 ## State
 

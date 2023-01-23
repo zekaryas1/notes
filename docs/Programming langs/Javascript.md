@@ -1,10 +1,153 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Sunday, October 2nd 2022, 11:09:16 pm
-title: Javascript
+date modified: Monday, January 23rd 2023, 12:47:19 pm
+title: JavaScript
 ---
 
 # JavaScript
+
+## JS Map and Set
+
+- [Source from JavaScript-info](https://javascript.info/map-set)
+
+### Map
+
+- Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+- *Avoid using map[key]=value or map[key] to set and get value from a map, instead use set and get methods*
+
+```txt
+new Map() 
+	– creates the map.
+map.set(key, value) 
+	– stores the value by the key.
+map.get(key) 
+	– returns the value by the key, undefined if key doesn’t exist in map.
+map.has(key) 
+	– returns true if the key exists, false otherwise.
+map.delete(key) 
+	– removes the element (the key/value pair) by the key.
+map.clear() 
+	– removes everything from the map.
+map.size 
+	– returns the current element count.
+```
+
+```js
+let map = new Map();
+
+map.set('1', 'str1');   // a string key
+map.set(1, 'num1');     // a numeric key
+map.set(true, 'bool1'); // a boolean key
+
+// remember the regular Object? it would convert keys to string
+// Map keeps the type, so these two are different:
+console.log(map.get(1)); // 'num1'
+console.log(map.get('1') ); // 'str1'
+
+console.log(map.size); // 3
+```
+
+#### Map Vs Object
+
+- for js object key must be string, otherwise it will be converted to string, however in map key can be anything(object, primitives)
+
+```js
+const obj = {};
+
+obj[12] = 'number of columns';
+obj[{name: 'John'}] = 450;
+
+console.log(obj);  //{ '12': 'number of columns', '[object Object]': 450 }
+```
+
+```js
+const m = new Map();
+
+m.set(12, 'number of columns');
+m.set({name: 'John'}, 450);
+
+console.log(m);  //Map(2) { 12 => 'number of columns', { name: 'John' } => 450 }
+```
+
+#### Iteration
+
+```js
+const priceMap = new Map([
+	['mac', 2400],
+	['iphone', 1200],
+	['samsung', 900]
+]); //map can be created with array
+
+for (let brand of priceMap.keys()) {
+  console.log(brand, priceMap.get(brand));
+}
+
+
+//or
+priceMap.forEach((value,key, map) => {
+	console.log(key, value);
+})
+```
+
+## Set
+
+- A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
+- *like map key can be any js type(number, boolean, array, object…)*
+
+```txt
+new Set([iterable]) 
+	– creates the set, and if an iterable object is provided (usually an array), copies values from it into the set.
+    
+set.add(value) 
+	– adds a value, returns the set itself.
+	
+set.delete(value) 
+	– removes the value, returns true if value existed at the moment of the call, otherwise false.
+	
+set.has(value) 
+	– returns true if the value exists in the set, otherwise false.
+	
+set.clear() 
+	– removes everything from the set.
+	
+set.size 
+	– is the elements count.
+```
+
+```js
+let set = new Set();
+
+let john = { name: "John" };
+let pete = { name: "Pete" };
+let mary = { name: "Mary" };
+
+// visits, some users come multiple times
+set.add(john);
+set.add(pete);
+//set.add([1,2,34]);
+set.add(john);
+set.add(mary);
+
+// set keeps only unique values
+console.log( set.size ); // 3
+
+for (let user of set) {
+  console.log(user); // John (then Pete and Mary)
+}
+```
+
+### Iteration
+
+```js
+let set = new Set(["oranges", "apples", "bananas"]);
+
+for (let value of set) console.log(value);
+
+// the same with forEach:
+set.forEach((value, valueAgain, set) => {
+  console.log(value);
+});
+```
 
 ## Higher Order Functions
 
