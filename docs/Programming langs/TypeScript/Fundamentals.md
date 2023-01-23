@@ -306,7 +306,7 @@ p1.x = 5; // error! Cannot assign to 'x' because it is a read-only property.
 
 ### ReadonlyArray
 
-- Typescript comes with a ReadonlyArray<> type that is the same as Array<> with all mutating methods removed, so you can make sure you don't change your arrays after creation.
+- Typescript comes with a ReadonlyArray type that is the same as Array with all mutating methods removed, so you can make sure you don't change your arrays after creation.
 
 ```ts
 let my_heros: ReadonlyArray<string> = ['Ali', 'Mike', 'Alferd'];
