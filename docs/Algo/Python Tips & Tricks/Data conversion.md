@@ -32,3 +32,25 @@ print(ord('a')) #97
 print(ord('a')-ord('a')) #0
 print(ord('b')-ord('a')) #1
 ```
+
+
+## Get all digits and alphabets in python
+
+- To get digits in python
+
+```python
+import string
+
+print(string.digits) #0123456789
+
+# to get as list of int
+print([int(d) for d in string.digits]) #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+- To get alphabets a-z A-Z
+
+```python
+import string
+
+print(string.ascii_letters) #abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ
+```

@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Monday, January 23rd 2023, 5:44:00 pm
+date modified: Tuesday, January 31st 2023, 12:23:56 pm
 title: Introduction
 ---
 
@@ -55,22 +55,24 @@ title: Introduction
 - [ ] update algorithms you should know
 	- [ ] add note to every list
 	- [ ] organize better
-- [ ] add typescript to programming langs
-- [ ] update GitHub readme
-	- [ ] include obsidian configuration
-	- [ ] more detailed explanation about the project
 - [ ] move react concepts from JavaScript to react note
 - [ ] explore <https://www.enjoyalgorithms.com/>
 - [ ] Leetcode questions to explore and add here
 	- [ ] you don't know union find - <https://leetcode.com/problems/lexicographically-smallest-equivalent-string/description/>
-	- [ ] nice hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
+	- [ ] hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
 	- [ ] subarray questions: revision
 		- [ ] <https://leetcode.com/problems/subarray-sum-equals-k/>
 		- [ ] <https://leetcode.com/problems/continuous-subarray-sum/>
 		- [ ] <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>
 			- [ ] <https://youtu.be/10wbS3uk2F8>
+		- [ ] Kadane
+			- [ ] <https://leetcode.com/problems/maximum-subarray/>
+			- [ ] <https://leetcode.com/problems/maximum-sum-circular-subarray/description/>
 	- [ ] leetcode stone game: dynamic programming questions
 	- [ ] new backtracking technique
 		- [ ] using path at leaf node
 		- [ ] or building the result along the path and function parameter
 			- [ ] <https://leetcode.com/problems/restore-ip-addresses/description/>
+	- [ ] Design questions to note
+		- [ ] <https://leetcode.com/problems/lru-cache/>
+		- [ ] <https://leetcode.com/problems/lfu-cache/>
