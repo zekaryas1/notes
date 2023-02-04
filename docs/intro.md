@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Tuesday, January 31st 2023, 12:23:56 pm
+date modified: Saturday, February 4th 2023, 1:38:07 pm
 title: Introduction
 ---
 
@@ -28,6 +28,12 @@ title: Introduction
 	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
+- Upcoming
+	- tRPC
+	- zod
+	- graphQL
+	- system design
+	- next 13
 
 # How to Become an Expert
 
@@ -58,7 +64,6 @@ title: Introduction
 - [ ] move react concepts from JavaScript to react note
 - [ ] explore <https://www.enjoyalgorithms.com/>
 - [ ] Leetcode questions to explore and add here
-	- [ ] you don't know union find - <https://leetcode.com/problems/lexicographically-smallest-equivalent-string/description/>
 	- [ ] hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
 	- [ ] subarray questions: revision
 		- [ ] <https://leetcode.com/problems/subarray-sum-equals-k/>
