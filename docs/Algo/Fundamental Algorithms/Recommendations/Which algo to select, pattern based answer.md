@@ -1,7 +1,7 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, August 10th 2022, 5:46:15 pm
-title: 'Which Algo to Select, Pattern Based Answer'
+date modified: Saturday, February 4th 2023, 3:29:51 pm
+title: Which Algo to Select, Pattern Based Answer
 ---
 
 # Which Algo to Select, Pattern Based Answer
@@ -33,20 +33,20 @@ title: 'Which Algo to Select, Pattern Based Answer'
 
 ## If Recursion is Banned Then
 
-- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
+- [Stack {LAST IN FIRST OUT}](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
 
 ## If Must Solve In-place Then
 
 - Swap corresponding values
 - Store one or more different values in the same pointer
 
-## If Asked for maximum/minimum sub-array/subset/options Then
+## If Asked for maximum/minimum of sub-array/subset/options Then
 
 - [Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 
 ## If Asked for top/least K Items Then
 
-- Heap [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
+- [Heap](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20{%20Heapq%20})
 
 ## If Asked for Common Strings Then
 
@@ -58,9 +58,14 @@ title: 'Which Algo to Select, Pattern Based Answer'
 - Sliding window
 - Monotonic queue
 
-## Next/Prev greater or smaller element
+## If Asked Sub-array Sum with X Condition
 
-- Monotonic stack
+- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Prefix%20sum/Prefix%20sum.md)
+
+## Next/Prev Greater or Smaller Element
+
+- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
+	- [ex: Next greater elt](Algo/Coding%20Practice/Stack/Next%20greater%20elt.md)
 
 ## Else
 

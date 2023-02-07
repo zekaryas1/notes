@@ -1,7 +1,7 @@
 ---
 title: Fundamentals
 date created: Monday, December 12th 2022, 8:37:20 pm
-date modified: Monday, January 23rd 2023, 3:54:16 pm
+date modified: Monday, February 6th 2023, 2:45:01 pm
 ---
 
 # Fundamentals
@@ -21,6 +21,7 @@ date modified: Monday, January 23rd 2023, 3:54:16 pm
 
 ## Basic Types
 
+- ![](https://d3n0h9tb65y8q.cloudfront.net/public_assets/assets/000/002/543/original/Typescript-primitive-types.png?1642578765)
 - All JavaScript types
 	- Primitive types
 		- string
@@ -29,8 +30,9 @@ date modified: Monday, January 23rd 2023, 3:54:16 pm
 		- boolean
 		- null & undefined
 			- By default null and undefined are subtypes of all other types. That means you can assign null and undefined to something like number.
+		- void & symbol
 	- Object types
-		- array, functions, classes and etc…
+		- array, functions, classes, enum and interfaces…
 
 ```ts
 //primitive-types

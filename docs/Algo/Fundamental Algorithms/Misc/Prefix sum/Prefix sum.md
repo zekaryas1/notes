@@ -1,7 +1,8 @@
 ---
+tags: [prefix, prefixSum]
 title: What is Prefix Sum
 date created: Sunday, November 6th 2022, 5:46:32 pm
-date modified: Sunday, December 4th 2022, 5:35:19 pm
+date modified: Saturday, February 4th 2023, 3:33:56 pm
 ---
 
 # What is Prefix Sum
@@ -42,8 +43,7 @@ print(res)
 	- maximum sub-array sub
 - Examples
 	- [2256 Minimum Average Difference](Algo/Coding%20Practice/Array/2256%20Minimum%20Average%20Difference.md)
-	- <https://leetcode.com/problems/subarray-sums-divisible-by-k>
-	- <https://leetcode.com/problems/subarray-sum-equals-k>
-	- <https://leetcode.com/problems/continuous-subarray-sum>
+	- [974. Subarray Sums Divisible by K](Algo/Coding%20Practice/Array/974.%20Subarray%20Sums%20Divisible%20by%20K.md)
+	- [560 Subarray Sum Equals K](Algo/Coding%20Practice/Array/560%20Subarray%20Sum%20Equals%20K.md)
 	- <https://leetcode.com/problems/product-of-array-except-self>
 	- <https://leetcode.com/problems/minimum-size-subarray-sum>

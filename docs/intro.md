@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Saturday, February 4th 2023, 1:38:07 pm
+date modified: Saturday, February 4th 2023, 3:56:36 pm
 title: Introduction
 ---
 
@@ -66,10 +66,6 @@ title: Introduction
 - [ ] Leetcode questions to explore and add here
 	- [ ] hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
 	- [ ] subarray questions: revision
-		- [ ] <https://leetcode.com/problems/subarray-sum-equals-k/>
-		- [ ] <https://leetcode.com/problems/continuous-subarray-sum/>
-		- [ ] <https://leetcode.com/problems/subarray-sums-divisible-by-k/description/>
-			- [ ] <https://youtu.be/10wbS3uk2F8>
 		- [ ] Kadane
 			- [ ] <https://leetcode.com/problems/maximum-subarray/>
 			- [ ] <https://leetcode.com/problems/maximum-sum-circular-subarray/description/>
