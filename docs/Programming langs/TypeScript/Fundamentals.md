@@ -194,10 +194,12 @@ let strLength: number = (someValue as string).length;
 
 ```ts
 const user = {} as User;
+
+//similarly
 const user = <User>{};
 ```
 
-## Types for Functions
+## Typing Functions
 
 ```ts
 function login(email: string, password: string): boolean {
@@ -457,12 +459,12 @@ function draw(color: Color, pattern: ...) {...}
 
 ### More OOP Concepts to cover…
 
-	- access control with protected, private and public
-	- getters and setters
-	- static properties
-	- abstract classes
-	- method overloading
-		- https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads
+- access control with protected, private and public
+- getters and setters
+- static properties
+- abstract classes
+- method overloading
+	- https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads
 
 ## Generics
 

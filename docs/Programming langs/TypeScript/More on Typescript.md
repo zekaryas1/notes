@@ -1,7 +1,7 @@
 ---
 title: More on Typescript
 date created: Monday, January 23rd 2023, 2:41:42 pm
-date modified: Tuesday, February 7th 2023, 10:51:12 am
+date modified: Sunday, April 9th 2023, 9:19:15 am
 ---
 
 # More on Typescript
@@ -250,23 +250,36 @@ todoInfo;
 	- *this is useful when the library/package we're using doesn't provide typescript types*
 
 ```ts
-import { getContent } from '@builder.io'
-const content = getContent()
-// 😍
-type Content = ReturnType<typeof getContent>
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+type AddReturnType = ReturnType<typeof add>;
+// type AddReturnType = number;
+```
+
+```ts
+async function featchData(a: number, b: number): Promise<number> {
+  return //...;
+}
+
+type AddReturnType = ReturnType<typeof featchData>;
+// type AddReturnType = Promise<number>;
 ```
 
 ### Awaited
 
-- now in the above [ReturnType](#ReturnType) example what if the `getContent` type was an async function.
+- now in the above second [ReturnType](#ReturnType) example the `featchData` type was an async function.
 	- *the return type will be promise, which we don't want*
 	- to fix this we can use the Awaited type to unwrap the promise and get the type of what the promise resolves to:
 
 ```ts
-import { getContent } from '@builder.io'
-const content = await getContent()
-// ✅
-type Content = Awaited<ReturnType<typeof getContent>>
+function featchData(a: number, b: number): Promise<number> {
+  return //...;
+}
+
+type AddReturnType = Awaited<ReturnType<typeof featchData>>
+// type AddReturnType = number;
 ```
 
 ### Parameters
@@ -296,4 +309,11 @@ type params2 = NonNullable<SumParams[1]>; //param2 is now type number
 
 //or
 type params2 = NonNullable<Parameters<typeof Sum>[1]>
+```
+
+```ts
+type NullableString = string | null | undefined;
+
+type NonNullableString = NonNullable<NullableString>;
+// type NonNullableString = string;
 ```

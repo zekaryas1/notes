@@ -1,10 +1,10 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Monday, January 23rd 2023, 12:47:19 pm
-title: JavaScript
+date modified: Thursday, March 9th 2023, 5:17:31 pm
+title: Should Know JavaScript
 ---
 
-# JavaScript
+# Should Know JavaScript
 
 ## JS Map and Set
 

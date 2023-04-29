@@ -209,7 +209,7 @@ onCommentClick = (event) => {
 ## React Web Workers
 
 - [Popular react web worker library](https://www.npmjs.com/package/@shopify/react-web-worker)
-- [Web Worker](Programming%20langs/Javascript.md#Web%20Worker)
+- [Web Worker](Programming%20langs/JavaScript/Should%20Know%20JavaScript.md#Web%20Worker)
 
 ```js
 import React, {useEffect} from 'react';

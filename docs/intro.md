@@ -21,16 +21,15 @@ title: Introduction
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
-	- [JavaScript](Programming%20langs/Javascript.md)
+	- [JavaScript](Programming%20langs/JavaScript/Should%20Know%20JavaScript.md)
 	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
+		- [More on Typescript](Programming%20langs/TypeScript/More%20on%20Typescript.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
 	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
 - Upcoming
-	- tRPC
-	- zod
 	- graphQL
 	- system design
 	- next 13
