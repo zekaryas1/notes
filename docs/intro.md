@@ -21,7 +21,7 @@ title: Introduction
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)
 - Programming languages
 	- [PHP](Programming%20langs/PHP.md)
-	- [JavaScript](Programming%20langs/JavaScript/Should%20Know%20JavaScript.md)
+	- [JavaScript](Programming%20langs/JavaScript/You%20Should%20Know%20JavaScript.md)
 	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
 		- [More on Typescript](Programming%20langs/TypeScript/More%20on%20Typescript.md)
 - Frameworks

@@ -1,10 +1,10 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Thursday, March 9th 2023, 5:17:31 pm
-title: Should Know JavaScript
+date modified: Sunday, April 30th 2023, 2:26:44 pm
+title: You Should Know JavaScript
 ---
 
-# Should Know JavaScript
+# You Should Know JavaScript
 
 ## JS Map and Set
 
@@ -434,3 +434,141 @@ myWorker.onmessage = function(e) {
 	console.log('Message received from worker');
 }
 ```
+
+## JS Sorting
+
+> Sorting is in-place in JavaScript
+
+- sort linear array
+
+```js
+const array = [5,4,3,2,1];
+array.sort()
+console.log(array)
+```
+
+- sort objects by
+	- string
+	- numeric value
+
+```js
+const array = [
+	{
+		id: 4,
+		name: "Zeku"
+	},
+	{
+		id: 1,
+		name: "Abel"
+	}
+]
+
+
+//sort by string value
+array.sort((a,b) => a.name.localeCompare(b.name));
+console.log(array)
+```
+
+```js
+const array = [
+	{
+		id: 4,
+		name: "Zeku"
+	},
+	{
+		id: 1,
+		name: "Abel"
+	}
+]
+
+
+//sort by numberic value
+array.sort((a,b) => a.id - b.id);
+console.log(array)
+```
+
+### Slice Vs Splice
+
+#### Slice
+
+> syntax => slice(start, end), end is not included
+
+- return portion of an array
+
+```js
+const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
+
+console.log(animals.slice(0, 2));
+```
+
+#### Splice
+
+> syntax => splice(start_index, number_of_elts_to_remove, …list_of_elts_to_add)
+
+- Remove elets with Splice
+
+```js
+let array = [1,2,3,4,5];
+
+array.splice(3, 1); //removes number 4
+console.log(array)
+```
+
+- Add elements with slice
+
+```js
+let array = [1,2,3,4,5];
+
+array.splice(3, 0, 'A', 'B', 'C'); //Add A,B,C
+console.log(array)
+```
+
+## What is the Difference Between Var, Let, Const
+
+- There are 3 type of scopes
+	- global
+	- local
+	- lexical scope or block scope
+
+> Variables declared with var are either function-scoped or global-scoped, depending on whether they are declared within a function or outside a function. variables declared with either const or let are block scope
+
+- let & const
+	- block scope {}
+- var
+	- function scope or global scope
+- const
+	- can not be re-initialized
+
+## What is Closure Ins JavaScript?
+
+- [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+- a closure gives you access to an outer function's scope from an inner function.
+
+```js
+function makeFunc() {
+  var name = "Mozilla"; // name is a local variable created by init
+  return function displayName() {
+    // displayName() is the inner function, that forms the closure
+    console.log(name); // use variable declared in the parent function
+  }
+}
+const res = makeFunc();
+res();
+```
+
+- Code explanation
+	- In some programming languages, the local variables within a function exist for just the duration of that function's execution.
+	- Once makeFunc() finishes executing, you might expect that the name variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
+
+```js
+function add(x) {
+  return function (y) {
+    return x + y;
+  };
+}
+
+const res = add(14)(14) //res = 14
+```
+
+- Real world example of using closures
+	- [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures)

@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Monday, January 23rd 2023, 3:55:03 pm
+date modified: Sunday, April 30th 2023, 2:18:03 pm
 ---
 
 # Best Practices
@@ -48,6 +48,8 @@ addNewUser = () => {
    }));
 };
 ```
+
+> [How to use Readonly to enforce state immutability](Programming%20langs/TypeScript/More%20on%20Typescript.md#Readonly)
 
 ### Avoid Props in Initial States
 
@@ -98,15 +100,22 @@ class EditPanelComponent extends Component {
 } 
 ```
 
-## Memoization
+## Use Memoization
+
+- There are three ways we can achieve memorization in react
+	- Pure-Component for memorizing Class-Based components
+		- *no discussed since class components are no longer recommended*
+	- React.memo for memorizing functional components
+		- `useCallback` for memorizing function instance
+	- useMemo for memorizing heavy functions result
 
 ### React.memo : Memorize React Components
 
->  if a component attribute is less likely to change, or it is either static or stateless use memorization
+- Memo allows us to implement memorization in functional components
+- It will only force the component to re-render if the props are changed.
 
 ```js
-const UserDetails = ({user, onEdit}) =>{
-    const {title, full_name, profile_img} = user;
+const UserDetail = ({title, full_name, profile_img}) =>{
 
     return (
         <div className="user-detail-wrapper">
@@ -117,8 +126,80 @@ const UserDetails = ({user, onEdit}) =>{
     )
 }
 
-export default React.memo(UserDetails)
+export default React.memo(UserDetail);
+
+//usage in parent component
+return (
+	<>
+		<p>{counter}</p>
+		<UserDetail 
+			title="Mr." 
+			full_name="Zack" 
+			profile_img="image.png"
+			/>
+		//other components
+	</>
+);
+
 ```
+
+- in the above examples, `UserDetail` will not re-render as long as it's props aren't changes even if the other components re-render, however React.memo has one limitation
+	- it is unable to handle functional props, if we introduce callback functions to `userDetail` component its behavior will change
+
+```js
+//..prev code
+
+//usage in parent component
+const updateProfile = () => {
+	//...
+}
+return (
+	<>
+		<p>{counter}</p>
+		<UserDetail 
+			title="Mr." 
+			full_name="Zack" 
+			profile_img="image.png"
+			onUpdateClick={updateProfile}
+			/>
+		//other components
+	</>
+);
+
+```
+
+- based on the above new code, if you somehow we change `counter variable i.e using setCounter` `UserDetail` will `re-render` even tough its props hasn't changed, how can we fix this
+	- `useCallback` is typically used to optimize the performance of child components that depend on a function prop.
+	- By `memoizing` the function using `useCallback`, we can prevent unnecessary re-renders of the child components that use the function, even if the function's dependencies change.
+
+```jsx
+//..prev Code
+//usage in parent component
+
+const updateProfile = useCallback(() => {
+	//...
+}, []);
+
+// if we have a function with parameters
+// const updateProfile = useCallback((a,b) => {
+//	//...
+//}, [a,b]);
+
+return (
+	<>
+		<p>{counter}</p>
+		<UserDetail 
+			title="Mr." 
+			full_name="Zack" 
+			profile_img="image.png"
+			onUpdateClick={updateProfile}
+			/>
+		//other components
+	</>
+);
+```
+
+> You should always use React.memo LITERALLY, as comparing the tree returned by the Component is always more expensive than comparing a pair of props properties [Source](When should you NOT use React memo? - Stack Overflow](<https://stackoverflow.com/a/63405621)>
 
 ### useMemo : Memorize Function Result
 
@@ -128,16 +209,12 @@ const multiply = (x,y) => {
 }
 
 const cachedValue = useMemo(() => multiply(x, y), [x, y])
+
+return <p>{ cachedValue(12,12) }</p>
 ```
 
 - The computed result is stored in the `cachedValue` variable and `useMemo()` Hook will return it each time unless the inputs are changed.
 - ![](https://pbs.twimg.com/media/DqaQy-7VAAEc-u5.jpg)
-
-### useCallback
-
-- The React useCallback Hook returns a memoized callback function.
-- This allows us to isolate resource intensive functions so that they will not automatically run on every render.
-- The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
 
 ## Other Useful Hooks & Concepts
 
@@ -167,7 +244,64 @@ function App() {
 
 - In the above example, If we tried to count how many times our application renders using the useState Hook{inside the useEffect hook}, we would be caught in an infinite loop since this Hook itself causes a re-render.
 
-### Depdendeny Array
+### useContext
+
+- what is react-context or `useContext` ?
+	- `useContext` is a hook in React that enables components to consume context values created by a parent component and passed down through the component tree.
+	- It is an alternative to the prop drilling technique used to pass down data through several layers of components.
+- How to use `useContext`
+	- create context
+	- provide the context at parent with modifier `Context.provide`
+	- use the context in child components with `useContext`
+
+```js
+//create the context
+import React from "react";
+const CountContext = React.createContext();
+
+export default CountContext;
+```
+
+```js
+//provide it at the parent
+import React, { useState } from "react";
+import Child from "./Child";
+import CountContext from "./context";
+
+const App = () => {
+  const [count, setCount] = useState(0);
+
+  const countHandler = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <CountContext.Provider value={{ count, countHandler }}>
+      <Child />
+      <h2>{count}</h2>
+    </CountContext.Provider>
+  );
+};
+
+export default App;
+```
+
+```js
+//use it inside a child
+import { useContext } from "react";
+import CountContext from "./context";
+
+const Child = () => {
+  const { countHandler } = useContext(CountContext);
+
+  return (
+    <div>
+      <button onClick={countHandler}>Increment</button>
+    </div>
+  );
+};
+export default Child;
+```
 
 ## Avoid Inline Function Definition in the Render Function.
 
@@ -209,7 +343,7 @@ onCommentClick = (event) => {
 ## React Web Workers
 
 - [Popular react web worker library](https://www.npmjs.com/package/@shopify/react-web-worker)
-- [Web Worker](Programming%20langs/JavaScript/Should%20Know%20JavaScript.md#Web%20Worker)
+- [Web Worker](Programming%20langs/JavaScript/You%20Should%20Know%20JavaScript.md#Web%20Worker)
 
 ```js
 import React, {useEffect} from 'react';
@@ -239,3 +373,76 @@ function Home() {
   return <Page title="Home"> {message} </Page>;
 }
 ```
+
+## Different Ways to Write CSS in React
+
+### Import Styles
+
+```jsx
+import "./Components/css/App.css"; //imported styles
+function App() {
+  return (
+    <div className="main">
+    </div>
+  );
+}
+export default App;
+```
+
+### Write Inline Styles
+
+```jsx
+<div className="main" style={{color:"red"}}>
+```
+
+- or construct an object of styles
+
+```jsx
+function App() {
+  const styles = {
+    main: {
+      backgroundColor: "#f1f1f1",
+      width: "100%",
+    },
+    inputText: {
+      padding: "10px",
+      color: "red",
+    },
+  };
+  return (
+    <div className="main" style={styles.main}>
+      <input type="text" style={styles.inputText}></input>
+    </div>
+  );
+}
+export default App;
+```
+
+### Use CSS Modules
+
+- CSS Modules allows us to use the same class name in multiple files without clashes since each class name is given a unique programmatic name.
+- This is especially useful in larger applications. Every class name is scoped locally to the specific component in which it is being imported.
+- rule
+	- create a file ending with .module.css
+
+```css
+/* styles.module.css */
+.font {
+  color: #f00;
+  font-size: 20px;
+}
+```
+
+```jsx
+import styles from "./styles.module.css";
+function App() {
+  return (
+    <h1 className={styles.heading}>Hello World</h1>
+  );
+}
+export default App;
+```
+
+- Other relevant methods
+	- TailwindCSS
+	- Styled-components

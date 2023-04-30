@@ -1,7 +1,7 @@
 ---
 title: Fundamentals
 date created: Monday, December 12th 2022, 8:37:20 pm
-date modified: Monday, February 6th 2023, 2:45:01 pm
+date modified: Saturday, April 29th 2023, 2:34:54 pm
 ---
 
 # Fundamentals
@@ -32,7 +32,7 @@ date modified: Monday, February 6th 2023, 2:45:01 pm
 			- By default null and undefined are subtypes of all other types. That means you can assign null and undefined to something like number.
 		- void & symbol
 	- Object types
-		- array, functions, classes, enum and interfaces…
+		- Array, Functions, Classes, enum and interfaces…
 
 ```ts
 //primitive-types
@@ -464,7 +464,7 @@ function draw(color: Color, pattern: ...) {...}
 - static properties
 - abstract classes
 - method overloading
-	- https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads
+	- <https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads>
 
 ## Generics
 
