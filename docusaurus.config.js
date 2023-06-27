@@ -107,8 +107,8 @@ const config = {
                 to: "/docs/Algo/Fundamental Algorithms/Sorting algos/Radix Sort",
               },
               {
-                label: "Python tips and Tricks",
-                to: "/docs/Algo/Tips & Tricks/Useful Python Collections module",
+                label: "TypeScript utility types",
+                to: "/docs/Programming%20langs/TypeScript/More%20on%20Typescript",
               },
             ],
           },
