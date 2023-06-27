@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/vsDark");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Zack's note and blogs",
-  tagline: "Brief notes here and there",
+  title: "Welcome to my website!",
+  tagline: "Home for my notes, blogs and resume.",
   url: "https://zack.onrender.com",
   baseUrl: "/",
   onBrokenLinks: "warn",
