@@ -2,6 +2,7 @@
 title: Zekaryas Tadele - Resume
 description: This page is about my technical backgrounds such as where I worked, what I built and what my goal is.
 ---
+
 import './resume.module.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -165,7 +166,7 @@ import TabItem from '@theme/TabItem';
 
 - Links
   - [Github](https://github.com/zekaryas1/ecommerce)
-  - [Vercel](https://ecommerce-phi-six.vercel.app/)
+  - [Vercel](https://tinyamazon.vercel.app/)
 - A simple e-commerce website with list, cart and category page, done with Tailwind, Next.js, Typescript and RestApi.
 <details style={{margin: "14px", marginLeft: 0}}>
   <summary>Screenshot!</summary>
@@ -185,6 +186,14 @@ import TabItem from '@theme/TabItem';
     <img src="https://github.com/zekaryas1/iContacts/raw/main/screenshots/mainscreenshot.png" width="400" height="400"/>
   </div>
 </details>
+
+### Phoenix mobile app
+
+- Link
+  - [PlayStore](https://play.google.com/store/apps/details?id=com.zekaryastadele.phoenix_for_programmers)
+- A mobile application to share supplementary knowledge for new programmers.
+- The app contains content on, System design, Python, Algorithm & data structure and UI/UX.
+- As of 2023 the app is being used by 1000 students.
 
 ## Awards
 
