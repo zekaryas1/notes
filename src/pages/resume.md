@@ -2,7 +2,7 @@
 title: Zekaryas Tadele - Resume
 description: This page is about my technical backgrounds such as where I worked, what I built and what my goal is.
 ---
-
+import './resume.module.css';
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
