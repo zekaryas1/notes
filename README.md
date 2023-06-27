@@ -12,15 +12,11 @@
     * [Deployment](#deployment)
 <!-- TOC -->
 
-- My Notes from books, articles and everywhere else powered by Obsidian & Docusaurus.
-  - https://cnotes.vercel.app
-----
-
 ## How I take notes
 - I use [Obsidian](https://obsidian.md/) a powerful and extensible knowledge base
   that works on top of your local folder of plain text files.
 - I use [Obsidian git plugin](https://github.com/denolehov/obsidian-git) to back up to GitHub
-- The repository uses `Docusaurus 2`, a documentation building tool, that is useful to turn my markdown notes to beautiful sites
+- The repository uses `Docusaurus 2`, a documentation-building tool, that is useful to turn my markdown notes to beautiful sites
   - I keep my notes in the `/docs` folder of `Docusaurus`
 - Algolia with `Docusaurus 2` to add instant search, which is the most useful thing
 
