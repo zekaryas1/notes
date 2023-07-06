@@ -1,7 +1,8 @@
 ---
+tags: [prefix_sum, prefix]
 title: 2256. Minimum Average Difference
 date created: Sunday, December 4th 2022, 5:22:11 pm
-date modified: Saturday, December 17th 2022, 12:34:32 pm
+date modified: Thursday, July 6th 2023, 11:16:45 am
 ---
 
 # 2256. Minimum Average Difference
@@ -13,7 +14,7 @@ date modified: Saturday, December 17th 2022, 12:34:32 pm
 			- it is O(N^2) because we iterate over each index of the input array and at each index, and again we iterate on all elements to calculate averages of two parts, which takes O(n)\*O(n) time.
 	- taking the brute force a step forward, if we can know the left and right sum before hand it will reduce our time complexity down to O(n).
 		- the formula will be `abs(left_sum/n - right_sum/m)`
-		- the technique we can use to pre-calculate left and right sums will be [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Prefix%20sum/Prefix%20sum.md)
+		- the technique we can use to pre-calculate left and right sums will be [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 
 ```python
 from collections import defaultdict

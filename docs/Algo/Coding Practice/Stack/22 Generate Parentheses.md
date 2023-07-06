@@ -1,4 +1,5 @@
 ---
+tags: [stack, parentheses]
 title: 22 Generate Parentheses
 date created: Sunday, December 18th 2022, 3:42:32 pm
 date modified: Sunday, December 18th 2022, 4:11:20 pm

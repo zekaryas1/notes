@@ -1,7 +1,7 @@
 ---
-tags: [dp, string]
+tags: [dp, sub_string]
 date created: Sunday, August 7th 2022, 3:36:00 pm
-date modified: Wednesday, August 10th 2022, 11:20:39 am
+date modified: Thursday, July 6th 2023, 11:17:23 am
 title: Longest Common Sub-string
 ---
 
@@ -13,7 +13,7 @@ title: Longest Common Sub-string
 
 - The values for the cells are usually what you’re trying to optimize. In this case, the values will probably be a number: the length of the longest sub-string that the two strings have in common.
 - The Formula
-	- If the letters match, the value will be {1 +  top-left neighbor}
+	- If the letters match, the value will be {1 + top-left neighbor}
 	- If the letters do not match, the value is zero
 
 ```python

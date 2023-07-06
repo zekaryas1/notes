@@ -1,5 +1,5 @@
 ---
-tags: [prefix, prefixSum, subarray]
+tags: [prefix, prefix_sum, sub_array]
 title: 560 Subarray Sum Equals K
 date created: Saturday, February 4th 2023, 2:49:51 pm
 date modified: Saturday, February 4th 2023, 3:22:58 pm
@@ -51,7 +51,7 @@ class Solution:
         for n in nums:
             curr += n  #calculate currPref
             prefix = curr-k  #out formula
-            res += memo[prefix]  #+ no previous subarray with desired prefix
+            res += memo[prefix]  #+count previous subarray with desired prefix
             
             memo[curr] += 1  #add curr pref to memo
         return res

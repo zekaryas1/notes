@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Saturday, February 4th 2023, 3:56:36 pm
+date modified: Thursday, July 6th 2023, 12:06:47 pm
 title: Introduction
 ---
 
@@ -16,7 +16,7 @@ title: Introduction
 		- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 	- [Python Tips and tricks](Algo/Python%20Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
-	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.py.md)
+	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.md)
 - Containerization
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)
 - Programming languages
@@ -36,43 +36,25 @@ title: Introduction
 
 # How to Become an Expert
 
+- Find a topic to master
+	- ex: Problem solving(Algo & DS), Cooking, Chess…
 - Regular Practice
 	- Find a good resource, this can be {teacher, book, website}
-		- ex: Use `Leetcode`, competition…
+		- ex: Use `Leetcode`, YouTube, competition…
 - Get feedback
-	- Is the code right or wrong?
-	- How fast or slow is it…can it be better?
+	- Is the work right or wrong?
+	- How good or bad is it…can it be better?
 		- can it be refactored?
 	- Compare with other solutions
 - Make your next step challenging or new
 	- Doing the same things multiple times won't make you an expert
-		- Now array questions next should be graph problems
-		- Previously medium problems, next should be hard problems
-		- Not great on DP questions then more practice on DP questions
+		- Previously practicing medium tasks, next should be hard tasks
+		- Ex: for coding
+			- Now array questions next should be graph problems
+			- Not great on DP questions then more practice on DP questions
+- Keep challenging yourself or Go back to Step one(Find another topic to master)
 
 ## Domains
 
 - [Main Vercel](https://zekaryas.vercel.app)
 - [Render](https://zack.onrender.com)
-
-## Things to Do
-
-- [ ] update algorithms you should know
-	- [ ] add note to every list
-	- [ ] organize better
-- [ ] move react concepts from JavaScript to react note
-- [ ] explore <https://www.enjoyalgorithms.com/>
-- [ ] Leetcode questions to explore and add here
-	- [ ] hard graph question - <https://leetcode.com/problems/number-of-ways-to-arrive-at-destination/description/>
-	- [ ] subarray questions: revision
-		- [ ] Kadane
-			- [ ] <https://leetcode.com/problems/maximum-subarray/>
-			- [ ] <https://leetcode.com/problems/maximum-sum-circular-subarray/description/>
-	- [ ] leetcode stone game: dynamic programming questions
-	- [ ] new backtracking technique
-		- [ ] using path at leaf node
-		- [ ] or building the result along the path and function parameter
-			- [ ] <https://leetcode.com/problems/restore-ip-addresses/description/>
-	- [ ] Design questions to note
-		- [ ] <https://leetcode.com/problems/lru-cache/>
-		- [ ] <https://leetcode.com/problems/lfu-cache/>

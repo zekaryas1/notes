@@ -1,4 +1,5 @@
 ---
+tags: [tree, dfs]
 date created: Thursday, August 18th 2022, 10:36:17 am
 date modified: Thursday, August 18th 2022, 10:44:06 am
 title: 79 Word Search

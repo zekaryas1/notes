@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Sunday, April 30th 2023, 2:18:03 pm
+date modified: Thursday, June 29th 2023, 9:36:10 am
 ---
 
 # Best Practices
@@ -57,23 +57,14 @@ addNewUser = () => {
 
 ```js
 //before
-class EditPanelComponent extends Component {
+function EditPanelComponent({applyCoupon}) {
+	const [applyCoupon, setapplyCoupon] = useState(applyCoupon)
     
-    constructor(props){
-        super(props);
-
-        this.state ={
-            isEditMode: false,
-            applyCoupon: props.applyCoupon
-        }
-    }
-
-    render(){
-        return <div>
-                    {this.state.applyCoupon && 
-                    <>Enter Coupon: <Input/></>}
-               </div>
-    }
+    return (
+	    <div>
+            {applyCoupon && Enter Coupon: <Input/>}
+        </div>
+    );
 }
 ```
 
@@ -83,21 +74,14 @@ class EditPanelComponent extends Component {
 
 ```js
 //after
-class EditPanelComponent extends Component {
+function EditPanelComponent({applyCoupon}) {
     
-    constructor(props){
-        super(props);
-
-        this.state ={
-            isEditMode: false
-        }
-    }
-
-    render(){
-        return <div>{this.props.applyCoupon && 
-         <>Enter Coupon:<Input/></>}</div>
-    }
-} 
+    return (
+	    <div>
+            {applyCoupon && Enter Coupon: <Input/>}
+        </div>
+    );
+}
 ```
 
 ## Use Memoization
@@ -257,7 +241,7 @@ function App() {
 ```js
 //create the context
 import React from "react";
-const CountContext = React.createContext();
+const CountContext = React.createContext(defaultValue);
 
 export default CountContext;
 ```
@@ -292,10 +276,11 @@ import { useContext } from "react";
 import CountContext from "./context";
 
 const Child = () => {
-  const { countHandler } = useContext(CountContext);
+  const { count, countHandler } = useContext(CountContext);
 
   return (
     <div>
+	  <p>count is: {count}</p>
       <button onClick={countHandler}>Increment</button>
     </div>
   );
@@ -311,15 +296,15 @@ export default Child;
 
 ```js
 //before
-<Comment onClick={(e)=> this.setState({elt: e})} comment={comment} key={comment.id}/>
+<Comment onClick={(e)=> setState({elt: e})} comment={comment} key={comment.id}/>
 
 
 //after
 onCommentClick = (event) => {
-	this.setState({elt:event}) 
+	setState({elt:event}) 
 }
 
-<Comment onClick={this.onCommentClick} comment={comment} key={comment.id}/>
+<Comment onClick={onCommentClick} comment={comment} key={comment.id}/>
 ```
 
 ## Spreading Props on DOM Elements
@@ -434,7 +419,7 @@ export default App;
 ```
 
 ```jsx
-import styles from "./styles.module.css";
+import styles from "./styles.module.css"; //you have to import it like this
 function App() {
   return (
     <h1 className={styles.heading}>Hello World</h1>

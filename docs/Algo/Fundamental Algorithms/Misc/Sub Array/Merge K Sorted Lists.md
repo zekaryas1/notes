@@ -1,5 +1,4 @@
 ---
-tags: [heap]
 date created: Thursday, August 4th 2022, 4:28:04 pm
 date modified: Friday, November 18th 2022, 1:36:17 pm
 title: Merge K Sorted Lists

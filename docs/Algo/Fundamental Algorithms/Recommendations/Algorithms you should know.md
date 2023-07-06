@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Sunday, December 4th 2022, 5:34:09 pm
+date modified: Thursday, July 6th 2023, 11:44:45 am
 title: Algorithms You Should Know
 ---
 
@@ -12,16 +12,15 @@ title: Algorithms You Should Know
 	- Binary search
 		- [Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 		- [Binary search-Find boundary](Algo/Fundamental%20Algorithms/Searching%20algos/2.%20Binary%20search-Find%20boundary.md)
-	- Two Pointers
-	- Sliding Window
-		- [Sliding window maximum](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
+	- [Two pointers](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Two%20pointers.md)
+	- [Sliding window](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Sliding%20window.md)
 	- Sorting
 		- [3. Merge Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/3.%20Merge%20Sort.md)
 		- [4. Quick Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/4.%20Quick%20Sort.md)
 		- [5. Radix Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/5.%20Radix%20Sort.md)
 	- [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
 	- Kadane algorithm
-	- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Prefix%20sum/Prefix%20sum.md)
+	- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 - String
 - Hash Table
 - Tree
@@ -41,6 +40,7 @@ title: Algorithms You Should Know
 	- Kosaraju's algorithm
 - [Linked list](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md)
 	- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
+	- [Linked list - fast/slow pointers](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique)
 - [Trie data structure](Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md)
 
 ## General Techniques

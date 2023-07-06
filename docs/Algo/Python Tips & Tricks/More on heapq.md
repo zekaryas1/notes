@@ -44,7 +44,7 @@ for item in merged:
 ```
 
 - Coding question related to this
-	- [Merge K Sorted Lists](Algo/Coding%20Practice/Heap/Merge%20K%20Sorted%20Lists.md)
+	- [Merge K Sorted Lists](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Merge%20K%20Sorted%20Lists.md)
 
 ### Merge Using a Function That Returns a Comparison Key
 

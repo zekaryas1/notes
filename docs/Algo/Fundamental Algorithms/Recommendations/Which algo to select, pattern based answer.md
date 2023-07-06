@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Saturday, February 4th 2023, 3:29:51 pm
+date modified: Thursday, July 6th 2023, 11:44:26 am
 title: Which Algo to Select, Pattern Based Answer
 ---
 
@@ -8,61 +8,65 @@ title: Which Algo to Select, Pattern Based Answer
 
 [Source](https://seanprashad.com/leetcode-patterns/)
 
-## If Input Array is Sorted Then
+## If
+
+### Input Array is Sorted Then
 
 - [1. Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 - Two pointers
 
-## If Asked for All permutations/subsets Then
+### Asked for All permutations/subsets Then
 
 - [Backtracking](Algo/Fundamental%20Algorithms/Recursion/Backtracking.md)
 
-## If Given a Tree Then
+### Given a Tree Then
 
-- DFS{inorder,preorder, postorder}
+- DFS
+	- inorder,preorder, postorder
 - BFS
 
-## If Given a Graph Then
+### Given a Graph Then
 
 - DFS
 - BFS
 
-## If Given a Linked List Then
+### Given a Linked List Then
 
-- Two pointers [Linked list](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md)
+- [Two pointers](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Two%20pointers.md)
+- [Linked list - fast/slow pointers](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique)
 
-## If Recursion is Banned Then
+### Recursion is Banned Then
 
 - [Stack {LAST IN FIRST OUT}](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
 
-## If Must Solve In-place Then
+### Must Solve In-place Then
 
 - Swap corresponding values
 - Store one or more different values in the same pointer
 
-## If Asked for maximum/minimum of sub-array/subset/options Then
+### Asked for maximum/minimum of Not-contiguous sub-array/subset/options Then
 
 - [Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 
-## If Asked for top/least K Items Then
+### Asked for top/least K Items Then
 
 - [Heap](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20{%20Heapq%20})
 
-## If Asked for Common Strings Then
+### Asked for Common Strings Then
 
 - Map
 - Trie
 
-## If Asked Sub-string with X Condition
+### Asked Contiguous Sub-string with X Condition
 
-- Sliding window
+- [Sliding window](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Sliding%20window.md)
 - Monotonic queue
 
-## If Asked Sub-array Sum with X Condition
+### Asked Contiguous Sub-array Sum with X Condition
 
-- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Prefix%20sum/Prefix%20sum.md)
+- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 
-## Next/Prev Greater or Smaller Element
+### Next/Prev Greater or Smaller Element
 
 - [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
 	- [ex: Next greater elt](Algo/Coding%20Practice/Stack/Next%20greater%20elt.md)

@@ -1,7 +1,8 @@
 ---
+tags: [bfs]
 title: 987 Vertical Order Traversal of a Binary Tree
 date created: Sunday, September 4th 2022, 1:02:47 pm
-date modified: Sunday, September 4th 2022, 1:13:22 pm
+date modified: Thursday, July 6th 2023, 11:25:21 am
 ---
 
 # 987 Vertical Order Traversal of a Binary Tree
