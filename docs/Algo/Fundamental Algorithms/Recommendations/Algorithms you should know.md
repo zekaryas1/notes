@@ -50,4 +50,3 @@ title: Algorithms You Should Know
 - [Recursion](Algo/Fundamental%20Algorithms/Recursion/Recursion.md)
 - [Backtracking](Algo/Fundamental%20Algorithms/Recursion/Backtracking.md)
 - [Greedy algorithms](Algo/Fundamental%20Algorithms/Greedy%20algorithms.md)
-- [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
