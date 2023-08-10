@@ -13,16 +13,14 @@ import TabItem from '@theme/TabItem';
 
 - As a fullstack developer, I enjoy finding solutions to various problems that arise in my work. I value teamwork and communication, and I have honed my analytical thinking and collaboration skills through my years of experience in this field.
 - Links
-  - [My Github](https://github.com/zekaryas1)
+  - [Github](https://github.com/zekaryas1)
   - [Linkedin](https://www.linkedin.com/in/zekaryas-tadele-dinku)
   - [Leetcode](https://leetcode.com/zekaryasTadele/)
 
 ## About me
 
 - I am software engineer from Ethiopia. I started coding with HTML, CSS, and JavaScript many years ago and fell in love with it. That's why I decided to study software engineering at [AAU](https://en.wikipedia.org/wiki/Addis_Ababa_University). I enjoy my career very much and I always welcome new challenges and opportunities to learn.
-
 - Moving ahead to the present, I've had the honor of working at [eHealth startup](https://orbithealth.co/), [end-to-end software service provider](https://etechsc.com/), [Software development company](https://workfleektechnologies.com/), and [eCommerce agency](https://scandiweb.com/).
-
 - Here are a few technologies I’ve been working with:
 
 ```mdx-code-block
@@ -65,62 +63,56 @@ import TabItem from '@theme/TabItem';
 ### [Scandiweb ecommerce agency](https://scandiweb.com/)
 
 - From
-  - _Sep 2022 – Dec 2022 | Remote contractual in Latvia as Web developer_
-- Implemented UI designs for responsive and accessible websites,
-  - _Tech: REACT.js, node.js, and PHP_
-- Fixed usability issues on the e-commerce website
-- Supported colleagues by providing documentation and notes
-- Extensive knowledge in using Bitbucket with Jira and working with an Agile team
+  - _Sep 2022 – Dec 2022 | Remote contractual | Latvia as Web developer_
+- Scandiweb, the world's leading eCommerce Agency with clients like Jaguar, New York Times, and Walmart. Working within a global service environment, collaborating with clients and developers worldwide.
+  - Developed responsive and accessible UI designs for websites.
+  - Addressed usability concerns on an e-commerce platform, enhancing user experience.
+  - Contributed to team productivity by generating comprehensive documentation and notes.
+  - Proficiently utilized Bitbucket and Jira in Agile team settings.
+  - Technologies - React, TypeScript, PHP, Node.js, Tailwind, Docker, GraphQL, and Jira
 
 ### [Workfleek technologies](https://workfleektechnologies.com/)
 
 - From
-  - _Mar 2022 – Sep 2022 | Full-time Remotely in Kenya as Senior full stack developer_
-- Maintained existing solutions by integrating new features and fixing issues
-  - _Tech: Nodejs, Express.js, MongoDB, GraphQL_
-- Introduced software deployment using docker and docker-compose which reduced deployment and new developer's enrollment time.
-  - _Tech: Docker_
-- Provided documented API for the front-end team to use, which helped us spend more time coding.
-  - _Tech: React, React Router, and Redux_
-- Successfully completed several small tasks with deadlines which let me adapt to working under a tight deadline and how to divide/prioritize tasks.
-  - _Tech: Python, Node.js_
+  - _Mar 2022 – Sep 2022 | Hybrid | Kenya as full stack developer_
+- WorkFleek, a pioneering startup in East Africa's technology solutions arena, renowned for its ISO certification and customer-focused Technology Solutions.
+  - Orchestrated seamless integration of new features and issue resolutions into existing solutions.
+  - Contributed to the implementation of Docker and docker-compose for streamlined software deployment, significantly reducing deployment time and new developer onboarding.
+  - Enhanced team efficiency by delivering well-documented APIs for frontend utilization, enabling more productive coding efforts.
+  - Demonstrated adeptness in managing tight deadlines, successfully delivering multiple time-sensitive tasks while effectively prioritizing and dividing responsibilities.
+  - Technologies - Nodejs, MongoDB, Spring boot, Docker, Python, React.js, and Linode
 
 ### [EtechSc](https://etechsc.com/)
 
 - From
-  - _Mar 2021 – Apr 2022 | Full-time in Ethiopia as Lead frontend developer_
-- Led the front-end team in developing an internal developers tool
-  - Tech: React, Node.js, JavaScript, and React Query
-- Peer-reviewed code, maintained code quality, and set code standards.
-  - _Tech: Jira_
-- Integrated CI/CD, Which replaced manual process and increased delivery and Quality testing time.
-- The tool has helped etech replace the legacy in-house developer tool and increased developer productivity by 80%.
-- Experience using Cypress.io to automate tests
+  - _Mar 2021 – Apr 2022 | Full-time | Ethiopia as Lead frontend developer_
+- Guided and led the front-end team in the creation of an internal developers' tool, streamlining development processes and boosting productivity.
+  - Conducted peer code reviews, ensuring codebase quality and enforcing coding standards.
+  - Implemented a CI/CD pipeline, automating the deployment process and significantly enhancing delivery efficiency and quality testing timelines.
+  - Led the transition from manual procedures to CI/CD integration, transforming development practices and efficiency.
+  - Orchestrated the successful replacement of a legacy in-house developer tool with the new solution, resulting in an impressive 80% surge in developer productivity.
+  - Technologies - React, Jira, Node.js, and TypeScript
 
 ### [EtechSc](https://etechsc.com/)
 
 - From
-  - _Oct 2021 – Apr 2022 | Full-time in Ethiopia as Software engineer_
-- Contributor to the development of an electronic health management system, with database design, UI improvement, and requirement gathering.
-  - _Tech: PostgreSQL, RabitMQ, and RestAPI_
-- Developed an integration module to add an open-source project to our existing code base. Which reduced the significant time by using already existing solutions.
-  - _Tech: PHP_
-- Provided alternate UI designs(charts, calendar) to convey information that benefited clients, which increased their dedication to the project.
-  - _Exp: UI/UX_
-  - _Tech: Typescript, Node.js, and Angular_
-- Gathered structured requirements from multiple site visits and domain expert meetings which helped the team with productivity.
-  - _Exp: Requirement gathering_
+  - _Oct 2021 – Apr 2022 | Full-time | Ethiopia as Software engineer_
+- eTech, a high-growth startup in Ethiopia's tech landscape, specializing in comprehensive IT services tailored to diverse business needs.
+  - Played a significant role in the development of an electronic health management system. Activities included database design, UI enhancements, and systematic requirement gathering.
+  - Engineered an integration module that seamlessly incorporated an open-source project into our existing codebase, drastically saving time by leveraging pre-existing solutions.
+  - Innovated UI concepts, incorporating visual elements like charts and calendars to convey information effectively, driving client engagement and project commitment.
+  - Demonstrated strong communication and analytical skills by systematically collecting structured requirements through on-site visits and domain expert consultations, significantly boosting team productivity.
+  - Technologies - Angular, PostgreSQL, RabitMQ, RestAPI, UI/UX, Typescript, Java, and PHP
 
 ### [Orbit health](https://orbithealth.co/)
 
 - From
-  - Ethiopia fulltime Intern Software developer
-- Designed and implemented a web-based appointment system for one of the first eHealth startup companies in Ethiopia.
-  - _Tech: MongoDB, Node.js, express.js, RxJS, TypeScript, and Angular_
-- Designed the system Data model, UI, and user interaction
-- Wrote UI documentation, and user manual to help users understand the system better and fast,
-  - _Tech: SwaggerJs_
-- Besides experience, the internship has helped me learn how to work in an agile and fast-paced team.
+  - Apr 2019 - Full-time | Ethiopia as Intern Software developer
+- Orbit Health, a collaborator with Sub-Saharan African healthcare providers, leading healthcare transformation through an innovative, fully interoperable digital health platform.
+  - Launched the design and execution of a web-based appointment system.
+  - Developed comprehensive system data models, captivating UI designs, and user-centric interaction flows.
+  - Authored UI documentation and user manuals, expediting user comprehension and system adoption for seamless integration.
+  - Technologies - Angular, Node.js, express.js, SwaggerJs, RxJS, TypeScript, and MongoDB
 
 ## Some Things I’ve Built
 
@@ -167,7 +159,9 @@ import TabItem from '@theme/TabItem';
 - Links
   - [Github](https://github.com/zekaryas1/ecommerce)
   - [Vercel](https://tinyamazon.vercel.app/)
-- A simple e-commerce website with list, cart and category page, done with Tailwind, Next.js, Typescript and RestApi.
+- Created a user-friendly e-commerce website featuring essential functionalities including listing, cart management, and categorized browsing.
+  - Employed a technology stack of Tailwind for styling, Next.js for optimal performance, and TypeScript for robust typing.
+  - Ensured website reliability by testing with playwright+Github-Action and integrating RESTful API.
 <details style={{margin: "14px", marginLeft: 0}}>
   <summary>Screenshot!</summary>
   <div>
@@ -179,7 +173,7 @@ import TabItem from '@theme/TabItem';
 
 - Links
   - [Github](https://github.com/zekaryas1/iContacts)
-- This is a mobile app built with React Native Expo for contact management. It has a homepage, detail page, manage page, and camera screen. Users can search, favorite, and hear the sound of contact names, and take pictures with flash and rotate screen options.
+- This is a mobile app built with React Native Expo for contact management. It has a homepage, detail page, manage page, and camera screen. Users can search, favorite, and hear the sound of contact names, and take pictures with flash and other screen options.
 <details style={{margin: "14px", marginLeft: 0}}>
   <summary>Screenshot!</summary>
   <div>
@@ -191,29 +185,28 @@ import TabItem from '@theme/TabItem';
 
 - Link
   - [PlayStore](https://play.google.com/store/apps/details?id=com.zekaryastadele.phoenix_for_programmers)
-- A mobile application to share supplementary knowledge for new programmers.
-- The app contains content on, System design, Python, Algorithm & data structure and UI/UX.
-- As of 2023 the app is being used by 1000 students.
+- Developed a personalized mobile application using Flutter to facilitate knowledge sharing.
+  - Curated lessons encompassing a wide range of topics like system design, modern CSS, advanced Python, and SEO.
+  - Boasts an active user base, with over 1000 individuals leveraging the app to enhance their learning journey.
 
 ## Awards
 
 ### [Appreciation Certificate](https://drive.google.com/file/d/1kfLUkwoHUE2L1fhoO_20U5K-F_y0zjCe/view)
 
-- Appreciation Certificate with brand new phone from etechsc.com - Apr 2022
-- Awarded brand new Samsung phone for leading a team and developing an in-house developer tool that increased developers' productivity by 80%.
+- Recognition certificate by Etech - Apr 2022
+- Recipient of appreciation certificate and a new phone in recognition of exemplary leadership and instrumental contribution to the development of an in-house developer tool.
 
 ### Oracle Hackathon
 
 - Prepared by Oracle with Addis Ababa University - May 2019
-- Won first place on a hackathon hosted in partnership with Oracle For developing an event tracking system using Oracle(JAVA) and Google technologies(Firebase).
+- Secured the first place position in a hackathon hosted in collaboration with Oracle by creating an advanced event tracking system.
 
 ### Top project Award
 
 - Top project Award by Addis Ababa University, SITE department - Jan 2019
-- Demonstrated how a digital pharmacy with recommendations and a search portal may be implemented in Ethiopia. This project landed me an internship with a top Ethiopian health tech startup
-- Part of top 10 projects from around 100 projects
+- Showed how to make a digital pharmacy with recommendation and a search tool for Ethiopia. This got me an internship at an Ethiopian health tech startup. I also got money as a prize for being in the top 10 projects.
 
 ### [Inspire Hackathon](https://drive.google.com/file/d/1kmstzmjWbUgF8be3ydUPThNLq6ouNoSJ/view)
 
 - Inspire Hackathon by Addis Ababa University - Jul 2018
-- Part of a team that won second place award out of 25 teams for developing an online examination system that tracks cheating within three days in Addis Ababa University.
+- I was part of a team that won second place among 25 teams. We created an online test system for Addis Ababa University. It quickly detects cheating and we finished it in just three days.
