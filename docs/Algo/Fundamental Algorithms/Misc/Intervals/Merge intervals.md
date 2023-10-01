@@ -1,7 +1,7 @@
 ---
 tags: [merge_intervals]
 date created: Friday, August 5th 2022, 11:33:39 am
-date modified: Wednesday, August 10th 2022, 5:53:33 pm
+date modified: Wednesday, September 6th 2023, 1:52:08 pm
 title: Merge Intervals
 ---
 
@@ -12,7 +12,7 @@ title: Merge Intervals
 - The Merge Intervals pattern is an efficient technique to deal with overlapping intervals. In a lot of problems involving intervals, you either need to find overlapping intervals or merge intervals if they overlap.
 - The pattern works like this:
 	- Given two intervals (‘a’ and ‘b’), there will be six different ways the two intervals can relate to each other:
-- ![](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FG9YRlqC9joZNTWsi1ul7tRkO6tv1-8mh13wm9.jpg&w=828&q=75)
+- ![](https://cdn.emre.me/2019-10-27-merge-intervals.png)
 
 ## Sample Question
 
@@ -45,6 +45,3 @@ class Solution:
                 result.append(elt)
         return result
 ```
-
-
-## 

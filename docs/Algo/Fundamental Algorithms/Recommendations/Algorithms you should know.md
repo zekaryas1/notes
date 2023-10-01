@@ -28,7 +28,7 @@ title: Algorithms You Should Know
 	- Depth First Search(in,pre,post)
 	- Breadth First Search
 	- Segment tree
-- Matrix
+- [Matrix](Algo/Fundamental%20Algorithms/Misc/Matrix.md)
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
 	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
 	- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
