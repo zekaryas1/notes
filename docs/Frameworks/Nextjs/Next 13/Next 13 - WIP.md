@@ -1,10 +1,10 @@
 ---
-title: Next 13
+title: Next 13 - WIP
 date created: Thursday, September 21st 2023, 12:39:07 pm
-date modified: Thursday, October 5th 2023, 1:35:04 pm
+date modified: Tuesday, November 21st 2023, 1:04:33 pm
 ---
 
-# Next 13
+# Next 13 - WIP
 
 - New rendering options
 	- Static site generation
