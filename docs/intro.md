@@ -26,7 +26,7 @@ title: Introduction
 		- [More on Typescript](Programming%20langs/TypeScript/More%20on%20Typescript.md)
 - Frameworks
 	- [React Best practices](Frameworks/React/Best%20practices.md)
-	- [Next.js](Frameworks/Nextjs/100.%20Intro%20to%20Next.js.md)
+	- [Next.js](Frameworks/Nextjs/Next%2012/100.%20Intro%20to%20Next.js.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
 - Upcoming

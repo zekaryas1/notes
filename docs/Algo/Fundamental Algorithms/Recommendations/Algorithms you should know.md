@@ -36,7 +36,7 @@ title: Algorithms You Should Know
 	- Depth First Search
 	- Breadth First Search
 	- [Topological Sort Kahns Algorithm](Algo/Tree%20&%20Graph/Graph/Topological%20Sort%20Kahns%20Algorithm.md)
-		- [Topological sort DFS](Algo/Tree%20&%20Graph/Graph/Topological%20sort%20DFS.md)
+		- [Topological sort](Algo/Tree%20&%20Graph/Graph/Topological%20sort.md)
 	- Kosaraju's algorithm
 - [Linked list](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md)
 	- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)

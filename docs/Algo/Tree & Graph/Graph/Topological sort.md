@@ -1,16 +1,16 @@
 ---
 date created: Sunday, July 31st 2022, 4:35:16 pm
-date modified: Sunday, July 31st 2022, 8:42:04 pm
-title: Topological Sort DFS
+date modified: Tuesday, November 21st 2023, 12:57:0258 pm
+title: Topological sort
 ---
 
-# Topological Sort DFS
+# Topological Sort
 
 - [Video source](https://youtu.be/eL-KzMXSXXI?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P)
 - ![](https://i0.wp.com/algorithms.tutorialhorizon.com/files/2018/03/Topological-Sort.png?ssl=1)
 - Topological sort algorithm can find a topological ordering in O(V+E)
 - A graph with a cycle can not have a valid ordering
-	- only works on as-cyclic directed graph/ no cycle
+	- only works on as-cyclic directed graph(no cycle)
 - Topological sort is not unique, there can be multiple ordering.
 - Real world application
 	- Course scheduling
@@ -53,3 +53,7 @@ def dfs(i, at, V, ordering, graph):
 	ordering[i] = at
 	return i - 1
 ```
+
+## Topological Sort Algorithm BFS Version
+
+- [Topological Sort Kahns Algorithm](Algo/Tree%20&%20Graph/Graph/Topological%20Sort%20Kahns%20Algorithm.md)
