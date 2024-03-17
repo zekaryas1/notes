@@ -1,6 +1,6 @@
 ---
 date created: Sunday, July 24th 2022, 1:23:21 pm
-date modified: Saturday, February 4th 2023, 2:37:19 pm
+date modified: Sunday, February 25th 2024, 12:13:40 pm
 title: Union Find
 ---
 
@@ -8,7 +8,7 @@ title: Union Find
 
 - A [_disjoint-set data structure_](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets.
 - A [_union-find algorithm_](http://en.wikipedia.org/wiki/Disjoint-set_data_structure) is an algorithm that performs two useful operations on such a data structure.
-- <iframe title="Union Find in 5 minutes — Data Structures &amp; Algorithms" src="https://www.youtube.com/embed/ayW5B2W9hfo?start=200&amp;feature=oembed" allowfullscreen="" allow="fullscreen" height='200' width='354'></iframe>
+- [Union Find in 5 minutes — Data Structures & Algorithms - YouTube](https://www.youtube.com/embed/ayW5B2W9hfo)
 
 ## The Two Useful Operations
 
@@ -32,7 +32,9 @@ def find(x):
 
 ```python
 def union(x,y):
-	Parent[find(y)] = find(x)
+	root_x, root_y = find(x), find(y):
+	if root_x != root_y:
+		Parent[find(y)] = find(x)
 ```
 
 ```python
@@ -41,11 +43,11 @@ def connected(x,y):
 	return find(x) == find(y)
 ```
 
-## Union Find Path Compression
+## Optimizing Find Operation: Union Find Path Compression
 
 > The previous operation on worst case performs O(n) since we will need to hop n times to reach the root.
 
-- <iframe src="https://www.youtube.com/embed/VHRhJWacxis?list=PLDV1Zeh2NRsBI1C-mR6ZhHTyfoEJWlxvq" height='200' width='354' allowfullscreen="" allow="fullscreen"></iframe>
+- [Union Find Path Compression - YouTube](https://www.youtube.com/embed/VHRhJWacxis)
 
 ![](https://hideoushumpbackfreak.com/algorithms/images/union-find-path-compression.png)
 
@@ -65,40 +67,64 @@ def find(x):
 	while x != root:
 		Parent[x], x = root, Parent[x]
 	return root
+
+# or with recusion
+def find(x):
+	if self.par[x] != x:
+		self.par[x] = self.find(self.par[x])
+	return self.par[x]
+```
+
+## Optimizing Union Operation: Union by Rank
+
+- Union by rank optimizes the union operation in Union-Find.
+	- It ensures the tree with fewer nodes is attached to the root of the tree with more nodes.
+	- This optimization aims to keep the overall height of the tree minimal.
+	- It improves the efficiency of both union and find operations.
+	- The rank of a tree serves as an upper bound on its height.
+	- During union, the tree with lower rank is attached to the root of the tree with higher rank.
+	- This prevents the tree from becoming unbalanced, maintaining performance.
+	- Union by rank helps reduce the worst-case time complexity of find operations to nearly constant time.
+	- Overall, it enhances the efficiency and effectiveness of the Union-Find data structure.
+- ![union by rank](https://algocoding.files.wordpress.com/2014/09/uf4_union_by_rank.png)
+
+## Template for Union Find
+
+```python
+class UF:
+    def __init__(self, n):
+        self.par = {i:i for i in range(n)}
+        self.rank = [1] * n
+    
+    def find(self, x):
+        if self.par[x] != x:
+            self.par[x] = self.find(self.par[x]) #path compression
+        return self.par[x]
+    
+    def union(self, x, y):
+        px, py = self.find(x), self.find(y)
+        if px == py:
+            return
+
+		# union by rank
+        if self.rank[px] < self.rank[py]:
+            self.par[px] = py
+            self.rank[py] += self.rank[px]
+        else:
+            self.par[py] = px
+            self.rank[px] += self.rank[py]
+
+	# additional: optional functions
+	def connected(self, x, y):
+		return self.find(x) == self.find(y)
 ```
 
 ## Application of Union Find
 
 - Solved problems
 	- [1061 Lexicographically Smallest Equivalent String](Algo/Coding%20Practice/Tree/1061%20Lexicographically%20Smallest%20Equivalent%20String.md)
-	- <https://leetcode.com/problems/find-if-path-exists-in-graph>
-	- <https://leetcode.com/problems/regions-cut-by-slashes/>
+	- [find-if-path-exists-in-graph](https://leetcode.com/problems/find-if-path-exists-in-graph)
+	- [regions-cut-by-slashes](https://leetcode.com/problems/regions-cut-by-slashes/)
 - Check whether an un-directed graph contains cycle or not
 - Find Number of components
 - Find common ancestor in trees
-
-## Template for Union Find
-
-```python
-Parent = {}  #use dictionary to store parent -> child relationship
-
-def findParent(x):
-	#initially parent of elt it is iteself
-	#setdefault only set elt if key doesn't exist
-	Parent.setdefault(x, x)  
-	
-	root = x
-	while root != Parent[root]:
-		root = Parent[root]
-
-	#perform path compression(...optional)
-	while x != root:
-		Parent[x], x = root, Parent[x]
-
-	return root
-
-
-def union(x1, x2):
-	parentX1, parentX2 = findParent(x1), findParent(x2)
-	Parent[parentX1] = Parent[parentX2]
-```

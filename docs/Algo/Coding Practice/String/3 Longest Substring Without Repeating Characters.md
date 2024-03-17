@@ -14,7 +14,7 @@ title: 3 Longest Sub-string Without Repeating Characters
 		- We can use set to check uniqueness
 	- If we find a duplicate element we will shrink the window from the start
 		- Until the current element is unique
-	- The length of the window will be [end-start+1]
+	- The length of the window will be `[end-start+1]`
 
 ```
 	 0 1 2 3 4 5 6 7

@@ -13,7 +13,7 @@ title: Longest Common Sub-string
 
 - The values for the cells are usually what you’re trying to optimize. In this case, the values will probably be a number: the length of the longest sub-string that the two strings have in common.
 - The Formula
-	- If the letters match, the value will be {1 + top-left neighbor}
+	- If the letters match, the value will be `{1 + top-left neighbor}`
 	- If the letters do not match, the value is zero
 
 ```python

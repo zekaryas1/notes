@@ -66,11 +66,11 @@ class Solution:
         return sorted(list(res))
 ```
 
-## Solution 2 {O(n)}
+## Solution 2 `{O(n)}`
 
 - Re-construct the tree by adding a parent field
 - We then traverse as above by starting from the target node
-	- We will traverse in three direction, left, right and up{parent}
+	- We will traverse in three direction, left, right and up(parent)
 - Complexity
 	- Time – O(N)
 	- Space – O(N)

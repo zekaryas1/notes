@@ -24,7 +24,7 @@ date modified: Thursday, July 6th 2023, 11:25:21 am
 
 ## A More Challenging Version
 
-- <https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/>
+- [LeetCode - The World's Leading Online Programming Learning Platform](https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/)
 - The two key things to consider is
 	- if two nodes are on the same level like [12, 2], store in sorted order [2,12]
 	- nodes should be stores in top down manner such as 4 should be stored before 15

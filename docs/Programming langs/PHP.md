@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, August 14th 2022, 4:10:31 pm
+date modified: Sunday, March 17th 2024, 11:46:37 am
 title: PHP Crash Note
 ---
 
@@ -165,7 +165,7 @@ count($my_array) //returns size of array
 sort($array) //sorts the array
 ```
 
-### Hashmap {associative array}
+### Hashmap (associative array)
 
 - All arrays in PHP are associative arrays (hashmaps in some languages)
 

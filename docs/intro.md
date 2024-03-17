@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Thursday, July 6th 2023, 12:06:47 pm
+date modified: Sunday, March 17th 2024, 12:11:22 pm
 title: Introduction
 ---
 
@@ -39,7 +39,7 @@ title: Introduction
 - Find a topic to master
 	- ex: Problem solving(Algo & DS), Cooking, Chess…
 - Regular Practice
-	- Find a good resource, this can be {teacher, book, website}
+	- Find a good resource, this can be (teacher, book, website)
 		- ex: Use `Leetcode`, YouTube, competition…
 - Get feedback
 	- Is the work right or wrong?

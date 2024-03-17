@@ -1,7 +1,7 @@
 ---
 title: More on Typescript
 date created: Monday, January 23rd 2023, 2:41:42 pm
-date modified: Sunday, April 9th 2023, 9:19:15 am
+date modified: Sunday, March 17th 2024, 11:47:46 am
 ---
 
 # More on Typescript
@@ -180,7 +180,7 @@ readonlyEvent.title = 'event title 2' //error
 readonlyEvent.memebers.push('m3'); //error
 ```
 
-### Record<Keys, Type>
+### `Record<Keys, Type>`
 
 - Constructs an object type whose property keys are `Keys` and whose property values are `Type`.
 - This utility can be used to map the properties of a type to another type.
@@ -202,7 +202,7 @@ const cats: Record<CatName, CatInfo> = {
 console.log(cats.boris);
 ```
 
-### Pick<Type, Keys>
+### `Pick<Type, Keys>`
 
 - Constructs a type by picking the set of properties Keys (string literal or union of string literals) from Type.
 
@@ -222,7 +222,7 @@ const todo: TodoPreview = {
 
 ```
 
-### Omit<Type, Keys>
+### `Omit<Type, Keys>`
 
 - Constructs a type by picking all properties from `Type` and then removing `Keys` (string literal or union of string literals).
 

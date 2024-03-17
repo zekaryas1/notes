@@ -1,14 +1,14 @@
 ---
 title: Fundamentals
 date created: Monday, December 12th 2022, 8:37:20 pm
-date modified: Saturday, April 29th 2023, 2:34:54 pm
+date modified: Sunday, March 17th 2024, 11:46:57 am
 ---
 
 # Fundamentals
 
 - Sources
-	- <https://www.typescriptlang.org/cheatsheets>
-	- <https://www.typescriptlang.org/>
+	- [TypeScript: Cheat Sheets](https://www.typescriptlang.org/cheatsheets)
+	- [TypeScript: JavaScript With Syntax For Types.](https://www.typescriptlang.org/)
 	- [Typescript for react](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
 
 ## Why and What of Typescript
@@ -464,7 +464,7 @@ function draw(color: Color, pattern: ...) {...}
 - static properties
 - abstract classes
 - method overloading
-	- <https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads>
+	- [TypeScript: Documentation - More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
 
 ## Generics
 

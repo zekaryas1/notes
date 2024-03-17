@@ -71,7 +71,7 @@ for i in range(rows * cols):
 #### Example Using One Loop Matrix Traversal
 
 - implementing a binary search in a sorted matrix
-	- <https://leetcode.com/problems/search-a-2d-matrix/description/>
+	- [LeetCode - The World's Leading Online Programming Learning Platform](https://leetcode.com/problems/search-a-2d-matrix/description/)
 
 ```python
 def binary_search(matrix, target):

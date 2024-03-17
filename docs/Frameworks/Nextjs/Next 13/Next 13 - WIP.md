@@ -1,7 +1,7 @@
 ---
 title: Next 13 - WIP
 date created: Thursday, September 21st 2023, 12:39:07 pm
-date modified: Tuesday, November 21st 2023, 1:04:33 pm
+date modified: Sunday, March 17th 2024, 11:12:36 am
 ---
 
 # Next 13 - WIP
@@ -121,7 +121,7 @@ export default function Page() {
 				- next will consider as static site rendering
 			- cache: 'no-store'
 				- don't cache -> Frequently changing data
-			- next: { `revalidate`: 10 }
+			- next: `{ revalidate: 10 }`
 				- `revalidate` every 10 second
 
 ```tsx

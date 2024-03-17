@@ -1,7 +1,9 @@
 ---
-tags: [sub_sets, bfs]
+tags:
+  - sub_sets
+  - bfs
 date created: Saturday, August 20th 2022, 12:31:38 pm
-date modified: Friday, September 2nd 2022, 9:47:24 am
+date modified: Monday, January 1st 2024, 7:39:22 pm
 title: 78 Subsets
 ---
 

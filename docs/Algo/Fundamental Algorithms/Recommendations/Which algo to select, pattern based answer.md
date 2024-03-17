@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, July 6th 2023, 11:44:26 am
+date modified: Monday, January 1st 2024, 8:01:24 pm
 title: Which Algo to Select, Pattern Based Answer
 ---
 
@@ -37,7 +37,7 @@ title: Which Algo to Select, Pattern Based Answer
 
 ### Recursion is Banned Then
 
-- [Stack {LAST IN FIRST OUT}](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
+- [Stack LAST IN FIRST OUT](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
 
 ### Must Solve In-place Then
 

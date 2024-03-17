@@ -1,7 +1,7 @@
 ---
 title: Best Practices
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Thursday, June 29th 2023, 9:36:10 am
+date modified: Sunday, March 17th 2024, 11:16:08 am
 ---
 
 # Best Practices
@@ -183,7 +183,7 @@ return (
 );
 ```
 
-> You should always use React.memo LITERALLY, as comparing the tree returned by the Component is always more expensive than comparing a pair of props properties [Source](When should you NOT use React memo? - Stack Overflow](<https://stackoverflow.com/a/63405621)>
+> You should always use React.memo LITERALLY, as comparing the tree returned by the Component is always more expensive than comparing a pair of props properties
 
 ### useMemo : Memorize Function Result
 
@@ -226,7 +226,7 @@ function App() {
 }
 ```
 
-- In the above example, If we tried to count how many times our application renders using the useState Hook{inside the useEffect hook}, we would be caught in an infinite loop since this Hook itself causes a re-render.
+- In the above example, If we tried to count how many times our application renders using the useState Hook(inside the useEffect hook), we would be caught in an infinite loop since this Hook itself causes a re-render.
 
 ### useContext
 
