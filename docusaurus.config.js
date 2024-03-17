@@ -33,6 +33,8 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
+                    routeBasePath: "docs/public-docs",
+                    path: "docs/public-docs",
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
@@ -55,8 +57,8 @@ const config = {
             '@docusaurus/plugin-content-docs',
             {
                 id: 'draft-docs',
-                path: 'draft-docs',
-                routeBasePath: 'draft-docs',
+                path: 'docs/draft-docs',
+                routeBasePath: 'docs/draft-docs',
                 sidebarPath: './sidebars.js',
                 // ... other options
             },
