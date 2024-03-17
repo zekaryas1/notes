@@ -1,7 +1,7 @@
 ---
 tags: [sub_sequence, string, two_pointers]
 date created: Wednesday, August 24th 2022, 11:09:27 am
-date modified: Wednesday, August 24th 2022, 11:40:16 am
+date modified: Sunday, March 17th 2024, 3:38:07 pm
 title: 392 Is Sub-sequence
 ---
 
@@ -37,7 +37,7 @@ class Solution:
 
 ## Solution 2: Python Iter
 
-- [Read about iter](Algo/Python%20Tips%20&%20Tricks/built-in%20list%20functions.md#iter)
+- [Related to: Iter](public-docs/Algo/Python%20Tips%20&%20Tricks/built-in%20list%20functions.md#Iter)
 - Just testing whether all characters in s are also in t (in order).
 
 ```python

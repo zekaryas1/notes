@@ -9,7 +9,7 @@ date modified: Saturday, February 4th 2023, 11:53:55 am
 
 ## Solution
 
-- [Union find](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
+- [Union find](public-docs/Algo/Tree%20&%20Graph/Tree/Union%20find.md)
 - iterate over the two strings, we can use zip for this
 - union the two strings, but when merging the parents, chose the smallest to be the parent.
 - finally based on the `basetStr`, iterate over each string and find the parent for that, and that will be your answer.

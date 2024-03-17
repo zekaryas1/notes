@@ -1,7 +1,7 @@
 ---
 tags: [matrix, dfs, set, graph]
 date created: Tuesday, August 23rd 2022, 12:12:16 pm
-date modified: Tuesday, August 23rd 2022, 12:21:31 pm
+date modified: Sunday, March 17th 2024, 3:33:15 pm
 title: 417 Pacific Atlantic Water Flow
 ---
 
@@ -16,7 +16,7 @@ title: 417 Pacific Atlantic Water Flow
 - Use set to store both result and visited nodes
 	- We're going in four direction, so we need a method not run in infinite loop
 - Use set's `&` method to quickly find nodes common to 2 or more sets
-	- [Sets - intersection, union and more](Algo/Python%20Tips%20&%20Tricks/Sets%20-%20intersection,%20union%20and%20more.md)
+	- [Sets - intersection, union and more](public-docs/Algo/Python%20Tips%20&%20Tricks/Sets%20-%20intersection,%20union%20and%20more.md)
 
 ```python
 class Solution:

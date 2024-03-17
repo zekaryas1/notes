@@ -9,8 +9,8 @@ title: 212 Word Search II
 
 ## Solution
 
-- Similar to [79 Word search](Algo/Coding%20Practice/Tree/79%20Word%20search.md)
-- For [79 Word search](Algo/Coding%20Practice/Tree/79%20Word%20search.md) we had one word, so using index to check if the path is a match was simple, however we now have multiple words
+- Similar to [79 Word search](draft-docs/Algo/Coding%20Practice/Tree/79%20Word%20search.md)
+- For [79 Word search](draft-docs/Algo/Coding%20Practice/Tree/79%20Word%20search.md) we had one word, so using index to check if the path is a match was simple, however we now have multiple words
 	- which can be very similar or different words, consider the following word_set
 
 ```
@@ -22,7 +22,7 @@ word_set = [
 ]
 ```
 
-- It is clear to see using index will not quite work here, better approach would be trie(prefix tree) [Trie data structure](Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md), with Trie we can
+- It is clear to see using index will not quite work here, better approach would be trie(prefix tree) [Trie data structure](public-docs/Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md), with Trie we can
 	- build the word set and look up if a word or a prefix exists efficiently
 
 ```python

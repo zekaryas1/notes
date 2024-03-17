@@ -1,13 +1,13 @@
 ---
 tags: [heap, sorting]
 date created: Wednesday, August 10th 2022, 6:04:10 pm
-date modified: Sunday, November 6th 2022, 5:28:49 pm
+date modified: Sunday, March 17th 2024, 3:34:54 pm
 title: 23 Merge K Sorted List
 ---
 
 # 23 Merge K Sorted List
 
-- [First read Merge K Sorted Lists](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Merge%20K%20Sorted%20Lists.md)
+- [First read: Merge K Sorted Lists](public-docs/Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Merge%20K%20Sorted%20Lists.md)
 
 ```python
 head = point = ListNode(0)
