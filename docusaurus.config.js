@@ -33,8 +33,7 @@ const config = {
             /** @type {import('@docusaurus/preset-classic').Options} */
             ({
                 docs: {
-                    routeBasePath: "docs/public-docs",
-                    path: "docs/public-docs",
+                    exclude: ["**/Algo/Coding Practice/**", "**/System design/**"],
                     sidebarPath: require.resolve("./sidebars.js"),
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
@@ -51,18 +50,6 @@ const config = {
                 },
             }),
         ],
-    ],
-    plugins: [
-        [
-            '@docusaurus/plugin-content-docs',
-            {
-                id: 'draft-docs',
-                path: 'docs/draft-docs',
-                routeBasePath: 'docs/draft-docs',
-                sidebarPath: './sidebars.js',
-                // ... other options
-            },
-        ]
     ],
 
     themeConfig:
@@ -122,14 +109,9 @@ const config = {
                                 label: "TypeScript utility types",
                                 to: "/docs/Programming%20langs/TypeScript/More%20on%20Typescript",
                             },
-                        ],
-                    },
-                    {
-                        title: "More Notes on",
-                        items: [
                             {
                                 label: "Docker & Docker compose",
-                                to: "/docs/Containerization/Docker/General Step to Dockerizing a Project",
+                                to: "/docs/Containerization/Docker/General%20Step%20to%20Dockerizing%20a%20Project",
                             },
                         ],
                     },
