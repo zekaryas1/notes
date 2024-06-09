@@ -2,13 +2,11 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Sunday, March 17th 2024, 12:11:22 pm
+date modified: Sunday, June 9th 2024, 7:04:50 pm
 title: Introduction
 ---
 
-# Introduction
-
-## Table of Content
+# Table of Content
 
 - Algorithm and data structure
 	- [Algorithms](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)

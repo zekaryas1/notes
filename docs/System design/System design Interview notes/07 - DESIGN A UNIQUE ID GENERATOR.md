@@ -64,7 +64,7 @@ date modified: Sunday, March 17th 2024, 4:08:20 pm
 	- easy to implement
 	- time sortable
 - snowflake parts
-	- ![](https://springmicroservices.com/wp-content/uploads/2022/08/Twitter-Snowflake-ID-sections-1.png)
+	- ![](https://miro.medium.com/v2/resize:fit:1200/0*zgoVKDg2-q9gmU1E.png)
 	- The first 41 bits are a timestamp, representing milliseconds since the chosen epoch.
 	- The next 10 bits represent a machine ID, preventing clashes
 		- its possible for two machines to generate the same timestamps, machine and data-center id will help differentiate.

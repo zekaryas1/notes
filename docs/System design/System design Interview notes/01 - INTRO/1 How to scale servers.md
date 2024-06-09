@@ -6,7 +6,7 @@ date modified: Sunday, March 17th 2024, 11:36:08 am
 
 # 1 How to Scale Servers
 
-![](https://www.cloudzero.com/hubfs/blog/horizontal-vs-vertical-scaling.webp)
+![](https://web.archive.org/web/20230622131909if_/https://www.cloudzero.com/hubfs/blog/horizontal-vs-vertical-scaling.webp)
 
 ## Vertical Scaling
 

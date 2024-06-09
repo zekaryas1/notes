@@ -12,7 +12,7 @@ title: Merge K Sorted Lists
 - K-way Merge helps you solve problems that involve a set of sorted arrays.
 - Whenever you’re given ‘K’ sorted arrays, you can use a Heap to efficiently perform a sorted traversal of all the elements of all arrays.
 - You can push the smallest element of each array in a Min Heap to get the overall minimum. After getting the overall minimum, push the next element from the same array to the heap. Then, repeat this process to make a sorted traversal of all elements.
-- ![](https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FG9YRlqC9joZNTWsi1ul7tRkO6tv1-4hwy3w8x.jpg&w=828&q=75)
+- ![](https://web.archive.org/web/20220121192227if_/https://hackernoon.com/_next/image?url=https%3A%2F%2Fcdn.hackernoon.com%2Fimages%2FG9YRlqC9joZNTWsi1ul7tRkO6tv1-4hwy3w8x.jpg&w=828&q=75)
 - The steps involved to solve this kind of problem will be
 	- Insert the first element of each array in a Min Heap.
 	- After this, take out the smallest (top) element from the heap and add it to the merged list.

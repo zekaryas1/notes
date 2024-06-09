@@ -198,7 +198,7 @@ return <p>{ cachedValue(12,12) }</p>
 ```
 
 - The computed result is stored in the `cachedValue` variable and `useMemo()` Hook will return it each time unless the inputs are changed.
-- ![](https://pbs.twimg.com/media/DqaQy-7VAAEc-u5.jpg)
+- ![](https://web.archive.org/web/20210513130537if_/https://pbs.twimg.com/media/DqaQy-7VAAEc-u5.jpg)
 
 ## Other Useful Hooks & Concepts
 
