@@ -40,9 +40,9 @@ class Solution:
 	- For each element, we check if it is the first sequence,
 		- `4 is not a first sequence since 3 is also in the set`
 		- `1 is a first sequence because 0 is not in the set`
-	- For all first sequences, count how long we can go up{curr + 1, curr + 2, curr+n}
+	- For all first sequences, count how long we can go up(curr + 1, curr + 2, curr+n)
 		- `i.e for 1 we can go 1 -> 2 -> 3 - 4, total length = 4`
-		- Stop when the next step {elt +1} is not in the set
+		- Stop when the next step (elt +1) is not in the set
 
 ```python
 class Solution:

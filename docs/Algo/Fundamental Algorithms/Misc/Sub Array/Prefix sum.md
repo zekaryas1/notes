@@ -2,12 +2,11 @@
 tags: [prefix, prefixSum]
 title: What is Prefix Sum
 date created: Sunday, November 6th 2022, 5:46:32 pm
-date modified: Saturday, February 4th 2023, 3:33:56 pm
+date modified: Sunday, March 17th 2024, 3:44:26 pm
 ---
 
 # What is Prefix Sum
 
-- [GeeksforGeeks prefix sum](https://www.geeksforgeeks.org/prefix-sum-array-implementation-applications-competitive-programming/)
 - In computer science, the prefix sum, (cumulative sum), is a second sequence of numbers `y0, y1, y2`,…, the sums of prefixes (previous numbers) of the input sequence:
 - ![prefix sum](https://www.cs.utexas.edu/~rossbach/cs380p-fall2019/lab/pfxsum.png)
 
@@ -42,8 +41,5 @@ print(res)
 	- `subarray sum with x condition`
 	- maximum sub-array sub
 - Examples
-	- [2256 Minimum Average Difference](Algo/Coding%20Practice/Array/2256%20Minimum%20Average%20Difference.md)
-	- [974. Subarray Sums Divisible by K](Algo/Coding%20Practice/Array/974.%20Subarray%20Sums%20Divisible%20by%20K.md)
-	- [560 Subarray Sum Equals K](Algo/Coding%20Practice/Array/560%20Subarray%20Sum%20Equals%20K.md)
-	- <https://leetcode.com/problems/product-of-array-except-self>
-	- <https://leetcode.com/problems/minimum-size-subarray-sum>
+	- [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self)
+	- [minimum-size-subarray-sum](https://leetcode.com/problems/minimum-size-subarray-sum)

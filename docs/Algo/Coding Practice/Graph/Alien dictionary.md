@@ -31,11 +31,11 @@ map
 
 - This pattern creates an order, a is before m, d is before p and p is before l
 	- This pattern is related to topological sort
-- We can use [Topological Sort Kahns Algorithm](Algo/Tree%20&%20Graph/Graph/Topological%20Sort%20Kahns%20Algorithm.md), to find this ordering, which is our answer
+- We can use Topological Sort, to find this ordering, which is our answer
 - Steps:
 	- Convert inputs to graph
 	- Find the in_degree
-	- Run [Topological Sort Kahns Algorithm](Algo/Tree%20&%20Graph/Graph/Topological%20Sort%20Kahns%20Algorithm.md)
+	- Run Topological Sort Kahns Algorithm
 
 ```python
 from typing import (

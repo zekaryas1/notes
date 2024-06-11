@@ -9,12 +9,12 @@ title: 3 Longest Sub-string Without Repeating Characters
 
 ## Solution
 
-- We will have a sliding window
+- We will have a [Sliding window](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Sliding%20window.md)
 	- We keep expanding the window as long as the next element is unique
 		- We can use set to check uniqueness
 	- If we find a duplicate element we will shrink the window from the start
 		- Until the current element is unique
-	- The length of the window will be [end-start+1]
+	- The length of the window will be `[end-start+1]`
 
 ```
 	 0 1 2 3 4 5 6 7

@@ -37,9 +37,7 @@ def mono_stack(nums):
 	- Or we can use it to find the previous smaller or greater `elt` by iterating from end - front
 - Next Largest or Smallest Element in a List
 	- [Get the next greater element for every array element](https://leetcode.com/problems/next-greater-element-i/)
-		- [Solution to Next greater elt](Algo/Coding%20Practice/Stack/Next%20greater%20elt.md)
 	- [daily-temperatures](https://leetcode.com/problems/daily-temperatures/)
-		- [Solution to Daily Temperatures](Algo/Coding%20Practice/Stack/739%20Daily%20Temperatures.md)
 	- [Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water)
 	- [Largest Rectangle in Histogram](https://leetcode.com/problems/largest-rectangle-in-histogram)
 	- [Steps to Make Array Non-decreasing](https://leetcode.com/problems/steps-to-make-array-non-decreasing)

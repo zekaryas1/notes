@@ -1,7 +1,7 @@
 ---
 tags: [bits, bit]
 date created: Wednesday, August 24th 2022, 4:11:39 pm
-date modified: Thursday, July 6th 2023, 11:17:02 am
+date modified: Sunday, March 17th 2024, 3:46:44 pm
 title: 191 Number of 1 Bits
 ---
 
@@ -9,7 +9,7 @@ title: 191 Number of 1 Bits
 
 ## Solution
 
-- Iterate through the bits and add the last bit to result [Bit manipulation](Algo/Fundamental%20Algorithms/Bit%20manipulation.md)
+- Iterate through the bits and add the last bit to result, [Check: Looping in Bit World](Algo/Fundamental%20Algorithms/Bit%20manipulation.md#Looping%20in%20Bit%20World)
 
 ```python
 class Solution:

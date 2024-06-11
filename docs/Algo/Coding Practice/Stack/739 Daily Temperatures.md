@@ -9,7 +9,7 @@ title: 739 Daily Temperatures
 
 ## Solution
 
-- Use [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
+- [Use Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
 
 ```python
 class Solution:

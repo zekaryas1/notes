@@ -9,7 +9,7 @@ date modified: Sunday, December 18th 2022, 4:11:20 pm
 
 ## Solution
 
-- we're asked to generate all combinations, thus the first algorithm that should come to mind should be [Backtracking](Algo/Fundamental%20Algorithms/Recursion/Backtracking.md)
+- we're asked to generate all combinations, thus the first algorithm that should come to mind should be Backtracking
 	- but how to control the backtracking, we don't want all permutation(i.e `)))(((`), we want all the valid ones(i.e `((())), ()()()`…)
 	- well, how can we control whether out path is valid and leading to a valid path, to do this
 		- we keep the number of open and close tags along the path and decide whether adding another open/close tag will make the path invalid

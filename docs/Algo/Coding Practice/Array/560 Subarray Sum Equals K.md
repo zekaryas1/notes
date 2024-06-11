@@ -15,7 +15,7 @@ prefix = [5, 10, 12, 15, 22]
 k = 10
 ```
 
-- for this problem we will use prefix sum
+- for this problem we will use [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 	- keep adding values to get current prefix
 		- store the prefixes at each stage to memo
 	- check `current Pref - k` in previous prefixes we saw

@@ -1,11 +1,12 @@
 ---
 date created: Tuesday, July 26th 2022, 2:09:40 pm
-date modified: Tuesday, July 26th 2022, 2:18:25 pm
+date modified: Monday, January 8th 2024, 12:43:37 pm
 title: Trie Data Structure
 ---
 
 # Trie Data Structure
 
+- aka Prefix tree, best when we look to search words with their prefix
 - [Video explanation](https://youtu.be/oobqoCJlHA0)
 - [Leetcode question](https://leetcode.com/problems/implement-trie-prefix-tree/)
 - ![](https://miro.medium.com/max/1200/1*-K7LHR1JFGIP_4AuzJel4A.png)

@@ -1,12 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Friday, November 18th 2022, 1:35:45 pm
+date modified: Monday, January 1st 2024, 7:57:35 pm
 title: Stack and Queue
 ---
 
 # Stack and Queue
 
-## Stack {LAST IN FIRST OUT}
+## Stack (LAST IN FIRST OUT)
 
 - Unlike an array, a stack does not offer constant-time access to the nth item. However, it does allow constant time adds and removes, as it doesn't require shifting elements around.
 
@@ -21,7 +21,7 @@ print(stack[-1])  #45 last in first out
 
 ```
 
-## Queue {FIRST IN FIRST OUT}
+## Queue (FIRST IN FIRST OUT)
 
 - A queue can also be implemented with a linked list. In fact, they are essentially the same thing, as long as items are added and removed from opposite sides.
 - Enqueue = Add, Dequeue(POP)
@@ -97,7 +97,7 @@ while not q.empty():
 	print(next_item)
 ```
 
-## Priority Queue 2 { Heapq }
+## Priority Queue 2 (Heapq)
 
 - Using [heapq](https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/)
 - `heapify`

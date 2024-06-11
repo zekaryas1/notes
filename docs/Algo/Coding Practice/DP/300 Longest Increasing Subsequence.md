@@ -1,7 +1,7 @@
 ---
 tags: [dp, sub_sequence, binary_search, dfs]
 date created: Thursday, August 4th 2022, 11:13:57 am
-date modified: Wednesday, August 10th 2022, 11:22:39 am
+date modified: Sunday, March 17th 2024, 3:31:55 pm
 title: 300 Longest Increasing Sub-sequence
 ---
 
@@ -13,9 +13,9 @@ title: 300 Longest Increasing Sub-sequence
 - Child will be any node which
 	- Is greater than the parent and
 	- One of the next elts. elt with index greater than parent index
--  At any node we have two choices
+- At any node we have two choices
 	- Chose the current node only
-	- Chose the current node plus,  the previous sequences
+	- Chose the current node plus, the previous sequences
 - Memorize the results using index
 
 ```python
@@ -79,7 +79,7 @@ for num in nums:
 return len(tail)
 ```
 
-- [Read about python binary search before](Algo/Python%20Tips%20&%20Tricks/In-built%20Binary%20search.md)
+- [Read about binary search before continuing](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 
 ```
 [10,9,2,5,3,7,101,18]

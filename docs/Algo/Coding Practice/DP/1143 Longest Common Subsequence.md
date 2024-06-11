@@ -12,7 +12,7 @@ title: 1143 Longest Common Sub-sequence
 ![](https://cdn.programiz.com/sites/tutorial2program/files/lcs-Table-4.png)
 
 - The Formula
-	- If the letters match, the value will be {1 +  top-left neighbor}
+	- If the letters match, the value will be `{1 +  top-left neighbor}`
 	- if the letters do not match, the value is maximum of left and up neighbors
 
 ```python

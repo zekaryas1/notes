@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, July 6th 2023, 11:45:25 am
+date modified: Monday, January 1st 2024, 6:37:07 pm
 title: What is Linked List
 ---
 
@@ -21,6 +21,7 @@ title: What is Linked List
 ## The Runner Technique
 
 - aka *fast/slow pointers*
+	- aka `floyd's tortoise and hare`
 - The "runner" (or second pointer) technique is used in many linked list problems.
 - The runner technique means that you iterate through the linked list with two pointers simultaneously, with one ahead of the other.
 - The "fast" node might be ahead by a fixed amount, or it might be hopping multiple nodes for each one node that the "slow" node iterates through.
@@ -28,9 +29,8 @@ title: What is Linked List
 ```python
 #example finding a middle node in linked-list
 def middleNode(head):
-	slow  = head
-    fast = head
-    while fast!=None and fast.next != None:
+	slow, fast =  head, head
+    while fast and fast.next:
         slow = slow.next
         fast = fast.next.next
     return slow

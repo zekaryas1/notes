@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, July 6th 2023, 11:44:26 am
+date modified: Monday, January 1st 2024, 8:01:24 pm
 title: Which Algo to Select, Pattern Based Answer
 ---
 
@@ -37,7 +37,7 @@ title: Which Algo to Select, Pattern Based Answer
 
 ### Recursion is Banned Then
 
-- [Stack {LAST IN FIRST OUT}](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
+- [Stack LAST IN FIRST OUT](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
 
 ### Must Solve In-place Then
 
@@ -60,7 +60,7 @@ title: Which Algo to Select, Pattern Based Answer
 ### Asked Contiguous Sub-string with X Condition
 
 - [Sliding window](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Sliding%20window.md)
-- Monotonic queue
+- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
 
 ### Asked Contiguous Sub-array Sum with X Condition
 
@@ -69,7 +69,6 @@ title: Which Algo to Select, Pattern Based Answer
 ### Next/Prev Greater or Smaller Element
 
 - [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
-	- [ex: Next greater elt](Algo/Coding%20Practice/Stack/Next%20greater%20elt.md)
 
 ## Else
 

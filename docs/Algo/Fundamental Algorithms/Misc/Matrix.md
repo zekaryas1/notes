@@ -1,7 +1,9 @@
 ---
+tags:
+  - matrix
 title: Matrix
 date created: Tuesday, August 15th 2023, 1:29:11 am
-date modified: Tuesday, August 15th 2023, 1:43:00 am
+date modified: Sunday, June 9th 2024, 7:36:06 pm
 ---
 
 # Matrix
@@ -10,7 +12,7 @@ date modified: Tuesday, August 15th 2023, 1:43:00 am
 
 ### Row Based
 
-- ![](https://media.licdn.com/dms/image/D4D12AQH2DXKfERV5dQ/article-inline_image-shrink_1500_2232/0/1662964049740?e=1697673600&v=beta&t=tEkwlSvG3x7z_9EIGwTguibHrAfbFXdD4OuERXi5AiU)
+- ![](https://craftofcoding.wordpress.com/wp-content/uploads/2017/02/rowcolumnarrays.jpg)
 
 ```python
 matrix = [
@@ -29,8 +31,6 @@ for r in range(rows):
 ```
 
 ### Column Based
-
-- ![](https://media.licdn.com/dms/image/D4D12AQGxERSUOYTiEw/article-inline_image-shrink_1500_2232/0/1662964312164?e=1697673600&v=beta&t=o4OuXeIK_UsLNFDETnx5H4Z7jFceiuzny4yUuRn5jGM)
 
 ```python
 matrix = [
@@ -71,7 +71,7 @@ for i in range(rows * cols):
 #### Example Using One Loop Matrix Traversal
 
 - implementing a binary search in a sorted matrix
-	- <https://leetcode.com/problems/search-a-2d-matrix/description/>
+	- [LeetCode - The World's Leading Online Programming Learning Platform](https://leetcode.com/problems/search-a-2d-matrix/description/)
 
 ```python
 def binary_search(matrix, target):

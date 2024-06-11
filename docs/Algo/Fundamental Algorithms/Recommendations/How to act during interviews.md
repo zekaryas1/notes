@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 16th 2023, 2:57:37 pm
+date modified: Monday, January 1st 2024, 8:00:47 pm
 title: How to Act During Interviews
 ---
 
@@ -23,6 +23,6 @@ title: How to Act During Interviews
 	- Select the best/easy based on time/space complexity.
 3. Draw/Visualize Your solution(approach)
 4. Code with Pseudo-code Before Going to Actual Solution
-	- Skip if time is ticking…{you don't want to over explain things}
+	- Skip if time is ticking…(you don't want to over explain things)
 5. Write the Actual Code
 6. Finally, Run the Test Cases

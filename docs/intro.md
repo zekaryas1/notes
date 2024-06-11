@@ -2,13 +2,11 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Thursday, July 6th 2023, 12:06:47 pm
+date modified: Sunday, June 9th 2024, 7:04:50 pm
 title: Introduction
 ---
 
-# Introduction
-
-## Table of Content
+# Table of Content
 
 - Algorithm and data structure
 	- [Algorithms](Algo/Fundamental%20Algorithms/Algorithm%20analysis.md)
@@ -16,7 +14,6 @@ title: Introduction
 		- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 	- [Python Tips and tricks](Algo/Python%20Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
-	- [Leetcode solutions](Algo/Coding%20Practice/Tree/101%20Symmetric%20Tree.md)
 - Containerization
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)
 - Programming languages
@@ -39,7 +36,7 @@ title: Introduction
 - Find a topic to master
 	- ex: Problem solving(Algo & DS), Cooking, Chess…
 - Regular Practice
-	- Find a good resource, this can be {teacher, book, website}
+	- Find a good resource, this can be (teacher, book, website)
 		- ex: Use `Leetcode`, YouTube, competition…
 - Get feedback
 	- Is the work right or wrong?
