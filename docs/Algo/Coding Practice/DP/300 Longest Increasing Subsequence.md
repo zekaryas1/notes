@@ -1,22 +1,13 @@
 ---
 tags: [dp, sub_sequence, binary_search, dfs]
 date created: Thursday, August 4th 2022, 11:13:57 am
-date modified: Sunday, March 17th 2024, 3:31:55 pm
+date modified: Sunday, July 14th 2024, 10:52:09 pm
 title: 300 Longest Increasing Sub-sequence
 ---
 
 # 300 Longest Increasing Sub-sequence
 
 ## DFS + Memo
-
-- Build a tree with all the nodes
-- Child will be any node which
-	- Is greater than the parent and
-	- One of the next elts. elt with index greater than parent index
-- At any node we have two choices
-	- Chose the current node only
-	- Chose the current node plus, the previous sequences
-- Memorize the results using index
 
 ```python
 memo = {}
@@ -42,12 +33,6 @@ return max(memo.values()) if memo else 1
 ```
 
 ## DP O(n2)
-
-- The last elt will always have a value of 1
-	- And the elt before it will have two choices
-		- If it is greater than the next elt add 1 to it
-		- Else keep the current value which is 1
-- For every elt we have to consider it combination will all the next elts.
 
 ```python
 length = len(nums)

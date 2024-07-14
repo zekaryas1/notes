@@ -23,7 +23,7 @@ for 1 -> the next greater elt is 6
 
 ## Solution
 
-- [Use Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
+- [Use Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Sequence.md)
 
 ```python
 class Solution:

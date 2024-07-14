@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Tuesday, December 19th 2023, 8:52:02 pm
+date modified: Sunday, June 30th 2024, 3:07:05 am
 title: Algorithms You Should Know
 ---
 
@@ -22,31 +22,31 @@ title: Algorithms You Should Know
 	- [Kadane](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Kadane.md)
 	- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 - String
+	- [Sliding window](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Sliding%20window.md)
 - Hash Table
 - Tree
-	- [Union find](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
 	- Depth First Search(in,pre,post)
 	- Breadth First Search
-	- Segment tree
+	- [Union find](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
+	- [Trie data structure](Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md)
+	- [Segment Tree](Algo/Tree%20&%20Graph/Tree/Segment%20Tree.md)
 - [Matrix](Algo/Fundamental%20Algorithms/Misc/Matrix.md)
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
-	- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
+	- [Monotonic Sequence](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Sequence.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search
 	- [Topological Sort Kahns Algorithm](Algo/Tree%20&%20Graph/Graph/Topological%20Sort%20Kahns%20Algorithm.md)
-		- [Topological sort](Algo/Tree%20&%20Graph/Graph/Topological%20sort.md)
+		- [Topological sort DFS](Algo/Tree%20&%20Graph/Graph/Topological%20sort.md)
+	- [Dijkstra](Algo/Tree%20&%20Graph/Graph/Dijkstra.md)
 	- Kosaraju's algorithm
 - [Linked list](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md)
-	- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
 	- [The Runner Technique](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique)
-- [Trie data structure](Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md)
 
 ## General Techniques
 
-- [Intro to Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
 - Divide and Conquer
 - [Recursion](Algo/Fundamental%20Algorithms/Recursion/Recursion.md)
 - [Backtracking](Algo/Fundamental%20Algorithms/Recursion/Backtracking.md)
-- [Greedy algorithms](Algo/Fundamental%20Algorithms/Greedy%20algorithms.md)
+- [Dynamic programming](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md)
+	- [DP Vs Greedy Algo](Algo/Fundamental%20Algorithms/Recursion/Intro%20to%20Dynamic%20programming.md#DP%20Vs%20Greedy%20Algo)

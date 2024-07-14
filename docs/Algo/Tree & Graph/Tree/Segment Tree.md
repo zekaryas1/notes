@@ -1,7 +1,7 @@
 ---
 title: Segment Tree
 date created: Sunday, January 14th 2024, 4:14:59 pm
-date modified: Thursday, January 18th 2024, 10:23:23 am
+date modified: Sunday, June 16th 2024, 11:24:46 am
 ---
 
 # Segment Tree
@@ -138,12 +138,12 @@ class NumArray(object):
 
         #If end of the range is less than the mid, the entire interval lies
         #in the left subtree
-        if i <= mid and mid >= j:  #in_short = (j <= mid)
+        if i <= mid:  #short for = (i <= mid and mid >= j)
             return self._sumRange(root.left, i, j)
 
         #If start of the interval is greater than mid, the entire inteval lies
         #in the right subtree
-        elif i > mid and mid < j: #in_short = (i > mid)
+        elif i > mid: #short for  = (i > mid and mid < j)
             return self._sumRange(root.right, i, j)
 
         #Otherwise, the interval is split. So we calculate the sum recursively,

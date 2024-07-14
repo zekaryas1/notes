@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Monday, January 1st 2024, 7:57:35 pm
+date modified: Sunday, June 16th 2024, 11:42:49 am
 title: Stack and Queue
 ---
 
@@ -100,12 +100,14 @@ while not q.empty():
 ## Priority Queue 2 (Heapq)
 
 - Using [heapq](https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/)
-- `heapify`
-	- This function is used to **convert the iterable into a heap** data structure.
-- `heappush`
-	- This function is used to **insert the element** mentioned in its arguments into heap.
-- `heappop`
-	- This function is used to **remove and return the smallest element** from heap.
+	- `heapify`
+		- This function is used to **convert the iterable into a heap** data structure.
+	- `heappush`
+		- This function is used to **insert the element** mentioned in its arguments into heap.
+	- `heappop`
+		- This function is used to **remove and return the smallest element** from heap.
+
+> Python's heapq is min heap implementation by default, but to get a max heap, you can multiply by -1 when inserting and multiply back by -1 when popping to get the max element.
 
 ```python
 import heapq

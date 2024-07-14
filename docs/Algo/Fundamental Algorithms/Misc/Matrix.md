@@ -3,7 +3,7 @@ tags:
   - matrix
 title: Matrix
 date created: Tuesday, August 15th 2023, 1:29:11 am
-date modified: Sunday, June 9th 2024, 7:36:06 pm
+date modified: Thursday, June 13th 2024, 12:54:32 am
 ---
 
 # Matrix
@@ -71,7 +71,7 @@ for i in range(rows * cols):
 #### Example Using One Loop Matrix Traversal
 
 - implementing a binary search in a sorted matrix
-	- [LeetCode - The World's Leading Online Programming Learning Platform](https://leetcode.com/problems/search-a-2d-matrix/description/)
+	- [LeetCode - search-a-2d-matrix](https://leetcode.com/problems/search-a-2d-matrix/description/)
 
 ```python
 def binary_search(matrix, target):
