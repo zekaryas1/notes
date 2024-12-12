@@ -1,12 +1,14 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, July 3rd 2022, 11:06:46 am
+date modified: Thursday, December 12th 2024, 3:49:19 pm
 title: Inspiring Math Algos
 ---
 
-# Inspiring Math Algos
+# Interesting Algos
 
-## The Sieve of Eratosthenes
+## Math
+
+### The Sieve of Eratosthenes
 
 * The Sieve of Eratosthenes is a highly efficient way to generate a list of primes. It works by recognizing that all non-prime numbers are divisible by a prime number.
 * How it works
@@ -46,7 +48,7 @@ if __name__ == '__main__':
     SieveOfEratosthenes(num)
 ```
 
-## Finding GCD(Greatest Common divisor) of Two Numbers
+### Finding GCD(Greatest Common divisor) of Two Numbers
 
 ```python
 
@@ -60,3 +62,161 @@ def gcd(m,n):
 
 print(gcd(84,44))
 ```
+
+## Probabilistic Data Structures
+
+- Probabilistic data structures are designed to provide fast, memory-efficient ==approximate== solutions for tasks like membership testing, frequency counting, or cardinality estimation.
+- While most tasks handled by probabilistic data structures can also be achieved using hash tables, binary search, or other traditional data structures with full accuracy, probabilistic data structures prioritize efficiency by sacrificing some accuracy, allowing for tolerable levels of false positives or negatives.
+
+| **Aspect**            | **Hash Table**                              | **Probabilistic Data Structures**                  |
+| --------------------- | ------------------------------------------- | -------------------------------------------------- |
+| **Accuracy**          | Exact results.                              | Approximate results (false positives/negatives).   |
+| **Memory Usage**      | High, especially for large datasets.        | Much lower for large datasets.                     |
+| **Scalability**       | Not suitable for massive or streaming data. | Scales well for large/streaming datasets.          |
+| **Speed**             | Efficient but memory-constrained.           | Faster for large-scale problems.                   |
+| **Deletes**           | Supported directly.                         | Often limited or unsupported (e.g., Bloom Filter). |
+| **Use Case Examples** | Caching, associative arrays.                | Membership testing, cardinality estimation.        |
+
+- **Common Probabilistic Data Structures and Their Alternatives**
+
+| **Task**               | **Probabilistic Data Structure** | **Exact Alternatives**              |
+| ---------------------- | -------------------------------- | ----------------------------------- |
+| **Membership Testing** | Bloom Filter                     | Hash table, Binary Search Tree.     |
+| **Frequency Counting** | Count-Min Sketch                 | Hash map, Counter data structure.   |
+| **Distinct Counting**  | HyperLogLog                      | Hash table (tracking all elements). |
+| **Set Operations**     | Cuckoo Filter                    | Linked lists, Trees, or Exact Sets. |
+
+- **When To Use Probabilistic Data Structures Over Others**
+	- **Memory Constraints**:
+	    - Bloom Filters use significantly less memory than hash tables for testing membership.
+	- **Fast Approximation Needs**:
+	    - Probabilistic data structures provide quick answers with small errors, making them suitable for real-time applications.
+	- **Large Data Streams**:
+	    - Can process elements in one pass without requiring the entire dataset in memory.
+	- **Tolerable Error Margins**:
+	    - Suitable when small inaccuracies are acceptable, such as in caching, recommendation systems, or network traffic analysis.
+
+### Bloom Filters
+
+- **Overview**
+	- **Definition**: A probabilistic data structure that efficiently checks if an element is present in a set, with a possibility of false positives but no false negatives.
+	- **Core Idea**:
+		- Uses multiple hash functions to map elements to a bit array.
+		- Supports two operations:
+			- **Insert**: Hash the element and set the corresponding bits to `1`.
+			- **Check**: Verify if all bits corresponding to the element's hash values are `1`.
+- **Use Cases**
+	- **Membership Testing**:
+		- Checking presence of elements in large datasets (e.g., web crawlers, caches).
+	- **Databases**:
+	    - Reduce disk lookups by testing for non-membership in indexes.
+	- **Distributed Systems**:
+	    - Quick checks in systems like distributed caching (e.g., Redis).
+	- **Network Security**:
+	    - Detecting malicious URLs or spam emails.
+- **Trade-offs**
+	- **Advantages**:
+	    - Memory-efficient compared to exact data structures.
+	    - Constant time complexity for insert and lookup.
+	- **Limitations**:
+	    - False positives are possible (but can be minimized by tuning parameters).
+	    - Cannot delete elements unless additional mechanisms like counting filters are used.
+	- **Parameter Tuning**:
+	    - Number of hash functions (k) and size of bit array (m) are critical.
+	    - Balance between false positive rate and memory usage.
+
+```python
+from hashlib import md5
+
+class BloomFilter:
+    def __init__(self, size, num_hashes):
+        self.size = size
+        self.num_hashes = num_hashes
+        self.bit_array = [0] * size
+
+    def _hashes(self, item):
+        for i in range(self.num_hashes):
+            yield int(md5((item + str(i)).encode()).hexdigest(), 16) % self.size
+
+    def insert(self, item):
+        for hash_val in self._hashes(item):
+            self.bit_array[hash_val] = 1
+
+    def contains(self, item):
+        return all(self.bit_array[hash_val] for hash_val in self._hashes(item))
+
+# Example usage:
+bf = BloomFilter(size=1000, num_hashes=5)
+bf.insert("apple")
+print(bf.contains("apple"))  # True
+print(bf.contains("orange"))  # False (likely) or True (false positive)
+
+```
+
+- Source
+	- [wiki bloom filters](https://en.wikipedia.org/wiki/Bloom_filter)
+
+### Count Min Sketch
+
+- ![count min sketch hight level design with code](https://i.sstatic.net/vhJmP.png)
+- Overview
+	- A **Count-Min Sketch** is a probabilistic data structure used for efficiently estimating the frequency of elements in a stream.
+	- It provides approximate counts, with some potential for overestimation, but guarantees no underestimation.
+- Key advantages:
+	- **Space-efficient**: Uses sub-linear space compared to the size of the data.
+		- for systems like counting millions or billions of views or counts, data structures like hash table and binary search although capable won't be space efficient as they requires as much keys in their structure.
+	- **Speed**: Supports fast insertions and queries.
+	- **Simplicity**: Easy to implement and tune.
+- Typical use cases:
+	- Tracking popular items in a data stream (e.g., trending hashtags).
+	- Network traffic monitoring.
+	- Estimating frequency distributions in large datasets.
+- Trade-offs
+	- **Accuracy**: Controlled by the number of hash functions and the width of the table.
+	- **Collisions**: Can lead to overestimation when different elements hash to the same position.
+	- Space and time complexity depend on the desired error bounds.
+
+```python
+import hashlib
+import math
+
+class CountMinSketch:
+    def __init__(self, width, depth):
+        """
+        Initialize a Count-Min Sketch with the given width and depth.
+        :param width: Number of counters per row.
+        :param depth: Number of hash functions (number of rows).
+        """
+        self.width = width
+        self.depth = depth
+        self.table = [[0] * width for _ in range(depth)]
+        self.hash_functions = [self._generate_hash(i) for i in range(depth)]
+
+    def _generate_hash(self, seed):
+        def hash_fn(x):
+            return int(hashlib.md5((str(x) + str(seed)).encode()).hexdigest(), 16) % self.width
+        return hash_fn
+
+    def add(self, item):
+        """Add an item to the Count-Min Sketch."""
+        for i, hash_fn in enumerate(self.hash_functions):
+            index = hash_fn(item)
+            self.table[i][index] += 1
+
+    def query(self, item):
+        """Query the count of an item in the Count-Min Sketch."""
+        return min(self.table[i][hash_fn(item)] for i, hash_fn in enumerate(self.hash_functions))
+
+# Example usage:
+sketch = CountMinSketch(width=1000, depth=5)
+sketch.add("apple")
+sketch.add("apple")
+sketch.add("banana")
+
+print("Count of 'apple':", sketch.query("apple"))  # Output: Approximate count of 'apple'
+print("Count of 'banana':", sketch.query("banana"))  # Output: Approximate count of 'banana'
+print("Count of 'cherry':", sketch.query("cherry"))  # Likely 0, if 'cherry' wasn't added
+```
+
+- Source
+	- [Detailed explanation of Count min sketch from stack-overflow](https://stackoverflow.com/a/64397892)
