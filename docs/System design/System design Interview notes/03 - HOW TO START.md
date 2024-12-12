@@ -1,7 +1,7 @@
 ---
 title: 03 - HOW TO START
 date created: Thursday, September 29th 2022, 7:46:13 pm
-date modified: Thursday, October 24th 2024, 6:07:09 pm
+date modified: Sunday, March 17th 2024, 4:06:25 pm
 ---
 
 # 03 - HOW TO START
@@ -12,15 +12,15 @@ date modified: Thursday, October 24th 2024, 6:07:09 pm
 	- end with
 		- Functional requirements and
 		- Non functional requirements
-1. Do back of the envelop estimation
-2. Start Fundamental design
+2. Do back of the envelop estimation
+3. Start Fundamental design
 	- Propose you solution using a single server setup only
 	- System can be divided into front-end -> back-end -> database
 	- Outline simple communication methods i.e API request types, database schema
 	- Confirm Use of third-party tools
 		- unless asked to design blob storage, confirm if you can use i.e S3
 		- unless asked to design CDN, confirm if you can use i.e Amazon cloud front
-3. Deep dive
+4. Deep dive
 	- Time to think about how to scale each parts separately
 	- How to scale back-end servers
 		- decide should we scale vertically or horizontally
@@ -38,8 +38,8 @@ date modified: Thursday, October 24th 2024, 6:07:09 pm
 			- use cache to speed up DB operation or for complex DB operations
 			- use CDN to increase page load time/ front-end load time
 		- consider Logging and Metrics to keep track of what is going on with your system and consider Automation to save time.
-4. Wrap up
-	1. Talk about what can be improved, What seems a bottleneck
+5. Wrap up
+	1. Talk about what can be improved, What seems a bottleneck  
 
 ## How to Approach System Design Interviews
 
@@ -57,11 +57,6 @@ date modified: Thursday, October 24th 2024, 6:07:09 pm
 - At the end create two requirements
 	- functional requirements(what the user needs)
 	- non-functional requirements(what the system needs, ex: consistency)
-		- Like functional requirements, non function requirements should also be in the context of you app
-			- instead of just saying `low latency` say `low lateny such that users should be matched with riders withing 1m or error`
-			- instead of just saying scalable, say system should scale as traffic spike increases when celebrities post a content
-		- Think about the CAP theorem to determine which aspects of the system should be consistent and which should be more suited for availability.
-				- For example, in a ticketing system, booking an event is consistent (you don't want two users sharing a seat) and searching for an event is availability (quick search with new events being tolerated for few moments).
 
 > Being asked to "design YouTube" can be a very broad challenge, but after scoping it, the questions can be narrowed down to specific aspects such as user interface design, content recommendation algorithms, monetization strategies, and community engagement features.
 

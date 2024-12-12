@@ -1,7 +1,7 @@
 ---
 title: Dijkstra
 date created: Monday, January 22nd 2024, 8:36:44 pm
-date modified: Sunday, June 16th 2024, 2:08:26 pm
+date modified: Monday, January 22nd 2024, 9:02:36 pm
 ---
 
 # Dijkstra
@@ -20,19 +20,18 @@ date modified: Sunday, June 16th 2024, 2:08:26 pm
 	- Dijkstra's algorithm works well when the graph has non-negative edge weights.
 4. **Single Source:**
 	- It is commonly used for finding the shortest paths from a single source to all other nodes in the graph.
-	- It works in cyclic graphs
 
 ## Dijkstra Vs Breadth-First Search (BFS)
 
-| Feature        | Dijkstra's Algorithm                                                                                 | Breadth-First Search (BFS)                                                                   |
-| -------------- | ---------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Objective      | Find the shortest path from a single source to all nodes in a graph.                                 | Explore all nodes in the graph starting from a given source.                                 |
-| Use Cases      | Shortest path problems with weighted graphs.                                                         | Traversal problems, finding connected components, shortest unweighted paths.                 |
-| Edge Weights   | Suitable for graphs with weighted edges (non-negative).                                              | Works with unweighted graphs or graphs with uniform edge weights.                            |
-| Data structure | Typically uses a priority queue to efficiently choose the next node to explore.                      | Uses a FIFO (First-In-First-Out) queue to explore nodes level by level.                      |
-| Optimality     | Guarantees the optimality of the solution; finds the shortest path accurately.                       | Does not guarantee the shortest path; suitable for exploring all nodes.                      |
-| Complexity     | Time complexity is O((V + E) log V), where V is the number of vertices and E is the number of edges. | Time complexity is O(V + E), where V is the number of vertices and E is the number of edges. |
-| Memory Usage   | Can use more memory due to the need for a priority queue.                                            | Typically uses less memory as it only requires a simple queue.                               |
+| Feature | Dijkstra's Algorithm | Breadth-First Search (BFS) |
+| ---- | ---- | ---- |
+| Objective | Find the shortest path from a single source to all nodes in a graph. | Explore all nodes in the graph starting from a given source. |
+| Use Cases | Shortest path problems with weighted graphs. | Traversal problems, finding connected components, shortest unweighted paths. |
+| Edge Weights | Suitable for graphs with weighted edges (non-negative). | Works with unweighted graphs or graphs with uniform edge weights. |
+| Data structure | Typically uses a priority queue to efficiently choose the next node to explore. | Uses a FIFO (First-In-First-Out) queue to explore nodes level by level. |
+| Optimality | Guarantees the optimality of the solution; finds the shortest path accurately. | Does not guarantee the shortest path; suitable for exploring all nodes. |
+| Complexity | Time complexity is O((V + E) log V), where V is the number of vertices and E is the number of edges. | Time complexity is O(V + E), where V is the number of vertices and E is the number of edges. |
+| Memory Usage | Can use more memory due to the need for a priority queue. | Typically uses less memory as it only requires a simple queue. |
 
 ## How the Algorithm Works
 

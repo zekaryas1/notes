@@ -87,11 +87,11 @@ const config = {
                         position: "left",
                         label: "Note",
                     },
-                    {href: "https://flowcv.com/resume/4akuj6gu1n", label: "Resume", position: "right"},
+                    {to: "/resume", label: "Resume", position: "left"},
                     {
                         href: "https://github.com/zekaryas1/notes",
                         label: "GitHub",
-                        position: "right",
+                        position: "left",
                     },
                 ],
             },
