@@ -1,7 +1,8 @@
 ---
 date created: Wednesday, July 27th 2022, 11:08:39 pm
-date modified: Sunday, June 16th 2024, 1:36:04 pm
+date modified: Thursday, December 12th 2024, 4:29:00 pm
 title: Monotonic Stack
+---
 ---
 
 # Monotonic Sequence

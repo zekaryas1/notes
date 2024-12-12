@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Wednesday, December 11th 2024, 1:22:22 pm
+date modified: Thursday, December 12th 2024, 4:31:03 pm
 title: What is Dynamic Programming
 ---
 
@@ -118,7 +118,7 @@ lis_length = longest_increasing_subsequence(arr)
 print(f"The length of the longest increasing subsequence is: {lis_length}")
 ```
 
-- Check [300 Longest Increasing Subsequence](Algo/Coding%20Practice/DP/300%20Longest%20Increasing%20Subsequence.md) for DFS and binary search based solutions
+- Longest Increasing Subsequence has interesting solutions based on DFS and binary search.
 
 ### 2 Dimension Problems
 
@@ -320,7 +320,7 @@ print(f"The maximum value that can be obtained is: {max_value}")
 
 - **LCS (Longest Common Subsequence)** refers to the longest sequence that can be found in both of given strings.
 	- This subsequence is different from a substring because the characters in an LCS do not need to appear consecutively, but their order must be preserved.
-	- [See also Longest Substring Without Repeating Characters](Algo/Coding%20Practice/String/3%20Longest%20Substring%20Without%20Repeating%20Characters.md)
+	- See also Longest Substring Without Repeating Characters a related problem.
 - They are widely applicable in various fields, especially where sequence comparison and alignment are crucial.
 - Example problems:
 	- Longest Common Subsequence
@@ -435,6 +435,5 @@ print(f"The longest palindromic substring is: {longest_palindrome}")
 # Additional Tips
 
 - **Practice**: Regular practice is key to mastering DP. Solve a variety of problems to get a feel for different types of states and recurrence relations.
-	- [More DP Pattern Examples](Algo/Coding%20Practice/DP/More%20DP%20Pattern%20Examples.md)
 - **Optimizations**: Be aware of space optimizations (e.g., using 1D array for 2D problems when only the previous row is needed).
 - **Edge Cases**: Always consider edge cases and handle them appropriately in your base cases and recurrence relations.

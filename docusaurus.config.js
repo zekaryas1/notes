@@ -87,7 +87,6 @@ const config = {
                         position: "left",
                         label: "Note",
                     },
-                    {to: "/resume", label: "Resume", position: "left"},
                     {
                         href: "https://github.com/zekaryas1/notes",
                         label: "GitHub",

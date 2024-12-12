@@ -1,10 +1,10 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Thursday, December 12th 2024, 3:49:19 pm
-title: Inspiring Math Algos
+date modified: Thursday, December 12th 2024, 4:44:08 pm
+title: Interesting Math Algos
 ---
 
-# Interesting Algos
+# Interesting Math Algos
 
 ## Math
 
@@ -15,7 +15,6 @@ title: Inspiring Math Algos
 	* We start with a list of all the numbers up through some value max. First, we cross off all numbers divisible by 2
 	* Then, we look for the next prime (the next non-crossed off number) and cross off all numbers divisible by it. By crossing off all numbers divisible by 2, 3, 5, 7, 11, and so on,
 	* Finally we wind up with a list of prime numbers from 2 through max.
-
 - [Code source](https://www.geeksforgeeks.org/python-program-for-sieve-of-eratosthenes)
 
 ```python
@@ -220,3 +219,52 @@ print("Count of 'cherry':", sketch.query("cherry"))  # Likely 0, if 'cherry' was
 
 - Source
 	- [Detailed explanation of Count min sketch from stack-overflow](https://stackoverflow.com/a/64397892)
+
+## In-place Frequency
+
+You can find the frequency of array elements using the array itself by modifying the array in-place while keeping track of the counts. Here's an algorithm to achieve this:
+
+1. Traverse the array and for each element `arr[i]`, decrement it by 1 to make it zero-indexed.
+2. For each zero-indexed element `arr[i]`, update the count at the index corresponding to the value of `arr[i]` by adding the length of the array (n) to the value at that index.
+3. Traverse the array again and divide each element by the length of the array (n) to get the final count of each element.
+
+Here's the Python code to implement this algorithm:
+
+```python
+def find_frequency(arr):
+    n = len(arr)
+    
+    # Make elements zero-indexed
+    for i in range(n):
+        arr[i] -= 1
+    
+    # Update counts using the array itself
+    for i in range(n):
+        arr[arr[i] % n] += n
+    
+    # Calculate final counts by dividing by the length of the array
+    for i in range(n):
+        arr[i] //= n
+    
+    return arr
+
+# Example usage
+arr = [3, 3, 4, 2, 4, 4, 2]
+freq = find_frequency(arr)
+print(freq)  # Output: [0, 2, 2, 3]
+```
+
+In the example usage, the input array `arr = [3, 3, 4, 2, 4, 4, 2]` represents the following counts:
+
+- 1 occurs 0 times
+- 2 occurs 2 times
+- 3 occurs 2 times
+- 4 occurs 3 times
+
+Please note that this algorithm modifies the input array in-place. If you'd like to preserve the original array, you can create a copy before performing the frequency calculation.
+
+> This algorithm, only works if all elts in the array are in-range [0-len(array)]
+
+### Leetcode Problem Related to This
+
+- [first-missing-positive - LeetCode](https://leetcode.com/problems/first-missing-positive/description/)

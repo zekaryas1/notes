@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Tuesday, December 19th 2023, 8:52:02 pm
+date modified: Thursday, December 12th 2024, 4:29:41 pm
 title: Algorithms You Should Know
 ---
 
@@ -30,8 +30,7 @@ title: Algorithms You Should Know
 	- Segment tree
 - [Matrix](Algo/Fundamental%20Algorithms/Misc/Matrix.md)
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
-	- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
+	- [Monotonic Sequence](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Sequence.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search
