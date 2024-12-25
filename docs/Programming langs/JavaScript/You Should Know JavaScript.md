@@ -1,6 +1,6 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Sunday, April 30th 2023, 2:26:44 pm
+date modified: Wednesday, December 25th 2024, 11:52:03 am
 title: You Should Know JavaScript
 ---
 
@@ -13,7 +13,7 @@ title: You Should Know JavaScript
 ### Map
 
 - Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
-- *Avoid using map[key]=value or map[key] to set and get value from a map, instead use set and get methods*
+- *Avoid using `map[key]=value` or `map[key]` to set and get value from a map, instead use set and get methods*
 
 ```txt
 new Map() 
@@ -89,7 +89,7 @@ priceMap.forEach((value,key, map) => {
 })
 ```
 
-## Set
+### Set
 
 - A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
 - *like map key can be any js type(number, boolean, array, object…)*
@@ -136,7 +136,7 @@ for (let user of set) {
 }
 ```
 
-### Iteration
+#### Iteration
 
 ```js
 let set = new Set(["oranges", "apples", "bananas"]);

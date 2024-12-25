@@ -1,9 +1,11 @@
 ---
 date created: Friday, November 15th 2024, 9:12:14 am
-date modified: Friday, November 15th 2024, 10:54:51 am
+date modified: Saturday, December 21st 2024, 7:56:47 pm
 ---
 
 # Web Accessibility Practices
+
+![what is web accessibility](https://www.spaceotechnologies.com/wp-content/uploads/2023/04/What-is-Web-Accessibility.png)
 
 ## Do not Use Aria unless…
 
