@@ -131,9 +131,9 @@ const config = {
                 copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
             },
             prism: {
-                theme: prismThemes.vsLight,
-                darkTheme: prismThemes.vsDark,
-                additionalLanguages: ["bash"],
+                theme: prismThemes.oneLight,
+                darkTheme: prismThemes.oneDark,
+                additionalLanguages: ["bash", "java"],
             },
             algolia: {
                 // The application ID provided by Algolia
