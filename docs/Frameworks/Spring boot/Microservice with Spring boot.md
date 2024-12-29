@@ -1,6 +1,6 @@
 ---
 date created: Monday, December 16th 2024, 2:55:37 pm
-date modified: Sunday, December 29th 2024, 3:56:51 pm
+date modified: Sunday, December 29th 2024, 4:26:21 pm
 title: Microservice with Spring Boot
 ---
 
@@ -69,21 +69,21 @@ title: Microservice with Spring Boot
 ## Each Components in Details
 
 - Where to get the libraries
-	- installing the libraries is ignored for the sake for stying up to date, the best way to install the libraries is to
-		- go to to [Spring initializer](https://start.spring.io/),
-		- search and select the libraries and
-		- copy from the generated pom or `gradle` files.
-- use the following tool to change application.properties to application.yaml and vise versa
+	- Installing the libraries is ignored for the sake for stying up to date, the best way to install the libraries is to
+		- Go to to [Spring initializer](https://start.spring.io/),
+		- Search and select the libraries and
+		- Copy from the generated pom or `gradle` files.
+- Use the following tool to change application.properties to application.yaml and vise versa
 	- [Environment Variable Generator for Spring Boot apps](https://env.simplestep.ca/)
 
 ### Service Discovery With Eureka
 
 #### Setup Eureka Server
 
-- create new project `service registry`
-- install the eureka server library
-- add the`@EnableEurekaServer` in the main file
-- make sure to add properties files in the application properties file
+- Create new project `service registry`
+- Install the eureka server library
+- Add the`@EnableEurekaServer` in the main file
+- Make sure to add properties files in the application properties file
 
 ```java
 @SpringBootApplication
@@ -109,9 +109,9 @@ eureka:
 
 #### Setup Eureka Clients
 
-- add the eureka client
-- add the `@EurekaClient` decorator in the main file
-- make sure to add the required properties in the application properties
+- Add the eureka client
+- Add the `@EurekaClient` decorator in the main file
+- Make sure to add the required properties in the application properties
 
 ```java
 @SpringBootApplication
@@ -138,9 +138,9 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 ```
 
-- when to use prefer ip address?
-	- by default services register themselves using hostname, this property makes them register with their ip address.
-	- why?
+- When to use prefer ip address?
+	- By default services register themselves using hostname, this property makes them register with their ip address.
+	- Why?
 		- When running services in cloud environments or across multiple regions, hostname resolution can become inconsistent. An IP address offers a stable identifier for service instances.
 		- In some environments, the hostname may not resolve properly due to DNS misconfigurations or delays. Using the IP address ensures direct and reliable communication.
 
@@ -152,18 +152,18 @@ eureka:
 
 #### Feign for Rest Communication
 
-- what is Feign
-	- a declarative web service client in Spring Boot. It simplifies the process of making HTTP API calls to other services in a microservices architecture by providing a cleaner, annotation-driven approach.
-- why Feign is better than restTemplate
+- What is Feign
+	- A declarative web service client in Spring Boot. It simplifies the process of making HTTP API calls to other services in a microservices architecture by providing a cleaner, annotation-driven approach.
+- Why Feign is better than restTemplate
 	- Declarative, minimal boilerplate code.
 	- Cleaner, as method signatures define the API.
 	- Easily integrates with Resilience4j, Eureka or Hystrix.
 	- Integrated with Spring Cloud Load Balancer.
-- how to use Feign
-	- install the feign library
-	- add the decorator to the main class `@EnableFeignClients`
-	- create a feign client interface class
-	- inject the client interface make calls
+- How to use Feign
+	- Install the feign library
+	- Add the decorator to the main class `@EnableFeignClients`
+	- Create a feign client interface class
+	- Inject the client interface make calls
 
 ```java
 @FeignClient(name = "users-service") // Name of the Eureka-registered service
@@ -196,16 +196,16 @@ public class ProductController {
 	- Microservices can fetch updated configurations without restarting, allowing runtime updates to critical parameters, like feature toggles or database connection details.
 	- It supports environment-specific configurations (e.g., dev, test, production) using profiles. This reduces duplication and ensures proper configuration per environment.
 	- By integrating with Git or similar version control systems, the Config Server enables version control for configurations.
-- what are the available options
-	- git
-	- vault
+- What are the available options
+	- Git
+	- Vault
 
 #### Setup Config Server
 
-- create a git repository for configuration management
-- install the Spring cloud config server
-- use the `@EnableConfigServer` decorator on the main class
-- add the giturl to the properties file
+- Create a git repository for configuration management
+- Install the Spring cloud config server
+- Use the `@EnableConfigServer` decorator on the main class
+- Add the giturl to the properties file
 
 ```
 your-repo/
@@ -246,17 +246,17 @@ spring:
           default-label: main
 ```
 
-- **service-specific properties**
-	- you can organize your configuration files to support general properties for all services and service-specific properties that override the general ones.
-	- steps
-		- create your properties with each service name.
-		- spring them will load properties with the following resolution order
+- **Service-specific properties**
+	- You can organize your configuration files to support general properties for all services and service-specific properties that override the general ones.
+	- Steps
+		- Create your properties with each service name.
+		- Spring them will load properties with the following resolution order
 			1. **Service-specific properties** (e.g., `user-service.yml`).
 			2. **Profile-specific properties** (e.g., `user-service-dev.yml`).
 			3. **General properties** (e.g., `application.yml`).
 			4. **Profile-specific general properties** (e.g., `application-dev.yml`).
 
-- create service specific properties in config server
+- Create service specific properties in config server
 
 ```
 config-repo/
@@ -269,9 +269,9 @@ config-repo/
 
 #### Setup Config Clients
 
-- add the spring cloud config client library
-- modify your properties file to point to the config server
-- access and use the configuration files
+- Add the spring cloud config client library
+- Modify your properties file to point to the config server
+- Access and use the configuration files
 
 ```yml
 spring:
@@ -284,7 +284,7 @@ spring:
       uri: http://localhost:8888
 ```
 
-- accessing the configuration files
+- Accessing the configuration files
 
 ```java
 public class ConfigController {
@@ -307,15 +307,15 @@ public class AppConfig {
 }
 ```
 
-- how to switch profiles
-	- you can either change the profile or configure spring config cloud to load from different branch i.e dev branch
+- How to switch profiles
+	- You can either change the profile or configure spring config cloud to load from different branch i.e dev branch
 
 ```
 spring.profiles.active=prod
 ```
 
-- how to make config server optional?
-	- optional: Prefix: Indicates that if the Config Server is unavailable or the URL is invalid, the application will not fail to start. Instead, it will fall back to local configuration files.
+- How to make config server optional?
+	- Optional: Prefix: Indicates that if the Config Server is unavailable or the URL is invalid, the application will not fail to start. Instead, it will fall back to local configuration files.
 
 ```
 spring:
@@ -342,10 +342,10 @@ spring:
 
 #### How to Use Spring Cloud Gateway
 
-- create a new project for the gateway
-- install the library
-- set it up as a eureka client
-- add the configurations
+- Create a new project for the gateway
+- Install the library
+- Set it up as a eureka client
+- Add the configurations
 
 ```java
 @SpringBootApplication
@@ -420,15 +420,15 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 ```
 
-- how to make gateway automatically fetch the services
-	- if you connect the gateway to eureka, then you can enable the discovery locator feature to true and spring gateway will automatically fetch, load the services and provide a URL
+- How to make gateway automatically fetch the services
+	- If you connect the gateway to eureka, then you can enable the discovery locator feature to true and spring gateway will automatically fetch, load the services and provide a URL
 	- The URL mapping strategy
 		- `{gateway-url}/{service-name}/{service-route}`
 		- ex `http://localhost:8080/user-service/api/v1/login`
-	- when to use?
-		- manually specifying service gives you the control what and how to define routes
-		- this might be useful you are eventually going to specify all services anyway
-			- if you add or remove new service, without adding the configuration the gateway can automatically provide or remote the routes.
+	- When to use?
+		- Manually specifying service gives you the control what and how to define routes
+		- This might be useful you are eventually going to specify all services anyway
+			- If you add or remove new service, without adding the configuration the gateway can automatically provide or remote the routes.
 
 ```yml
 spring:
@@ -439,17 +439,17 @@ spring:
 				lowerCaseServiceId: true
 ```
 
-- integration with actuator?
-	- if you are working with actuator you can use the `{gateway-url}/actuator/gateway/routes` to get a listing of all the mappings on our service
+- Integration with actuator?
+	- If you are working with actuator you can use the `{gateway-url}/actuator/gateway/routes` to get a listing of all the mappings on our service
 
-- what are Predicate and Filter Factories?
+- What are Predicate and Filter Factories?
 	- Predicate Factories
-		- objects that allow us to check if the requests fulfill a set of conditions before executing or processing the requests
-		- example:
-			- we can use predicate to check whether a request matches required path, date, header method…
+		- Objects that allow us to check if the requests fulfill a set of conditions before executing or processing the requests
+		- Example:
+			- We can use predicate to check whether a request matches required path, date, header method…
 	- Filter Factories
-		- filters let us modify the incoming and outgoing HTTP requests and responses.
-		- example:
+		- Filters let us modify the incoming and outgoing HTTP requests and responses.
+		- Example:
 			- AddRequestHeader, AddResponseHeader, PrefixPath(Adds a prefix to the HTTP request path.), RequestRateLimiter, RewritePath…
 	- Example:
 		- Scenario:
@@ -479,7 +479,7 @@ spring:
 
 ### Distributed Tracing with Zipkin and Micrometer
 
-- **distributed tracing** is a practice for monitoring and debugging the flow of requests across multiple services.
+- **Distributed tracing** is a practice for monitoring and debugging the flow of requests across multiple services.
 - Here are the **key benefits** of distributed tracing and why it’s essential to trace requests from start to finish:
 	- End-to-End Visibility
 		-  In a microservices architecture, a single request often spans multiple services. Without tracing, it’s difficult to understand how the request is processed across these services.
@@ -496,17 +496,17 @@ spring:
 	- Metrics collections library
 		- Micrometer
 			- A metrics collection library that integrates with tracing tools like Zipkin and Jaeger.
-- why is actuator required for `zipkin` to work?
+- Why is actuator required for `zipkin` to work?
 	-  It provides essential features that enhance the observability and management of your application, such as
 		- Actuator exposes a wide range of metrics (e.g., HTTP requests, JVM memory, CPU usage) and health information about your application.
 		- Actuator integrates with monitoring tools like Prometheus and Grafana, enabling real-time monitoring and alerting.
 
 #### Setup to Work with Zipkin Micrometer
 
- - install `zipkin` first, preferable with docker
- - install the libraries
-	 - search `zipkin` on spring initializer and copy the list of libraries
- - add the configurations options to your properties file
+ - Install `zipkin` first, preferable with docker
+ - Install the libraries
+	 - Search `zipkin` on spring initializer and copy the list of libraries
+ - Add the configurations options to your properties file
 
 ```
 docker run -d -p 9411:9411 openzipkin/zipkin
@@ -532,11 +532,10 @@ management:
         include: "health" # Expose health Actuator endpoints or use ("*") to expose all end points
 ```
 
-- open the `zipkin` url on browser and use the ui to investigate request flows and issues
-	- [zipkin local url](http://localhost:9411)
-
-- how to add feign client to zipkin micrometer ?
-	- if you are using feign client in your project you need to add the feign micrometer integration library
+- Open the `zipkin` url on browser and use the ui to investigate request flows and issues
+	- [Zipkin local url](http://localhost:9411)
+- How to add feign client to zipkin micrometer ?
+	- If you are using feign client in your project you need to add the feign micrometer integration library
 
 ```xml
 <dependency>
@@ -546,12 +545,12 @@ management:
 </dependency>
 ```
 
-- what is a good value for sampling probability?
-	- what is sampling probability?
+- What is a good value for sampling probability?
+	- What is sampling probability?
 		- The sampling probability determines how many traces are collected and sent to Zipkin. Setting the right sampling probability is important to balance performance and observability.
-	- for dev environment 1.0
+	- For dev environment 1.0
 		- In a development environment, you want to capture all traces to debug and observe the behavior of your application. This ensures that you don’t miss any important traces while testing.
-	- for production 0.1 - 0.2
+	- For production 0.1 - 0.2
 		- In production, capturing all traces can generate a large amount of data, which can overwhelm Zipkin and impact performance. A lower sampling rate reduces the load on the tracing system while still providing enough data for observability.
 
 ### Resilience And Fault Tolerance with Resilience4j
@@ -579,17 +578,17 @@ management:
 	- Stops making requests to a failing service after a certain number of failures, allowing it to recover.
 - **Benefit**:
 	- Prevents cascading failures and reduces load on the failing service.
-- what are Circuit breaker state transitions and how do they work?
+- What are Circuit breaker state transitions and how do they work?
 	- ![circuit breaker state transition illustration](https://miro.medium.com/v2/resize:fit:315/1*Vqp5A2zcMQ9AjIX3_4_pRg.jpeg)
-	- initially the state is
-		- closed where all requests are allowed to pass, if errors keep stacking up the state transitions to open state
-		- open state is where all requests not allowed to pass, after some duration the state goes to half-open
-		- half-open state is where only some requests are processed, if requests success starts to grow the state if updated to closed otherwise it is goes back to open state.
-- setup and for circuit breakers
-	- install the library `resilience4j` and spring aspect oriented programming(aop)
-		- [resilience4j setup instruction](https://resilience4j.readme.io/docs/getting-started-3)
-	- add the configurations inside your application.properties(yaml) file
-	- use the `@CircuitBreaker` annotation
+	- Initially the state is
+		- Closed where all requests are allowed to pass, if errors keep stacking up the state transitions to open state
+		- Open state is where all requests not allowed to pass, after some duration the state goes to half-open
+		- Half-open state is where only some requests are processed, if requests success starts to grow the state if updated to closed otherwise it is goes back to open state.
+- Setup and for circuit breakers
+	- Install the library `resilience4j` and spring aspect oriented programming(aop)
+		- [Resilience4j setup instruction](https://resilience4j.readme.io/docs/getting-started-3)
+	- Add the configurations inside your application.properties(yaml) file
+	- Use the `@CircuitBreaker` annotation
 
 ```xml
 <dependency>
@@ -598,8 +597,8 @@ management:
 </dependency>
 ```
 
-- you need to evaluate and use the proper value that match your applications need
-	- we can define separate configurations for each external instances with want to integrate, the service identifier we specify here will be used as name later.
+- You need to evaluate and use the proper value that match your applications need
+	- We can define separate configurations for each external instances with want to integrate, the service identifier we specify here will be used as name later.
 
 ```yaml
 resilience4j:
@@ -616,7 +615,7 @@ resilience4j:
 		eventConsumerBufferSize: 10
 ```
 
-- now you can use `@CircuitBreaker` when you interact with external service
+- Now you can use `@CircuitBreaker` when you interact with external service
 
 ```java
 @Service
@@ -765,17 +764,17 @@ resilience4j:
 
 #### More Info
 
-- integrating with actuator?
+- Integrating with actuator?
 	- If you are using Spring Boot Actuator, Resilience4j automatically integrates with it.
 		- http://localhost:8080/actuator/metrics/resilience4j.circuitbreaker.calls
-- working with micrometer
-	- you can bind resilience4j modules to micrometer to provide metrics.
+- Working with micrometer
+	- You can bind resilience4j modules to micrometer to provide metrics.
 	- [Resilience4j + Micrometer](https://resilience4j.readme.io/docs/micrometer)
-- working with feign client?
-	- `resilience4j-feign` makes it easy to incorporate "fault tolerance" patterns into the feign framework, such as the CircuitBreaker and RateLimiter.
+- Working with feign client?
+	- `Resilience4j-feign` makes it easy to incorporate "fault tolerance" patterns into the feign framework, such as the CircuitBreaker and RateLimiter.
 	- [Resilience4j + Feign](https://resilience4j.readme.io/docs/feign)
-- testing your new fault tolerance configurations
-	- use `Apache Jmeter` java tool or any other performance measurement tools
+- Testing your new fault tolerance configurations
+	- Use `Apache Jmeter` java tool or any other performance measurement tools
 
 ### Securing Microservice
 
@@ -788,8 +787,8 @@ resilience4j:
 		- [downloads - Keycloak](https://www.keycloak.org/downloads)
 		- Keyclock be default uses Local H2 database which is suitable to testing and can be updated to use SQL db such as Postgres sql.
 		- A realm is a space where you manage users, roles, and clients.
-		- what are clients?
-			- often the applications(web-app, mobile-app…) or services that we want to secure by providing a single sign-on (SSO) solution.
+		- What are clients?
+			- Often the applications(web-app, mobile-app…) or services that we want to secure by providing a single sign-on (SSO) solution.
 	- Add the Keycloak dependency and configure it in your microservice.
 	- Enable Keycloak security and secure endpoints using Spring Security annotations.
 
@@ -817,7 +816,7 @@ resilience4j:
 
 ### Equivalent Kubernetes Services
 
-- service no longer needed when using Kubernetes?
+- Service no longer needed when using Kubernetes?
 	- List of features from Spring cloud that can be replaced with Kubernetes features.
 
 | Feature                      | Spring Cloud Microservices                | Kubernetes-Oriented Microservices                                                                                                       |
@@ -836,6 +835,6 @@ resilience4j:
 ### Spring Cloud Kubernetes
 
 - [Spring Cloud Kubernetes](https://spring.io/projects/spring-cloud-kubernetes) provides implementations of well known Spring Cloud interfaces allowing developers to build and run Spring Cloud applications on Kubernetes.
-	- this is not a requirement but it helps simplify spring boot integration with Kubernetes.
+	- This is not a requirement but it helps simplify spring boot integration with Kubernetes.
 - In this practice, Kubernetes will handle the infrastructure and scaling, while Spring Cloud (or equivalent tools) will take care of application-level concerns.
-	- i.e We can integrate Spring cloud config to work with Config Maps and secrets
+	- I.e We can integrate Spring cloud config to work with Config Maps and secrets

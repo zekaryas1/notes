@@ -1,7 +1,7 @@
 ---
 title: New Features
 date created: Thursday, March 9th 2023, 5:18:19 pm
-date modified: Sunday, December 29th 2024, 4:09:49 pm
+date modified: Sunday, December 29th 2024, 4:18:40 pm
 ---
 
 # New Features
@@ -35,9 +35,9 @@ const response = await promisedFunction().catch((err) => {
 #### Top Level Await
 
 - This means that modules with child modules that use await will wait for the child modules to execute before they themselves run, while not blocking other child modules from loading.
-- how can we use top level await?
-	- to load necessary configs bootstrapping before executing a logic
-	- module needs to wait for language files to load before it can proceed
+- How can we use top level await?
+	- To load necessary configs bootstrapping before executing a logic
+	- Module needs to wait for language files to load before it can proceed
 
 ```js
 

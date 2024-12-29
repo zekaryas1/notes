@@ -1,6 +1,6 @@
 ---
 date created: Thursday, July 21st 2022, 8:54:35 pm
-date modified: Wednesday, December 25th 2024, 11:52:03 am
+date modified: Sunday, December 29th 2024, 4:19:48 pm
 title: You Should Know JavaScript
 ---
 
@@ -49,7 +49,7 @@ console.log(map.size); // 3
 
 #### Map Vs Object
 
-- for js object key must be string, otherwise it will be converted to string, however in map key can be anything(object, primitives)
+- For js object key must be string, otherwise it will be converted to string, however in map key can be anything(object, primitives)
 
 ```js
 const obj = {};
@@ -92,7 +92,7 @@ priceMap.forEach((value,key, map) => {
 ### Set
 
 - A Set is a special type collection – “set of values” (without keys), where each value may occur only once.
-- *like map key can be any js type(number, boolean, array, object…)*
+- *Like map key can be any js type(number, boolean, array, object…)*
 
 ```txt
 new Set([iterable]) 
@@ -439,7 +439,7 @@ myWorker.onmessage = function(e) {
 
 > Sorting is in-place in JavaScript
 
-- sort linear array
+- Sort linear array
 
 ```js
 const array = [5,4,3,2,1];
@@ -447,9 +447,9 @@ array.sort()
 console.log(array)
 ```
 
-- sort objects by
-	- string
-	- numeric value
+- Sort objects by
+	- String
+	- Numeric value
 
 ```js
 const array = [
@@ -491,9 +491,9 @@ console.log(array)
 
 #### Slice
 
-> syntax => slice(start, end), end is not included
+> Syntax => slice(start, end), end is not included
 
-- return portion of an array
+- Return portion of an array
 
 ```js
 const animals = ['ant', 'bison', 'camel', 'duck', 'elephant'];
@@ -503,7 +503,7 @@ console.log(animals.slice(0, 2));
 
 #### Splice
 
-> syntax => splice(start_index, number_of_elts_to_remove, …list_of_elts_to_add)
+> Syntax => splice(start_index, number_of_elts_to_remove, …list_of_elts_to_add)
 
 - Remove elets with Splice
 
@@ -542,7 +542,7 @@ console.log(array)
 ## What is Closure Ins JavaScript?
 
 - [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
-- a closure gives you access to an outer function's scope from an inner function.
+- A closure gives you access to an outer function's scope from an inner function.
 
 ```js
 function makeFunc() {
