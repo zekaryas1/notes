@@ -1,7 +1,7 @@
 ---
 title: More on React
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Wednesday, December 25th 2024, 12:18:48 pm
+date modified: Wednesday, December 25th 2024, 12:47:36 pm
 ---
 
 # More on React
@@ -405,6 +405,7 @@ async function MinimalWeatherCard({city}) {
  - react without concurrency
 	 - updates are rendered in a single, uninterrupted, synchronous transaction. With synchronous rendering, once an update starts rendering, nothing can interrupt it until the user can see the result on screen.
  - react with concurrency
+	 - [Concurrent React Made Easy Youtube - Henrique Inonhe](https://www.youtube.com/watch?v=ssYDhx5ld7o)
 	 - react may start rendering an update, pause in the middle, then continue later. It may even abandon an in-progress render altogether. React guarantees that the UI will appear consistent even if a render is interrupted.
 	 - allows for more responsive user interfaces by breaking down the rendering work into smaller chunks and prioritizing which parts of the UI to render first.
  - concurrent features

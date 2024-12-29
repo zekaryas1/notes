@@ -2,8 +2,8 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Sunday, June 9th 2024, 7:04:50 pm
-title: Introduction
+date modified: Wednesday, December 25th 2024, 12:31:53 pm
+title: Table of Content
 ---
 
 # Table of Content
@@ -26,10 +26,6 @@ title: Introduction
 	- [Next.js](Frameworks/Nextjs/Next%20pages%20router/100.%20Intro%20to%20Next.js.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
-- Upcoming
-	- graphQL
-	- system design
-	- next 13
 
 # How to Become an Expert
 

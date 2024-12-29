@@ -1,10 +1,10 @@
 ---
-title: React.native
+title: React Native
 date created: Wednesday, April 26th 2023, 5:55:21 pm
-date modified: Wednesday, December 25th 2024, 12:05:35 pm
+date modified: Wednesday, December 25th 2024, 12:31:16 pm
 ---
 
-# React.native
+# React Native
 
 ![react native is composed of native mapped components](https://reactnative.dev/img/homepage/dissection-dark.png)
 
@@ -1261,7 +1261,7 @@ const App = () => {
 	- Local database
 		- Expo sqlite
 			- Can also be integrated with [Drizzle orm for react native](https://orm.drizzle.team/docs/get-started/expo-new)
-	- Char library
+	- Chart library
 		- [Victory Native](https://commerce.nearform.com/open-source/victory-native/)
 	- Maps
 		- React Native Map components for iOS(Apple maps)+ Android(Google maps)
