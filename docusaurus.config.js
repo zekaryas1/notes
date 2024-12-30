@@ -5,8 +5,8 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Welcome to my website!",
-    tagline: "Home for my notes, blogs and resume.",
+    title: "Zack's TechNotes",
+    tagline: "Software Engineering, Coding, and Development Insights",
     url: "https://zack.onrender.com",
     baseUrl: "/",
     onBrokenLinks: "warn",
@@ -146,11 +146,11 @@ const config = {
             metadata: [
                 {
                     name: "keywords",
-                    content: `Programming language notes, Docker notes, TypeScript notes, Algorithm and data structure notes, Technical notes for programmers, Programming tips and tricks, Coding best practices, Beginner-friendly programming resources, Learning resources for new programmers, Programming tutorials, Code snippets and examples, Software engineering insights`,
+                    content: `Zack's TechNotes, Zack's coding notes, software engineering notes, programming language insights, web development, front-end development, back-end development, full-stack development, JavaScript tips, Python tutorials, developer resources, coding best practices, software architecture, personal coding notes, developer insights`,
                 },
                 {
                     name: "description",
-                    content: `Welcome to my website, where I share my technical notes on software engineering, coding, and programming languages. You'll also find my resume, which highlights my experience and side projects. Whether you're interested in web development, front-end development, or back-end development, you're sure to find valuable insights and information here.`,
+                    content: `Welcome to my notes, where I share my personal notes on software engineering, programming languages, web development, and more. Collections of practical tips, code snippets, and insights.`,
                 },
             ],
         }),
