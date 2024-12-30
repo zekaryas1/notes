@@ -146,7 +146,7 @@ const config = {
             metadata: [
                 {
                     name: "keywords",
-                    content: `Zack's TechNotes, Zack's coding notes, software engineering notes, programming language insights, web development, front-end development, back-end development, full-stack development, JavaScript tips, Python tutorials, developer resources, coding best practices, software architecture, personal coding notes, developer insights`,
+                    content: `Zack's TechNotes, Zack's coding notes, software engineering notes, programming language insights, JavaScript tips, Python tutorials, developer resources, coding best practices, software architecture, personal coding notes, developer insights`,
                 },
                 {
                     name: "description",
