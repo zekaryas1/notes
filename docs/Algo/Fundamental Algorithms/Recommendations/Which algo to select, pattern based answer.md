@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, June 16th 2024, 1:29:08 pm
+date modified: Monday, December 30th 2024, 12:23:19 pm
 title: Which Algo to Select, Pattern Based Answer
 ---
 
@@ -12,7 +12,7 @@ title: Which Algo to Select, Pattern Based Answer
 
 ### Input Array is Sorted Then
 
-- [1Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
+- [Binary search](Algo/Fundamental%20Algorithms/Searching%20algos/1.%20Binary%20search.md)
 - [Two pointers](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Two%20pointers.md)
 
 ### Asked for All permutations/subsets Then

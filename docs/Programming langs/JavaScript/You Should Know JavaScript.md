@@ -539,7 +539,7 @@ console.log(array)
 - const
 	- can not be re-initialized
 
-## What is Closure Ins JavaScript?
+## What is Closure In JavaScript?
 
 - [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
 - A closure gives you access to an outer function's scope from an inner function.

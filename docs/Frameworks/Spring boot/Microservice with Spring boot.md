@@ -1,6 +1,6 @@
 ---
 date created: Monday, December 16th 2024, 2:55:37 pm
-date modified: Sunday, December 29th 2024, 4:26:21 pm
+date modified: Monday, December 30th 2024, 11:21:55 am
 title: Microservice with Spring Boot
 ---
 
@@ -191,7 +191,7 @@ public class ProductController {
 
 ### Configuration Management with Spring Cloud Config
 
-- why do we need centralised configuration management
+- Why do we need centralised configuration management
 	- When configuration properties are stored in a single, centralized location (e.g., Git, SVN, or file system). This eliminates the need to manage configurations individually for each service.
 	- Microservices can fetch updated configurations without restarting, allowing runtime updates to critical parameters, like feature toggles or database connection details.
 	- It supports environment-specific configurations (e.g., dev, test, production) using profiles. This reduces duplication and ensures proper configuration per environment.
@@ -480,7 +480,7 @@ spring:
 ### Distributed Tracing with Zipkin and Micrometer
 
 - **Distributed tracing** is a practice for monitoring and debugging the flow of requests across multiple services.
-- Here are the **key benefits** of distributed tracing and why it’s essential to trace requests from start to finish:
+- What are the **key benefits** of distributed tracing and why it’s essential to trace requests from start to finish?
 	- End-to-End Visibility
 		-  In a microservices architecture, a single request often spans multiple services. Without tracing, it’s difficult to understand how the request is processed across these services.
 	- Debugging and Troubleshooting:
