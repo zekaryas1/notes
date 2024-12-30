@@ -11,7 +11,7 @@ function HomepageHeader() {
   return (
     <header className={clsx(styles.heroBanner)}>
       <div className="container">
-        <img src="img/logo.svg" style={{width: 280, borderRadius: '50%'}} /> 
+        <img src="img/logo.svg" alt={"website mascot"} style={{width: 280, borderRadius: '50%'}} />
         <h1 className="hero__title">{siteConfig.title}</h1>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
         <div className={styles.buttons}>
@@ -30,8 +30,8 @@ export default function Home() {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={siteConfig.title}
+      description="Welcome to my notes, where I share my personal notes on software engineering, programming languages, web development, and more. Collections of practical tips, code snippets, and insights.">
       <HomepageHeader />
     </Layout>
   );

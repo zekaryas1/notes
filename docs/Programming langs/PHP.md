@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Sunday, March 17th 2024, 11:46:37 am
+date modified: Monday, December 30th 2024, 12:09:17 pm
 title: PHP Crash Note
 ---
 
@@ -400,6 +400,8 @@ $audi = new Audi("Audi");
 echo $audi->intro();
 ```
 
-### Namespace, Typed-PHP…
+### There is More to PHP
 
-- To be included…
+> Since 2022, more intriguing features have been added to PHP, which should be considered following this.
+
+- [PHP: Appendices - Manual](https://www.php.net/manual/en/appendices.php), can help find out the new features on each release.

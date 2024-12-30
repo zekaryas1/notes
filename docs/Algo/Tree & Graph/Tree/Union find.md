@@ -1,6 +1,6 @@
 ---
 date created: Sunday, July 24th 2022, 1:23:21 pm
-date modified: Sunday, February 25th 2024, 12:13:40 pm
+date modified: Sunday, June 16th 2024, 2:38:40 am
 title: Union Find
 ---
 
@@ -32,9 +32,7 @@ def find(x):
 
 ```python
 def union(x,y):
-	root_x, root_y = find(x), find(y):
-	if root_x != root_y:
-		Parent[find(y)] = find(x)
+	Parent[find(y)] = find(x)
 ```
 
 ```python
@@ -126,5 +124,5 @@ class UF:
 	- [find-if-path-exists-in-graph](https://leetcode.com/problems/find-if-path-exists-in-graph)
 	- [regions-cut-by-slashes](https://leetcode.com/problems/regions-cut-by-slashes/)
 - Check whether an un-directed graph contains cycle or not
-- Find Number of components
+- Find Number of components in set of graphs
 - Find common ancestor in trees

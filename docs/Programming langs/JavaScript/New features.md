@@ -1,14 +1,16 @@
 ---
-title: From State of Js 2022
+title: New Features
 date created: Thursday, March 9th 2023, 5:18:19 pm
-date modified: Thursday, March 9th 2023, 5:43:38 pm
+date modified: Sunday, December 29th 2024, 4:18:40 pm
 ---
 
-# From State of Js 2022
+# New Features
 
-## Awaits
+## 2022
 
-### Shorthand for try/catch
+### Awaits
+
+#### Shorthand for try/catch
 
 ```js
 async function f4() {
@@ -30,12 +32,12 @@ const response = await promisedFunction().catch((err) => {
 // response will be "default response" if the promise is rejected
 ```
 
-### Top Level Await
+#### Top Level Await
 
 - This means that modules with child modules that use await will wait for the child modules to execute before they themselves run, while not blocking other child modules from loading.
-- how can we use top level await?
-	- to load necessary configs bootstrapping before executing a logic
-	- module needs to wait for language files to load before it can proceed
+- How can we use top level await?
+	- To load necessary configs bootstrapping before executing a logic
+	- Module needs to wait for language files to load before it can proceed
 
 ```js
 
@@ -65,7 +67,7 @@ function render(){
 }
 ```
 
-## At
+### At
 
 - The at() method is equivalent to the bracket notation when index is non-negative.
 	- However if provided a negative value it will index array from the back, *just like python*
@@ -77,7 +79,7 @@ console.log(array1.at(0))  //5
 console.log(array1.at(-1)) //44
 ```
 
-## Proxy
+### Proxy
 
 - The Proxy object allows you to create an object that can be used in place of the original object, but which may redefine fundamental Object operations like getting, setting, and defining properties.
 	- Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.

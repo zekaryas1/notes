@@ -2,8 +2,8 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Sunday, June 9th 2024, 7:04:50 pm
-title: Introduction
+date modified: Monday, December 30th 2024, 12:26:41 pm
+title: Table of Content
 ---
 
 # Table of Content
@@ -22,14 +22,13 @@ title: Introduction
 	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
 		- [More on Typescript](Programming%20langs/TypeScript/More%20on%20Typescript.md)
 - Frameworks
-	- [React Best practices](Frameworks/React/Best%20practices.md)
-	- [Next.js](Frameworks/Nextjs/Next%2012/100.%20Intro%20to%20Next.js.md)
+	- [More on React.js](Frameworks/React/More%20on%20React.md)
+	- [React native notes](Frameworks/React/React%20native.md)
+	- [Next.js old pages router](Frameworks/Nextjs/Next%20pages%20router/100.%20Intro%20to%20Next.js.md)
+	- [Microservice with Spring boot](Frameworks/Spring%20boot/Microservice%20with%20Spring%20boot.md)
 - Others
 	- [Linux](Linux/Common%20Commands.md)
-- Upcoming
-	- graphQL
-	- system design
-	- next 13
+	- [Web Accessibility Best practices](Programming%20langs/Web%20Accessibility%20Best%20practices.md)
 
 # How to Become an Expert
 
@@ -39,7 +38,7 @@ title: Introduction
 	- Find a good resource, this can be (teacher, book, website)
 		- ex: Use `Leetcode`, YouTube, competition…
 - Get feedback
-	- Is the work right or wrong?
+	- Is your work right or wrong?
 	- How good or bad is it…can it be better?
 		- can it be refactored?
 	- Compare with other solutions
