@@ -1,6 +1,6 @@
 ---
 date created: Monday, December 16th 2024, 2:55:37 pm
-date modified: Monday, December 30th 2024, 11:21:55 am
+date modified: Thursday, January 2nd 2025, 10:51:38 am
 title: Microservice with Spring Boot
 ---
 
@@ -561,6 +561,7 @@ management:
 	- Recovering from failures: Automatically or manually restoring functionality.
 	- Providing fallbacks: Offering alternative responses or behaviors when a failure occur
 	- Resilience: Prevents cascading failures and isolates issues.
+		- **Systems that can anticipate and cope with faults are called *fault-tolerant* or *resilient*.**
 - Resilience4j:
 	- A lightweight fault tolerance library for Java.
 - Here are some common fault tolerance techniques used in microservices?

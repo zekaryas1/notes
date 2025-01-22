@@ -1,7 +1,7 @@
 ---
 title: React Native
 date created: Wednesday, April 26th 2023, 5:55:21 pm
-date modified: Wednesday, December 25th 2024, 12:31:16 pm
+date modified: Wednesday, January 22nd 2025, 12:35:24 pm
 ---
 
 # React Native
@@ -757,10 +757,10 @@ export default FlatListComponent;
 	- `ListHeaderComponent` & `ListFooterComponnet`, which can be used to create custom header and footer around List
 	- `keyboardDissMissMode`, Determines whether the keyboard gets dismissed in response to a drag.
 		- set `keyboardDissMissMode = "on-drag"` then keyboard is dismissed when a drag begins.
-
-> If you need sectioned list, there is a another react native component called [SectionList · React Native](https://reactnative.dev/docs/sectionlist)
-
-> There is another library called [FlashList by Shopify](https://shopify.github.io/flash-list/), that has better performance and similar api compatibility
+- FlatList alternatives
+	- [SectionList · React Native](https://reactnative.dev/docs/sectionlist)
+	- [FlashList by Shopify](https://shopify.github.io/flash-list/), Similar to FlatList with better performance and similar api compatibility
+	- [LegendApp/legend-list](https://github.com/LegendApp/legend-list)
 
 ### Safe Area Context
 
@@ -1018,6 +1018,35 @@ import BigButton from './BigButton';
 		- [mrousavy/react-native-mmkv: ⚡️ The fastest key/value storage for React Native. ~30x faster than AsyncStorage!](https://github.com/mrousavy/react-native-mmkv)
 		- Has significant performance advantage compared to other local key value storage options.
 		- includes secure storage for sensitive data.
+
+### Performance Improvements
+
+- Source:
+	- [Improving Shopify App’s Performance (2024) - Shopify](https://shopify.engineering/improving-shopify-app-s-performance)
+- What tool to use to inspect performance degrades
+	- **Strategy**:
+		- Utilize tools to measure rendering times in React Native apps.
+	- **Benefit**:
+		- Provides insights into performance bottlenecks and areas needing optimization.
+	- **Tools**:
+		- Shopify React performance library
+- Leverage features from react toolbox
+	- Memoization features, using useMemo, React.memo hooks…
+	- Load components or data only when needed (e.g., using React.lazy or pagination).
+	- Consider Concurrent React to prioritize high priority updates
+- Build your UI as a list first
+	- **Strategy**:
+		- Use FlatList of FlashList to build your ui
+		- Replace ScrollView or list of items with Recyclable Views
+			- ScrollView ends up drawing all the items while FlatList without the right config only draws 10 items.
+		- Consider better suited Recycler view, FlatList, FlashList, LazyScrollView and `LegendList`
+	- Benefit:
+		- Only renders what's visible and updates only the necessary components.
+- Leverage Caching Effectively
+	- **Strategy**:
+		- Load data from the cache first, then fetch updates from the network in parallel.
+	- **Benefit**:
+		- Improves perceived loading times, especially for users who frequently access the app.
 
 ### Use DOM
 
