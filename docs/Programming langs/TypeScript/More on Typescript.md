@@ -1,7 +1,7 @@
 ---
 title: More on TypeScript
 date created: Monday, January 23rd 2023, 2:41:42 pm
-date modified: Saturday, April 26th 2025, 11:03:15 am
+date modified: Friday, May 2nd 2025, 4:03:06 pm
 ---
 
 # More on TypeScript
@@ -70,7 +70,7 @@ const todo2 = updateTodo(todo1, {
 ### Required
 
 - Constructs a type consisting of all properties of Type set to required.
-- The opposite of [Partial](#Partial).
+- The opposite of [Partial](Programming%20langs/TypeScript/More%20on%20TypeScript.md#partial).
 
 ```ts
 interface Props {
@@ -269,7 +269,7 @@ type AddReturnType = ReturnType<typeof featchData>;
 
 ### Awaited
 
-- now in the above second [ReturnType](#ReturnType) example the `featchData` type was an async function.
+- Now in the above second [ReturnType](Programming%20langs/TypeScript/More%20on%20TypeScript.md#returntype) example the `featchData` type was an async function.
 	- *the return type will be promise, which we don't want*
 	- to fix this we can use the Awaited type to unwrap the promise and get the type of what the promise resolves to:
 
@@ -284,7 +284,7 @@ type AddReturnType = Awaited<ReturnType<typeof featchData>>
 
 ### Parameters
 
-- Same as [ReturnType](#ReturnType), we can use `Parameters` to get the parameter types of a function.
+- Same as [ReturnType](Programming%20langs/TypeScript/More%20on%20TypeScript.md#returntype), we can use `Parameters` to get the parameter types of a function.
 - Parameters gives you a tuple of the argument types, and you can pull out a specific parameter type by index like so:
 
 ```ts
@@ -301,7 +301,7 @@ type params2 = SumParams[1]; //param2 is now type number | undefined
 
 ### NonNullable
 
-- In the above example [Parameters](#Parameters), what if we want params2 to be type number not `number | undefined`
+- In the above example [Parameters](Programming%20langs/TypeScript/More%20on%20TypeScript.md#parameters), what if we want params2 to be type number not `number | undefined`
 - We can use the NonNullable utility type, to exclude any null or undefined values from a union type.
 
 ```ts
