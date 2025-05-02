@@ -1,7 +1,7 @@
 ---
 title: More on React
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Wednesday, December 25th 2024, 12:47:36 pm
+date modified: Friday, April 25th 2025, 3:48:29 pm
 ---
 
 # More on React
@@ -33,7 +33,7 @@ date modified: Wednesday, December 25th 2024, 12:47:36 pm
 
 ---
 - Server component can create server function
-	- you can access server resources inside a server function i.e file resource, cookies and database…
+	- you can access server resources inside a server function i.e file resource, cookies, and database…
 
 ```jsx
 function EmptyNote () {
@@ -71,7 +71,7 @@ export default function Button({ onClick }) {
 
 ```
 
-- client can import server functions from a server file
+- Client can import server functions from a server file
 
 ```jsx
 "use server";
@@ -144,7 +144,7 @@ function Form() {
 
 ```
 
-- we can also have multiple submissions using `formAction`
+- We can also have multiple submissions using `formAction`
 
 ```jsx
 import { useActionState } from "react";
@@ -185,10 +185,10 @@ function Form() {
 
 - `useActionState` to track the state of the form such as pending, action responses(messages).
 	- [useActionState – React](https://react.dev/reference/react/useActionState) is a Hook that allows you to update state based on the result of a form action.
-- alternate to using the pending state from `useActionState` we can also use `useFormStatus` for showing loading state
-	- [useFormStatus – React](https://react.dev/reference/react-dom/hooks/useFormStatus) is a Hook that gives you status information of the last form submission.
+- Alternate to using the pending state from `useActionState` we can also use `useFormStatus` for showing loading state
+	- [useFormStatus – React](https://react.dev/reference/react-dom/hooks/useFormStatus) is a Hook that gives you, status information of the last form submission.
 	- `useFormStatus` is a client side hook thus you need to separate it to a new file and use `use client`
-	- `useFormStatus` needs to have a parent form and can not be placed along side a form.
+	- `useFormStatus` needs to have a parent form and cannot be placed along side a form.
 
 ```jsx
 "use client";
@@ -316,7 +316,7 @@ function HorizontalRule({ show }) {
 - Streaming data from the server to the client
 	- Data can be streamed from the server to the client by passing a Promise as a prop from a Server Component to a Client Component.
 	- The difference between awaiting the promise on the server and passing data vs passing the promise as prop to be used by use
-		- using await in a Server Component will block its rendering until the await statement is finished.
+		- Using await in a Server Component will block its rendering until the await statement is finished.
 		- Passing a Promise from a Server Component to a Client Component prevents the Promise from blocking the rendering of the Server Component.
 
 ```jsx
@@ -339,7 +339,7 @@ export function Message({ messagePromise }) {
 ```
 
 - Error handling when promise fall
-	- use `ErrorBoundary`, you need to wrap the suspense with ErrorBoundary and provide fallback to it.
+	- Use `ErrorBoundary`, you need to wrap the suspense with ErrorBoundary and provide fallback to it.
 
 ```jsx
 export function MessageContainer({ messagePromise }) {
@@ -400,7 +400,7 @@ async function MinimalWeatherCard({city}) {
 		- similar to next.js fetch, but you can use cache to manually memoize data requests for use cases when the fetch API is not suitable.
 			- For example, some database clients, CMS clients, or GraphQL clients.
 
-### Concurent React
+### Concurrent React
 
  - react without concurrency
 	 - updates are rendered in a single, uninterrupted, synchronous transaction. With synchronous rendering, once an update starts rendering, nothing can interrupt it until the user can see the result on screen.
@@ -941,7 +941,7 @@ addNewUser = () => {
 };
 ```
 
-> [How to use Readonly to enforce state immutability](Programming%20langs/TypeScript/More%20on%20Typescript.md#Readonly)
+> [How to use Readonly to enforce state immutability](Programming%20langs/TypeScript/More%20on%20TypeScript.md#Readonly)
 
 #### Avoid Props in Initial States
 

@@ -53,7 +53,7 @@ npm run reset-project
 		- `npx expo run `
 - Physical device
 	- For developing or testing apps meant for production apps
-		- This is great when testing features that require physical devices such as camera and haptics.
+		- This is great when testing features that require physical devices such as camera and haptic.
 	- Command
 		- make sure to install
 			- `npx expo install expo-dev-client`
@@ -64,16 +64,16 @@ npm run reset-project
 - [Different Development Stages](https://docs.expo.dev/workflow/overview/#the-core-development-loop)
 - Install a new library
 	- `npx expo install package-name`
-		- do not use `npm(yarn) install package-name`, because these do not allows Expo CLI to pick a compatible version of a library when possible and also warn you about known incompatibilities.
-- does the library include native code?
+		- Do not use `npm(yarn) install package-name`, because these do not allows Expo CLI to pick a compatible version of a library when possible and warn you about known incompatibilities.
+- Does the library include native code?
 	- [How to know if the library has native code](https://docs.expo.dev/workflow/using-libraries/#determining-third-party-library-compatibility)
 	- yes
-		- stop and pre-build the app `npx expo prebuild --clean`
-		- run the dev server to continue `npx expo run`
+		- Stop and pre-build the app `npx expo prebuild --clean`
+		- Run the dev server to continue `npx expo run`
 	- no
-		- see the changes immediately or reload the app by pressing `r` in terminal
+		- See the changes immediately or reload the app by pressing `r` in terminal
 		- if this doesn't work
-			- close the app and run it again
+			- Close the app and run it again
 
 ### Production Builds
 
@@ -91,8 +91,8 @@ npm run reset-project
 
 - `npx expo run`
 	- Build a the app and then runs the development server
-		- does't build the app on consecutive runs if there exists build folder(`ios` and android) folder.
-			- use `npx expo prebuild --clean` to regenerate the build folders again
+		- Doesn't build the app on consecutive runs if there exists build folder(`ios` and android) folder.
+			- Use `npx expo prebuild --clean` to regenerate the build folders again
 	- other options
 		- `npx expo run:android` for running on android physical device or emulator,
 		- `npx expo run:ios` for running on simulator
@@ -103,15 +103,15 @@ npm run reset-project
 	- You can remove the boilerplate code and start fresh with a new project
 - `npx expo prebuild`
 	- To modify your project's configuration or native code after the first build.
-	- delete existing directories before regenerating them
+	- Delete existing directories before regenerating them
 		- `npx expo prebuild --clean`
 	- `npx expo install expo-dev-client` must be installed for this to work.
 		- this also includes useful development tools. such as
 			- launcher UI
 			- Improved debugging tools
-			- developer menu ui
+			- developer menu UI
 - `npx expo-doctor`
-	- command line tool used to diagnose issues in your Expo project
+	- Command line tool used to diagnose issues in your Expo project
 - `npx expo install package-name`
 	- Used to install a new library or validate and update specific libraries
 
@@ -157,13 +157,13 @@ export default AppView;
 
 ### Styling
 
-- how it works?
-	- All of the core components accept a prop named style.
+- How it works?
+	- All the core components accept a prop named style.
 	- Create your styles using `Stylesheet.create` and pass the styles to the style prop.
 		- [StyleSheet · React Native](https://reactnative.dev/docs/stylesheet)
 	- The style names and values usually match how CSS works on the web, except names are written using camel casing, e.g. backgroundColor rather than background-color.
 - Tips:
-	- move styles away from the render function, thus making the code easier to understand.
+	- Move styles away from the render function, thus making the code easier to understand.
 
 ```jsx
 import React from 'react';
@@ -256,11 +256,11 @@ const styles = StyleSheet.create({
 
 - React native uses flex which is similar to css flex for styling.
 	- [Layout with Flexbox · React Native](https://reactnative.dev/docs/flexbox)
-	- every component has display flex and it direction is `column` unlike web which row.
+	- Every component has display flex and it direction is `column` unlike web which row.
 	- Check out the react native layout system to learn how styling works
 		- [About Yoga | Yoga](https://www.yogalayout.dev/docs/about-yoga)
-- what does `{flex: 1}`?
-	- setting an element to `flex: 1`, i.e a container is a common practice that has a specific purpose in layout design.
+- What does `{flex: 1}`?
+	- Setting an element to `flex: 1`, i.e a container is a common practice that has a specific purpose in layout design.
 		- Takes Up Available Space
 			- similar to `flex-grow`
 		- Relative Sizing

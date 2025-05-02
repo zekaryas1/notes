@@ -1,7 +1,7 @@
 ---
 title: 2 How to Scale Database
 date created: Wednesday, February 1st 2023, 2:17:33 pm
-date modified: Sunday, March 17th 2024, 11:37:35 am
+date modified: Saturday, April 26th 2025, 4:20:07 pm
 ---
 
 # 2 How to Scale Database
@@ -17,10 +17,10 @@ date modified: Sunday, March 17th 2024, 11:37:35 am
 - Database replication can be used in many database management systems
 - ![](https://miro.medium.com/max/1400/1*x0rxTJ4wxdWOnmLNmWm-kQ.png)
 - master/slave(leader/follower) database replication is one of the easiest database replication technique
-	- purpose of master
+	- Purpose of master
 		- only supports write operations
 		- handles only insert, delete and update commands
-	- purpose of slave
+	- Purpose of slave
 		- get copies of the data from master database
 		- handles only read operation
 	- How many master or slave nodes do we need

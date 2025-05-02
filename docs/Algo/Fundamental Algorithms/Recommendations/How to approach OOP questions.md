@@ -9,7 +9,7 @@ title: How to Approach OOP Questions
 ## Handle Ambiguity
 
 - When being asked an object-oriented design question,
-	- you should inquire _who _ is going to use it and _how _ they are going to use it.
+	- You should inquire _who _ is going to use it and _how _ they are going to use it.
 - Depending on the question, you may even want to go through the "six _Ws":
 	- _ who, what, where, when, how, why.
 
@@ -39,7 +39,7 @@ class Meal{
 - Having more or less decided on our core objects, we now want to analyze the relationships between the objects.
 - Which objects are members of which other objects? Do any objects inherit from any others? Are relationships many-to-many or one-to-many?
 * For example, in the restaurant question, we may come up with the following design:
-	* the Party should have an array of Guests.
+	* The Party should have an array of Guests.
 	* Server and Host inherit from Employee.
 	* Each table has one party, but each Party may have multiple Tables .
 	* There is one Host for the Restaurant.

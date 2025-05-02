@@ -1,10 +1,10 @@
 ---
-title: More on Typescript
+title: More on TypeScript
 date created: Monday, January 23rd 2023, 2:41:42 pm
-date modified: Sunday, March 17th 2024, 11:47:46 am
+date modified: Saturday, April 26th 2025, 11:03:15 am
 ---
 
-# More on Typescript
+# More on TypeScript
 
 ## Type Narrowing
 
@@ -301,8 +301,8 @@ type params2 = SumParams[1]; //param2 is now type number | undefined
 
 ### NonNullable
 
-- in the above example [Parameters](#Parameters), what if we want params2 to be type number not `number | undefined`
-- we can use the NonNullable utility type, to exclude any null or undefined values from a union type.
+- In the above example [Parameters](#Parameters), what if we want params2 to be type number not `number | undefined`
+- We can use the NonNullable utility type, to exclude any null or undefined values from a union type.
 
 ```ts
 type params2 = NonNullable<SumParams[1]>; //param2 is now type number

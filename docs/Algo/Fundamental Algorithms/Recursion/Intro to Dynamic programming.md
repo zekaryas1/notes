@@ -67,7 +67,7 @@ print(fibo(5))
 	* The characteristic that is common in DP problems is that future "decisions" depend on earlier decisions.
 	* Deciding to do something at one step may affect the ability to do something in a later step.
 	* This characteristic is what makes a greedy algorithm invalid for a DP problem - we need to factor in results from previous decisions.
-	* with greedy at each step we decide the best value not caring about past decisions
+	* With greedy at each step we decide the best value not caring about past decisions
 
 ## Common DP Patterns
 

@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Monday, December 30th 2024, 12:26:41 pm
+date modified: Saturday, April 26th 2025, 10:23:26 am
 title: Table of Content
 ---
 
@@ -20,7 +20,7 @@ title: Table of Content
 	- [PHP](Programming%20langs/PHP.md)
 	- [JavaScript](Programming%20langs/JavaScript/You%20Should%20Know%20JavaScript.md)
 	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
-		- [More on Typescript](Programming%20langs/TypeScript/More%20on%20Typescript.md)
+		- [More on TypeScript](Programming%20langs/TypeScript/More%20on%20TypeScript.md)
 - Frameworks
 	- [More on React.js](Frameworks/React/More%20on%20React.md)
 	- [React native notes](Frameworks/React/React%20native.md)
