@@ -24,13 +24,14 @@
   - Private notes are either notes that I think aren't ready for publishing to web yet or notes that are Personal like shopping list, so they do not need to be on git or online.
   - But still if you want to store them as a backup. you can use the following simple process.
   - Use the following command to backup and restore
-    - `./backup_private_folder.sh`
+    - `yarn run private_backup`
       - This command zips a folder called Private in docs folder and store them in `private_backup` folder
       - It also removes old backups, 30 or more days old
       - It zips folders using provided password.
+      - Make sure the script is executable(`private_backup/backup_script.sh`) and `p7zip` is installed already 
     - `7z x ./private_backup/{foldername.7z} -o./private_backup`
       - This command decrypts a folder prompted the correct password.
-      - You can them copy the extract folder called Private to docs dir.
+      - You can then copy the extract folder called Private to docs dir.
 
 ## Obsidian Plugins I use
 - [Obsidian git](https://github.com/denolehov/obsidian-git)
