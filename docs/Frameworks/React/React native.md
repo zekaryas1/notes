@@ -1,7 +1,7 @@
 ---
 title: React Native
 date created: Wednesday, April 26th 2023, 5:55:21 pm
-date modified: Wednesday, January 22nd 2025, 12:35:24 pm
+date modified: Thursday, May 8th 2025, 1:53:27 pm
 ---
 
 # React Native
@@ -1256,75 +1256,42 @@ const App = () => {
 
 ## Popular Libraries to Know
 
-- for data fetching both rest & graphQL
-	- [React Native | TanStack Query React Docs](https://tanstack.com/query/latest/docs/framework/react/react-native)
-	- default:
-		- fetch api
-- state management
-	- [React Native | TanStack Query React Docs](https://tanstack.com/query/latest/docs/framework/react/react-native)
-	- alternative:
-		- [Zustand documentation](https://zustand.docs.pmnd.rs/)
-	- default:
-		- useContext, useReducer…
-- navigation
-	- [Introduction to File-based Expo Router - Expo Documentation](https://docs.expo.dev/router/introduction/)
-	- alternative
-		- react navigation
-- styling ui components
-	- [NativeWind](https://www.nativewind.dev/) aka tailwind for react.native
-	- default:
-		- stylesheet api
-- ui libraries
-	- [React Native Paper](https://callstack.github.io/react-native-paper/) aka material ui for react native
-- internationalization
-	- react-i18next
-- testing
-	- jest
-- animation
-	- [Introduction | React Native Gesture Handler](https://docs.swmansion.com/react-native-gesture-handler/docs/)
-	- [Getting started | React Native Reanimated](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/)
-- Other popular or useful libraries
-	- Native menu
-		- [Welcome to Zeego | Zeego](https://zeego.dev/)
-			- Beautiful, native menus for React Native + Web, inspired by Radix UI.
-	- Local database
-		- Expo sqlite
-			- Can also be integrated with [Drizzle orm for react native](https://orm.drizzle.team/docs/get-started/expo-new)
-	- Chart library
-		- [Victory Native](https://commerce.nearform.com/open-source/victory-native/)
-	- Maps
-		- React Native Map components for iOS(Apple maps)+ Android(Google maps)
-			- [react-native-maps - npm](https://www.npmjs.com/package/react-native-maps)
-		- Mapbox
-			- [React Native Mapbox | @rnmapbox/maps](https://rnmapbox.github.io/)
-	- BottomSheet
-		- [React Native Bottom Sheet - Gorhom](https://gorhom.dev/react-native-bottom-sheet/)
-			- works with expo router, FlatList…
-	- Payment subscriptions
-		- [React Native | In-App Subscriptions Made Easy – RevenueCat](https://www.revenuecat.com/docs/getting-started/installation/reactnative)
-	- Toast
-		- [Introduction | sonner-native](https://gunnartorfis.github.io/sonner-native/)
-	- SVG
-		- [software-mansion/react-native-svg: SVG library for React Native, React Native Web, and plain React web projects.](https://github.com/software-mansion/react-native-svg)
-	- Create blur effect
-		- BlurView
-			- [BlurView - Expo Documentation](https://docs.expo.dev/versions/latest/sdk/blur-view/)
-			- A React component that blurs everything underneath the view.
-		- Blur image Placeholder
-			- [mrousavy/react-native-blurhash: 🖼️ A library to show colorful blurry placeholders while your content loads.](https://github.com/mrousavy/react-native-blurhash)
-			- A blurring placeholder when showing images.
-	- Share
-		- share - from react native
-			- For simple text based sharing you can use the native share function
-				- [Share · React Native](https://reactnative.dev/docs/share)
-		- React native share
-			- For sharing with options such as `uri`, images and files.
-				- [react-native-share/react-native-share: Social share, sending simple data to other apps.](https://github.com/react-native-share/react-native-share)
-	- Alert and prompts
-		- alert - from react native
-			- Launches an alert dialog with the specified title and message.
-			- [Alert · React Native](https://reactnative.dev/docs/alert)
-			- The prompt feature is only supported on ios.
-		- react native prompt
-			- external library that supports prompt on both android and ios
-			- [react-native-prompt-android - npm](https://www.npmjs.com/package/react-native-prompt-android)
+### Most Common
+
+| **Category**             | **Library Name**             | **Type**    | **Description/Link**                                                                                                                                    |
+| ------------------------ | ---------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Fetching**        | TanStack Query (React Query) | Recommended | For both REST & GraphQL.                                                                                                                                |
+|                          | Fetch API                    | Default     | Built-in browser API for making network requests.                                                                                                       |
+| **State Management**     | TanStack Query (React Query) | Recommended | Can also be used for managing server state.                                                                                                             |
+|                          | Zustand                      | Alternative | A small, fast, and scalable bearbones state-management solution. [Zustand documentation](https://zustand.docs.pmnd.rs/)                                 |
+|                          | useContext, useReducer       | Default     | React's built-in hooks for state management.                                                                                                            |
+| **Navigation**           | Expo Router                  | Recommended | File-based routing for React Native & web. [Introduction - Expo Documentation](https://docs.expo.dev/router/introduction/)                              |
+|                          | React Navigation             | Alternative | A popular community solution for navigation.                                                                                                            |
+| **Styling UI**           | NativeWind                   | Recommended | Tailwind CSS for React Native. [NativeWind](https://www.nativewind.dev/)                                                                                |
+|                          | StyleSheet API               | Default     | React Native's built-in API for styling.                                                                                                                |
+| **UI Libraries**         | React Native Paper           | Recommended | Material Design components for React Native. [React Native Paper](https://callstack.github.io/react-native-paper/)                                      |
+| **Internationalization** | react-i18next                | Recommended | A powerful internationalization framework for React.                                                                                                    |
+| **Testing**              | Jest                         | Recommended | A delightful JavaScript Testing Framework with a focus on simplicity.                                                                                   |
+| **Animation**            | React Native Gesture Handler | Recommended | Declarative API exposing platform native touch and gesture system. [Introduction](https://docs.swmansion.com/react-native-gesture-handler/docs/)        |
+|                          | React Native Reanimated      | Recommended | React Native's Animated library reimplemented. [Getting started](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/) |
+
+### Others
+
+| **Category**        | **Library Name**                    | **Type** | **Description/Link**                                                                                                                                                  |
+| ------------------- | ----------------------------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Native Menu**     | Zeego                               | Useful   | Beautiful, native menus for React Native + Web. [Welcome to Zeego](https://zeego.dev/)                                                                                |
+| **Local Database**  | Expo SQLite                         | Useful   | Provides an API for a WebSQL-compatible database. Can integrate with Drizzle ORM. [Drizzle ORM for React Native](https://orm.drizzle.team/docs/get-started/expo-new)  |
+| **Chart Library**   | Victory Native                      | Useful   | A collection of composable React components for building interactive data visualizations. [Victory Native](https://commerce.nearform.com/open-source/victory-native/) |
+| **Maps**            | react-native-maps                   | Useful   | React Native Map components for iOS (Apple Maps) & Android (Google Maps). [react-native-maps - npm](https://www.npmjs.com/package/react-native-maps)                  |
+|                     | Mapbox (@rnmapbox/maps)             | Useful   | React Native Mapbox SDK. [React Native Mapbox](https://rnmapbox.github.io/)                                                                                           |
+| **BottomSheet**     | React Native Bottom Sheet by Gorhom | Useful   | A performant interactive bottom sheet with gesture support. [React Native Bottom Sheet - Gorhom](https://gorhom.dev/react-native-bottom-sheet/)                       |
+| **Payment/Subs**    | RevenueCat                          | Useful   | In-app subscriptions made easy. [React Native                                                                                                                         |
+| **Toast**           | sonner-native                       | Useful   | An opinionated toast component for React Native. [Introduction                                                                                                        |
+| **SVG**             | react-native-svg                    | Useful   | SVG library for React Native, React Native Web, and plain React web projects. [react-native-svg GitHub](https://github.com/software-mansion/react-native-svg)         |
+| **Blur Effect**     | BlurView (Expo)                     | Useful   | A React component that blurs everything underneath the view. [BlurView - Expo Docs](https://docs.expo.dev/versions/latest/sdk/blur-view/)                             |
+|                     | react-native-blurhash               | Useful   | Show colorful blurry placeholders while content loads. [react-native-blurhash GitHub](https://github.com/mrousavy/react-native-blurhash)                              |
+| **Share**           | Share (from React Native)           | Default  | For simple text-based sharing. [Share · React Native](https://reactnative.dev/docs/share)                                                                             |
+|                     | react-native-share                  | Useful   | For sharing with options like URI, images, and files. [react-native-share GitHub](https://github.com/react-native-share/react-native-share)                           |
+| **Alert & Prompts** | Alert (from React Native)           | Default  | Launches an alert dialog. Prompt feature is iOS only. [Alert · React Native](https://reactnative.dev/docs/alert)                                                      |
+|                     | react-native-prompt-android         | Useful   | External library for prompt support on both Android and iOS. [react-native-prompt-android - npm](https://www.npmjs.com/package/react-native-prompt-android)           |
+| **Quick Actions**   | expo-quick-actions                  | Useful   | Add home screen quick actions/shortcuts. [expo-quick-actions GitHub](https://github.com/EvanBacon/expo-quick-actions)                                                 |
