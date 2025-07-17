@@ -1,7 +1,7 @@
 ---
 title: More on React
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Friday, April 25th 2025, 3:48:29 pm
+date modified: Saturday, June 14th 2025, 1:38:45 pm
 ---
 
 # More on React
@@ -118,18 +118,18 @@ export default function Button({ onClick }) {
 
 ```jsx
 function Form() {
-  const action = async (formData) => {
+  const action = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
 
   // action can also be Server Function
-  const action = async (formData) => {
+  const action = async (formData: FormData) => {
     "use server";
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
@@ -150,16 +150,16 @@ function Form() {
 import { useActionState } from "react";
 
 function Form() {
-  const subscribeAction = async (formData) => {
+  const subscribeAction = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
 
-  const unSubscribeAction = async (formData) => {
+  const unSubscribeAction = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
@@ -195,9 +195,9 @@ function Form() {
 import { useActionState } from "react";
 
 function Form() {
-  const action = async (prev, formData) => {
+  const action = async (prev, formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
     if (notEmail(email)) {
       return {
         error: "not valid email",
@@ -245,9 +245,9 @@ function Submit() {
 
 ```js
 "use server";
-export const action = async (prev, formData) => {
+export const action = async (prev, formData: FormData) => {
   await new Promise((res) => setTimeout(res, 1000));
-  const email = formDate.get("email");
+  const email = formData.get("email");
 
   if (notEmail(email)) {
     return {
