@@ -135,6 +135,7 @@ build
 
 # Ignore temp and private notes
 docs/Private
+docs/🔑 Private
 docs/local-docs
 
 # Ignore macOS .DS_Store files
