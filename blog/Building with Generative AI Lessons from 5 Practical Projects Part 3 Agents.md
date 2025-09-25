@@ -2,6 +2,8 @@
 title: "Building with Generative AI: Lessons from 5 Practical Projects Part 3: Agents"
 date created: Friday, August 29th 2025, 12:59:17 pm
 date modified: Friday, August 29th 2025, 2:13:53 pm
+tags:
+  - gen_ai
 ---
 
 # Building with Generative AI: Lessons from 5 Practical Projects Part 3: Agents
@@ -10,13 +12,17 @@ date modified: Friday, August 29th 2025, 2:13:53 pm
 
 What are agents and how AI companies define them, and how tools give agents access to external environments.
 
-How to build agents with the Google ADK library and how to connect small agents to build comprehensive `agentic` solutions.
+How to build agents with the Google ADK library and how to connect small agents to build comprehensive `agentic`
+solutions.
+
+<!-- truncate -->
 
 ## Structured Outputs
 
 We need to look at structured outputs first before we dive in, as they are a core component of agents.
 
-One of the features of LLMs is their ability to return output in a desired format, such as binary answers ("yes" or "no", true or false), JSON, or code.
+One of the features of LLMs is their ability to return output in a desired format, such as binary answers ("yes" or "
+no", true or false), JSON, or code.
 
 This helps us use LLMs as a garden hose, connecting one to another with understandable output formats.
 
@@ -24,7 +30,8 @@ This helps us use LLMs as a garden hose, connecting one to another with understa
 
 Example 1: Does the user question followup query, or is it related to company information needing a RAG search?
 
-- GitHub code link: [gen-ai/adk_agents/agents/simple_agentic_rag/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/simple_agentic_rag/agent.py)
+- GitHub code
+  link: [gen-ai/adk_agents/agents/simple_agentic_rag/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/simple_agentic_rag/agent.py)
 
 We can use the `Pydantic` BaseModel in Google ADK to specify the output schema we want.
 
@@ -185,20 +192,24 @@ how many user have not posted yet?
 There are many definitions of agents. Let’s see two from the two leading AI companies:
 
 - **OpenAI’s definition:**
-    - Agents represent **systems that intelligently accomplish tasks**, ranging from executing simple workflows to pursuing complex, open-ended objectives.
+    - Agents represent **systems that intelligently accomplish tasks**, ranging from executing simple workflows to
+      pursuing complex, open-ended objectives.
 - **Anthropic’s definition:**
-    - **Agents** are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over how they accomplish tasks.
+    - **Agents** are systems where LLMs dynamically direct their own processes and tool usage, maintaining control over
+      how they accomplish tasks.
 
 This can be challenging to understand, but in summary, agents have common properties:
 
 - **Components**: `Specialized LLM Model + Tools + Loop + Context`
 - **Specialized model**:
-    - An LLM that converts inputs into action plans and executes these plans through available tools or Agent Computer Interfaces.
+    - An LLM that converts inputs into action plans and executes these plans through available tools or Agent Computer
+      Interfaces.
     - The models used in agents should be able to break down complex tasks into manageable steps.
 - **Tools**:
     - Agents gateway to external APIs, data stores, and functions for real-world actions.
 - **Loop**:
-    - Agents do not necessarily have a linear execution path; they can use different tools, then return to call another tool until their plan is satisfied or they are terminated.
+    - Agents do not necessarily have a linear execution path; they can use different tools, then return to call another
+      tool until their plan is satisfied or they are terminated.
     - Agents can also have humans-in-the-loop, where a human confirms an action (e.g., installing a new library).
 
 ### **What Can Agents do**
@@ -217,7 +228,8 @@ Tools are functions that extend the capabilities of LLM-based agents beyond thei
 - Enable interaction with external and real-time data.
     - For example, a weather tool can return real-time weather data to the agent.
 - Support querying databases or making API requests.
-    - LLMs cannot natively interact with databases, so tools allow them to run generated queries and return affected rows.
+    - LLMs cannot natively interact with databases, so tools allow them to run generated queries and return affected
+      rows.
 - Facilitate calculations or data processing.
 - Allow execution of specific actions (e.g., creating files, running code).
 - Handle authentication processes.
@@ -234,15 +246,19 @@ Let’s build a to-do assistant agent. It will help users manage to-dos with sim
 
 **What tools do we need?**
 
-The agent is unable to track todo lists natively. We want persistent todos that persist over discussions, so we can use a simple database like SQLite, but for simplicity, we'll use a Python dictionary this time.
+The agent is unable to track todo lists natively. We want persistent todos that persist over discussions, so we can use
+a simple database like SQLite, but for simplicity, we'll use a Python dictionary this time.
 
 This means we need a way to interact with the in memory database, using the LLM as the interaction layer.
 
 **Breaking down the tools:**
 
-The agent acts as a CRUD layer: Create, Read, Update, Delete. We’ll skip Delete and consider updating a to-do’s status as enough.
+The agent acts as a CRUD layer: Create, Read, Update, Delete. We’ll skip Delete and consider updating a to-do’s status
+as enough.
 
-The agent should be provided with precise instructions, which include the current date, current date, example, and output format, as well as the available tools and their use-cases. This instruction may become verbose and may necessitate continual updating based on model interaction.
+The agent should be provided with precise instructions, which include the current date, current date, example, and
+output format, as well as the available tools and their use-cases. This instruction may become verbose and may
+necessitate continual updating based on model interaction.
 
 - [gen-ai/adk_agents/agents/todo_agent/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/todo_agent/agent.py)
 
@@ -337,8 +353,10 @@ root_agent = Agent(
 ```
 
 - Let's look at one of the tools in detail, `update_todo_tool`:
-    - It has extensive documentation on its arguments and return types, which is very useful for the agent to interact with our tool.
-    - It includes multiple checks on the passed data. We need to validate the agent's input, as the agent's behavior is not deterministic and we should not trust it blindly.
+    - It has extensive documentation on its arguments and return types, which is very useful for the agent to interact
+      with our tool.
+    - It includes multiple checks on the passed data. We need to validate the agent's input, as the agent's behavior is
+      not deterministic and we should not trust it blindly.
     - Our return types contain information that tells the agent exactly what went wrong.
 
 ```python
@@ -423,9 +441,13 @@ def update_todo_tool(
 
 ## Agents WorkFlow
 
-Building a complete agent means more than a single agent; most solutions involve multiple agents working together to solve a problem.
+Building a complete agent means more than a single agent; most solutions involve multiple agents working together to
+solve a problem.
 
-Consider a research assistant agent: in this case, one agent might specialize in finding relevant information from the internet using a `search_tool`. A supporting agent could be responsible for refining the collected documents based on the user’s query. Finally, an assessment agent would determine whether additional information is needed or if the workflow is complete.
+Consider a research assistant agent: in this case, one agent might specialize in finding relevant information from the
+internet using a `search_tool`. A supporting agent could be responsible for refining the collected documents based on
+the user’s query. Finally, an assessment agent would determine whether additional information is needed or if the
+workflow is complete.
 
 Depending on the problem you are trying to solve, your solution workflow might be categorized into these workflows
 
@@ -433,11 +455,13 @@ Depending on the problem you are trying to solve, your solution workflow might b
 
 ![Sequential workflow](https://dgc8kkav4l0lgf.archive.is/pilY2/190994fc386ebb6f0771b60fd9bbf7dc71623d54.webp)
 
-Sequential workflow decomposes a task into a sequence of steps, where each LLM call processes the output of the previous one.
+Sequential workflow decomposes a task into a sequence of steps, where each LLM call processes the output of the previous
+one.
 
 A writing assistant can be a linear workflow:
 
-- An agent writes a draft → hands it over to a critic agent → final editor agent applies the critiques and writes the final version.
+- An agent writes a draft → hands it over to a critic agent → final editor agent applies the critiques and writes the
+  final version.
 
 ### Coordinator Workflow
 
@@ -447,7 +471,8 @@ In this workflow, agents have sub-agents to which they route a request.
 
 When the router agent receives an instruction, it assesses which sub-agent should handle it.
 
-Example: In `agentic` RAG, the coordinator RAG can decide if a sub-agent with a `search_tool` should handle the request, or if another sub-agent with a `rag_tool` should do it.
+Example: In `agentic` RAG, the coordinator RAG can decide if a sub-agent with a `search_tool` should handle the request,
+or if another sub-agent with a `rag_tool` should do it.
 
 - `"What is the new employee onboarding process?"` → sub-agent 2 with `rag_tool`.
 - `"What do people think about our company based on online reviews?"` → sub-agent 1 with `search_tool`.
@@ -456,9 +481,11 @@ Example: In `agentic` RAG, the coordinator RAG can decide if a sub-agent with a 
 
 ![loop workflow](https://dgc8kkav4l0lgf.archive.is/pilY2/892d0e6e5a8cd0713294307d126cf9563462ccd1.webp)
 
-In a loop workflow, agents keep working, refining, and improving their output until their goal is met or a human stops the loop.
+In a loop workflow, agents keep working, refining, and improving their output until their goal is met or a human stops
+the loop.
 
-Again, a writing assistant can be a loop workflow agent, where writer and editor workflows keep evolving until there are no suggestions left, or until a human decides it’s good enough.
+Again, a writing assistant can be a loop workflow agent, where writer and editor workflows keep evolving until there are
+no suggestions left, or until a human decides it’s good enough.
 
 ### Parallel Workflow
 
@@ -466,17 +493,21 @@ Again, a writing assistant can be a loop workflow agent, where writer and editor
 
 In this workflow, two agents work in parallel, trying different approaches to solve an issue.
 
-Example: A code review assistant might have one agent checking for vulnerabilities and another checking for code quality, both working in parallel. Their results are then aggregated into a single review.
+Example: A code review assistant might have one agent checking for vulnerabilities and another checking for code
+quality, both working in parallel. Their results are then aggregated into a single review.
 
 ### Combination
 
-You can build complex agentic solutions by combining different workflows, such as a **Coordinator** with a **Loop** workflow. Many agent development libraries already include abstractions for this, and there are managed solutions on top of these ideas such as [n8n - AI Workflow Automation Platform & Tools](https://n8n.io/).
+You can build complex agentic solutions by combining different workflows, such as a **Coordinator** with a **Loop**
+workflow. Many agent development libraries already include abstractions for this, and there are managed solutions on top
+of these ideas such as [n8n - AI Workflow Automation Platform & Tools](https://n8n.io/).
 
 ## Code Example 4: Workflow Agent
 
 ![workflow agent example with weather tool, letter counter tool and research assistance agent](https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F9afb63146wbi1pi8rtab.png)
 
-Let's make out second example a multi-purpose agent, meaning it can help with multiple types of tasks. In our case, this multi-purpose agent can:
+Let's make out second example a multi-purpose agent, meaning it can help with multiple types of tasks. In our case, this
+multi-purpose agent can:
 
 - Answer questions about the weather
 - Count specific alphabet characters in a given word (e.g., “How many b’s are there in strawberry?”)
@@ -487,9 +518,12 @@ Let's make out second example a multi-purpose agent, meaning it can help with mu
 - We can identify 3 agents:
     - **Agent 1:** Weather agent with a weather tool
     - **Agent 2:** Alphabet agent with a character counter tool
-    - **Agent 3:** Research assistant agent, which includes research and revision steps (this can be a loop until the research/revision step is satisfied).
+    - **Agent 3:** Research assistant agent, which includes research and revision steps (this can be a loop until the
+      research/revision step is satisfied).
 
-The root agent acts as a coordinator agent, either delegating queries to the research agent when it receives research-related queries or answering questions using the appropriate tool, such as the weather tool or the letter counter tool.
+The root agent acts as a coordinator agent, either delegating queries to the research agent when it receives
+research-related queries or answering questions using the appropriate tool, such as the weather tool or the letter
+counter tool.
 
 - [gen-ai/adk_agents/agents/workflow_agent/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/workflow_agent/agent.py)
 
@@ -507,7 +541,9 @@ root_agent = Agent(
 )
 ```
 
-The research agent operates in a loop, drafting and refining the research. It begins by gathering information using Google Search. Then, the refinement agent identifies areas where the research can be strengthened. This process continues until the refinement agent determines there are no more areas to improve.
+The research agent operates in a loop, drafting and refining the research. It begins by gathering information using
+Google Search. Then, the refinement agent identifies areas where the research can be strengthened. This process
+continues until the refinement agent determines there are no more areas to improve.
 
 - There are two loop exit scenarios:
     - The refinement agent decides there are no further points to consider and calls the `exit_loop` tool.
@@ -567,19 +603,25 @@ Research quantum computing?
 
 ## What Did I Build and How?
 
-I wanted to build a non-technical solution for reading analytical information from data, particularly from CSV files. It’s meant for people who might not be familiar with SQL or who want a simple solution.
+I wanted to build a non-technical solution for reading analytical information from data, particularly from CSV files.
+It’s meant for people who might not be familiar with SQL or who want a simple solution.
 
-You provide your query, such as “What is the most selling item?” or “What is the most expensive product?” in plain English, and the agent writes the necessary SQL for you.
+You provide your query, such as “What is the most selling item?” or “What is the most expensive product?” in plain
+English, and the agent writes the necessary SQL for you.
 
-The agent doesn’t store anything. When the user provides a CSV file, we first analyze its structure and store it into a local database such as SQLite.
+The agent doesn’t store anything. When the user provides a CSV file, we first analyze its structure and store it into a
+local database such as SQLite.
 
-Next time the user asks a question, we pass the database table schema to the LLM and ask it to generate a query. We then run the query against the database and finally ask the LLM to generate a user-friendly answer.
+Next time the user asks a question, we pass the database table schema to the LLM and ask it to generate a query. We then
+run the query against the database and finally ask the LLM to generate a user-friendly answer.
 
-- GitHub source code link: [gen-ai/adk_agents/agents/file_analytics_agents/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/file_analytics_agents/agent.py)
+- GitHub source code
+  link: [gen-ai/adk_agents/agents/file_analytics_agents/agent.py at main · zekaryas1/gen-ai · GitHub](https://github.com/zekaryas1/gen-ai/blob/main/adk_agents/agents/file_analytics_agents/agent.py)
 
 **Some further thinking:**
 
-- This pattern is scalable: while we just used CSVs here, we could integrate with databases, Notion documents, or any other datastore the user might be using.
+- This pattern is scalable: while we just used CSVs here, we could integrate with databases, Notion documents, or any
+  other datastore the user might be using.
 - The database should be read-only for security, so we do not allow deleting resources.
 
 ## What's next

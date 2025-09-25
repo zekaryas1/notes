@@ -77,19 +77,25 @@ const config = {
                 },
                 items: [
                     {
-                        type: "search",
-                        position: "right",
-                    },
-                    {
                         type: "doc",
                         docId: "intro",
                         position: "left",
                         label: "Note",
                     },
                     {
+                        href: "/resume",
+                        label: "Resume",
+                        position: "left",
+                    },
+                    {to: 'blog', label: 'Blog', position: 'left'},
+                    {
                         href: "https://github.com/zekaryas1/notes",
                         label: "GitHub",
                         position: "left",
+                    },
+                    {
+                        type: "search",
+                        position: "right",
                     },
                 ],
             },
