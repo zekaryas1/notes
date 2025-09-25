@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-    title: "Zack's TechNotes",
+    title: "Zack's Tech Notes",
     tagline: "Software Engineering, Coding, and Development Insights",
     url: "https://zack.onrender.com",
     baseUrl: "/",
