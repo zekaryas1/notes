@@ -4,7 +4,7 @@
 RETENTION_DAYS=30
 
 # Set paths
-SOURCE_FOLDER="./docs/Private"
+SOURCE_FOLDER="./docs/🔑 Private"
 BACKUP_DIR="./private_backup"
 
 # Check if 7z is installed

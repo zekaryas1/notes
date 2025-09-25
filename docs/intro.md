@@ -2,7 +2,7 @@
 tags: [intro]
 sidebar_position: 1
 date created: Monday, June 27th 2022, 9:46:38 am
-date modified: Monday, June 2nd 2025, 6:00:02 pm
+date modified: Tuesday, September 2nd 2025, 6:19:03 pm
 title: Table of Content
 ---
 
@@ -14,6 +14,11 @@ title: Table of Content
 		- [Which algo to select, pattern based answer](Algo/Fundamental%20Algorithms/Recommendations/Which%20algo%20to%20select,%20pattern%20based%20answer.md)
 	- [Python Tips and tricks](Algo/Python%20Tips%20&%20Tricks/Useful%20Python%20Collections%20module.md)
 	- [Graph algorithms](Algo/Tree%20&%20Graph/Tree/Union%20find.md)
+- Generative ai tools development
+	- [LLM](GEN%20AI%20DEV/1.%20LLM.md)
+	- [RAG  Introduction](GEN%20AI%20DEV/2.%20RAG/1.%20Introduction.md)
+	- [Agents](GEN%20AI%20DEV/3.%20Agents/1.%20Agents.md)
+	- [Context engineering](GEN%20AI%20DEV/4.%20More%20to%20know/1.%20Context%20engineering.md)
 - Containerization
 	- [Docker](Containerization/Docker/1.%20General%20step%20to%20dockerizing%20a%20project.md)
 - Programming languages
@@ -21,6 +26,7 @@ title: Table of Content
 	- [JavaScript](Programming%20langs/JavaScript/You%20Should%20Know%20JavaScript.md)
 	- [Typescript](Programming%20langs/TypeScript/Fundamentals.md)
 		- [More on TypeScript](Programming%20langs/TypeScript/More%20on%20TypeScript.md)
+    - [Typed Python](Programming%20langs/Typed%20Python.md)
 - Frameworks
 	- [More on React.js](Frameworks/React/More%20on%20React.md)
 	- [React native notes](Frameworks/React/React%20native.md)
