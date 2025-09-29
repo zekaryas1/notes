@@ -89,7 +89,7 @@ hide_table_of_contents: false
     - University:[Addis Ababa University](https://www.aau.edu.et/)
     - Graduation Year: 2021
 
-## Open source Projects
+## Personal Projects
 
 - [Generative AI Apps](https://github.com/zekaryas1/gen-ai) | Apr 2025
     - Developed an [AI-powered PDF reader web application](https://aku-ai-pdf.vercel.app/) and other generative AI
@@ -100,22 +100,20 @@ hide_table_of_contents: false
     - Developed a dynamic code-generation utility powered by the Liquid template engine.
     - Enabled developers to craft personalized templates for generating code snippets, files, or comprehensive projects
       using diverse data schemas.
-- **KnowledgeShare Mobile App | 2020 – 2022**
-    - Developed a personalized mobile application using Flutter to facilitate knowledge sharing.
-    - Curated lessons on system design, modern CSS, advanced Python, and SEO.
-    - Achieved an active user base of over 1000 individuals. More projects on my GitHub account
-
-## Skills
-
-- Front end
-    - CSS3, Bootstrap, HTML5, Tailwind, JavaScript, Typescript, React.js, ReactNative, Angular.js, Next.js
-- Back end
-    - Node.js, Nest.js, Python, FastAPI, GraphQL, Laravel, Microservices, Java and Spring boot
-- Data Stores
-    - MySQL, PostgresSQL, MongoDB
-- Operating systems
-    - Linux(Ubuntu), Windows and macOS
-- Others
-    - git/GitHub/GitLab, Docker, Data structure and algorithm
-- Cloud
-    - AWS: Familiar with S3, DynamoDB, Lambda, API gateway, EQS, ENS, and EC2
+- Mobile dev projects
+    - [KnowledgeShare Mobile App](https://drive.google.com/file/d/1q3SZzaedgrFHWQxEFKWZYjPuBVb7jl7T/view?usp=sharing) |
+      2020 – 2022
+        - Developed a personalized mobile application using Flutter to facilitate knowledge sharing.
+        - Curated lessons on system design, modern CSS, advanced Python, and SEO.
+        - Achieved an active user base of over 1000 individuals. More projects on my GitHub account
+    - Others
+        - Developed a
+          feature-rich [Quote App](https://drive.google.com/file/d/1_gZUaUxuVGxB1vYj1OXFZzDxhyhon73x/view?usp=sharing)
+          with a highly creative and user-friendly interface, focusing on intuitive design and smooth user experience.
+        - Built
+          an [Inventory Management app](https://drive.google.com/file/d/1L6ndCoRkQJOWyI2cm5w4KKXJe68Ntvuw/view?usp=sharing)
+          using Google Material UI, integrated with a backend system for real-time data handling and inventory tracking.
+        - Created
+          a [Simple Contact Management Application](https://drive.google.com/file/d/1hW6j8Xq4yARJzKBDF14_KOf4_y2auP4o/view?usp=sharing)
+          for adding, updating, and organizing user contacts efficiently.
+            - [GitHub Source Code Link](https://github.com/zekaryas1/iContacts)
