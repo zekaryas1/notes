@@ -12,30 +12,30 @@ date modified: Saturday, May 3rd 2025, 12:02:14 pm
 
 ### Typeof for Primitives
 
-```jsx
-if(typeof input  === 'string'){
-	console.log(input.toUpperCase());
+```ts
+if (typeof input === 'string') {
+    console.log(input.toUpperCase());
 }
 ```
 
 ### instanceOf for Objects
 
-```jsx
-if(input instanceOf Array){
-	//do sth
+```ts
+if (data instanceof Array) {
+    //do sth
 }
 
-if(input instanceOf MyClass){
-	//do sth
+if (data instanceof MyClass) {
+    //do sth
 }
 ```
 
 ### Property in Object
 
-```js
+```ts
 const output = getResult(req);
-if("error" in output){
-	consol.error(output.error)
+if ("error" in output) {
+    consol.error(output.error)
 }
 ```
 
@@ -48,22 +48,22 @@ if("error" in output){
 
 ```ts
 interface Todo {
-  title: string;
-  description: string;
+    title: string;
+    description: string;
 }
 
 function updateTodo(todo: Todo, fieldsToUpdate: Partial<Todo>) {
-  return { ...todo, ...fieldsToUpdate };
+    return {...todo, ...fieldsToUpdate};
 }
 
- 
+
 const todo1 = {
-  title: "organize desk",
-  description: "clear clutter",
+    title: "organize desk",
+    description: "clear clutter",
 };
- 
+
 const todo2 = updateTodo(todo1, {
-  description: "throw out trash",
+    description: "throw out trash",
 });
 ```
 
@@ -74,28 +74,29 @@ const todo2 = updateTodo(todo1, {
 
 ```ts
 interface Props {
-  a?: number;
-  b?: string;
+    a?: number;
+    b?: string;
 }
- 
-const obj: Props = { a: 5 };
- 
-const obj2: Required<Props> = { a: 5 };  //error => b is required
+
+const obj: Props = {a: 5};
+
+const obj2: Required<Props> = {a: 5};  //error => b is required
 ```
 
 ### Readonly
 
-- Constructs a type with all properties of `Type` set to `readonly`, meaning the properties of the constructed type cannot be reassigned.
+- Constructs a type with all properties of `Type` set to `readonly`, meaning the properties of the constructed type
+  cannot be reassigned.
 
 ```ts
 interface Todo {
-  title: string;
+    title: string;
 }
- 
+
 const todo: Readonly<Todo> = {
-  title: "Delete inactive users",
+    title: "Delete inactive users",
 };
- 
+
 todo.title = "Hello";  //error cannot reassign
 ```
 
@@ -103,21 +104,21 @@ todo.title = "Hello";  //error cannot reassign
 
 ```ts
 export function EditEvent() {
-  const [event, setEvent] = useState<Event>()
-  
-  event.title = 'Sth' //not error, but bad practice	
-  setEvent(event);	
+    const [event, setEvent] = useState<Event>()
+
+    event.title = 'Sth' //not error, but bad practice	
+    setEvent(event);
 }
 ```
 
 ```ts
 export function EditEvent() {
-  const [event, setEvent] = useState<Readonly<Event>>()
+    const [event, setEvent] = useState<Readonly<Event>>()
 
-  event.title = 'Sth' //error, cannot assign to readonly
+    event.title = 'Sth' //error, cannot assign to readonly
 
-  //better, do
-  setEvent({...event, title: event.target.value})
+    //better, do
+    setEvent({...event, title: event.target.value})
 }
 ```
 
@@ -127,15 +128,15 @@ export function EditEvent() {
 
 ```ts
 type Event = {
-	title: string,
-	body: string,
-	members: string[]
+    title: string,
+    body: string,
+    members: string[]
 }
 
 const readonlyEvent: Readonly<Event> = {
-	title: 'event title',
-	body:  'event body',
-	members: ['m1', 'm2']
+    title: 'event title',
+    body: 'event body',
+    members: ['m1', 'm2']
 }
 
 //since readonly we can't edit title and body of readonlyEvent
@@ -146,31 +147,33 @@ readonlyEvent.memebers.push('m3');
 ```
 
 - This is because
-	- Readonly only applies to top level properties of an object. We can still mutate nested properties and arrays without errors.
-	- To prevent this use DeepReadonly, *which is a custom snippet not found in typescript utility types*
+    - Readonly only applies to top level properties of an object. We can still mutate nested properties and arrays
+      without errors.
+    - To prevent this use DeepReadonly, *which is a custom snippet not found in typescript utility types*
 
 ```typescript
 export type DeepReadonly<T> =
-  T extends Primitive ? T :
-  T extends Array<infer U> ? DeepReadonlyArray<U> :
-  DeepReadonlyObject<T>
+    T extends Primitive ? T :
+        T extends Array<infer U> ? DeepReadonlyArray<U> :
+            DeepReadonlyObject<T>
 
-type Primitive = 
-  string | number | boolean | undefined | null
+type Primitive =
+    string | number | boolean | undefined | null
 
-interface DeepReadonlyArray<T> 
-  extends ReadonlyArray<DeepReadonly<T>> {}
+interface DeepReadonlyArray<T>
+    extends ReadonlyArray<DeepReadonly<T>> {
+}
 
 type DeepReadonlyObject<T> = {
-  readonly [P in keyof T]: DeepReadonly<T[P]>
+    readonly [P in keyof T]: DeepReadonly<T[P]>
 }
 ```
 
 ```ts
 const readonlyEvent: DeepReadonly<Event> = {
-	title: 'event title',
-	body:  'event body',
-	members: ['m1', 'm2']
+    title: 'event title',
+    body: 'event body',
+    members: ['m1', 'm2']
 }
 
 //since readonly we can't edit title and body of readonlyEvent
@@ -187,18 +190,18 @@ readonlyEvent.memebers.push('m3'); //error
 
 ```ts
 interface CatInfo {
-  age: number;
-  breed: string;
+    age: number;
+    breed: string;
 }
- 
+
 type CatName = "miffy" | "boris" | "mordred";
- 
+
 const cats: Record<CatName, CatInfo> = {
-  miffy: { age: 10, breed: "Persian" },
-  boris: { age: 5, breed: "Maine Coon" },
-  mordred: { age: 16, breed: "British Shorthair" },
+    miffy: {age: 10, breed: "Persian"},
+    boris: {age: 5, breed: "Maine Coon"},
+    mordred: {age: 16, breed: "British Shorthair"},
 };
- 
+
 console.log(cats.boris);
 ```
 
@@ -208,50 +211,51 @@ console.log(cats.boris);
 
 ```ts
 interface Todo {
-  title: string;
-  description: string;
-  completed: boolean;
+    title: string;
+    description: string;
+    completed: boolean;
 }
- 
+
 type TodoPreview = Pick<Todo, "title" | "completed">; //equivalent to => i want just these
- 
+
 const todo: TodoPreview = {
-  title: "Clean room",
-  completed: false,
+    title: "Clean room",
+    completed: false,
 };
 
 ```
 
 ### `Omit<Type, Keys>`
 
-- Constructs a type by picking all properties from `Type` and then removing `Keys` (string literal or union of string literals).
+- Constructs a type by picking all properties from `Type` and then removing `Keys` (string literal or union of string
+  literals).
 
 ```ts
 interface Todo {
-  title: string;
-  description: string;
-  completed: boolean;
-  createdAt: number;
+    title: string;
+    description: string;
+    completed: boolean;
+    createdAt: number;
 }
 
 type TodoInfo = Omit<Todo, "completed" | "createdAt">;  //all except this
- 
+
 const todoInfo: TodoInfo = {
-  title: "Pick up kids",
-  description: "Kindergarten closes at 5pm",
+    title: "Pick up kids",
+    description: "Kindergarten closes at 5pm",
 };
- 
+
 todoInfo;
 ```
 
 ### ReturnType
 
 - To grab the type returned from a function, we can use the ReturnType utility
-	- *this is useful when the library/package we're using doesn't provide typescript types*
+    - *this is useful when the library/package we're using doesn't provide typescript types*
 
 ```ts
 function add(a: number, b: number): number {
-  return a + b;
+    return a + b;
 }
 
 type AddReturnType = ReturnType<typeof add>;
@@ -260,7 +264,7 @@ type AddReturnType = ReturnType<typeof add>;
 
 ```ts
 async function featchData(a: number, b: number): Promise<number> {
-  return //...;
+    return //...;
 }
 
 type AddReturnType = ReturnType<typeof featchData>;
@@ -270,12 +274,12 @@ type AddReturnType = ReturnType<typeof featchData>;
 ### Awaited
 
 - Now in the above second [ReturnType](#ReturnType) example the `featchData` type was an async function.
-	- *the return type will be promise, which we don't want*
-	- to fix this we can use the Awaited type to unwrap the promise and get the type of what the promise resolves to:
+    - *the return type will be promise, which we don't want*
+    - to fix this we can use the Awaited type to unwrap the promise and get the type of what the promise resolves to:
 
 ```ts
 function featchData(a: number, b: number): Promise<number> {
-  return //...;
+    return //...;
 }
 
 type AddReturnType = Awaited<ReturnType<typeof featchData>>
@@ -288,8 +292,8 @@ type AddReturnType = Awaited<ReturnType<typeof featchData>>
 - Parameters gives you a tuple of the argument types, and you can pull out a specific parameter type by index like so:
 
 ```ts
-function sum(a: number, b?:number){
-	//...
+function sum(a: number, b?: number) {
+    //...
 }
 
 type SumParams = Parameters<typeof sum>

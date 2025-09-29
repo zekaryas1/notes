@@ -404,4 +404,5 @@ echo $audi->intro();
 
 > Since 2022, more intriguing features have been added to PHP, which should be considered following this.
 
-- [PHP: Appendices - Manual](https://www.php.net/manual/en/appendices.php), can help find out the new features on each release.
+- [PHP: Appendices - Manual](https://www.php.net/manual/en/appendices.php), can help find out the new features on each
+  release.

@@ -12,7 +12,8 @@ title: You Should Know JavaScript
 
 ### Map
 
-- Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+- Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any
+  type.
 - *Avoid using `map[key]=value` or `map[key]` to set and get value from a map, instead use set and get methods*
 
 ```txt
@@ -42,14 +43,15 @@ map.set(true, 'bool1'); // a boolean key
 // remember the regular Object? it would convert keys to string
 // Map keeps the type, so these two are different:
 console.log(map.get(1)); // 'num1'
-console.log(map.get('1') ); // 'str1'
+console.log(map.get('1')); // 'str1'
 
 console.log(map.size); // 3
 ```
 
 #### Map Vs Object
 
-- For js object key must be string, otherwise it will be converted to string, however in map key can be anything(object, primitives)
+- For js object key must be string, otherwise it will be converted to string, however in map key can be anything(object,
+  primitives)
 
 ```js
 const obj = {};
@@ -73,19 +75,19 @@ console.log(m);  //Map(2) { 12 => 'number of columns', { name: 'John' } => 450 }
 
 ```js
 const priceMap = new Map([
-	['mac', 2400],
-	['iphone', 1200],
-	['samsung', 900]
+    ['mac', 2400],
+    ['iphone', 1200],
+    ['samsung', 900]
 ]); //map can be created with array
 
 for (let brand of priceMap.keys()) {
-  console.log(brand, priceMap.get(brand));
+    console.log(brand, priceMap.get(brand));
 }
 
 
 //or
-priceMap.forEach((value,key, map) => {
-	console.log(key, value);
+priceMap.forEach((value, key, map) => {
+    console.log(key, value);
 })
 ```
 
@@ -117,9 +119,9 @@ set.size
 ```js
 let set = new Set();
 
-let john = { name: "John" };
-let pete = { name: "Pete" };
-let mary = { name: "Mary" };
+let john = {name: "John"};
+let pete = {name: "Pete"};
+let mary = {name: "Mary"};
 
 // visits, some users come multiple times
 set.add(john);
@@ -129,10 +131,10 @@ set.add(john);
 set.add(mary);
 
 // set keeps only unique values
-console.log( set.size ); // 3
+console.log(set.size); // 3
 
 for (let user of set) {
-  console.log(user); // John (then Pete and Mary)
+    console.log(user); // John (then Pete and Mary)
 }
 ```
 
@@ -145,7 +147,7 @@ for (let value of set) console.log(value);
 
 // the same with forEach:
 set.forEach((value, valueAgain, set) => {
-  console.log(value);
+    console.log(value);
 });
 ```
 
@@ -155,7 +157,7 @@ set.forEach((value, valueAgain, set) => {
 
 ### Filter
 
-- Returns a new array with any elements for which the callback function returns `true`.
+- Returns a new array with any elements for which the callback function returns`true`.
 
 ```js
 const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
@@ -167,7 +169,8 @@ console.log(result);
 
 ### Map
 
-- **Creates a new array** populated with the results of calling a provided function on every element in the calling array.
+- **Creates a new array**populated with the results of calling a provided function on every element in the calling
+  array.
 - The original array does not get altered
 
 ```js
@@ -185,10 +188,10 @@ console.log(map1);
 - Executes a callback function on each of the elements in an array in order.
 
 ```js
-const numbers = [28, 77, 45, 99, 27];  
-  
-numbers.forEach(number => {    
-  console.log(number);  
+const numbers = [28, 77, 45, 99, 27];
+
+numbers.forEach(number => {
+    console.log(number);
 });
 ```
 
@@ -197,10 +200,10 @@ numbers.forEach(number => {  
 - Iterates through an array and returns a single value
 
 ```js
-const arrayOfNumbers = [1, 2, 3, 4];  
-  
-const sum = arrayOfNumbers.reduce((accumulator, currentValue) => {    
-  return accumulator + currentValue;  
+const arrayOfNumbers = [1, 2, 3, 4];
+
+const sum = arrayOfNumbers.reduce((accumulator, currentValue) => {
+    return accumulator + currentValue;
 });
 ```
 
@@ -212,8 +215,8 @@ const array1 = [1, 2, 3, 4];
 // 0 + 1 + 2 + 3 + 4
 const initialValue = 0;
 const sumWithInitial = array1.reduce(
-  (accumulator, currentValue) => accumulator + currentValue,
-  initialValue
+    (accumulator, currentValue) => accumulator + currentValue,
+    initialValue
 );
 
 console.log(sumWithInitial);
@@ -223,7 +226,8 @@ console.log(sumWithInitial);
 ### Find
 
 - Returns the first element in the provided array that satisfies the provided testing function.
-- If no values satisfy the testing function, [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is returned.
+- If no values satisfy the testing function,[
+  `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)is returned.
 
 ```js
 const array1 = [5, 12, 8, 130, 44];
@@ -237,7 +241,8 @@ console.log(found);
 ### FindLast
 
 - Returns the value of the last element in an array that satisfies the provided testing function.
-- If no elements satisfy the testing function, [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined) is returned.
+- If no elements satisfy the testing function,[
+  `undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)is returned.
 
 ```js
 const array1 = [5, 12, 50, 130, 44];
@@ -250,7 +255,7 @@ console.log(found);
 
 ### Every
 
-- The **`every()`** method tests whether all elements in the array pass the test implemented by the provided function.
+- The**`every()`**method tests whether all elements in the array pass the test implemented by the provided function.
 - It returns a Boolean value.
 
 ```js
@@ -262,7 +267,8 @@ console.log(array1.every(val => val < 40));
 
 ### Some
 
-- The **`some()`** method tests whether at least one element in the array passes the test implemented by the provided function.
+- The**`some()`**method tests whether at least one element in the array passes the test implemented by the provided
+  function.
 - It returns a Boolean value.
 
 ```js
@@ -307,24 +313,26 @@ console.log(array1.findLastIndex(isLargeNumber));
 
 ```js
 let data = {
-	todos: []
+    todos: []
 };
 //const [state, setState] = useState(data);
 
 //add
-data = { todos: [...data.todos, newData] }
+data = {todos: [...data.todos, newData]}
 //setState(data)
 
 //remove by id
-data = { todos: data.todos.filter(todo => todo.id !== id) }
+data = {todos: data.todos.filter(todo => todo.id !== id)}
 
 //update by id
-data = { todos: data.todos.map(todo => {
-	if(todo.id === id){
-		todo.status = 'updated';
-	}
-	return todo;
-}) };
+data = {
+    todos: data.todos.map(todo => {
+        if (todo.id === id) {
+            todo.status = 'updated';
+        }
+        return todo;
+    })
+};
 
 //add new entry
 data = {...data, notes: []}
@@ -340,26 +348,29 @@ data = {...data, notes: []}
 
 ```js
 // exports from ./MyComponent.js file  
-export const MyComponent = () => {}  
-export const MyComponent2 = () => {}
+export const MyComponent = () => {
+}
+export const MyComponent2 = () => {
+}
 ```
 
 ```js
 // imports  
 // ex. importing a single named export  
-import { MyComponent } from "./MyComponent";// ex. importing multiple named exports  
-import { MyComponent, MyComponent2 } from "./MyComponent";
+import {MyComponent} from "./MyComponent";// ex. importing multiple named exports  
+import {MyComponent, MyComponent2} from "./MyComponent";
 
-import * as MainComponents from "./MyComponent";  
+import * as MainComponents from "./MyComponent";
 // use MainComponents.MyComponent and MainComponents.MyComponent2 here
 ```
 
 ```js
 // ex. giving a named import a different name by using "as":  
-import { MyComponent2 as MyNewComponent } from "./MyComponent";
+import {MyComponent2 as MyNewComponent} from "./MyComponent";
 ```
 
-> Named exports are useful to export several values. During the import, one will be able to use the same name to refer to the corresponding value.
+> Named exports are useful to export several values. During the import, one will be able to use the same name to refer
+> to the corresponding value.
 
 ### Default Export: (export default)
 
@@ -367,7 +378,8 @@ import { MyComponent2 as MyNewComponent } from "./MyComponent";
 - When we import we have to specify a name.
 
 ```js
-const MyComponent = () => {}
+const MyComponent = () => {
+}
 export default MyComponent;
 ```
 
@@ -379,11 +391,14 @@ import MyDefaultComponent from "./MyDefaultExport";
 ## Web Worker
 
 - [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers)
-- Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface.
+- Web Workers are a simple means for web content to run scripts in background threads. The worker thread can perform
+  tasks without interfering with the user interface.
 - What you can and can't inside web workers
-	- You can run whatever code you like inside the worker thread, with some exceptions.
-		- For example, you can't directly manipulate the `DOM` from inside a worker, or use some default methods and properties of the window object
-	- You can use a large number of items available under window, including `WebSockets`, and data storage mechanisms like `IndexedDB`.
+    - You can run whatever code you like inside the worker thread, with some exceptions.
+        - For example, you can't directly manipulate the `DOM` from inside a worker, or use some default methods and
+          properties of the window object
+    - You can use a large number of items available under window, including `WebSockets`, and data storage mechanisms
+      like `IndexedDB`.
 
 ### Create a Web Worker
 
@@ -394,8 +409,8 @@ const worker = new Worker('worker-file.js');
 ### Send Message & Responses
 
 - Both the client and server use `postMessage` to send messages & responses to each other
-	- The client uses it to send request
-	- The server uses it to send response
+    - The client uses it to send request
+    - The server uses it to send response
 
 ```js
 const worker = new Worker('worker-file.js');
@@ -405,22 +420,22 @@ myWorker.postMessage([first.value, second.value]);
 ### Receive Message & Response
 
 - Both client and server respond to messages via the `onmessage` event handler
-	- The message is contained within the message event's data attribute.
-	- The data is copied rather than shared.
+    - The message is contained within the message event's data attribute.
+    - The data is copied rather than shared.
 
 ```js
 //webworker.js
 //receive message from server side
-onmessage = function(e) {
-  console.log('Worker: Message received from main script');
-  const result = e.data[0] * e.data[1];
-  if (isNaN(result)) {
-    postMessage('Please write two numbers');  //send the message to client
-  } else {
-    const workerResult = 'Result: ' + result;
-    console.log('Worker: Posting message back to main script');
-    postMessage(workerResult);  //send the message to client
-  }
+onmessage = function (e) {
+    console.log('Worker: Message received from main script');
+    const result = e.data[0] * e.data[1];
+    if (isNaN(result)) {
+        postMessage('Please write two numbers');  //send the message to client
+    } else {
+        const workerResult = 'Result: ' + result;
+        console.log('Worker: Posting message back to main script');
+        postMessage(workerResult);  //send the message to client
+    }
 }
 ```
 
@@ -429,9 +444,9 @@ const worker = new Worker('worker-file.js');
 myWorker.postMessage([first.value, second.value]);
 
 //client can receive response with onmessage
-myWorker.onmessage = function(e) {
-	result.textContent = e.data;
-	console.log('Message received from worker');
+myWorker.onmessage = function (e) {
+    result.textContent = e.data;
+    console.log('Message received from worker');
 }
 ```
 
@@ -442,48 +457,48 @@ myWorker.onmessage = function(e) {
 - Sort linear array
 
 ```js
-const array = [5,4,3,2,1];
+const array = [5, 4, 3, 2, 1];
 array.sort()
 console.log(array)
 ```
 
 - Sort objects by
-	- String
-	- Numeric value
+    - String
+    - Numeric value
 
 ```js
 const array = [
-	{
-		id: 4,
-		name: "Zeku"
-	},
-	{
-		id: 1,
-		name: "Abel"
-	}
+    {
+        id: 4,
+        name: "Zeku"
+    },
+    {
+        id: 1,
+        name: "Abel"
+    }
 ]
 
 
 //sort by string value
-array.sort((a,b) => a.name.localeCompare(b.name));
+array.sort((a, b) => a.name.localeCompare(b.name));
 console.log(array)
 ```
 
 ```js
 const array = [
-	{
-		id: 4,
-		name: "Zeku"
-	},
-	{
-		id: 1,
-		name: "Abel"
-	}
+    {
+        id: 4,
+        name: "Zeku"
+    },
+    {
+        id: 1,
+        name: "Abel"
+    }
 ]
 
 
 //sort by numberic value
-array.sort((a,b) => a.id - b.id);
+array.sort((a, b) => a.id - b.id);
 console.log(array)
 ```
 
@@ -508,7 +523,7 @@ console.log(animals.slice(0, 2));
 - Remove elets with Splice
 
 ```js
-let array = [1,2,3,4,5];
+let array = [1, 2, 3, 4, 5];
 
 array.splice(3, 1); //removes number 4
 console.log(array)
@@ -517,7 +532,7 @@ console.log(array)
 - Add elements with slice
 
 ```js
-let array = [1,2,3,4,5];
+let array = [1, 2, 3, 4, 5];
 
 array.splice(3, 0, 'A', 'B', 'C'); //Add A,B,C
 console.log(array)
@@ -526,18 +541,19 @@ console.log(array)
 ## What is the Difference Between Var, Let, Const
 
 - There are 3 type of scopes
-	- global
-	- local
-	- lexical scope or block scope
+    - global
+    - local
+    - lexical scope or block scope
 
-> Variables declared with var are either function-scoped or global-scoped, depending on whether they are declared within a function or outside a function. variables declared with either const or let are block scope
+> Variables declared with var are either function-scoped or global-scoped, depending on whether they are declared within
+> a function or outside a function. variables declared with either const or let are block scope
 
 - let & const
-	- block scope {}
+    - block scope {}
 - var
-	- function scope or global scope
+    - function scope or global scope
 - const
-	- can not be re-initialized
+    - can not be re-initialized
 
 ## What is Closure In JavaScript?
 
@@ -546,29 +562,32 @@ console.log(array)
 
 ```js
 function makeFunc() {
-  var name = "Mozilla"; // name is a local variable created by init
-  return function displayName() {
-    // displayName() is the inner function, that forms the closure
-    console.log(name); // use variable declared in the parent function
-  }
+    var name = "Mozilla"; // name is a local variable created by init
+    return function displayName() {
+        // displayName() is the inner function, that forms the closure
+        console.log(name); // use variable declared in the parent function
+    }
 }
+
 const res = makeFunc();
 res();
 ```
 
 - Code explanation
-	- In some programming languages, the local variables within a function exist for just the duration of that function's execution.
-	- Once makeFunc() finishes executing, you might expect that the name variable would no longer be accessible. However, because the code still works as expected, this is obviously not the case in JavaScript.
+    - In some programming languages, the local variables within a function exist for just the duration of that
+      function's execution.
+    - Once makeFunc() finishes executing, you might expect that the name variable would no longer be accessible.
+      However, because the code still works as expected, this is obviously not the case in JavaScript.
 
 ```js
 function add(x) {
-  return function (y) {
-    return x + y;
-  };
+    return function (y) {
+        return x + y;
+    };
 }
 
 const res = add(14)(14) //res = 14
 ```
 
 - Real world example of using closures
-	- [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures)
+    - [Closures - JavaScript | MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures#practical_closures)
