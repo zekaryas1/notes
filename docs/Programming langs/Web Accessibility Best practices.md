@@ -37,9 +37,9 @@ date modified: Saturday, December 21st 2024, 7:56:47 pm
     - use aria-description or aria-described by to add addition info such as validation requirements
 
 ```html
-<input type="text" autocomplete="name">
-<input type="tel" autocomplete="phone number">
-<input type="email" autocomplete="email address">
+<input type="name" autocomplete="name">
+<input type="tel" autocomplete="tel">
+<input type="email" autocomplete="email">
 ```
 
 - **Use Autofocus Thoughtfully**
