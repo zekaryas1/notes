@@ -18,7 +18,7 @@ questions exclusively about the current page or chapter.
 
 ## My Solution
 
-![Aku screenshot from Github](https://raw.githubusercontent.com/zekaryas1/aku-ai-pdf/main/screenshots/AKU-AI-PDF-2.jpg?token=GHSAT0AAAAAACWOAC4YRG3JP3O7DY3PZZR62GUGGOQ)
+![Aku screenshot from Github](https://i.ibb.co/QvsCykKd/image.png)
 
 AKU is my solution to this problem. It combines two key features: an online PDF reader and an AI-powered sidebar.
 
