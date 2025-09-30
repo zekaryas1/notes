@@ -52,7 +52,7 @@ export default await user;
 
 ```js
 
-import user from user.js
+import user from "user.js"
 
 //by this time user id defined and available
 
@@ -70,7 +70,7 @@ function render(){
 ### At
 
 - The at() method is equivalent to the bracket notation when index is non-negative.
-	- However if provided a negative value it will index array from the back, *just like python*
+	- However, if provided a negative value it will index array from the back, *just like python*
 
 ```js
 const array1 = [5, 12, 8, 130, 44];

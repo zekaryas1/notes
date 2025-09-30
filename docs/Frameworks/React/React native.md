@@ -64,7 +64,7 @@ npm run reset-project
 - [Different Development Stages](https://docs.expo.dev/workflow/overview/#the-core-development-loop)
 - Install a new library
 	- `npx expo install package-name`
-		- Do not use `npm(yarn) install package-name`, because these do not allows Expo CLI to pick a compatible version of a library when possible and warn you about known incompatibilities.
+		- Do not use `npm(yarn) install package-name`, because these do not allow Expo CLI to pick a compatible version of a library when possible and warn you about known incompatibilities.
 - Does the library include native code?
 	- [How to know if the library has native code](https://docs.expo.dev/workflow/using-libraries/#determining-third-party-library-compatibility)
 	- yes
@@ -78,7 +78,7 @@ npm run reset-project
 ### Production Builds
 
 - When to use Production builds
-	- To build the final release app that you intend to release to app store or google play store
+	- To build the final release app that you intend to release to app store or Google Play Store
 - Checklists before submission
 	- Before building a release app, check expo [App stores best practices - Expo Documentation](https://docs.expo.dev/distribution/app-stores/)
 - Build Locally
@@ -90,7 +90,7 @@ npm run reset-project
 ### Common Commands
 
 - `npx expo run`
-	- Build a the app and then runs the development server
+	- Builds the app and then runs the development server
 		- Doesn't build the app on consecutive runs if there exists build folder(`ios` and android) folder.
 			- Use `npx expo prebuild --clean` to regenerate the build folders again
 	- other options
@@ -223,7 +223,7 @@ const styles = StyleSheet.create({
 			height: 2,
 		},
 		shadowOpacity: 0.25,
-		shadowRadius: 3.84
+		shadowRadius: 3.84,
 		elevation: 5,
 	}
 })
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
 
 ```jsx
 const App = () => (
-  <Button title="click me" onPress={...} style={styles.btn}/>
+  <Button title="click me" onPress={} style={styles.btn}/>
 );
 
 const styles = StyleSheet.create({
@@ -256,8 +256,8 @@ const styles = StyleSheet.create({
 
 - React native uses flex which is similar to css flex for styling.
 	- [Layout with Flexbox · React Native](https://reactnative.dev/docs/flexbox)
-	- Every component has display flex and it direction is `column` unlike web which row.
-	- Check out the react native layout system to learn how styling works
+	- Every component has display flex and its direction is `column` unlike web which row.
+	- Check out the React native layout system to learn how styling works
 		- [About Yoga | Yoga](https://www.yogalayout.dev/docs/about-yoga)
 - What does `{flex: 1}`?
 	- Setting an element to `flex: 1`, i.e a container is a common practice that has a specific purpose in layout design.
@@ -764,7 +764,7 @@ export default FlatListComponent;
 
 ### Safe Area Context
 
-> There is another library Called SafeAreaView from react native but it only works for `ios`
+> There is another library Called SafeAreaView from React native, but it only works for `ios`
 
 - An external library with a flexible API for accessing the device's safe area inset information.
 
@@ -781,7 +781,7 @@ function SomeComponent() {
 ```
 
 - useSafeAreaInsets
-	- Hook gives you direct access to the safe area insets. This can be useful when you want to place element(i.e Header) to safe area by setting styles like paddingTop.
+	- Hook gives you direct access to the safe area insets. This can be useful when you want to place element(i.e. Header) to safe area by setting styles like paddingTop.
 
 ```js
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -804,7 +804,7 @@ function HookComponent() {
 
 ## Examples
 
-### Pull-to-refersh
+### Pull-to-refresh
 
 - To implement pull to refresh functionality in a `FlatList` component in React Native, you can make use of the `RefreshControl` component provided by React Native.
 - Here's an example code snippet:
@@ -1023,16 +1023,16 @@ import BigButton from './BigButton';
 
 - Source:
 	- [Improving Shopify App’s Performance (2024) - Shopify](https://shopify.engineering/improving-shopify-app-s-performance)
-- What tool to use to inspect performance degrades
+- What tools to use to inspect performance degrades
 	- **Strategy**:
 		- Utilize tools to measure rendering times in React Native apps.
 	- **Benefit**:
 		- Provides insights into performance bottlenecks and areas needing optimization.
 	- **Tools**:
 		- Shopify React performance library
-- Leverage features from react toolbox
+- Leverage features from React toolbox
 	- Memoization features, using useMemo, React.memo hooks…
-	- Load components or data only when needed (e.g., using React.lazy or pagination).
+	- Load components or data only when needed (e.g., using `React.lazy` or pagination).
 	- Consider Concurrent React to prioritize high priority updates
 - Build your UI as a list first
 	- **Strategy**:
@@ -1056,10 +1056,10 @@ import BigButton from './BigButton';
 	- your desired component is not currently available natively
 	- use rich text components, markdown and webGL support which are greatly supported on web
 - how to use?
-	- add the `use dom` directive to the top of the web component file to include a react component.
+	- add the `use dom` directive to the top of the web component file to include a React component.
 - examples
 
-```jsx
+```tsx
 'use dom';
 
 export default function DOMComponent({ name }: { name: string }) {
@@ -1084,7 +1084,7 @@ export default function App() {
 
 - you can pass props to the `dom` component
 
-```jsx
+```tsx
 'use dom';
 
 export default function DOMComponent({ hello }: { hello: string }) {
@@ -1108,9 +1108,9 @@ export default function App() {
 		- If you want to pass `dom` configurations as props, use the special `dom` props
 			- `DOMComponent({}: { dom: import('expo/dom').DOMProps })`
 			- [Read more](https://docs.expo.dev/guides/dom-components/#webview-props)
-		- for navigation, you can use the `<Link/>` component from react router. however if you want other functionality from react router i.e pathname you need to pass it as a prop.
+		- for navigation, you can use the `<Link/>` component from React router. however if you want other functionality from React router i.e. pathname you need to pass it as a prop.
 
-```jsx
+```tsx
 'use dom';
 
 export default function MyComponent({ hello }: { hello: (data: string) => Promise<void> }) {
@@ -1133,9 +1133,9 @@ export default function App() {
 }
 ```
 
-### Concurent React Native
+### Concurrent React Native
 
-- [What is concurrent react](Frameworks/React/More%20on%20React.md#Concurent%20React)
+- [What is concurrent react](Frameworks/React/More%20on%20React.md#Concurrent%20React)
 - In our React Native app, we can use concurrent features to prioritize updates as urgent and non-urgent, allowing React to handle rendering more efficiently. This ensures our app remains responsive and performs well, even during complex updates.
 
 #### Suspense
@@ -1143,8 +1143,8 @@ export default function App() {
 - Available starting React native(0.76) using the New Architecture
 - The use hook introduced in React 19 allows you to integrate Suspense with asynchronous operations, such as fetching data from an API.
 - tips
-	- are you using react query? if you are using react query, react query has hook called `useSuspenseQuery` which can be used in place of react `use` hook.
-	- you can use Suspense with lazy loading to show loading when using Heavy components i.e Map and Markdown
+	- are you using react query? if you are using react query, react query has hook called `useSuspenseQuery` which can be used in place of React `use` hook.
+	- you can use Suspense with lazy loading to show loading when using Heavy components i.e. Map and Markdown
 
 ```jsx
 // Main App Component
@@ -1190,7 +1190,7 @@ function fetchUserData(userId) {
 - Available starting React native(0.76) using the New Architecture
 - These feature allow you to differentiate between **urgent updates** (e.g., user input) and **non-urgent updates** (e.g., background tasks), improving the responsiveness of the UI.
 
-```jsx
+```tsx
 import React, { useState, useTransition } from 'react';
 import { View, Text, TextInput, FlatList, StyleSheet } from 'react-native';
 
@@ -1258,22 +1258,22 @@ const App = () => {
 
 ### Most Common
 
-| **Category**             | **Library Name**             | **Type**    | **Description/Link**                                                                                                                                    |
-| ------------------------ | ---------------------------- | ----------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Data Fetching**        | TanStack Query (React Query) | Recommended | For both REST & GraphQL.                                                                                                                                |
-|                          | Fetch API                    | Default     | Built-in browser API for making network requests.                                                                                                       |
-| **State Management**     | TanStack Query (React Query) | Recommended | Can also be used for managing server state.                                                                                                             |
-|                          | Zustand                      | Alternative | A small, fast, and scalable bearbones state-management solution. [Zustand documentation](https://zustand.docs.pmnd.rs/)                                 |
-|                          | useContext, useReducer       | Default     | React's built-in hooks for state management.                                                                                                            |
-| **Navigation**           | Expo Router                  | Recommended | File-based routing for React Native & web. [Introduction - Expo Documentation](https://docs.expo.dev/router/introduction/)                              |
-|                          | React Navigation             | Alternative | A popular community solution for navigation.                                                                                                            |
-| **Styling UI**           | NativeWind                   | Recommended | Tailwind CSS for React Native. [NativeWind](https://www.nativewind.dev/)                                                                                |
-|                          | StyleSheet API               | Default     | React Native's built-in API for styling.                                                                                                                |
-| **UI Libraries**         | React Native Paper           | Recommended | Material Design components for React Native. [React Native Paper](https://callstack.github.io/react-native-paper/)                                      |
-| **Internationalization** | react-i18next                | Recommended | A powerful internationalization framework for React.                                                                                                    |
-| **Testing**              | Jest                         | Recommended | A delightful JavaScript Testing Framework with a focus on simplicity.                                                                                   |
-| **Animation**            | React Native Gesture Handler | Recommended | Declarative API exposing platform native touch and gesture system. [Introduction](https://docs.swmansion.com/react-native-gesture-handler/docs/)        |
-|                          | React Native Reanimated      | Recommended | React Native's Animated library reimplemented. [Getting started](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/) |
+| **Category**             | **Library Name**             | **Description/Link**                                                                                                                                    |
+| ------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Data Fetching**        | TanStack Query (React Query) | For both REST & GraphQL.                                                                                                                                |
+|                          | Fetch API                    | Built-in browser API for making network requests.                                                                                                       |
+| **State Management**     | TanStack Query (React Query) | Can also be used for managing server state.                                                                                                             |
+|                          | Zustand                      | A small, fast, and scalable bearbones state-management solution. [Zustand documentation](https://zustand.docs.pmnd.rs/)                                 |
+|                          | useContext, useReducer       | React's built-in hooks for state management.                                                                                                            |
+| **Navigation**           | Expo Router                  | File-based routing for React Native & web. [Introduction - Expo Documentation](https://docs.expo.dev/router/introduction/)                              |
+|                          | React Navigation             | A popular community solution for navigation.                                                                                                            |
+| **Styling UI**           | NativeWind                   | Tailwind CSS for React Native. [NativeWind](https://www.nativewind.dev/)                                                                                |
+|                          | StyleSheet API               | React Native's built-in API for styling.                                                                                                                |
+| **UI Libraries**         | React Native Paper           | Material Design components for React Native. [React Native Paper](https://callstack.github.io/react-native-paper/)                                      |
+| **Internationalization** | react-i18next                | A powerful internationalization framework for React.                                                                                                    |
+| **Testing**              | Jest                         | A delightful JavaScript Testing Framework with a focus on simplicity.                                                                                   |
+| **Animation**            | React Native Gesture Handler | Declarative API exposing platform native touch and gesture system. [Introduction](https://docs.swmansion.com/react-native-gesture-handler/docs/)        |
+|                          | React Native Reanimated      | React Native's Animated library reimplemented. [Getting started](https://docs.swmansion.com/react-native-reanimated/docs/fundamentals/getting-started/) |
 
 ### Others
 
@@ -1285,8 +1285,8 @@ const App = () => {
 | **Maps**            | react-native-maps                   | React Native Map components for iOS (Apple Maps) & Android (Google Maps). [react-native-maps - npm](https://www.npmjs.com/package/react-native-maps)                  |
 |                     | Mapbox (@rnmapbox/maps)             | React Native Mapbox SDK. [React Native Mapbox](https://rnmapbox.github.io/)                                                                                           |
 | **BottomSheet**     | React Native Bottom Sheet by Gorhom | A performant interactive bottom sheet with gesture support. [React Native Bottom Sheet - Gorhom](https://gorhom.dev/react-native-bottom-sheet/)                       |
-| **Payment/Subs**    | RevenueCat                          | In-app subscriptions made easy. [React Native                                                                                                                         |
-| **Toast**           | sonner-native                       | An opinionated toast component for React Native. [Introduction                                                                                                        |
+| **Payment/Subs**    | RevenueCat                          | In-app subscriptions made easy.                                                                                                                                       |
+| **Toast**           | sonner-native                       | An opinionated toast component for React Native.                                                                                                                      |
 | **SVG**             | react-native-svg                    | SVG library for React Native, React Native Web, and plain React web projects. [react-native-svg GitHub](https://github.com/software-mansion/react-native-svg)         |
 | **Blur Effect**     | BlurView (Expo)                     | A React component that blurs everything underneath the view. [BlurView - Expo Docs](https://docs.expo.dev/versions/latest/sdk/blur-view/)                             |
 |                     | react-native-blurhash               | Show colorful blurry placeholders while content loads. [react-native-blurhash GitHub](https://github.com/mrousavy/react-native-blurhash)                              |

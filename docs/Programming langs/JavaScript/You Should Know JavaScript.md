@@ -505,7 +505,7 @@ console.log(animals.slice(0, 2));
 
 > Syntax => splice(start_index, number_of_elts_to_remove, …list_of_elts_to_add)
 
-- Remove elets with Splice
+- Remove elements with Splice
 
 ```js
 let array = [1,2,3,4,5];

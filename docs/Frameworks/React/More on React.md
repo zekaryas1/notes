@@ -21,7 +21,7 @@ date modified: Saturday, June 14th 2025, 1:38:45 pm
 	        - Define the function in the file and import it as needed.
 - Guidelines for Using Server Functions:
 	- **Call Context**:
-		- Server Functions must be called within a [useTransition](#Concurent%20React#useTransition).
+		- Server Functions must be called within a [useTransition](#useTransition).
 	    - When used with `<form action>` or `formAction`, they are automatically called in a transition.
 	    - Transitions allow you to display a loading state during execution.
 	- **Async Requirement**:
@@ -33,7 +33,7 @@ date modified: Saturday, June 14th 2025, 1:38:45 pm
 
 ---
 - Server component can create server function
-	- you can access server resources inside a server function i.e file resource, cookies, and database…
+	- you can access server resources inside a server function i.e. file resource, cookies, and database…
 
 ```jsx
 function EmptyNote () {
@@ -116,7 +116,7 @@ export default function Button({ onClick }) {
 	        - Defined within a Server Component.
 	        - Or extracted into a server file and imported where needed.
 
-```jsx
+```tsx
 function Form() {
   const action = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
@@ -146,7 +146,7 @@ function Form() {
 
 - We can also have multiple submissions using `formAction`
 
-```jsx
+```tsx
 import { useActionState } from "react";
 
 function Form() {
@@ -188,9 +188,9 @@ function Form() {
 - Alternate to using the pending state from `useActionState` we can also use `useFormStatus` for showing loading state
 	- [useFormStatus – React](https://react.dev/reference/react-dom/hooks/useFormStatus) is a Hook that gives you, status information of the last form submission.
 	- `useFormStatus` is a client side hook thus you need to separate it to a new file and use `use client`
-	- `useFormStatus` needs to have a parent form and cannot be placed along side a form.
+	- `useFormStatus` needs to have a parent form and cannot be placed alongside a form.
 
-```jsx
+```tsx
 "use client";
 import { useActionState } from "react";
 
@@ -296,9 +296,10 @@ function Form() {
 import { use } from 'react';
 
 function MessageComponent({ messagePromise }) {
-  const message = use(messagePromise);
-  const theme = use(ThemeContext);
-  // ...
+    const message = use(messagePromise);
+    const theme = use(ThemeContext);
+    // ...
+}
 ```
 
 - Unlike useContext, use can be called in conditionals and loops like if to access context data.
@@ -423,7 +424,7 @@ async function MinimalWeatherCard({city}) {
 	1. **Client-Side Data Fetching** (e.g., React.js):
 	    - Use the `use` hook to read cached promises.
 	    - With libraries like React Query, you can use `useSuspenseQuery` as a replacement for React’s `use` hook.
-	1. **Server-Side Data Fetching** (e.g., Next.js):
+	2. **Server-Side Data Fetching** (e.g., Next.js):
 	    - Suspense works with asynchronous data fetching, as demonstrated in [Next.js sequential data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#sequential-data-fetching).
 - Key Features
 	- **Fallback UI**: Suspense displays a fallback (e.g., a loading spinner) until the data or child components are ready.
@@ -493,7 +494,7 @@ function Comments({ commentsPromise }) {
 ```
 
 - using suspense with lazy loading
-	- you can use Suspense with lazy loading to show loading when using Heavy components i.e Map and Markdown
+	- you can use Suspense with lazy loading to show loading when using Heavy components i.e. Map and Markdown
 
 ```jsx
 const MarkdownPreview = lazy(() => delayForDemo(import('./MarkdownPreview.js')));
@@ -535,7 +536,7 @@ export default function MarkdownEditor() {
 	- **Not Suitable for Controlling Text Inputs**:
 	    - Transitions are interruptible, making them unsuitable for controlling text input fields where real-time updates are required.
 
-```jsx
+```tsx
 import React, { useState, useTransition } from "react";
 
 const ITEMS = ["Apple", "Banana", "Cherry"];
@@ -699,7 +700,7 @@ function App() {
 
 - DOM manipulation using useRef
 
-```jsx
+```tsx
 import React, { useRef } from 'react';
 
 const InputFocusExample: React.FC = () => {
@@ -947,14 +948,14 @@ addNewUser = () => {
 
 > Don't initialize state with props which can be changed later. Instead, use props directly in the component.
 
-```js
+```jsx
 //before
 function EditPanelComponent({applyCoupon}) {
 	const [applyCoupon, setapplyCoupon] = useState(applyCoupon)
     
     return (
 	    <div>
-            {applyCoupon && Enter Coupon: <Input/>}
+            {applyCoupon && <CuuponInput placeholder={"enter cupon"}/>}
         </div>
     );
 }
@@ -970,7 +971,7 @@ function EditPanelComponent({applyCoupon}) {
     
     return (
 	    <div>
-            {applyCoupon && Enter Coupon: <Input/>}
+            {applyCoupon && <CuuponInput placeholder={"enter cupon"}/>}
         </div>
     );
 }

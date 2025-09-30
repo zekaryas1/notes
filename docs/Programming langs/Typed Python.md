@@ -8,7 +8,7 @@ date modified: Monday, September 8th 2025, 1:07:09 pm
 
 - **Python is a dynamically typed language:**
 	- Meaning variables do not have a fixed type and can hold values of any type (e.g., str, int, bool, etc.) without explicit declaration.
-	- The type of a variable is determined at runtime based on the value assigned to it, and it can change if a new value of a different type is assigned.
+	- The type of variable is determined at runtime based on the value assigned to it, and it can change if a new value of a different type is assigned.
 - **Python’s type hints:**
 	- Introduced via the typing module (PEP 484), allow developers to annotate variables, function parameters, and return types to indicate expected types.
 - **Type hints are for Dev UX**:
