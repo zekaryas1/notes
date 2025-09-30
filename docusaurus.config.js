@@ -10,7 +10,6 @@ const config = {
     url: "https://zack.onrender.com",
     baseUrl: "/",
     onBrokenLinks: "warn",
-    onBrokenMarkdownLinks: "warn",
     favicon: "img/favicon.ico",
     trailingSlash: false,
 
@@ -26,7 +25,14 @@ const config = {
         defaultLocale: "en",
         locales: ["en"],
     },
-
+    markdown: {
+        anchors: {
+            maintainCase: true,
+        },
+        hooks: {
+            onBrokenMarkdownLinks: "warn"
+        }
+    },
     presets: [
         [
             "classic",
@@ -106,34 +112,38 @@ const config = {
                         title: "Notes on",
                         items: [
                             {
+                                label: "Generative AI",
+                                to: "/docs/GEN AI DEV/LLM",
+                            },
+                            {
                                 label: "Algorithm & Data structure",
                                 to: "/docs/Algo/Fundamental Algorithms/Sorting algos/Radix Sort",
                             },
                             {
                                 label: "TypeScript utility types",
-                                to: "/docs/Programming%20langs/TypeScript/More%20on%20Typescript",
+                                to: "/docs/Programming langs/TypeScript/More on TypeScript",
                             },
                             {
                                 label: "Docker & Docker compose",
-                                to: "/docs/Containerization/Docker/General%20Step%20to%20Dockerizing%20a%20Project",
+                                to: "/docs/Containerization/Docker/General step to dockerizing a project",
                             },
                         ],
                     },
                     {
-                        title: "More",
+                        title: "Contacts",
                         items: [
                             {
                                 label: "GitHub",
                                 href: "https://github.com/zekaryas1/notes",
                             },
                             {
-                                label: "Contact me on Linkedin",
+                                label: "Linkedin",
                                 href: "https://www.linkedin.com/in/zekaryas-tadele-dinku",
                             },
                         ],
                     },
                 ],
-                copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Zekaryas Tadele. Built with Docusaurus.`,
             },
             prism: {
                 theme: prismThemes.oneLight,
