@@ -1,0 +1,13 @@
+diff --git a/node_modules/github-slugger/index.js b/node_modules/github-slugger/index.js
+index c1f2d01..ef43c03 100644
+--- a/node_modules/github-slugger/index.js
++++ b/node_modules/github-slugger/index.js
+@@ -44,7 +44,7 @@ BananaSlug.prototype.reset = function () {
+ function slugger (string, maintainCase) {
+   if (typeof string !== 'string') return ''
+   if (!maintainCase) string = string.toLowerCase()
+-  return string.replace(regex, '').replace(/ /g, '-')
++  return string;
+ }
+ 
+ BananaSlug.slug = slugger
