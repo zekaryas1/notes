@@ -14,11 +14,11 @@ date modified: Sunday, December 29th 2024, 4:18:40 pm
 
 ```js
 async function f4() {
-    try {
-        const z = await promisedFunction();
-    } catch (e) {
-        console.error(e); // 30
-    }
+  try {
+    const z = await promisedFunction();
+  } catch (e) {
+    console.error(e); // 30
+  }
 }
 ```
 
@@ -26,26 +26,25 @@ async function f4() {
 
 ```js
 const response = await promisedFunction().catch((err) => {
-    console.error(err);
-    return "default response";
+  console.error(err);
+  return "default response";
 });
 // response will be "default response" if the promise is rejected
 ```
 
 #### Top Level Await
 
-- This means that modules with child modules that use await will wait for the child modules to execute before they
-  themselves run, while not blocking other child modules from loading.
+- This means that modules with child modules that use await will wait for the child modules to execute before they themselves run, while not blocking other child modules from loading.
 - How can we use top level await?
-    - To load necessary configs bootstrapping before executing a logic
-    - Module needs to wait for language files to load before it can proceed
+	- To load necessary configs bootstrapping before executing a logic
+	- Module needs to wait for language files to load before it can proceed
 
 ```js
 
 const user = async () => {
-    const url = 'api/users';
-    const response = await fetch(url);
-    return await response.json();
+	  const url = 'api/users';
+	  const response = await fetch(url);
+	  return await response.json();
 }
 
 export default await user;
@@ -53,25 +52,25 @@ export default await user;
 
 ```js
 
-import user from "user.js"
+import user from user.js
 
 //by this time user id defined and available
 
-function render() {
-
-    return {
-        data: {
-            time: "",
-            ...user
-        }
-    }
+function render(){
+	
+	return {
+		data: {
+			 time: "",
+			 ...user
+		}	
+	}
 }
 ```
 
 ### At
 
 - The at() method is equivalent to the bracket notation when index is non-negative.
-    - However if provided a negative value it will index array from the back, *just like python*
+	- However if provided a negative value it will index array from the back, *just like python*
 
 ```js
 const array1 = [5, 12, 8, 130, 44];
@@ -82,20 +81,19 @@ console.log(array1.at(-1)) //44
 
 ### Proxy
 
-- The Proxy object allows you to create an object that can be used in place of the original object, but which may
-  redefine fundamental Object operations like getting, setting, and defining properties.
-    - Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
+- The Proxy object allows you to create an object that can be used in place of the original object, but which may redefine fundamental Object operations like getting, setting, and defining properties.
+	- Proxy objects are commonly used to log property accesses, validate, format, or sanitize inputs, and so on.
 
 ```js
 const target = {
-    message1: "hello",
-    message2: "everyone",
+  message1: "hello",
+  message2: "everyone",
 };
 
 const handler2 = {
-    get(target, prop, receiver) {
-        return "world";
-    },
+  get(target, prop, receiver) {
+    return "world";
+  },
 };
 
 const proxy2 = new Proxy(target, handler2);
@@ -106,17 +104,17 @@ console.log(proxy2.message2); // world
 
 ```js
 const target = {
-    message1: "hello",
-    message2: "everyone",
+  message1: "hello",
+  message2: "everyone",
 };
 
 const handler3 = {
-    get(target, prop, receiver) {
-        if (prop === "message2") {
-            return "world";
-        }
-        return Reflect.get(...arguments);
-    },
+  get(target, prop, receiver) {
+    if (prop === "message2") {
+      return "world";
+    }
+    return Reflect.get(...arguments);
+  },
 };
 
 const proxy3 = new Proxy(target, handler3);

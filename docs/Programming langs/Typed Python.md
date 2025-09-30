@@ -7,28 +7,22 @@ date modified: Monday, September 8th 2025, 1:07:09 pm
 # Typed Python
 
 - **Python is a dynamically typed language:**
-    - Meaning variables do not have a fixed type and can hold values of any type (e.g., str, int, bool, etc.) without
-      explicit declaration.
-    - The type of a variable is determined at runtime based on the value assigned to it, and it can change if a new
-      value of a different type is assigned.
+	- Meaning variables do not have a fixed type and can hold values of any type (e.g., str, int, bool, etc.) without explicit declaration.
+	- The type of a variable is determined at runtime based on the value assigned to it, and it can change if a new value of a different type is assigned.
 - **Python’s type hints:**
-    - Introduced via the typing module (PEP 484), allow developers to annotate variables, function parameters, and
-      return types to indicate expected types.
+	- Introduced via the typing module (PEP 484), allow developers to annotate variables, function parameters, and return types to indicate expected types.
 - **Type hints are for Dev UX**:
-    - Type hints in Python are primarily for developer experience and tooling support (e.g., IDEs, linters, or static
-      type checkers).
-    - They do not affect the runtime behavior of Python code, as Python remains dynamically typed at runtime. Type hints
-      are optional and ignored by the Python interpreter.
+	- Type hints in Python are primarily for developer experience and tooling support (e.g., IDEs, linters, or static type checkers).
+	- They do not affect the runtime behavior of Python code, as Python remains dynamically typed at runtime. Type hints are optional and ignored by the Python interpreter.
 - **Python modern type checkers:**
-    - [facebook/pyrefly: A fast type checker and IDE for Python](https://github.com/facebook/pyrefly)
-    - [astral-sh/ty: An extremely fast Python type checker and language server, written in Rust.](https://github.com/astral-sh/ty)
+	- [facebook/pyrefly: A fast type checker and IDE for Python](https://github.com/facebook/pyrefly)
+	- [astral-sh/ty: An extremely fast Python type checker and language server, written in Rust.](https://github.com/astral-sh/ty)
 - **Python Runtime validation**:
-    - [Pydantic](https://docs.pydantic.dev/latest/)
-        - A third-party library designed for data validation and serialization using type hints.
-        - Focuses on runtime data validation, parsing, and automatic conversion of data, often used in APIs and data
-          processing.
+	- [Pydantic](https://docs.pydantic.dev/latest/)
+		- A third-party library designed for data validation and serialization using type hints.
+		- Focuses on runtime data validation, parsing, and automatic conversion of data, often used in APIs and data processing.
 - **Python 3.9+:**
-    - This note is for python 3.9 and above
+	- This note is for python 3.9 and above
 
 ## Primitives
 
@@ -41,7 +35,7 @@ e: bytes = b"test"
 ```
 
 - Any type
-    - The Any type from the typing module can be used when a variable’s type is unknown or can be any type.
+	- The Any type from the typing module can be used when a variable’s type is unknown or can be any type.
 
 ```python
 from typing import Any
@@ -76,8 +70,7 @@ e: tuple[int, ...] = (1, 2, 3)
 
 ### TypedDict
 
-- TypedDict lets you give precise types for dictionaries that represent objects with a fixed schema, such as
-  `{'id': 1, 'items': ['x']}`.
+- TypedDict lets you give precise types for dictionaries that represent objects with a fixed schema, such as `{'id': 1, 'items': ['x']}`.
 
 ```python
 from typing import TypedDict
@@ -181,7 +174,7 @@ def exit_with_error(message: str) -> NoReturn:
 ### Callbacks or Anonymous Functions
 
 - Use Callable when annotating function parameters or variables that store functions.
-    - Syntax: `[[param1, param2…], return_type]`
+	- Syntax: `[[param1, param2…], return_type]`
 
 ```python
 from typing import Callable
