@@ -89,7 +89,7 @@ const config = {
                         label: "Note",
                     },
                     {
-                        href: "/resume",
+                        href: "/docs/resume",
                         label: "Resume",
                         position: "left",
                     },
