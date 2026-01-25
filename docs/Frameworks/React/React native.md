@@ -1,7 +1,7 @@
 ---
 title: React Native
 date created: Wednesday, April 26th 2023, 5:55:21 pm
-date modified: Thursday, May 8th 2025, 1:53:27 pm
+date modified: Monday, November 10th 2025, 10:34:14 am
 ---
 
 # React Native
@@ -62,10 +62,10 @@ npm run reset-project
 ### Add New Library
 
 - [Different Development Stages](https://docs.expo.dev/workflow/overview/#the-core-development-loop)
-- Install a new library
+- First, Install a new library
 	- `npx expo install package-name`
 		- Do not use `npm(yarn) install package-name`, because these do not allow Expo CLI to pick a compatible version of a library when possible and warn you about known incompatibilities.
-- Does the library include native code?
+- Then, Does the library include native code?
 	- [How to know if the library has native code](https://docs.expo.dev/workflow/using-libraries/#determining-third-party-library-compatibility)
 	- yes
 		- Stop and pre-build the app `npx expo prebuild --clean`
@@ -84,7 +84,7 @@ npm run reset-project
 - Build Locally
 	 - [Create a production build locally - Expo Documentation](https://docs.expo.dev/guides/local-app-production/)
  - Build with EAS
-	 - EAS is cloud service which is not free, but can greatly simplify the development and release process of your app
+	 - EAS is cloud service which is not free(has free tier), but can greatly simplify the development and release process of your app
 	 - [Build your project for app stores using EAS - Expo Documentation](https://docs.expo.dev/deploy/build-project/)
 
 ### Common Commands
@@ -209,7 +209,7 @@ export default LotsOfStyles;
 //in react version 0.76 and above
 const styles = StyleSheet.create({
 	card: {
-		boyShadow: "5 5 5 0 rgba(255, 0, 0, 0.5)"
+		boxShadow: "5 5 5 0 rgba(255, 0, 0, 0.5)"
 	}
 })
 
@@ -264,7 +264,7 @@ const styles = StyleSheet.create({
 		- Takes Up Available Space
 			- similar to `flex-grow`
 		- Relative Sizing
-			- If one element has flex: 1 and another has flex: 2, the second element will take up twice as much space as the first.
+			- If one element has `flex: 1` and another has `flex: 2`, the second element will take up twice as much space as the first.
 
 ```jsx
 const App = () => {
@@ -304,7 +304,7 @@ export default App;
 
 ##### Position Layout
 
-- Position layout such as `position:absolute` and `position: relative` work just like how they are used css.
+- Position layout such as `position: absolute` and `position: relative` work just like how they are used web css.
 
 ```jsx
 const App = () => {
@@ -361,10 +361,27 @@ export default App;
 
 > Do not forget to consider and use SafeAreaContext when placing an element at the edges of your app screen.
 
+##### Use Percentage or Relative Units
+
+- Unlike the web, you can’t use `vw` or `vh`, but you can simulate them:
+
+```jsx
+import { Dimensions } from 'react-native';
+const { width, height } = Dimensions.get('window');
+
+const styles = StyleSheet.create({
+  box: {
+    width: width * 0.9,   // 90% of screen width
+    height: height * 0.2, // 20% of screen height
+  },
+});
+```
+
 ### Text
 
 - The `Text` component in React Native is used to display and style text on the screen.
-- It is a basic component that renders a string of text, which can be styled using various props. The most commonly used props are `style`,
+- It is a basic component that renders a string of text, which can be styled using various props.
+- The most commonly used props are `style`,
 	- `numberOfLines`, and `ellipsizeMode`.
 - The `style` prop is used to define the visual appearance of the text and other components.
 	- It accepts an object containing various style properties such as `color`, `fontSize`, `fontWeight`, `textAlign`, `textDecorationLine`, `textShadowColor`, `textShadowOffset`, and `textShadowRadius`. With these style props, you can customize the text as per your need.
@@ -407,6 +424,28 @@ const AppText = () => {
 export default AppText;
 ```
 
+### Button
+
+- A basic button component that should render nicely on any platform. Supports a minimal level of customization.
+- underneath it uses `Pressable` component, which you can use to create custom buttons too
+
+```tsx
+<Button
+  onPress={onPressLearnMore}
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"
+/>
+
+<Button
+  onPress={onPressLearnMore}
+  title="Learn More"
+  color="#841584"
+  accessibilityLabel="Learn more about this purple button"
+  disabled={true}
+/>
+```
+
 ### Image
 
 - The `source` prop of the `Image` component is used to specify the image's location, either as a string or an object with a `uri` attribute.
@@ -431,6 +470,11 @@ export default ExampleApp;
 - The `Image` component also has additional props that can be used to customize its appearance and behavior.
 	- These include `onLoad`, `onError`, `resizeMethod`, `resizeMode`, `borderRadius`, `overlayColor`, among others.
 	- `defaultSource`, A static image to display while loading the image source.
+- Key points:
+	- Image missing width dimension for network URI
+		- React Native's `<Image>` requires explicit width and height for remote images (to avoid layout thrashing or blank renders)
+		- style with height and width value is preferred for consistency instead of using Images's width and height props
+			- ex: use `style={{ width: '100%', height: 300 }}`.
 
 ```jsx
 <Image
@@ -454,6 +498,8 @@ export default ExampleApp;
   overlayColor="blue"
 />
 ```
+
+> If you are loading multiple images, ex: Image gallery with FlatList consider using more efficient Image component i.e [Expo Image](https://docs.expo.dev/versions/latest/sdk/image/)
 
 #### Image Background
 
@@ -724,13 +770,15 @@ export default ScrollViewComponent;
 import React from 'react';
 import { FlatList, Text } from 'react-native';
 
-const FlatListComponent = () => {
+//It is a good practice to put your renderItem outside the component
+//helps you avoid using useCallback
+const renderFlatListItem = ({ item }) => {
+	return (
+	  <Text>{item.title}</Text>
+	);
+};
 
-  const renderFlatListItem = ({ item }) => {
-    return (
-      <Text>{item.title}</Text>
-    );
-  };
+const FlatListComponent = () => {	
 
   const data = [
     { key: '1', title: 'Item 1' },
@@ -744,6 +792,7 @@ const FlatListComponent = () => {
     <FlatList
       data={data}
       renderItem={renderFlatListItem}
+      keyExtractor={(item) => item.key()}
     />
   );
 };
@@ -757,6 +806,15 @@ export default FlatListComponent;
 	- `ListHeaderComponent` & `ListFooterComponnet`, which can be used to create custom header and footer around List
 	- `keyboardDissMissMode`, Determines whether the keyboard gets dismissed in response to a drag.
 		- set `keyboardDissMissMode = "on-drag"` then keyboard is dismissed when a drag begins.
+- Key points
+	- FlatList lacks a bounded height (won't fill screen or scroll)
+		- FlatList requires a constrained height to virtualize items and enable scrolling.
+		- FlatList's default style is `{} (flex: 0)`, so it collapses to content height (potentially rendering everything at once, causing perf issues or no scroll).
+		- Consider adding `style={{ flex: 1 }}` to FlatList. This makes it expand to fill the parent.
+	- Missing keyExtractor on FlatList
+		- "Each child in a list should have a unique 'key' prop." Without it, re-renders can be inefficient (e.g., during updates)
+		- Add `keyExtractor={(item) => item.id.toString()}`. If no id, use index (less ideal):
+			- `keyExtractor={(item, index) => index.toString()}`.
 - FlatList alternatives
 	- [SectionList · React Native](https://reactnative.dev/docs/sectionlist)
 	- [FlashList by Shopify](https://shopify.github.io/flash-list/), Similar to FlatList with better performance and similar api compatibility
@@ -764,7 +822,7 @@ export default FlatListComponent;
 
 ### Safe Area Context
 
-> There is another library Called SafeAreaView from React native, but it only works for `ios`
+> Not to be confused with `SafeAreaView` from React native, that only works on `ios`
 
 - An external library with a flexible API for accessing the device's safe area inset information.
 
@@ -781,7 +839,7 @@ function SomeComponent() {
 ```
 
 - useSafeAreaInsets
-	- Hook gives you direct access to the safe area insets. This can be useful when you want to place element(i.e. Header) to safe area by setting styles like paddingTop.
+	- Hook gives you direct access to the safe area insets. This can be useful when you want to place element(i.e. Header) to safe area by setting styles like `paddingTop`.
 
 ```js
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -802,7 +860,7 @@ function HookComponent() {
 }
 ```
 
-## Examples
+## Use Case Examples
 
 ### Pull-to-refresh
 
@@ -872,7 +930,7 @@ export default App;
 
 ### Scroll to item/index
 
-To scroll to a specific index or item in a `FlatList` in React Native, you can use the `scrollToIndex` or `scrollToItem` method respectively. Here is an example:
+- To scroll to a specific index or item in a `FlatList` in React Native, you can use the `scrollToIndex` or `scrollToItem` method respectively. Here is an example:
 
 ```jsx
 import React, { useRef } from 'react';
@@ -944,7 +1002,7 @@ export default App;
 ### Platform Specific Codes
 
 - [Platform · React Native](https://reactnative.dev/docs/platform)
-- When building a cross-platform app, you'll want to re-use as much code as possible. Scenarios may arise where it makes sense for the code to be different, for example you may want to implement separate visual components for Android and iOS.
+- When building a cross-platform app, you'll want to re-use as much code as possible. However, Scenarios may arise where it makes sense for the code to be different, for example you may want to implement separate visual components for Android and iOS.
 
 ```js
 import {Platform, StyleSheet} from 'react-native';
@@ -1018,35 +1076,6 @@ import BigButton from './BigButton';
 		- [mrousavy/react-native-mmkv: ⚡️ The fastest key/value storage for React Native. ~30x faster than AsyncStorage!](https://github.com/mrousavy/react-native-mmkv)
 		- Has significant performance advantage compared to other local key value storage options.
 		- includes secure storage for sensitive data.
-
-### Performance Improvements
-
-- Source:
-	- [Improving Shopify App’s Performance (2024) - Shopify](https://shopify.engineering/improving-shopify-app-s-performance)
-- What tools to use to inspect performance degrades
-	- **Strategy**:
-		- Utilize tools to measure rendering times in React Native apps.
-	- **Benefit**:
-		- Provides insights into performance bottlenecks and areas needing optimization.
-	- **Tools**:
-		- Shopify React performance library
-- Leverage features from React toolbox
-	- Memoization features, using useMemo, React.memo hooks…
-	- Load components or data only when needed (e.g., using `React.lazy` or pagination).
-	- Consider Concurrent React to prioritize high priority updates
-- Build your UI as a list first
-	- **Strategy**:
-		- Use FlatList of FlashList to build your ui
-		- Replace ScrollView or list of items with Recyclable Views
-			- ScrollView ends up drawing all the items while FlatList without the right config only draws 10 items.
-		- Consider better suited Recycler view, FlatList, FlashList, LazyScrollView and `LegendList`
-	- Benefit:
-		- Only renders what's visible and updates only the necessary components.
-- Leverage Caching Effectively
-	- **Strategy**:
-		- Load data from the cache first, then fetch updates from the network in parallel.
-	- **Benefit**:
-		- Improves perceived loading times, especially for users who frequently access the app.
 
 ### Use DOM
 
@@ -1133,126 +1162,39 @@ export default function App() {
 }
 ```
 
-### Concurrent React Native
+### Performance Improvements
 
-- [What is concurrent react](Frameworks/React/More%20on%20React.md#Concurrent%20React)
-- In our React Native app, we can use concurrent features to prioritize updates as urgent and non-urgent, allowing React to handle rendering more efficiently. This ensures our app remains responsive and performs well, even during complex updates.
-
-#### Suspense
-
-- Available starting React native(0.76) using the New Architecture
-- The use hook introduced in React 19 allows you to integrate Suspense with asynchronous operations, such as fetching data from an API.
-- tips
-	- are you using react query? if you are using react query, react query has hook called `useSuspenseQuery` which can be used in place of React `use` hook.
-	- you can use Suspense with lazy loading to show loading when using Heavy components i.e. Map and Markdown
-
-```jsx
-// Main App Component
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>User Profile</Text>
-      <Suspense fallback={<Text>Loading user data...</Text>}>
-        <UserProfile userId="123" />
-      </Suspense>
-    </View>
-  );
-}
-
-// Component that uses the `use` hook to await the promise
-function UserProfile({ userId }) {
-  const userData = use(fetchUserData(userId));
-  return (
-    <View style={styles.profile}>
-      <Text style={styles.text}>Name: {userData.name}</Text>
-      <Text style={styles.text}>Email: {userData.email}</Text>
-    </View>
-  );
-}
-
-
-// Simulate an API call
-function fetchUserData(userId) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({
-        id: userId,
-        name: 'John Doe',
-        email: 'john.doe@example.com',
-      });
-    }, 2000); // Simulate a 2-second delay
-  });
-}
-```
-
-#### Transition
-
-- Available starting React native(0.76) using the New Architecture
-- These feature allow you to differentiate between **urgent updates** (e.g., user input) and **non-urgent updates** (e.g., background tasks), improving the responsiveness of the UI.
-
-```tsx
-import React, { useState, useTransition } from 'react';
-import { View, Text, TextInput, FlatList, StyleSheet } from 'react-native';
-
-const App = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-  const [filteredItems, setFilteredItems] = useState<string[]>([]);
-  const [isPending, startTransition] = useTransition();
-
-  const handleSearch = (text: string) => {
-    setSearchQuery(text);
-
-    // Use startTransition to mark this state update as non-blocking
-    startTransition(() => {
-      const filtered = ITEMS.filter((item) =>
-        item.toLowerCase().includes(inputValue.toLowerCase()),
-      );
-      setFilteredItems(filtered);
-    });
-  };
-
-  const handleSearchAsync = async (text: string) => {
-    setSearchQuery(text);
-
-    // To access the pending state of a transition,
-    // call startTransition again.
-    startTransition(async () => {
-      const filtered = await db.getFilteredItems(inputValue);
-      startTransition(() => {
-        setFilteredItems(filtered);
-      });
-    });
-  };
-
-  return (
-    <View style={styles.container}>
-      <Text style={styles.title}>React Native Transitions Example</Text>
-
-      {/* Input for search */}
-      <TextInput
-        style={styles.input}
-        placeholder="Type to search..."
-        value={searchQuery}
-        onChangeText={handleSearch}
-      />
-
-      {/* Indicator for pending transition */}
-      {isPending && <Text style={styles.loading}>Loading...</Text>}
-
-      {/* Display filtered data */}
-      <FlatList
-        data={filteredItems}
-        renderItem={({ item }) => (
-          <View style={styles.item}>
-            <Text>{item}</Text>
-          </View>
-        )}
-        keyExtractor={(item) => item}
-      />
-    </View>
-  );
-};
-```
+- Source:
+	- [Best Practices for reducing lag in Expo apps](https://expo.dev/blog/best-practices-for-reducing-lag-in-expo-apps)
+- What tools to use to inspect performance degrades
+	- Use Chrome DevTools for React native
+		- Just press J in Expo CLI to open Chrome DevTools and connect it directly to the Hermes engine.
+		- Example:
+			- One of the features for optimizing performance is the ability to highlight React renders. This tool is essentially equivalent to React Scan.
+			- `Go to: Profiler > [Gear icon] > “Highlight updates when components render`.
+- Leverage features from React toolbox
+	- Use [React Compiler](https://react.dev/learn/react-compiler/introduction)
+		- For many cases this reduces the need for using react memoization features but for specific and rare cases you might still need, useMemo, React.memo and useCallback hooks…
+	- Load components or data only when needed (e.g., using `React.lazy` or pagination).
+		- Lazy components great options when dealing with Heavy components i.e Map Components
+	- Consider [Concurrent React features](Frameworks/React/More%20on%20React.md#Concurrent%20React) to prioritize high priority updates
+	- Background tasks, offload heavy computational tasks to background thread.
+- Build your UI as a list first
+	- **Strategy**:
+		- Use FlatList of FlashList to build your ui
+		- Replace ScrollView or list of items with Recyclable Views
+			- ScrollView ends up drawing all the items while FlatList without a custom config only draws 10 items.
+	- Benefit:
+		- Only renders what's visible and updates only the necessary components.
+- Leverage Caching Effectively
+	- **Strategy**:
+		- Load data from a cache first, then fetch updates from the network in parallel.
+	- **Benefit**:
+		- Improves perceived loading times, especially for users who frequently access the app.
+- Find and use better library
+	- Beyond common libraries, consider and evaluate new and alternative libraries based on performance and features.
+- Remove `console.log` from output builds
+	- Not just removing from your project, add a [babel-plugin-transform-remove-console · Babel](https://babeljs.io/docs/babel-plugin-transform-remove-console/) to remove console.log from third party plugins as well.
 
 ## Popular Libraries to Know
 
@@ -1267,7 +1209,7 @@ const App = () => {
 |                          | useContext, useReducer       | React's built-in hooks for state management.                                                                                                            |
 | **Navigation**           | Expo Router                  | File-based routing for React Native & web. [Introduction - Expo Documentation](https://docs.expo.dev/router/introduction/)                              |
 |                          | React Navigation             | A popular community solution for navigation.                                                                                                            |
-| **Styling UI**           | NativeWind                   | Tailwind CSS for React Native. [NativeWind](https://www.nativewind.dev/)                                                                                |
+| **Styling UI**           | NativeWind                   | Tailwind CSS for React Native. [Uniwind](https://docs.uniwind.dev)or  [NativeWind](https://www.nativewind.dev/)                                         |
 |                          | StyleSheet API               | React Native's built-in API for styling.                                                                                                                |
 | **UI Libraries**         | React Native Paper           | Material Design components for React Native. [React Native Paper](https://callstack.github.io/react-native-paper/)                                      |
 | **Internationalization** | react-i18next                | A powerful internationalization framework for React.                                                                                                    |
@@ -1277,21 +1219,23 @@ const App = () => {
 
 ### Others
 
-| **Category**        | **Library Name**                    | **Description/Link**                                                                                                                                                  |
-| ------------------- | ----------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Native Menu**     | Zeego                               | Beautiful, native menus for React Native + Web. [Welcome to Zeego](https://zeego.dev/)                                                                                |
-| **Local Database**  | Expo SQLite                         | Provides an API for a WebSQL-compatible database. Can integrate with Drizzle ORM. [Drizzle ORM for React Native](https://orm.drizzle.team/docs/get-started/expo-new)  |
-| **Chart Library**   | Victory Native                      | A collection of composable React components for building interactive data visualizations. [Victory Native](https://commerce.nearform.com/open-source/victory-native/) |
-| **Maps**            | react-native-maps                   | React Native Map components for iOS (Apple Maps) & Android (Google Maps). [react-native-maps - npm](https://www.npmjs.com/package/react-native-maps)                  |
-|                     | Mapbox (@rnmapbox/maps)             | React Native Mapbox SDK. [React Native Mapbox](https://rnmapbox.github.io/)                                                                                           |
-| **BottomSheet**     | React Native Bottom Sheet by Gorhom | A performant interactive bottom sheet with gesture support. [React Native Bottom Sheet - Gorhom](https://gorhom.dev/react-native-bottom-sheet/)                       |
-| **Payment/Subs**    | RevenueCat                          | In-app subscriptions made easy.                                                                                                                                       |
-| **Toast**           | sonner-native                       | An opinionated toast component for React Native.                                                                                                                      |
-| **SVG**             | react-native-svg                    | SVG library for React Native, React Native Web, and plain React web projects. [react-native-svg GitHub](https://github.com/software-mansion/react-native-svg)         |
-| **Blur Effect**     | BlurView (Expo)                     | A React component that blurs everything underneath the view. [BlurView - Expo Docs](https://docs.expo.dev/versions/latest/sdk/blur-view/)                             |
-|                     | react-native-blurhash               | Show colorful blurry placeholders while content loads. [react-native-blurhash GitHub](https://github.com/mrousavy/react-native-blurhash)                              |
-| **Share**           | Share (from React Native)           | For simple text-based sharing. [Share · React Native](https://reactnative.dev/docs/share)                                                                             |
-|                     | react-native-share                  | For sharing with options like URI, images, and files. [react-native-share GitHub](https://github.com/react-native-share/react-native-share)                           |
-| **Alert & Prompts** | Alert (from React Native)           | Launches an alert dialog. Prompt feature is iOS only. [Alert · React Native](https://reactnative.dev/docs/alert)                                                      |
-|                     | react-native-prompt-android         | External library for prompt support on both Android and iOS. [react-native-prompt-android - npm](https://www.npmjs.com/package/react-native-prompt-android)           |
-| **Quick Actions**   | expo-quick-actions                  | Add home screen quick actions/shortcuts. [expo-quick-actions GitHub](https://github.com/EvanBacon/expo-quick-actions)                                                 |
+| **Category**        | **Library Name**                    | **Description/Link**                                                                                                                                                                                 |
+| ------------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Native Menu**     | Zeego                               | Beautiful, native menus for React Native + Web. [Welcome to Zeego](https://zeego.dev/)                                                                                                               |
+| **Local Database**  | Expo SQLite                         | Provides an API for a WebSQL-compatible database. Can integrate with Drizzle ORM. [Drizzle ORM for React Native](https://orm.drizzle.team/docs/get-started/expo-new)                                 |
+| **Chart Library**   | Victory Native                      | A collection of composable React components for building interactive data visualizations. [Victory Native](https://commerce.nearform.com/open-source/victory-native/)                                |
+| **Maps**            | react-native-maps                   | React Native Map components for iOS (Apple Maps) & Android (Google Maps). [react-native-maps - npm](https://www.npmjs.com/package/react-native-maps)                                                 |
+|                     | Mapbox (@rnmapbox/maps)             | React Native Mapbox SDK. [React Native Mapbox](https://rnmapbox.github.io/)                                                                                                                          |
+| **BottomSheet**     | React Native Bottom Sheet by Gorhom | [React Native Bottom Sheet - Gorhom](https://gorhom.dev/react-native-bottom-sheet/)                                                                                                                  |
+|                     | React Native True Sheet             | [True Native Bottom Sheet](https://sheet.lodev09.com/)                                                                                                                                               |
+| **Payment/Subs**    | RevenueCat                          | In-app subscriptions made easy.                                                                                                                                                                      |
+| **Toast**           | sonner-native                       | An opinionated toast component for React Native.                                                                                                                                                     |
+| **SVG**             | react-native-svg                    | SVG library for React Native, React Native Web, and plain React web projects. [react-native-svg GitHub](https://github.com/software-mansion/react-native-svg)                                        |
+| **Blur Effect**     | BlurView (Expo)                     | A React component that blurs everything underneath the view. [BlurView - Expo Docs](https://docs.expo.dev/versions/latest/sdk/blur-view/)                                                            |
+|                     | react-native-blurhash               | Show colorful blurry placeholders while content loads. [react-native-blurhash GitHub](https://github.com/mrousavy/react-native-blurhash)                                                             |
+| **Share**           | Share (from React Native)           | For simple text-based sharing. [Share · React Native](https://reactnative.dev/docs/share)                                                                                                            |
+|                     | react-native-share                  | For sharing with options like URI, images, and files. [react-native-share GitHub](https://github.com/react-native-share/react-native-share)                                                          |
+| **Alert & Prompts** | Alert (from React Native)           | Launches an alert dialog. Prompt feature is iOS only. [Alert · React Native](https://reactnative.dev/docs/alert)                                                                                     |
+|                     | react-native-prompt-android         | External library for prompt support on both Android and iOS. [react-native-prompt-android - npm](https://www.npmjs.com/package/react-native-prompt-android)                                          |
+| **Quick Actions**   | expo-quick-actions                  | Add home screen quick actions/shortcuts. [expo-quick-actions GitHub](https://github.com/EvanBacon/expo-quick-actions)                                                                                |
+| Keyboard handling   | react-native-keyboard-controller    | [GitHub - kirillzyusko/react-native-keyboard-controller: ⌨️ Keyboard manager which works in identical way on both iOS and Android](https://github.com/kirillzyusko/react-native-keyboard-controller) |

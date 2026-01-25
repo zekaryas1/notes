@@ -1,7 +1,7 @@
 ---
 title: More on TypeScript
 date created: Monday, January 23rd 2023, 2:41:42 pm
-date modified: Saturday, May 3rd 2025, 12:02:14 pm
+date modified: Tuesday, January 13th 2026, 3:41:37 pm
 ---
 
 # More on TypeScript
@@ -21,11 +21,11 @@ if(typeof input  === 'string'){
 ### instanceOf for Objects
 
 ```jsx
-if(input instanceOf Array){
+if(input instanceof Array){
 	//do sth
 }
 
-if(input instanceOf MyClass){
+if(input instanceof MyClass){
 	//do sth
 }
 ```
