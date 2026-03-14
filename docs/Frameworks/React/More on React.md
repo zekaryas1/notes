@@ -1,7 +1,7 @@
 ---
 title: More on React
 date created: Sunday, October 2nd 2022, 4:31:59 pm
-date modified: Wednesday, December 25th 2024, 12:47:36 pm
+date modified: Sunday, December 7th 2025, 4:24:26 pm
 ---
 
 # More on React
@@ -21,7 +21,7 @@ date modified: Wednesday, December 25th 2024, 12:47:36 pm
 	        - Define the function in the file and import it as needed.
 - Guidelines for Using Server Functions:
 	- **Call Context**:
-		- Server Functions must be called within a [useTransition](#Concurent%20React#useTransition).
+		- Server Functions must be called within a [useTransition](#useTransition).
 	    - When used with `<form action>` or `formAction`, they are automatically called in a transition.
 	    - Transitions allow you to display a loading state during execution.
 	- **Async Requirement**:
@@ -33,7 +33,7 @@ date modified: Wednesday, December 25th 2024, 12:47:36 pm
 
 ---
 - Server component can create server function
-	- you can access server resources inside a server function i.e file resource, cookies and database…
+	- you can access server resources inside a server function i.e. file resource, cookies, and database…
 
 ```jsx
 function EmptyNote () {
@@ -71,7 +71,7 @@ export default function Button({ onClick }) {
 
 ```
 
-- client can import server functions from a server file
+- Client can import server functions from a server file
 
 ```jsx
 "use server";
@@ -116,20 +116,20 @@ export default function Button({ onClick }) {
 	        - Defined within a Server Component.
 	        - Or extracted into a server file and imported where needed.
 
-```jsx
+```tsx
 function Form() {
-  const action = async (formData) => {
+  const action = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
 
   // action can also be Server Function
-  const action = async (formData) => {
+  const action = async (formData: FormData) => {
     "use server";
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
@@ -144,22 +144,22 @@ function Form() {
 
 ```
 
-- we can also have multiple submissions using `formAction`
+- We can also have multiple submissions using `formAction`
 
-```jsx
+```tsx
 import { useActionState } from "react";
 
 function Form() {
-  const subscribeAction = async (formData) => {
+  const subscribeAction = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
 
-  const unSubscribeAction = async (formData) => {
+  const unSubscribeAction = async (formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
 
     console.log(formData.get("email"));
   };
@@ -185,19 +185,19 @@ function Form() {
 
 - `useActionState` to track the state of the form such as pending, action responses(messages).
 	- [useActionState – React](https://react.dev/reference/react/useActionState) is a Hook that allows you to update state based on the result of a form action.
-- alternate to using the pending state from `useActionState` we can also use `useFormStatus` for showing loading state
-	- [useFormStatus – React](https://react.dev/reference/react-dom/hooks/useFormStatus) is a Hook that gives you status information of the last form submission.
+- Alternate to using the pending state from `useActionState` we can also use `useFormStatus` for showing loading state
+	- [useFormStatus – React](https://react.dev/reference/react-dom/hooks/useFormStatus) is a Hook that gives you, status information of the last form submission.
 	- `useFormStatus` is a client side hook thus you need to separate it to a new file and use `use client`
-	- `useFormStatus` needs to have a parent form and can not be placed along side a form.
+	- `useFormStatus` needs to have a parent form and cannot be placed alongside a form.
 
-```jsx
+```tsx
 "use client";
 import { useActionState } from "react";
 
 function Form() {
-  const action = async (prev, formData) => {
+  const action = async (prev, formData: FormData) => {
     await new Promise((res) => setTimeout(res, 1000));
-    const email = formDate.get("email");
+    const email = formData.get("email");
     if (notEmail(email)) {
       return {
         error: "not valid email",
@@ -245,9 +245,9 @@ function Submit() {
 
 ```js
 "use server";
-export const action = async (prev, formData) => {
+export const action = async (prev, formData: FormData) => {
   await new Promise((res) => setTimeout(res, 1000));
-  const email = formDate.get("email");
+  const email = formData.get("email");
 
   if (notEmail(email)) {
     return {
@@ -284,7 +284,7 @@ function Form() {
 
 ```
 
-### Apis
+### React Apis
 
 #### Use
 
@@ -296,9 +296,10 @@ function Form() {
 import { use } from 'react';
 
 function MessageComponent({ messagePromise }) {
-  const message = use(messagePromise);
-  const theme = use(ThemeContext);
-  // ...
+    const message = use(messagePromise);
+    const theme = use(ThemeContext);
+    // ...
+}
 ```
 
 - Unlike useContext, use can be called in conditionals and loops like if to access context data.
@@ -313,45 +314,7 @@ function HorizontalRule({ show }) {
 }
 ```
 
-- Streaming data from the server to the client
-	- Data can be streamed from the server to the client by passing a Promise as a prop from a Server Component to a Client Component.
-	- The difference between awaiting the promise on the server and passing data vs passing the promise as prop to be used by use
-		- using await in a Server Component will block its rendering until the await statement is finished.
-		- Passing a Promise from a Server Component to a Client Component prevents the Promise from blocking the rendering of the Server Component.
-
-```jsx
-export default function App() {
-  const messagePromise = fetchMessage();
-  return (
-    <Suspense fallback={<p>waiting for message...</p>}>
-      <Message messagePromise={messagePromise} />
-    </Suspense>
-  );
-}
-
-'use client';
-import { use } from 'react';
-
-export function Message({ messagePromise }) {
-  const messageContent = use(messagePromise);
-  return <p>Here is the message: {messageContent}</p>;
-}
-```
-
-- Error handling when promise fall
-	- use `ErrorBoundary`, you need to wrap the suspense with ErrorBoundary and provide fallback to it.
-
-```jsx
-export function MessageContainer({ messagePromise }) {
-  return (
-    <ErrorBoundary fallback={<p>⚠️Something went wrong</p>}>
-      <Suspense fallback={<p>⌛Fetching message...</p>}>
-        <Message messagePromise={messagePromise} />
-      </Suspense>
-    </ErrorBoundary>
-  );
-}
-```
+- Read [Suspense section](#Suspense) for more detail and examples.
 
 #### Cache
 
@@ -400,7 +363,7 @@ async function MinimalWeatherCard({city}) {
 		- similar to next.js fetch, but you can use cache to manually memoize data requests for use cases when the fetch API is not suitable.
 			- For example, some database clients, CMS clients, or GraphQL clients.
 
-### Concurent React
+### Concurrent React
 
  - react without concurrency
 	 - updates are rendered in a single, uninterrupted, synchronous transaction. With synchronous rendering, once an update starts rendering, nothing can interrupt it until the user can see the result on screen.
@@ -417,18 +380,23 @@ async function MinimalWeatherCard({city}) {
 
 - What is [Suspense – React](https://react.dev/reference/react/Suspense)?
 	- Suspense allows you to display a fallback UI while waiting for its children to load.
-	- It works seamlessly with suspense-enabled data sources and is closely tied to React's Concurrent Mode.
+	- It works seamlessly with suspense-enabled data sources(ex: `use` Api) and is closely tied to React's Concurrent Mode.
 	- Components can suspend rendering while waiting for asynchronous data, improving the user experience.
 - When to Use Suspense
 	1. **Client-Side Data Fetching** (e.g., React.js):
 	    - Use the `use` hook to read cached promises.
 	    - With libraries like React Query, you can use `useSuspenseQuery` as a replacement for React’s `use` hook.
-	1. **Server-Side Data Fetching** (e.g., Next.js):
+	2. **Server-Side Data Fetching** (e.g., Next.js):
 	    - Suspense works with asynchronous data fetching, as demonstrated in [Next.js sequential data fetching](https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#sequential-data-fetching).
 - Key Features
 	- **Fallback UI**: Suspense displays a fallback (e.g., a loading spinner) until the data or child components are ready.
 	- **Streaming**: Allows parts of the UI to render incrementally as they become ready, instead of waiting for the entire UI or page to load.
 	    - [Streaming](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming#what-is-streaming) works particularly well when using multiple Suspense components.
+- Client side data fetching
+	- Can be seen as a alternative to the pattern of loading data using useEffect on mount.
+	- Caveat:
+		- Promises created in Client Components are recreated on every render.
+		- Promises passed from a Server Component to a Client Component are stable across re-renders
 
 ```jsx
 <Suspense fallback={<Loading />}>
@@ -456,7 +424,7 @@ export default function Albums({ artistId }) {
 }
 ```
 
-- passing promise from server to client
+- Server side data fetching
 	- Example
 		- The note content is important data for the page to render, so we await it on the server.
 		- The comments are below the fold and lower-priority, so we start the promise on the server, and wait for it on the client with the `use` API.
@@ -492,8 +460,23 @@ function Comments({ commentsPromise }) {
 
 ```
 
-- using suspense with lazy loading
-	- you can use Suspense with lazy loading to show loading when using Heavy components i.e Map and Markdown
+- Error handling when promise fall
+	- Use `ErrorBoundary`, you need to wrap the suspense with ErrorBoundary and provide fallback to it.
+
+```jsx
+export function MessageContainer({ messagePromise }) {
+  return (
+    <ErrorBoundary fallback={<p>⚠️Something went wrong</p>}>
+      <Suspense fallback={<p>⌛Fetching message...</p>}>
+        <Message messagePromise={messagePromise} />
+      </Suspense>
+    </ErrorBoundary>
+  );
+}
+```
+
+- Using suspense with lazy loading
+	- you can use Suspense with lazy loading to show loading when using Heavy components i.e. Map and Markdown
 
 ```jsx
 const MarkdownPreview = lazy(() => delayForDemo(import('./MarkdownPreview.js')));
@@ -510,6 +493,17 @@ export default function MarkdownEditor() {
   );
 }
 ```
+
+- Difference between client side Suspense and Server side Suspense
+
+| Concept                               | **Code 1 (Inline)**                                             | **Code 2 (External)**                                                      |
+| ------------------------------------- | --------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| **Where the data promise comes from** | From an inline async function you define right in the component | From a promise created elsewhere (server component, module, or parent)     |
+| **Who performs the fetch**            | The **client browser**                                          | Usually the **server** (or parent already fetched it)                      |
+| **When it runs**                      | Runs when the component mounts on the client                    | Runs before render — the component just suspends until it resolves         |
+| **Ideal for**                         | Small, client-side only data                                    | Server-rendered or pre-fetched data (RSC pattern)                          |
+| **Caching**                           | None by default                                                 | Possible, if fetched server-side with React cache or Next.js fetch caching |
+| **Performance**                       | Client fetches → slower initial load                            | Server fetches → faster SSR, less client work                              |
 
 #### useTransition
 
@@ -535,7 +529,7 @@ export default function MarkdownEditor() {
 	- **Not Suitable for Controlling Text Inputs**:
 	    - Transitions are interruptible, making them unsuitable for controlling text input fields where real-time updates are required.
 
-```jsx
+```tsx
 import React, { useState, useTransition } from "react";
 
 const ITEMS = ["Apple", "Banana", "Cherry"];
@@ -567,9 +561,7 @@ const SearchExample: React.FC = () => {
     // call startTransition again.
     startTransition(async () => {
       const filtered = await getFilteredItems(inputValue);
-      startTransition(() => {
-        setFilteredItems(filtered);
-      });
+       setFilteredItems(filtered);
     });
   };
 
@@ -596,6 +588,7 @@ export default SearchExample;
 ```
 
 - More
+	- if you don't need to pending state, you can import startTransition from React and not the useTransition hoot.
 	- you can pass the action(the function that goes inside the startTransition) as props
 		- [Exposing action prop from components ](https://react.dev/reference/react/useTransition#exposing-action-props-from-components)
 	- you can combine Transition with suspense to prevent already revealed content from hiding or indicate a transition is happening
@@ -699,7 +692,7 @@ function App() {
 
 - DOM manipulation using useRef
 
-```jsx
+```tsx
 import React, { useRef } from 'react';
 
 const InputFocusExample: React.FC = () => {
@@ -741,52 +734,256 @@ export default InputFocusExample;
 
 ```js
 //create the context
-import React from "react";
-const CountContext = React.createContext(defaultValue);
+const ThemeContext = createContext({ theme: "light", toggle: () => {} });
 
-export default CountContext;
+export function ThemeProvider({ children }) {
+  const [theme, setTheme] = useState("light");
+  const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
+
+  return (
+    <ThemeContext.Provider value={{ theme, toggle }}>
+      {children}
+    </ThemeContext.Provider>
+  );
+}
+
+export function useTheme() {
+  return useContext(ThemeContext);
+}
 ```
 
 ```js
-//provide it at the parent
-import React, { useState } from "react";
-import Child from "./Child";
-import CountContext from "./context";
-
-const App = () => {
-  const [count, setCount] = useState(0);
-
-  const countHandler = () => {
-    setCount(count + 1);
-  };
-
+//provide it at the parent, root/parent layout
+const App = ({children}) => {
   return (
-    <CountContext.Provider value={{ count, countHandler }}>
-      <Child />
-      <h2>{count}</h2>
-    </CountContext.Provider>
+    <ThemeProvider>
+      {children}
+    </ThemeProvider>
   );
 };
-
 export default App;
 ```
 
 ```js
 //use it inside a child
-import { useContext } from "react";
-import CountContext from "./context";
+function Button() {
+  const { theme, toggle } = useTheme();
+  return <Pressable onPress={toggle}>Current theme: {theme}</Pressable>;
+}
+```
 
-const Child = () => {
-  const { count, countHandler } = useContext(CountContext);
+#### useOptimistic
+
+- The useOptimistic hook lets you:
+	- Keep a temporary optimistic state (e.g., adding a new item before the API confirms it).
+	- Revert to the real state if the operation fails.
+	- Avoid flickers and spinners for fast, confident UIs.
+
+```tsx
+"use client";
+
+import { useState, useOptimistic, startTransition } from "react";
+
+
+export default function Comments() {
+  const [comments, setComments] = useState<Comment[]>([
+    { id: 1, text: "This is the first comment" },
+  ]);
+
+  // --- useOptimistic manages the temporary optimistic state
+  const [optimisticComments, addOptimisticComment] = useOptimistic(
+    comments,
+    (currentComments, newComment: Comment) => [...currentComments, newComment]
+  );
+
+  async function handleAddComment(formData: FormData) {
+    const text = formData.get("text") as string;
+
+    // Create a temporary comment (not yet confirmed by backend)
+    // Immediately show the optimistic comment
+    addOptimisticComment({
+      id: Math.random(), // temporary client ID
+      text,
+    });
+
+    // Now a network call to save it
+    const res = await fetch("/api/comments", {
+      method: "POST",
+      body: JSON.stringify({ text }),
+    });
+
+    if (res.ok) {
+      const saved = await res.json();
+      
+      // Update the *real* list
+      startTransition(()=>{
+		setComments((prev) => [...prev, saved]); 
+      });
+      
+    } else {
+      alert("Failed to save comment!");
+    }
+  }
 
   return (
     <div>
-	  <p>count is: {count}</p>
-      <button onClick={countHandler}>Increment</button>
+      <h2>Comments</h2>
+
+		//
+      <ul>
+        {optimisticComments.map((comment) => (
+          <li key={comment.id}>{comment.text}</li>
+        ))}
+      </ul>
+
+      <form action={handleAddComment}>
+        <input type="text" name="text" placeholder="Add comment..." />
+        <button type="submit">Post</button>
+      </form>
     </div>
   );
-};
-export default Child;
+}
+
+```
+
+#### useReducer
+
+- Components with many state updates spread across many event handlers can get overwhelming.
+	- For these cases, you can consolidate all the state update logic outside your component in a single function, called a reducer.
+- Comparison to useState:
+	- Both have the same functionality can be used exchangeably but useReducer can be a better alternative when you have large state logic and scalable solution
+		- useReducer can help cut down on the code if many event handlers modify state in a similar way.
+		- useReducer lets you cleanly separate the how of update logic from the what happened of event handlers.
+		- userReducer is easier to test as it has central place of logic handling
+	- Note Just like useState, Reducers must be pure.
+
+```jsx
+export default function TaskApp() {
+  const [tasks, setTasks] = useState(initialTasks);
+
+  function handleAddTask(text) {
+    setTasks([
+      ...tasks,
+      {
+        id: nextId++,
+        text: text,
+        done: false,
+      },
+    ]);
+  }
+
+  function handleChangeTask(task) {
+    setTasks(
+      tasks.map((t) => {
+        if (t.id === task.id) {
+          return task;
+        } else {
+          return t;
+        }
+      })
+    );
+  }
+
+  function handleDeleteTask(taskId) {
+    setTasks(tasks.filter((t) => t.id !== taskId));
+  }
+
+  return //show task...
+}
+```
+
+- To convert from useState to useReducer:
+	- Dispatch actions from event handlers.
+		- Each action should describes a single user interaction.
+	- Write a reducer function that returns the next state for a given state and action.
+	- Replace useState with useReducer.
+
+```jsx
+export default function TaskApp() {
+  const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+
+  function handleAddTask(text) {
+    dispatch({
+      type: 'added',
+      id: nextId++,
+      text: text,
+    });
+  }
+
+  function handleChangeTask(task) {
+    dispatch({
+      type: 'changed',
+      task: task,
+    });
+  }
+
+  function handleDeleteTask(taskId) {
+    dispatch({
+      type: 'deleted',
+      id: taskId,
+    });
+  }
+
+  return   return //show task...
+}
+
+function tasksReducer(tasks, action) {
+  switch (action.type) {
+    case 'added': {
+      return [
+        ...tasks,
+        {
+          id: action.id,
+          text: action.text,
+          done: false,
+        },
+      ];
+    }
+    case 'changed': {
+      return tasks.map((t) => {
+        if (t.id === action.task.id) {
+          return action.task;
+        } else {
+          return t;
+        }
+      });
+    }
+    case 'deleted': {
+      return tasks.filter((t) => t.id !== action.id);
+    }
+    default: {
+      throw Error('Unknown action: ' + action.type);
+    }
+  }
+}
+```
+
+#### Custom Hooks
+
+- Encapsulate logic (state, effects, data fetching, subscriptions, etc.) into reusable functions that start with use.
+
+```jsx
+function useFetch(url: string) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch(url).then(res => res.json()).then((d) => {
+      setData(d);
+      setLoading(false);
+    });
+  }, [url]);
+
+  return { data, loading };
+}
+
+function UserList() {
+  const { data, loading } = useFetch("/api/users");
+  if (loading) return <Text>Loading...</Text>;
+
+  return data.map((user) => <Text key={user.id}>{user.name}</Text>);
+}
+
 ```
 
 ### React Web Workers
@@ -941,20 +1138,20 @@ addNewUser = () => {
 };
 ```
 
-> [How to use Readonly to enforce state immutability](Programming%20langs/TypeScript/More%20on%20Typescript.md#Readonly)
+> [How to use Readonly to enforce state immutability](Programming%20langs/TypeScript/More%20on%20TypeScript.md#Readonly)
 
 #### Avoid Props in Initial States
 
 > Don't initialize state with props which can be changed later. Instead, use props directly in the component.
 
-```js
+```jsx
 //before
 function EditPanelComponent({applyCoupon}) {
 	const [applyCoupon, setapplyCoupon] = useState(applyCoupon)
     
     return (
 	    <div>
-            {applyCoupon && Enter Coupon: <Input/>}
+            {applyCoupon && <CuuponInput placeholder={"enter cupon"}/>}
         </div>
     );
 }
@@ -970,13 +1167,20 @@ function EditPanelComponent({applyCoupon}) {
     
     return (
 	    <div>
-            {applyCoupon && Enter Coupon: <Input/>}
+            {applyCoupon && <CuuponInput placeholder={"enter cupon"}/>}
         </div>
     );
 }
 ```
 
-### Use Memoization
+### React Compiler
+
+- React Compiler is a new build-time tool that automatically optimizes your React app. It works with plain JavaScript, and understands the Rules of React, so you don’t need to rewrite any code to use it.
+- [React Compiler](https://react.dev/learn/react-compiler/introduction)
+
+> The following re-render optimization methods might not be required in most cases, but still relevant for some neat cases.
+
+#### React Memoization
 
 - There are three ways we can achieve memorization in react
 	- Pure-Component for memorizing Class-Based components
@@ -985,7 +1189,7 @@ function EditPanelComponent({applyCoupon}) {
 		- `useCallback` for memorizing function instance
 	- useMemo for memorizing heavy functions result
 
-#### React.memo : Memorize React Components
+##### React.memo : Memorize React Components
 
 - Memo allows us to implement memorization in functional components
 - It will only force the component to re-render if the props are changed.
@@ -1077,7 +1281,7 @@ return (
 
 > You should always use React.memo LITERALLY, as comparing the tree returned by the Component is always more expensive than comparing a pair of props properties
 
-#### useMemo : Memorize Function Result
+##### useMemo : Memorize Function Result
 
 ```js
 const multiply = (x,y) => {
@@ -1091,7 +1295,7 @@ return <p>{ cachedValue(12,12) }</p>
 
 - The computed result is stored in the `cachedValue` variable and `useMemo()` Hook will return it each time unless the inputs are changed.
 
-### Avoid Inline Function Definition in the Render Function.
+### Avoid Inline Function inside Render
 
 - Since functions are objects in JavaScript `({} !== {})`, the inline function will always fail the prop diff when React does a diff check.
 - An arrow function will create a new instance of the function on each render if it's used in a JSX property.

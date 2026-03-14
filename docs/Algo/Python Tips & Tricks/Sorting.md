@@ -1,8 +1,9 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Saturday, January 20th 2024, 9:24:01 pm
+date modified: Saturday, April 26th 2025, 10:19:49 am
 title: Sorting in Python
 ---
+
 # Sorting in Python
 
 - Two type of sort
@@ -43,9 +44,9 @@ a.sort(key=lambda x: x[1], reverse=True)
 
 ### Given Sorted List
 
-- binary search to find the index and adding the element there,
-	- finding the position is `Ologn`, but the insertion will force us to shift all the left elements one step backward witch is `On`, thus overall `Onlogn`
-- heap to propagate the number up to the right position, `Ologn`
+- Binary search to find the index and adding the element there,
+	- Finding the position is `Ologn`, but the insertion will force us to shift all the left elements one step backward witch is `On`, thus overall `Onlogn`
+- Heap to propagate the number up to the right position, `Ologn`
 
 ```python
 import bisect
@@ -79,13 +80,13 @@ print(sorted_list) # Output: [1, 3, 4, 5, 7, 9]
 - Use specific data structure to cover your use-case
 	- Binary search tree
 		- Keep a binary search tree to maintain your sort order
-		- inorder traversal to get all elements in sorted order
+		- in-order traversal to get all elements in sorted order
 		- with balanced BST, CRUD, operations can be `logn`
 	- Maintain Heap
 		- min heap to store values with sort order
 			- CUD(add, update, delete) `logn`
-		- pop all elements to get sorted list `nlogn`
-	- [p] SortedList python library
+		- Pop all elements to get sorted list `nlogn`
+	- SortedList python library
 		- It maintains sorted order and efficiently supports insertions, deletions, and indexing.
 			- All CRUD operations have `logn` cost
 		- Already present in some coding websites i.e `Leetcode`

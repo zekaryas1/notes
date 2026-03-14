@@ -7,7 +7,7 @@ title: What is Linked List
 # What is Linked List
 
 * A linked list is a data structure that represents a sequence of nodes.
-	* In a singly linked list. each node points to the next node in the linked list.  
+	* In a singly linked list. Each node points to the next node in the linked list.  
 	![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200922124319/Singly-Linked-List1.png)
 
 	* A doubly linked list gives each node pointers to both the next node and the previous node.
@@ -15,7 +15,7 @@ title: What is Linked List
 ![](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200922124412/Doubly-Linked-List.png)
 
 * Unlike an array, a linked list does not provide constant time access to a particular "index" within the list.
-	* This means that if you'd like to find the Kth element in the list, you will need to iterate through K elements.
+	* This means that if you'd like to find the K'th element in the list, you will need to iterate through K elements.
 * The benefit of a linked list is that you can add and remove items from the beginning of the list in constant time. For specific applications, this can be useful.
 
 ## The Runner Technique

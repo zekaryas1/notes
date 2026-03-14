@@ -62,7 +62,7 @@ echo PI;
 
 ## Control Flows
 
-### == Vs ===
+### Two type of equals
 
 ```php
 // == checks value sequality

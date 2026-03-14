@@ -32,7 +32,7 @@ date modified: Saturday, December 21st 2024, 7:56:47 pm
     - use aria-description or aria-described by to add addition info such as validation requirements
 
 ```html
-<input type="name" autocomplete="name">
+<input type="text" autocomplete="name">
 <input type="tel" autocomplete="tel">
 <input type="email" autocomplete="email">
 ```
@@ -102,12 +102,12 @@ date modified: Saturday, December 21st 2024, 7:56:47 pm
 
 ```css
 
---don't
+/*--don't*/
 :focus {
 	outline: none;
 }
 
--- better
+/*-- better*/
 :focus {
   outline: 3px dotted #008576;
 }
@@ -184,7 +184,7 @@ date modified: Saturday, December 21st 2024, 7:56:47 pm
 	- **Spacing and Line Height**:
 		- Adjust spacing and line height (`line-height`) for long paragraphs to make them less dense and easier to read.
 - **Tools for Typography Accessibility**
-	- [line hight calculator](https://thegoodlineheight.com/)
+	- [line height calculator](https://thegoodlineheight.com/)
 	- [Golden ratio calculator](https://grtcalculator.com/)
 
 ## Testing Tools

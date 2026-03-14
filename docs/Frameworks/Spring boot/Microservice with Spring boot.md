@@ -1,6 +1,6 @@
 ---
 date created: Monday, December 16th 2024, 2:55:37 pm
-date modified: Monday, December 30th 2024, 11:21:55 am
+date modified: Thursday, January 2nd 2025, 10:51:38 am
 title: Microservice with Spring Boot
 ---
 
@@ -21,11 +21,11 @@ title: Microservice with Spring Boot
 	- **Technologies**:
 		- Spring Cloud Gateway or Netflix `Zuul`.
 - **Service Discovery**
-	- Service discovery enables micro-services to locate each other dynamically, especially when services are added or removed frequently.
+	- Service discovery enables microservices to locate each other dynamically, especially when services are added or removed frequently.
 	- **Technologies**:
 		- Spring cloud Eureka(Netflix Eureka), Consul.
 - **Configuration Management**
-	- Centralized configuration management ensures that micro-services have consistent configuration and environment information, which can be updated without redeployment.
+	- Centralized configuration management ensures that microservices have consistent configuration and environment information, which can be updated without redeployment.
 	- **Technologies**:
 		- Spring Cloud Config Server.
 - **Inter-Service Communication**
@@ -37,7 +37,7 @@ title: Microservice with Spring Boot
 	- **Technologies**:
 		- Sleuth (for trace IDs) and Zipkin/Jaeger for tracing, ELK Stack (Elasticsearch, Logstash, and Kibana) for logging.
 - **Resilience and Fault Tolerance**
-	- Micro-services must handle failures gracefully to avoid cascading errors, especially in complex, distributed systems.
+	- Microservices must handle failures gracefully to avoid cascading errors, especially in complex, distributed systems.
 		- Retry mechanisms, circuit breaking, and fallbacks to avoid downtime.
 	- **Technologies**:
 		- Resilience4j or `Hystrix` (deprecated), which provides circuit breakers, retries, and timeouts.
@@ -47,22 +47,22 @@ title: Microservice with Spring Boot
 	- **Technologies**:
 	    - Apache Kafka, RabbitMQ, or AWS SNS/SQS for pub-sub event-driven communication patterns.
 - **Authentication and Authorization**
-	- Authentication and authorization ensure that only valid users and services have access to a micro-service’s resources.
+	- Authentication and authorization ensure that only valid users and services have access to a microservice’s resources.
 	- **Technologies**:
 	    - Spring Security and `OAuth2`, often paired with JWT or OpenID Connect for stateless authentication.
 ---
 - **Data Management and Storage**
-	- Each micro-service ideally has its own data store to avoid direct dependencies on other services’ databases, enforcing data autonomy.
+	- Each microservice ideally has its own data store to avoid direct dependencies on other services’ databases, enforcing data autonomy.
 - **Monitoring and Metrics Collection**
 	- Monitoring services collect metrics and provide insights into service health and performance, crucial for operational excellence.
 	- **Technologies**:
 		- Micrometer, Prometheus, and `Grafana` for metrics and monitoring.
 - **Continuous Integration and Continuous Deployment (CI/CD)**
-	- CI/CD pipelines automate the process of building, testing, and deploying micro-services independently, allowing rapid and reliable delivery.
+	- CI/CD pipelines automate the process of building, testing, and deploying microservices independently, allowing rapid and reliable delivery.
 	- **Technologies**:
 	    - CI/CD tools like Jenkins, GitLab CI, CircleCI, or cloud solutions like GitHub Actions and AWS CodePipeline.
 - **Containerization and Orchestration**
-	- Containers package each micro-service with its dependencies, and orchestrators manage container deployment, scaling, and networking.
+	- Containers package each microservice with its dependencies, and orchestrators manage container deployment, scaling, and networking.
 	- **Technologies**:
 	    - Docker for containerization, Kubernetes or Docker Swarm for orchestration.
 
@@ -70,7 +70,7 @@ title: Microservice with Spring Boot
 
 - Where to get the libraries
 	- Installing the libraries is ignored for the sake for stying up to date, the best way to install the libraries is to
-		- Go to to [Spring initializer](https://start.spring.io/),
+		- Go to [Spring initializer](https://start.spring.io/),
 		- Search and select the libraries and
 		- Copy from the generated pom or `gradle` files.
 - Use the following tool to change application.properties to application.yaml and vise versa
@@ -139,7 +139,7 @@ eureka:
 ```
 
 - When to use prefer ip address?
-	- By default services register themselves using hostname, this property makes them register with their ip address.
+	- By default, services register themselves using hostname, this property makes them register with their ip address.
 	- Why?
 		- When running services in cloud environments or across multiple regions, hostname resolution can become inconsistent. An IP address offers a stable identifier for service instances.
 		- In some environments, the hostname may not resolve properly due to DNS misconfigurations or delays. Using the IP address ensures direct and reliable communication.
@@ -308,7 +308,7 @@ public class AppConfig {
 ```
 
 - How to switch profiles
-	- You can either change the profile or configure spring config cloud to load from different branch i.e dev branch
+	- You can either change the profile or configure spring config cloud to load from different branch i.e. dev branch
 
 ```
 spring.profiles.active=prod
@@ -561,6 +561,7 @@ management:
 	- Recovering from failures: Automatically or manually restoring functionality.
 	- Providing fallbacks: Offering alternative responses or behaviors when a failure occur
 	- Resilience: Prevents cascading failures and isolates issues.
+		- **Systems that can anticipate and cope with faults are called *fault-tolerant* or *resilient*.**
 - Resilience4j:
 	- A lightweight fault tolerance library for Java.
 - Here are some common fault tolerance techniques used in microservices?
@@ -778,14 +779,14 @@ resilience4j:
 
 ### Securing Microservice
 
-#### Keyclock
+#### Keycloak
 
 - Keycloak is an open-source Identity and Access Management (IAM) solution developed by Red Hat.
 - It provides a comprehensive set of features for securing applications and services, including authentication, authorization, single sign-on (SSO), and user management.
 - Steps:
 	- Set up Keycloak and configure a realm, client, roles, and users.
 		- [downloads - Keycloak](https://www.keycloak.org/downloads)
-		- Keyclock be default uses Local H2 database which is suitable to testing and can be updated to use SQL db such as Postgres sql.
+		- Keycloak be default uses Local H2 database which is suitable to testing and can be updated to use SQL db such as Postgres sql.
 		- A realm is a space where you manage users, roles, and clients.
 		- What are clients?
 			- Often the applications(web-app, mobile-app…) or services that we want to secure by providing a single sign-on (SSO) solution.
@@ -820,7 +821,7 @@ resilience4j:
 	- List of features from Spring cloud that can be replaced with Kubernetes features.
 
 | Feature                      | Spring Cloud Microservices                | Kubernetes-Oriented Microservices                                                                                                       |
-| ---------------------------- | ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------------------|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 | **Primary Focus**            | Application-level concerns                | Infrastructure-level concerns                                                                                                           |
 | **Service Discovery**        | Spring Cloud Netflix Eureka, Consul       | [Kubernetes DNS and Service Objects](https://kubernetes.io/docs/concepts/services-networking/service/#discovering-services)             |
 | **Configuration Management** | Spring Cloud Config Server                | [ConfigMaps](https://kubernetes.io/docs/user-guide/configmap/) and [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) |
@@ -835,6 +836,6 @@ resilience4j:
 ### Spring Cloud Kubernetes
 
 - [Spring Cloud Kubernetes](https://spring.io/projects/spring-cloud-kubernetes) provides implementations of well known Spring Cloud interfaces allowing developers to build and run Spring Cloud applications on Kubernetes.
-	- This is not a requirement but it helps simplify spring boot integration with Kubernetes.
+	- This is not a requirement, but it helps simplify spring boot integration with Kubernetes.
 - In this practice, Kubernetes will handle the infrastructure and scaling, while Spring Cloud (or equivalent tools) will take care of application-level concerns.
-	- I.e We can integrate Spring cloud config to work with Config Maps and secrets
+	- I.e. We can integrate Spring cloud config to work with Config Maps and secrets

@@ -1,6 +1,6 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Monday, December 30th 2024, 12:23:19 pm
+date modified: Tuesday, September 30th 2025, 2:11:05 pm
 title: Which Algo to Select, Pattern Based Answer
 ---
 
@@ -37,7 +37,7 @@ title: Which Algo to Select, Pattern Based Answer
 
 ### Recursion is Banned Then
 
-- [Stack LAST IN FIRST OUT](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20{LAST%20IN%20FIRST%20OUT})
+- [Stack (LAST IN FIRST OUT)](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Stack%20(LAST%20IN%20FIRST%20OUT))
 
 ### Must Solve In-place Then
 
@@ -50,7 +50,7 @@ title: Which Algo to Select, Pattern Based Answer
 
 ### Asked for top/least K Items Then
 
-- [Heap](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20{%20Heapq%20})
+- [Heap](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20(Heapq))
 
 ### Asked for Common Strings Then
 
