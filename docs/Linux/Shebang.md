@@ -1,6 +1,6 @@
 ---
 date created: Sunday, July 24th 2022, 11:02:23 pm
-date modified: Sunday, July 24th 2022, 11:02:37 pm
+date modified: Tuesday, February 10th 2026, 11:21:48 am
 title: Shebang (#!)
 ---
 
@@ -44,9 +44,9 @@ printed in the screen when it's executed
 
 ## When to Use Env?
 
-- When the interpreter is within the Linux system such as (cat, ls, bash…) we can use the #!bin/Linux-command format, however, for user-installed interpreters such as (node, python…) we need to use their environment variables
+- When the interpreter is within the Linux system such as (cat, ls, bash…) we can use the `#!bin/Linux-command` format, however, for user-installed interpreters such as (node, python…) we need to use their environment variables
 
-> We can still use #!/path-to-node but that won’t be portable to other machines as the path is dependent on where the user installed node.js.
+> We can still use #!/path-to-node but that won’t be portable to other machines as the path is dependent on where the user installed `node.js`.
 
 ```shell
 #!/usr/bin/env node  
