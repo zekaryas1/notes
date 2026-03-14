@@ -1,12 +1,12 @@
 ---
 date created: Thursday, June 16th 2022, 1:47:45 pm
-date modified: Friday, November 18th 2022, 1:35:45 pm
+date modified: Sunday, June 16th 2024, 11:42:49 am
 title: Stack and Queue
 ---
 
 # Stack and Queue
 
-## Stack {LAST IN FIRST OUT}
+## Stack (LAST IN FIRST OUT)
 
 - Unlike an array, a stack does not offer constant-time access to the nth item. However, it does allow constant time adds and removes, as it doesn't require shifting elements around.
 
@@ -21,7 +21,7 @@ print(stack[-1])  #45 last in first out
 
 ```
 
-## Queue {FIRST IN FIRST OUT}
+## Queue (FIRST IN FIRST OUT)
 
 - A queue can also be implemented with a linked list. In fact, they are essentially the same thing, as long as items are added and removed from opposite sides.
 - Enqueue = Add, Dequeue(POP)
@@ -97,15 +97,17 @@ while not q.empty():
 	print(next_item)
 ```
 
-## Priority Queue 2 { Heapq }
+## Priority Queue 2 (Heapq)
 
 - Using [heapq](https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/)
-- `heapify`
-	- This function is used to **convert the iterable into a heap** data structure.
-- `heappush`
-	- This function is used to **insert the element** mentioned in its arguments into heap.
-- `heappop`
-	- This function is used to **remove and return the smallest element** from heap.
+	- `heapify`
+		- This function is used to **convert the iterable into a heap** data structure.
+	- `heappush`
+		- This function is used to **insert the element** mentioned in its arguments into heap.
+	- `heappop`
+		- This function is used to **remove and return the smallest element** from heap.
+
+> Python's heapq is min heap implementation by default, but to get a max heap, you can multiply by -1 when inserting and multiply back by -1 when popping to get the max element.
 
 ```python
 import heapq

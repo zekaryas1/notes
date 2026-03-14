@@ -7,7 +7,7 @@ title: Topological sort
 # Topological Sort
 
 - [Video source](https://youtu.be/eL-KzMXSXXI?list=PLDV1Zeh2NRsDGO4--qE8yH72HFL1Km93P)
-- ![](https://i0.wp.com/algorithms.tutorialhorizon.com/files/2018/03/Topological-Sort.png?ssl=1)
+- ![](https://web.archive.org/web/20240609162359if_/https://tutorialhorizon.com/static/media/algorithms/2018/03/Topological-Sort.png)
 - Topological sort algorithm can find a topological ordering in O(V+E)
 - A graph with a cycle can not have a valid ordering
 	- only works on as-cyclic directed graph(no cycle)

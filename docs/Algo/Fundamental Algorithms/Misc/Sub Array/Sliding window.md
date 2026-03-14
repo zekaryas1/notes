@@ -1,7 +1,7 @@
 ---
 title: Sliding Window
 date created: Thursday, July 6th 2023, 10:36:16 am
-date modified: Thursday, July 6th 2023, 11:07:12 am
+date modified: Saturday, January 20th 2024, 9:27:38 pm
 ---
 
 # Sliding Window
@@ -25,6 +25,19 @@ By using the sliding window technique, you avoid unnecessary computations by eff
 > It can be particularly useful when dealing with problems that involve finding a maximum or minimum subarray, substring, or satisfying certain conditions within a contiguous section of the input data.
 
 ## Template
+
+### Sliding Window Fixed Size
+
+```python
+def sliding_windo_fixed(nums, k):
+	L = 0
+	for R in range(len(nums)):
+		if R-L+1 == K:
+			#size is fit, do task now
+			L += 1
+```
+
+### Sliding Window Variable Sizes
 
 ```python
 def sliding_window(nums):
@@ -52,7 +65,28 @@ def sliding_window(nums):
     return result
 ```
 
-## Recommended Leetcode Exercises 
+## Recommended Leetcode Exercises
+
+### Fixed Size
+
+- Given an array, return true if there are k consecutive elements that are the same.
+
+```python
+def isThereDuplicate(nums, k):
+	L = 0
+	
+	for R in range(len(nums)):
+		if R-L+1 == k:
+			window = set(nums[L:R+1])
+			if len(window) == 1:
+				return True
+			L += 1
+	return False
+
+print(isThereDuplicate([1,2,3,3,3], 3))
+```
+
+### Variable Size
 
 - [LeetCode - maximum-average-subarray](https://leetcode.com/problems/maximum-average-subarray-i)
 

@@ -1,7 +1,7 @@
 ---
 title: Matrix Iteration Methods
 date created: Tuesday, January 3rd 2023, 11:00:51 am
-date modified: Tuesday, January 3rd 2023, 11:10:29 am
+date modified: Friday, April 25th 2025, 3:55:15 pm
 ---
 
 # Matrix Iteration Methods
@@ -41,7 +41,7 @@ for c in range(C):
 #output = 1,4,7 2,5,8 3,6,9
 ```
 
-## Sprial Visit
+## Spiral Visit
 
 - [Leetcode question](https://leetcode.com/problems/spiral-matrix/)
 - [Explanation print-matrix-in-spiral-order](https://www.enjoyalgorithms.com/blog/print-matrix-in-spiral-order)

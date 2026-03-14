@@ -1,23 +1,23 @@
 ---
 title: Fundamentals
 date created: Monday, December 12th 2022, 8:37:20 pm
-date modified: Saturday, April 29th 2023, 2:34:54 pm
+date modified: Saturday, April 26th 2025, 11:02:50 am
 ---
 
 # Fundamentals
 
 - Sources
-	- <https://www.typescriptlang.org/cheatsheets>
-	- <https://www.typescriptlang.org/>
-	- [Typescript for react](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
+	- [TypeScript: Cheat Sheets](https://www.typescriptlang.org/cheatsheets)
+	- [TypeScript: JavaScript With Syntax For Types.](https://www.typescriptlang.org/)
+	- [TypeScript for react](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example)
 
-## Why and What of Typescript
+## Why and What of TypeScript
 
 - ![typescript is a super-set of JavaScript](https://www.typescripttutorial.net/wp-content/uploads/2020/05/what-is-typescript-typescript-and-js.png)
 - The goal of TypeScript is to be a static typechecker for JavaScript programs
 	- in other words, a tool that runs before your code runs (static) and ensure that the types of the program are correct (typechecked).
 - TS = JavaScript + Types
-	- *basically Typescript provides types for JavaScript, and understanding these types is the key to mastering Typescript.*
+	- *Basically TypeScript provides types for JavaScript, and understanding these types is the key to mastering TypeScript.*
 
 ## Basic Types
 
@@ -32,7 +32,7 @@ date modified: Saturday, April 29th 2023, 2:34:54 pm
 			- By default null and undefined are subtypes of all other types. That means you can assign null and undefined to something like number.
 		- void & symbol
 	- Object types
-		- Array, Functions, Classes, enum and interfaces…
+		- Array, Functions, Classes, enum, and interfaces…
 
 ```ts
 //primitive-types
@@ -49,7 +49,7 @@ const set: Set<number> = new Set();
 const square: (x: number) => number =  x => x*x;  //function definition
 ```
 
-> Never use uppercase, String, Number or Object, it's recommended to use lowercase, string, number and object.
+> Never use uppercase, String, Number, or Object, it's recommended to use lowercase, string, number, and object.
 
 ## More Types
 
@@ -65,7 +65,7 @@ looselyTyped.ifItExists();
 looselyTyped.toFixed();
 ```
 
-> Type safety is one of the main motivations for using Typescript and you should try to avoid using any when not necessary.
+> Type safety is one of the main motivations for using TypeScript and you should try to avoid using any when not necessary.
 
 ### Literal Types
 
@@ -310,7 +310,7 @@ p1.x = 5; // error! Cannot assign to 'x' because it is a read-only property.
 
 ### ReadonlyArray
 
-- Typescript comes with a ReadonlyArray type that is the same as Array with all mutating methods removed, so you can make sure you don't change your arrays after creation.
+- TypeScript comes with a ReadonlyArray type that is the same as Array with all mutating methods removed, so you can make sure you don't change your arrays after creation.
 
 ```ts
 let my_heros: ReadonlyArray<string> = ['Ali', 'Mike', 'Alferd'];
@@ -464,7 +464,7 @@ function draw(color: Color, pattern: ...) {...}
 - static properties
 - abstract classes
 - method overloading
-	- <https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads>
+	- [TypeScript: Documentation - More on Functions](https://www.typescriptlang.org/docs/handbook/2/functions.html#function-overloads)
 
 ## Generics
 

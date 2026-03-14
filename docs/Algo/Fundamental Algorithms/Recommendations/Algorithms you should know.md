@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 4:08:37 pm
-date modified: Thursday, July 6th 2023, 11:44:45 am
+date modified: Thursday, December 12th 2024, 4:29:41 pm
 title: Algorithms You Should Know
 ---
 
@@ -19,7 +19,7 @@ title: Algorithms You Should Know
 		- [4. Quick Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/4.%20Quick%20Sort.md)
 		- [5. Radix Sort](Algo/Fundamental%20Algorithms/Sorting%20algos/5.%20Radix%20Sort.md)
 	- [Merge intervals](Algo/Fundamental%20Algorithms/Misc/Intervals/Merge%20intervals.md)
-	- Kadane algorithm
+	- [Kadane](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Kadane.md)
 	- [Prefix sum](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Prefix%20sum.md)
 - String
 - Hash Table
@@ -30,8 +30,7 @@ title: Algorithms You Should Know
 	- Segment tree
 - [Matrix](Algo/Fundamental%20Algorithms/Misc/Matrix.md)
 - [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Monotonic Stack](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Stack.md)
-	- [Monotonic queue](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20queue.md)
+	- [Monotonic Sequence](Algo/Fundamental%20Algorithms/Misc/Monotonic/Monotonic%20Sequence.md)
 - Graph
 	- Depth First Search
 	- Breadth First Search
@@ -40,7 +39,7 @@ title: Algorithms You Should Know
 	- Kosaraju's algorithm
 - [Linked list](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md)
 	- [Stack & Queue](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md)
-	- [Linked list - fast/slow pointers](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique)
+	- [The Runner Technique](Algo/Fundamental%20Algorithms/Linked%20List/Linked%20list.md#The%20Runner%20Technique)
 - [Trie data structure](Algo/Tree%20&%20Graph/Tree/Trie%20data%20structure.md)
 
 ## General Techniques

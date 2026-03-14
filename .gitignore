@@ -133,6 +133,10 @@ dist
 .idea
 build
 
+# Ignore temp and private notes
 docs/Private
-.DS_Store
 docs/🔑 Private
+docs/local-docs
+
+# Ignore macOS .DS_Store files
+.DS_Store

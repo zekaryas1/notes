@@ -1,19 +1,19 @@
 ---
 title: More Heapq
 date created: Friday, November 18th 2022, 1:00:20 pm
-date modified: Friday, November 18th 2022, 1:37:33 pm
+date modified: Monday, January 1st 2024, 8:02:53 pm
 ---
 
 # More Heapq
 
 ## For Heapq Introduction
 
-- [Priority Queue 2 { Heapq }](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20{%20Heapq%20})
+- [Priority Queue 2 (Heapq)](Algo/Fundamental%20Algorithms/Linked%20List/Stack%20&%20Queue.md#Priority%20Queue%202%20(Heapq))
 
 ## Merge Sorted Array with Heapq
 
 - Source
-	- <https://pythontic.com/algorithms/heapq/merge>
+	- [merge function of heapq module in python | Pythontic.com](https://pythontic.com/algorithms/heapq/merge)
 - Python's heapq has a function called merge
 - The merge() function takes multiple Python iterables as parameters.
 - For the merge() function to work correctly each of the input sequence should be in sorted order.
@@ -45,7 +45,6 @@ for item in merged:
 
 - Coding question related to this
 	- [Merge K Sorted Lists](Algo/Fundamental%20Algorithms/Misc/Sub%20Array/Merge%20K%20Sorted%20Lists.md)
-
 ### Merge Using a Function That Returns a Comparison Key
 
 ```python
@@ -62,7 +61,7 @@ print(list(merged))
 ## Find N Largest or Smallest Elt with Heapq
 
 - Source
-	- <https://pythontic.com/algorithms/heapq/nsmallest>
+	- [nsmallest function of heapq module In Python | Pythontic.com](https://pythontic.com/algorithms/heapq/nsmallest)
 - The nlargest() function of the Python module heapq returns the specified number of largest elements from a Python iterable like a list, tuple and others.
 - The function nlargest() can also be passed a key function that returns a comparison key to be used in the sorting.
 

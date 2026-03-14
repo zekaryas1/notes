@@ -1,6 +1,6 @@
 ---
 date created: Sunday, August 7th 2022, 1:16:43 pm
-date modified: Wednesday, August 10th 2022, 6:14:39 pm
+date modified: Tuesday, February 13th 2024, 7:44:47 pm
 title: Dynamic Programming Template
 ---
 
@@ -14,7 +14,11 @@ title: Dynamic Programming Template
 - At each step/cell of DP, we will make a decision that will maximize/minimize our output depending on what we want.
 
 ```python
-#current_value = max(prev_value, curr + some_value)
+#first row initialization
+
+#first column initalization
+
+#current_value = max(prev_value, curr + some_value_from_last_row)
 cell[r][c] = max(cell[r-1][c], current + cell[r-1][c-items_weight])
 
 for r in range(Row):
@@ -24,7 +28,7 @@ for r in range(Row):
 
 - It's possible to use 2D, nD array to solve DP problems however using dictionary will make things a lot easier.
 
-## Knapsack Question
+## Bounded Knapsack Question(0/1 knapsack)
 
 - You’re a thief with a knapsack that can carry 4 lb of goods.
 - You have three items that you can put into the knapsack.
@@ -49,4 +53,16 @@ for r in range(3):
 			dp[(r,c)] = max(dp[(r-1,c)], items[r][1] + dp[(r-1, c-items_weight)])
 
 print(dp[(2,4)])
+```
+
+## Unbounded Knabsack
+
+```python
+#current_value = max(prev_value, curr + some_value_from_this_row)
+
+#first row initialization
+
+#first column initalization
+
+cell[r][c] = max(cell[r-1][c], current + cell[r][c-items_weight])
 ```

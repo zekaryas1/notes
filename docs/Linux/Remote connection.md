@@ -67,8 +67,8 @@ ssh-keygen -o
 
 ## Steps to SSH Key Pair
 
-- Generate SSH key [Generate Ssh Key](Linux/Remote%20connection.md#Generate%20Ssh%20Key)
-- Copy the key to the server you want to connect
+1. [Generate Ssh Key](Linux/Remote%20connection.md#Generate%20Ssh%20Key)
+2. Copy the key to the server you want to connect
 
 ```bash
 ssh-copy-id username@your_server_address
